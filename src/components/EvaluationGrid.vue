@@ -2,56 +2,74 @@
   <div class="evaluation-grid">
     <div class="eval-item city">
       <div class="eval-header">市街</div>
-      <div class="eval-value">{{ ratings.city }}</div>
+      <div class="eval-value">{{ characterData.city }}</div>
     </div>
     <div class="eval-item outdoor">
       <div class="eval-header">野外</div>
-      <div class="eval-value">{{ ratings.outdoor }}</div>
+      <div class="eval-value">{{ characterData.outdoor }}</div>
     </div>
     <div class="eval-item indoor">
       <div class="eval-header">室內</div>
-      <div class="eval-value">{{ ratings.indoor }}</div>
+      <div class="eval-value">{{ characterData.indoor }}</div>
     </div>
-    <div class="eval-item equipment1">
-      <div class="eval-header">裝備1</div>
-      <div class="eval-value">{{ ratings.newbie }}</div>
+
+    <div v-for="(equip, index) in characterData.equipments" :key="equip" class="eval-item equipment">
+      <div class="eval-header">裝備{{ index + 1 }}</div>
+      <div class="eval-value">{{ equip }}</div>
     </div>
-    <div class="eval-item equipment2">
-      <div class="eval-header">裝備2</div>
-      <div class="eval-value">{{ ratings.unsuitable }}</div>
-    </div>
-    <div class="eval-item equipment3">
-      <div class="eval-header">裝備3</div>
-      <div class="eval-value">{{ ratings.overall }}</div>
-    </div>
+
     <div class="eval-item uniqueWeaponStar2">
       <div class="eval-header">專武2</div>
-      <div class="eval-value">{{ ratings.overall }}</div>
+      <div class="eval-value">{{ characterData.uniqueWeaponStar2 }}</div>
     </div>
     <div class="eval-item uniqueWeaponStar3">
       <div class="eval-header">專武3</div>
-      <div class="eval-value">{{ ratings.overall }}</div>
+      <div class="eval-value">{{ uniqueWeaponStar3Text }}</div>
     </div>
-    <div class="eval-item overall">
-      <div class="eval-header">綜合泛用推薦</div>   <!-- TODO 把角評版本改到這裡-->
-      <div class="eval-value">{{ ratings.overall }}</div>
+
+    <div class="eval-item opart">
+      <div class="eval-header">主素材</div>
+      <div class="eval-value">{{ characterData.skillMainOparts || 'N/A' }}</div>
     </div>
-    <!-- TODO 添加主素材、副素材、l2d所需羈絆的資訊 -->
+    <div class="eval-item opart">
+      <div class="eval-header">副素材</div>
+      <div class="eval-value">{{ characterData.skillSubOparts || 'N/A' }}</div>
+    </div>
+    <div class="eval-item l2d">
+      <div class="eval-header">L2D羈絆</div>
+      <div class="eval-value">{{ characterData.l2dUnlock }}</div>
+    </div>
+
+    <div class="eval-item version">
+      <div class="eval-header">角評版本</div>
+      <div class="eval-value">{{ characterData.ratingVersion }}</div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, computed } from 'vue';
 
-defineProps({
-  ratings: {
+const props = defineProps({
+  characterData: {
     type: Object,
-    required: true,
-    // 基礎驗證，確保包含預期的鍵
-    validator: (value) => {
-      return ['city', 'outdoor', 'indoor', 'newbie', 'unsuitable', 'overall'].every(key => key in value);
-    }
+    required: true
   }
+});
+
+const terrainMap = {
+  'indoor': '室內',
+  'outdoor': '野外',
+  'city': '市街'
+};
+
+const uniqueWeaponStar3Text = computed(() => {
+  if (Array.isArray(props.characterData.uniqueWeaponStar3) && props.characterData.uniqueWeaponStar3.length === 2) {
+    const [terrainKey, rank] = props.characterData.uniqueWeaponStar3;
+    const terrainName = terrainMap[terrainKey] || terrainKey;
+    return `${terrainName} → ${rank}`;
+  }
+  return props.characterData.uniqueWeaponStar3 || 'N/A';
 });
 </script>
 
@@ -82,12 +100,12 @@ defineProps({
 .city { background: #ffffff; border: 2px solid #bdc3c7; }
 .outdoor { background: #f1c40f; }
 .indoor { background: #27ae60; color: white; }
-.equipment1 { background: #3498db; color: white; }
-.equipment2 { background: #95a5a6; color: white; }
-.equipment3 { background: #95a5a6; color: white; }
+.equipment { background: #3498db; color: white; }
 .uniqueWeaponStar2 { background: #95a5a6; color: white; }
 .uniqueWeaponStar3 { background: #95a5a6; color: white; }
-.overall { background: #e74c3c; color: white; }
+.opart { background: #8e44ad; color: white; }
+.l2d { background: #e67e22; color: white; }
+.version { background: #2c3e50; color: white; }
 
 @media (max-width: 768px) {
   .evaluation-grid {

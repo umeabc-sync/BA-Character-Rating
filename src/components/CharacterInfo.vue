@@ -5,7 +5,9 @@
       光
     </div>
     <div class="character-name">{{ name }}</div>
-    <!-- TODO 添加暱稱在這裡 -->
+    <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">
+      {{ nicknames.join(', ') }}
+    </div>
     <div class="school-badge">{{ school }}</div>
   </div>
 </template>
@@ -17,6 +19,10 @@ defineProps({
   name: {
     type: String,
     required: true
+  },
+  nicknames: {
+    type: Array,
+    default: () => []
   },
   school: {
     type: String,
@@ -50,6 +56,12 @@ defineProps({
   font-size: 1.3rem;
   font-weight: bold;
   color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.character-nicknames {
+  font-size: 0.9rem;
+  color: #7f8c8d;
   margin-bottom: 10px;
 }
 

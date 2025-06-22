@@ -38,10 +38,4 @@ defineProps({
   line-height: 1.6;
   color: #34495e;
 }
-
-/* 星星樣式，因為在 RatingCard 中使用，所以也放在這裡 */
-.stars {
-  color: #f39c12;
-  font-size: 1.2rem;
-}
 </style>

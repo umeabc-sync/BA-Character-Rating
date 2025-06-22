@@ -7,36 +7,40 @@
     <div class="card-content">
       <div class="left-section">
         <CharacterInfo 
-          :name="character.name" 
+          :name="character.name"
+          :nicknames="character.nicknames"
           :school="character.school" 
         />
 
-        <!-- TODO 把綜合泛用推薦分數移到這裡，並且透過分數自動判斷評級 -->
-        
+        <div class="overall-rating-section">
+          <div class="overall-score">{{ character.ratings.overall }}</div>
+          <div class="overall-grade">{{ overallGrade }}</div>
+        </div>
+
         <CharacterAttributes 
           :attack-type="character.attackType" 
           :defense-type="character.defenseType" 
           :weapon="character.weapon" 
           :position="character.position" 
+          :unique-weapon-recommended="character.uniqueWeaponRecommended" 
+          :acquisition-method="character.acquisitionMethod" 
         />
       </div>
       
       <div class="right-section">
-        <EvaluationGrid :ratings="character.ratings" />
+        <EvaluationGrid :character-data="character" />
         
         <RatingSection title="星級評價">
-          <div style="margin-bottom: 8px;"><strong>新手期：</strong> <span class="stars"> 不適合</span></div>
-          <div style="margin-bottom: 8px;"><strong>總力戰：</strong> <span class="stars">★★★★</span></div>
-          <div style="margin-bottom: 8px;"><strong>戰術對抗戰：</strong> 不適合</div>
-          <div style="margin-bottom: 8px;"><strong>大決戰：</strong> <span class="stars">★★★★★</span></div>
-          <div style="margin-bottom: 8px;"><strong>制約解除作戰：</strong> <span class="stars">★★★★☆</span></div>
-          <div style="margin-bottom: 8px;"><strong>演習考試：</strong> <span class="stars">★★★★</span></div>
-          <div><strong>活動高難：</strong> <span class="stars">★★★★★</span></div>
+          <div class="rating-row"><strong>新手期：</strong> <StarRating :rating="character.ratings.newbie" /></div>
+          <div class="rating-row"><strong>總力戰：</strong> <StarRating :rating="character.ratings.totalAssault" /></div>
+          <div class="rating-row"><strong>戰術對抗戰：</strong> <StarRating :rating="character.ratings.pvp" /></div>
+          <div class="rating-row"><strong>大決戰：</strong> <StarRating :rating="character.ratings.grandAssault" /></div>
+          <div class="rating-row"><strong>制約解除作戰：</strong> <StarRating :rating="character.ratings.limitBreakAssault" /></div>
+          <div class="rating-row"><strong>演習考試：</strong> <StarRating :rating="character.ratings.jointFiringDrill" /></div>
+          <div class="rating-row"><strong>活動高難：</strong> <StarRating :rating="character.ratings.eventChallenge" /></div>
         </RatingSection>
-        
-        <RatingSection title="角評 7.0">  <!-- TODO 移動到左欄，title改名為「技能簡述」 -->
-          <p><strong>專武推薦度：</strong> 看情況開</p> <!-- TODO 移動到左欄 -->
-          <p><strong>入手方式：</strong> 限定池</p> <!-- TODO 移動到左欄 -->
+
+        <RatingSection :title="`技能簡述 (角評 ${character.ratingVersion})`">
           <p style="margin-top: 10px;">
             <span class="highlight">EX技能：</span>Cost使1名我方振動屬攻增加92.7%(32秒專二38秒)若目標有額外費用
           </p>
@@ -52,8 +56,8 @@
         </RatingSection>
         
         <SkillsSection 
-          :overall-recommendation="character.skills.overallRecommendation" 
-          :skill-order="character.skills.skillOrder" 
+          :overall-recommendation="skills.overallRecommendation" 
+          :skill-order="skills.skillOrder" 
         />
       </div>
     </div>
@@ -61,54 +65,37 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
 import RatingSection from './RatingSection.vue';
 import SkillsSection from './SkillsSection.vue';
+import StarRating from './StarRating.vue';
+import characterData from '../data/zh-tw.json';
 
-const character = ref({
-  name: "橘 光",
-  nicknames: ["光"],
-  school: "高地人",
-  attackType: "振動屬",
-  defenseType: "輕裝甲",
-  weapon: "HG手槍",
-  position: "前排(輔助坦)",
-  uniqueWeaponRecommended: "看情況開",
-  acquisitionMethod: "限定池",
-  skillMainOparts: "",
-  skillSubOparts: "",
-  l2dUnlock: 6,
-  city: "D",
-  outdoor: "B",
-  indoor: "S",
-  equipments: [
-    "Gloves",
-    "Hairpin",
-    "Amulet"
-  ],
-  uniqueWeaponStar2: "增益持續增加",
-  uniqueWeaponStar3: ["indoor", "SS"],
-  ratingVersion: "7.0",
-  ratings: {
-    "newbie": null,
-    "totalAssault": 4,
-    "pvp": null,
-    "grandAssault": 6,
-    "limitBreakAssault": 6,
-    "jointFiringDrill": 4,
-    "eventChallenge": 5,
-    "overall": 81
-  },
-  skills: {
-    overallRecommendation: "振動大決戰必備人權，紫甲大決戰較力頻繁，未來可能有較高使用率。振動屬攻建議拿下",
-    skillOrder: `
+const character = ref(characterData);
+
+// 這部分暫時保留為硬編碼
+const skills = ref({
+  overallRecommendation: "振動大決戰必備人權，紫甲大決戰較力頻繁，未來可能有較高使用率。振動屬攻建議拿下",
+  skillOrder: `
       <span class="highlight">EX3</span> → 技一二三Lv4 → <span class="highlight">EX5</span> → 技一Lv7 → 技二Lv7 → 技三Lv7<br>
       → 技一Lv10 → 技二Lv10 → 技三Lv10 → <span class="highlight">Max</span>
     `
-  }
+});
+
+const overallGrade = computed(() => {
+  const score = character.value.ratings.overall;
+  if (score > 100) return "SS";
+  if (score >= 90) return "S";
+  if (score >= 80) return "A";
+  if (score >= 70) return "B";
+  if (score >= 60) return "C";
+  if (score >= 50) return "D";
+  if (score >= 40) return "E";
+  if (score >= 20) return "F";
+  return "N/A";
 });
 </script>
 
@@ -146,6 +133,37 @@ const character = ref({
 
 .right-section {
   padding: 20px;
+}
+
+.overall-rating-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.overall-score {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.overall-grade {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #f1c40f;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.rating-row {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* 樣式高亮，因為在 RatingSection 和 SkillsSection 中使用，所以放在這裡 */
