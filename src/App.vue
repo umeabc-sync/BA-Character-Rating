@@ -1,12 +1,11 @@
 <template>
   <div :class="{ 'dark-mode': isDarkMode }">
-    <button @click="toggleDarkMode" class="dark-mode-toggle">
-      {{ isDarkMode ? '切換至明亮模式' : '切換至暗黑模式' }}
-    </button>
     <RatingCard 
       v-if="currentCharacter"
       :character="currentCharacter" 
       @open-selector="isSelectorVisible = true" 
+      :is-dark-mode="isDarkMode"
+      @toggle-dark-mode="toggleDarkMode"
     />
     <CharacterSelector 
       v-if="isSelectorVisible" 
@@ -59,33 +58,9 @@ body {
   transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-/* Dark Mode Styles for Body */
 body.dark-mode {
   background: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
   color: #e0e6ed;
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 174, 239, 0.5);
-  z-index: 1000;
-  transition: all 0.3s ease;
-  background: linear-gradient(45deg, #2a7fff, #00aeef);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-.dark-mode-toggle:hover {
-  background: linear-gradient(45deg, #00aeef, #2a7fff);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 174, 239, 0.4);
 }
 
 </style>

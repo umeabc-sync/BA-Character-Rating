@@ -2,6 +2,22 @@
   <div class="character-card">
     <div class="card-header">
       蔚藍檔案 角色評分
+      <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="isDarkMode ? '切換至明亮模式' : '切換至暗黑模式'">
+        <svg v-if="isDarkMode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </div>
     
     <div class="card-content">
@@ -100,9 +116,10 @@ import InfoTooltip from './InfoTooltip.vue';
 import InfoIcon from './InfoIcon.vue';
 
 const props = defineProps({
-  character: { type: Object, required: true }
+  character: { type: Object, required: true },
+  isDarkMode: { type: Boolean, default: false }
 });
-defineEmits(['open-selector']);
+defineEmits(['open-selector', 'toggle-dark-mode']);
 
 const overallGrade = computed(() => {
   const score = props.character.ratings.overall;
@@ -145,6 +162,26 @@ const overallGrade = computed(() => {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0;
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .left-section {
