@@ -66,31 +66,36 @@ defineProps({
 .attribute-row {
   display: flex;
   margin-bottom: 8px;
-  align-items: center;
+  align-items: stretch; /* Make labels and values ​​the same height */
 }
 
 .attribute-label {
-  flex: 1;
+  flex: 0 0 110px;
   font-weight: bold;
   padding: 8px;
   text-align: center;
   font-size: 0.9rem;
+  border-radius: 5px 0 0 5px;
+  color: white;
 }
 
 .attribute-value {
   color: black;
   flex: 1;
   padding: 8px;
-  text-align: center;
+  text-align: left;
   font-size: 0.9rem;
-  border-radius: 5px;
-  margin-left: 5px;
+  border-radius: 0 5px 5px 0;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-left: none;
+  display: flex;
+  align-items: center;
 }
 
-.red { background: #e74c3c; color: white; }
-.green { background: #27ae60; color: white; }
-.yellow { background: #f39c12; color: white; }
-.blue { background: #3498db; color: white; }
+.red { background: #ff7591; }
+.green { background: #4a90e2; }
+.blue { background: #6495ED; }
 
 @media (max-width: 480px) {
   .attribute-row {
@@ -102,6 +107,9 @@ defineProps({
   .attribute-value {
     flex: none;
     width: 100%;
+    border-radius: 5px; /* 在堆疊時恢復圓角 */
+    border-left: 1px solid #e9ecef;
+    text-align: center;
   }
 }
 </style>

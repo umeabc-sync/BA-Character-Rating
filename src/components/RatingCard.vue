@@ -101,7 +101,6 @@ const overallGrade = computed(() => {
 </script>
 
 <style scoped>
-/* 應用於卡片結構的樣式 */
 .character-card {
   max-width: 1200px;
   margin: 0 auto;
@@ -127,7 +126,7 @@ const overallGrade = computed(() => {
 }
 
 .left-section {
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.7);
   padding: 20px;
   border-right: 3px solid #dee2e6;
 }
@@ -154,10 +153,11 @@ const overallGrade = computed(() => {
 .overall-grade {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2c3e50;
-  background-color: #f1c40f;
+  color: white;
+  background: linear-gradient(45deg, #87CEEB, #6495ED); /* BA Style Gradient */
   padding: 5px 15px;
   border-radius: 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .rating-row {
@@ -169,10 +169,11 @@ const overallGrade = computed(() => {
 
 /* 樣式高亮，因為在 RatingSection 和 SkillsSection 中使用，所以放在這裡 */
 .highlight {
-  background: #fff3cd;
+  background: rgba(135, 206, 235, 0.3); /* Translucent light blue in BA style */
   padding: 2px 6px;
   border-radius: 3px;
   font-weight: bold;
+  color: #005A9C; /* The dark blue text increases readability */
 }
 
 @media (max-width: 768px) {

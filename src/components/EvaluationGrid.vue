@@ -124,11 +124,15 @@ const getOpartImageUrl = (name) => {
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */
+  border-top: 4px solid; /* 將顏色改為頂部邊框 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .eval-header {
   font-size: 0.9rem;
   margin-bottom: 5px;
+  color: #555; /* 在淺色背景上使用深色文字 */
 }
 
 .eval-value {
@@ -137,6 +141,7 @@ const getOpartImageUrl = (name) => {
   justify-content: center;
   align-items: center;
   min-height: 30px; /* Give some height for images to load into */
+  color: #2c3e50;
 }
 
 .eval-image {
@@ -149,15 +154,14 @@ const getOpartImageUrl = (name) => {
   vertical-align: middle;
 }
 
-.white { background: #ffffff; border: 2px solid #bdc3c7; }
-.yellow { background: #f1c40f; }
-.green { background: #27ae60; color: white; }
-.blue { background: #3498db; color: white; }
-.gray { background: #95a5a6; color: white; }
-.purple { background: #8e44ad; color: white; }
-.orange { background: #e67e22; color: white; }
-.pink { background: #ff7591; color: white; }
-.darkgray { background: #2c3e50; color: white; }
+.yellow { border-color: #f1c40f; }
+.green { border-color: #27ae60; }
+.blue { border-color: #3498db; }
+.gray { border-color: #95a5a6; }
+.purple { border-color: #8e44ad; }
+.orange { border-color: #e67e22; }
+.pink { border-color: #ff7591; }
+.darkgray { border-color: #2c3e50; }
 
 @media (max-width: 768px) {
   .evaluation-grid {

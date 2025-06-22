@@ -1,9 +1,9 @@
 <template>
   <div class="skills-section">
-    <div class="rating-title">綜合泛用推薦</div>
+    <!-- <div class="rating-title">綜合泛用推薦</div>
     <div class="rating-details">
       {{ overallRecommendation }}
-    </div>
+    </div> -->
     
     <div class="skill-recommendation">
       <div class="rating-title">技能推薦順序</div>
@@ -53,12 +53,27 @@ defineProps({
   font-weight: bold;
 }
 
-/* 為了保持一致性，重用 RatingSection 的樣式 */
+/* For consistency, reuse the RatingSection style */
 .rating-title {
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: #2c3e50;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Added UI decorative lines in the style of BA */
+.rating-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background-color: #6495ED;
+  border-radius: 3px;
 }
 
 .rating-details {
