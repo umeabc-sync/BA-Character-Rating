@@ -11,6 +11,7 @@
           :name="character.name"
           :nicknames="character.nicknames"
           :school="character.school" 
+          @avatar-click="$emit('open-selector')"
         />
 
         <div class="overall-rating-section">
@@ -88,7 +89,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { computed, defineProps, defineEmits } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
@@ -97,12 +98,14 @@ import SkillsSection from './SkillsSection.vue';
 import StarRating from './StarRating.vue';
 import InfoTooltip from './InfoTooltip.vue';
 import InfoIcon from './InfoIcon.vue';
-import characterData from '../data/zh-tw.json';
 
-const character = ref(characterData);
+const props = defineProps({
+  character: { type: Object, required: true }
+});
+defineEmits(['open-selector']);
 
 const overallGrade = computed(() => {
-  const score = character.value.ratings.overall;
+  const score = props.character.ratings.overall;
   if (score > 100) return "SS";
   if (score >= 90) return "S";
   if (score >= 80) return "A";

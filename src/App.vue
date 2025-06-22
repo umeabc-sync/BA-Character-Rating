@@ -3,19 +3,42 @@
     <button @click="toggleDarkMode" class="dark-mode-toggle">
       {{ isDarkMode ? '切換至明亮模式' : '切換至暗黑模式' }}
     </button>
-    <RatingCard />
+    <RatingCard 
+      v-if="currentCharacter"
+      :character="currentCharacter" 
+      @open-selector="isSelectorVisible = true" 
+    />
+    <CharacterSelector 
+      v-if="isSelectorVisible" 
+      :characters="allCharacters" 
+      @select="handleCharacterSelect" 
+      @close="isSelectorVisible = false" 
+    />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import RatingCard from './components/RatingCard.vue';
+import CharacterSelector from './components/CharacterSelector.vue';
+import characterData from './data/zh-tw.json';
 
-const isDarkMode = ref(false); // Light mode preset
+const isDarkMode = ref(false);
+const allCharacters = ref(characterData);
+const currentCharacter = ref(allCharacters.value.length > 0 ? allCharacters.value[0] : null);
+const isSelectorVisible = ref(false);
 
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;
   document.body.classList.toggle('dark-mode', isDarkMode.value); // 將 class 應用到 body
+};
+
+const handleCharacterSelect = (characterId) => {
+  const selected = allCharacters.value.find(c => c.id === characterId);
+  if (selected) {
+    currentCharacter.value = selected;
+  }
+  isSelectorVisible.value = false;
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="character-info">
-    <div class="character-avatar">
+    <div class="character-avatar" @click="$emit('avatar-click')" title="點擊切換角色">
       <img :src="getAvatarUrl(id)" :alt="name" class="avatar-image" />
     </div>
     <div class="character-name">{{ name }}</div>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 defineProps({
   id: {
@@ -32,6 +32,8 @@ defineProps({
     required: true
   }
 });
+
+defineEmits(['avatar-click']);
 
 const getAvatarUrl = (id) => {
   return new URL(`../assets/avatar/${id}.png`, import.meta.url).href;
@@ -54,6 +56,13 @@ const getAvatarUrl = (id) => {
   border-color: #6495ed;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 174, 239, 0.7);
 }
 
 .avatar-image {
@@ -88,6 +97,10 @@ const getAvatarUrl = (id) => {
 .dark-mode .character-avatar {
   border-color: #4a90e2;
   box-shadow: 0 0 15px rgba(0, 174, 239, 0.5), 0 4px 15px rgba(0,0,0,0.2); /* Halo Glow */
+}
+
+.dark-mode .character-avatar:hover {
+  box-shadow: 0 0 25px rgba(0, 174, 239, 0.9), 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .dark-mode .character-name {
