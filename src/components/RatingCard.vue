@@ -167,13 +167,63 @@ const overallGrade = computed(() => {
   gap: 8px;
 }
 
-/* 樣式高亮，因為在 RatingSection 和 SkillsSection 中使用，所以放在這裡 */
+/* Dark Mode Overrides for RatingCard */
+.dark-mode .character-card {
+  background: #24303f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .card-header {
+  background: linear-gradient(45deg, #5a80b0, #3a6090);
+}
+
+.dark-mode .left-section {
+  background: rgba(28, 42, 58, 0.7); /* A deeper, distinct blue for the left panel */
+  border-right-color: #4a5c70;
+}
+
+.dark-mode .character-name,
+.dark-mode .character-nicknames,
+.dark-mode .school-badge,
+.dark-mode .overall-score {
+  color: #e0e6ed;
+}
+
+.dark-mode .school-badge {
+  background: #4a5c70;
+}
+
+.dark-mode .overall-grade {
+  background: linear-gradient(45deg, #5a80b0, #3a6090);
+}
+
+/* General text color for dark mode within the card */
+.dark-mode .right-section {
+  color: #e0e6ed;
+}
+
+.dark-mode .rating-row strong {
+  color: #c0c8d0; /* Slightly lighter for strong text */
+}
+
+.dark-mode p {
+  color: #c0c8d0;
+}
+
+
+
+/* Style highlighting, because it is used in RatingSection and SkillsSection, so put it here */
 .highlight {
   background: rgba(135, 206, 235, 0.3); /* Translucent light blue in BA style */
   padding: 2px 6px;
   border-radius: 3px;
   font-weight: bold;
-  color: #005A9C; /* The dark blue text increases readability */
+  color: #005a9c; /* The dark blue text increases readability */
+}
+
+.dark-mode .highlight {
+  background: rgba(90, 128, 176, 0.4);
+  color: #add8e6;
 }
 
 @media (max-width: 768px) {
@@ -184,6 +234,10 @@ const overallGrade = computed(() => {
   .left-section {
     border-right: none;
     border-bottom: 3px solid #dee2e6;
+  }
+
+  .dark-mode .left-section {
+    border-bottom-color: #4a5c70;
   }
   
   .card-header {

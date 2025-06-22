@@ -26,6 +26,10 @@ defineProps({
   margin-bottom: 20px;
 }
 
+.dark-mode .rating-section {
+  background: #2f3c4c;
+}
+
 .rating-title {
   font-weight: bold;
   font-size: 1.1rem;
@@ -33,6 +37,10 @@ defineProps({
   color: #2c3e50;
   position: relative;
   padding-left: 15px; /* Leave space for decorative moldings */
+}
+
+.dark-mode .rating-title {
+  color: #e0e6ed;
 }
 
 /* Added UI decorative lines in the style of BA */
@@ -48,9 +56,17 @@ defineProps({
   border-radius: 3px;
 }
 
+.dark-mode .rating-title::before {
+  background-color: #add8e6;
+}
+
 .rating-details {
   font-size: 0.9rem;
   line-height: 1.6;
   color: #34495e;
+}
+
+.dark-mode .rating-details {
+  color: #c0c8d0;
 }
 </style>

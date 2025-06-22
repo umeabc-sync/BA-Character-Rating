@@ -124,15 +124,26 @@ const getOpartImageUrl = (name) => {
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */
-  border-top: 4px solid; /* 將顏色改為頂部邊框 */
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 4px solid; /* Change the color of the top border */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Overrides for EvaluationGrid */
+.dark-mode .eval-item {
+  background: rgba(45, 58, 75, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #e0e6ed;
 }
 
 .eval-header {
   font-size: 0.9rem;
   margin-bottom: 5px;
-  color: #555; /* 在淺色背景上使用深色文字 */
+  color: #555;
+}
+
+.dark-mode .eval-header {
+  color: #c0c8d0;
 }
 
 .eval-value {
@@ -142,6 +153,10 @@ const getOpartImageUrl = (name) => {
   align-items: center;
   min-height: 30px; /* Give some height for images to load into */
   color: #2c3e50;
+}
+
+.dark-mode .eval-value {
+  color: #e0e6ed; /* Light text for value */
 }
 
 .eval-image {

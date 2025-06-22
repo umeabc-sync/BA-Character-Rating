@@ -93,6 +93,19 @@ defineProps({
   align-items: center;
 }
 
+/* Dark Mode Overrides for CharacterAttributes */
+.dark-mode .attribute-value {
+  background: #3A4B60;
+  border-color: #4A5C70;
+  color: #E0E6ED;
+}
+.dark-mode .attribute-label {
+  /* Adjust label colors for better harmony in dark mode */
+}
+.dark-mode .red { background: #D9667E; }
+.dark-mode .green { background: #4281CF; }
+.dark-mode .blue { background: #5A85D6; }
+
 .red { background: #ff7591; }
 .green { background: #4a90e2; }
 .blue { background: #6495ED; }
@@ -107,9 +120,13 @@ defineProps({
   .attribute-value {
     flex: none;
     width: 100%;
-    border-radius: 5px; /* 在堆疊時恢復圓角 */
+    border-radius: 5px; /* Restore rounded corners when stacking */
     border-left: 1px solid #e9ecef;
     text-align: center;
+  }
+  .dark-mode .attribute-label,
+  .dark-mode .attribute-value {
+    border-left-color: #4a5c70; /* Dark mode border */
   }
 }
 </style>

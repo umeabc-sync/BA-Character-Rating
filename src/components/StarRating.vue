@@ -30,7 +30,10 @@ defineProps({
 .star-rating { display: inline-block; font-size: 1.2rem; }
 .star { margin: 0 1px; }
 .black-star { color: #2c3e50; }
+.dark-mode .black-star {
+  color: #a4adb6;
+}
+
 .blue-star { color: #3498db; }
 .red-star { color: #e74c3c; }
 </style>
-

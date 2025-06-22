@@ -47,7 +47,7 @@ const getAvatarUrl = (id) => {
 .character-avatar {
   width: 120px;
   height: 120px;
-  background: linear-gradient(45deg, #ADD8E6, #87CEEB);
+  background: linear-gradient(45deg, #add8e6, #87ceeb);
   border-radius: 50%;
   margin: 0 auto 15px;
   border: 4px solid white;
@@ -81,6 +81,14 @@ const getAvatarUrl = (id) => {
   border-radius: 20px;
   font-size: 0.9rem;
   display: inline-block;
+}
+
+.dark-mode .character-avatar {
+  border-color: #3a4b60;
+}
+
+.dark-mode .character-name {
+  color: #e0e6ed;
 }
 
 @media (max-width: 768px) {
