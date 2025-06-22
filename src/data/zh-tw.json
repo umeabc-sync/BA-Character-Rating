@@ -32,5 +32,22 @@
     "jointFiringDrill": [4, 0, 0],
     "eventChallenge": [5, 0, 0],
     "overall": 81
-  }
+  },
+  "skillsSummary": {
+    "ex": "2Cost使1名我方振動屬攻增加92.7%（32秒專二38秒）若目標有額外費用增傷機制可減少2C(升至EX5)額外費用,如果只能追加1費，則只減少1費",
+    "ns": "消耗三層「發車信號」使我方前排振動屬攻增加29%（25秒專二29.7秒）（冷卻20秒）",
+    "ss": "隊友每使用2次EX自身獲得「發車信號」並增加30.6%攻速"
+  },
+  "ratingsSummary": {
+    "newbie": null,
+    "totalAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
+    "pvp": null,
+    "grandAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
+    "limitBreakAssault": "提法瑞斯主對策振動屬攻拐",
+    "jointFiringDrill": "振動通用輔助人權",
+    "eventChallenge": "振動通用輔助人權"
+  },
+  "uniqueWeaponRecommendedSummary": "增益時間增加，平民3星即可，凹分開專",
+  "overallRecommendation": "振動大決戰必備人權，紫甲大決戰較為頻繁，未來可能有較高使用率。振動屬攻建議拿下",
+  "skillOrder": "EX3 → 技一.二.三Lv4 → EX5 → 技一Lv7 → 技二Lv7 → 技三LV7 → 技一Lv10 → 技二Lv10 → 技三Lv10 → Max"
 }

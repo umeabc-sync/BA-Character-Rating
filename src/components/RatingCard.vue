@@ -32,33 +32,55 @@
         <EvaluationGrid :character-data="character" />
         
         <RatingSection title="星級評價">
-          <div class="rating-row"><strong>新手期：</strong> <StarRating :rating="character.ratings.newbie" /></div>
-          <div class="rating-row"><strong>總力戰：</strong> <StarRating :rating="character.ratings.totalAssault" /></div>
-          <div class="rating-row"><strong>戰術對抗戰：</strong> <StarRating :rating="character.ratings.pvp" /></div>
-          <div class="rating-row"><strong>大決戰：</strong> <StarRating :rating="character.ratings.grandAssault" /></div>
-          <div class="rating-row"><strong>制約解除作戰：</strong> <StarRating :rating="character.ratings.limitBreakAssault" /></div>
-          <div class="rating-row"><strong>演習考試：</strong> <StarRating :rating="character.ratings.jointFiringDrill" /></div>
-          <div class="rating-row"><strong>活動高難：</strong> <StarRating :rating="character.ratings.eventChallenge" /></div>
+          <div class="rating-row">
+            <strong>新手期：</strong>
+            <StarRating :rating="character.ratings.newbie" />
+            <InfoTooltip v-if="character.ratingsSummary.newbie" :text="character.ratingsSummary.newbie"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>總力戰：</strong>
+            <StarRating :rating="character.ratings.totalAssault" />
+            <InfoTooltip v-if="character.ratingsSummary.totalAssault" :text="character.ratingsSummary.totalAssault"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>戰術對抗戰：</strong>
+            <StarRating :rating="character.ratings.pvp" />
+            <InfoTooltip v-if="character.ratingsSummary.pvp" :text="character.ratingsSummary.pvp"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>大決戰：</strong>
+            <StarRating :rating="character.ratings.grandAssault" />
+            <InfoTooltip v-if="character.ratingsSummary.grandAssault" :text="character.ratingsSummary.grandAssault"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>制約解除作戰：</strong>
+            <StarRating :rating="character.ratings.limitBreakAssault" />
+            <InfoTooltip v-if="character.ratingsSummary.limitBreakAssault" :text="character.ratingsSummary.limitBreakAssault"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>演習考試：</strong>
+            <StarRating :rating="character.ratings.jointFiringDrill" />
+            <InfoTooltip v-if="character.ratingsSummary.jointFiringDrill" :text="character.ratingsSummary.jointFiringDrill"><InfoIcon /></InfoTooltip>
+          </div>
+          <div class="rating-row">
+            <strong>活動高難：</strong>
+            <StarRating :rating="character.ratings.eventChallenge" />
+            <InfoTooltip v-if="character.ratingsSummary.eventChallenge" :text="character.ratingsSummary.eventChallenge"><InfoIcon /></InfoTooltip>
+          </div>
         </RatingSection>
 
-        <RatingSection :title="`技能簡述`">
-          <p style="margin-top: 10px;">
-            <span class="highlight">EX技能：</span>Cost使1名我方振動屬攻增加92.7%(32秒專二38秒)若目標有額外費用
-          </p>
-          <p style="margin-top: 8px;">
-            增傷機制可減少2C(升至EX5)額外費用。如果只能追加1費，則只減少1費。
-          </p>
-          <p style="margin-top: 8px;">
-            <span class="highlight">NS技能：</span>消耗三層「發車信號」使我方前排振動屬攻增加129%(25秒專二29.7秒)
-          </p>
-          <p style="margin-top: 8px;">
-            (冷卻120秒) <span class="highlight">SS技能：</span>每次使用2次EX自身獲得「發車信號」並增加30.6%攻速
-          </p>
+        <RatingSection title="技能簡述">
+          <div v-if="character.skillsSummary" class="skills-summary">
+            <p><span class="highlight">EX技能</span>{{ character.skillsSummary.ex }}</p>
+            <p><span class="highlight">NS技能</span>{{ character.skillsSummary.ns }}</p>
+            <p><span class="highlight">SS技能</span>{{ character.skillsSummary.ss }}</p>
+          </div>
         </RatingSection>
         
         <SkillsSection 
-          :overall-recommendation="skills.overallRecommendation" 
-          :skill-order="skills.skillOrder" 
+          :overall-recommendation="character.overallRecommendation"
+          :unique-weapon-recommended-summary="character.uniqueWeaponRecommendedSummary"
+          :skill-order="character.skillOrder"
         />
       </div>
     </div>
@@ -73,18 +95,11 @@ import EvaluationGrid from './EvaluationGrid.vue';
 import RatingSection from './RatingSection.vue';
 import SkillsSection from './SkillsSection.vue';
 import StarRating from './StarRating.vue';
+import InfoTooltip from './InfoTooltip.vue';
+import InfoIcon from './InfoIcon.vue';
 import characterData from '../data/zh-tw.json';
 
 const character = ref(characterData);
-
-// 這部分暫時保留為硬編碼
-const skills = ref({
-  overallRecommendation: "振動大決戰必備人權，紫甲大決戰較力頻繁，未來可能有較高使用率。振動屬攻建議拿下",
-  skillOrder: `
-      <span class="highlight">EX3</span> → 技一二三Lv4 → <span class="highlight">EX5</span> → 技一Lv7 → 技二Lv7 → 技三Lv7<br>
-      → 技一Lv10 → 技二Lv10 → 技三Lv10 → <span class="highlight">Max</span>
-    `
-});
 
 const overallGrade = computed(() => {
   const score = character.value.ratings.overall;
@@ -117,6 +132,10 @@ const overallGrade = computed(() => {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .card-content {
@@ -165,6 +184,14 @@ const overallGrade = computed(() => {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.skills-summary p {
+  margin-bottom: 8px;
+}
+
+.skills-summary p:last-child {
+  margin-bottom: 0;
 }
 
 /* Dark Mode Overrides for RatingCard */
@@ -217,6 +244,7 @@ const overallGrade = computed(() => {
 /* Style highlighting, because it is used in RatingSection and SkillsSection, so put it here */
 .highlight {
   background: rgba(135, 206, 235, 0.3); /* Translucent light blue in BA style */
+  margin-right: 0.25em;
   padding: 2px 6px;
   border-radius: 3px;
   font-weight: bold;

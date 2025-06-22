@@ -1,13 +1,21 @@
 <template>
   <div class="skills-section">
-    <!-- <div class="rating-title">綜合泛用推薦</div>
-    <div class="rating-details">
-      {{ overallRecommendation }}
-    </div> -->
+    <div class="recommendation-card">
+      <div class="rating-title">綜合泛用推薦</div>
+      <div class="recommendation-details">
+        {{ overallRecommendation }}
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="rating-title">專武推薦度說明</div>
+      <div class="recommendation-details">
+        {{ uniqueWeaponRecommendedSummary }}
+      </div>
+    </div>
     
-    <div class="skill-recommendation">
+    <div class="recommendation-card">
       <div class="rating-title">技能推薦順序</div>
-      <!-- 使用 v-html 渲染包含 HTML 標籤的字串 -->
       <div class="skill-order" v-html="skillOrder"></div>
     </div>
   </div>
@@ -21,6 +29,10 @@ defineProps({
     type: String,
     required: true
   },
+  uniqueWeaponRecommendedSummary: {
+    type: String,
+    required: true
+  },
   skillOrder: {
     type: String,
     required: true // 這個 prop 將包含 HTML，所以需要使用 v-html
@@ -30,22 +42,26 @@ defineProps({
 
 <style scoped>
 .skills-section {
-  margin-top: 20px;
+  /* Parent container controls spacing */
 }
 
-.skill-recommendation {
+.recommendation-card {
   background: #ecf0f1;
   padding: 15px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.recommendation-card:first-child {
+  margin-top: 0;
 }
 
 /* Dark Mode Overrides for SkillsSection */
-.dark-mode .skill-recommendation {
+.dark-mode .recommendation-card {
   background: #1f3048; /* Match RatingSection */
 }
 
-.dark-mode .skill-order {
+.dark-mode .skill-order, .dark-mode .recommendation-details {
   color: #c0c8d0;
 }
 
@@ -54,6 +70,12 @@ defineProps({
   font-size: 0.9rem;
   line-height: 1.8;
   color: #2c3e50;
+}
+
+.recommendation-details {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #34495e;
 }
 
 /* For consistency, reuse the RatingSection style */
@@ -87,9 +109,13 @@ defineProps({
   background-color: #00aeef;
 }
 
-.rating-details {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #34495e;
+.separator {
+  height: 1px;
+  background-color: #dee2e6;
+  margin: 15px 0;
+}
+
+.dark-mode .separator {
+  background-color: #2a4a6e;
 }
 </style>
