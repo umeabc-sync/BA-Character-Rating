@@ -1,8 +1,7 @@
 <template>
   <div class="character-info">
     <div class="character-avatar">
-      <!-- 假設 '光' 是頭像的佔位符或首字 -->
-      光
+      <img :src="getAvatarUrl(id)" :alt="name" class="avatar-image" />
     </div>
     <div class="character-name">{{ name }}</div>
     <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">
@@ -16,6 +15,10 @@
 import { defineProps } from 'vue';
 
 defineProps({
+  id: {
+    type: Number,
+    required: true
+  },
   name: {
     type: String,
     required: true
@@ -29,6 +32,10 @@ defineProps({
     required: true
   }
 });
+
+const getAvatarUrl = (id) => {
+  return new URL(`../assets/avatar/${id}.png`, import.meta.url).href;
+};
 </script>
 
 <style scoped>
@@ -43,13 +50,15 @@ defineProps({
   background: linear-gradient(45deg, #667eea, #764ba2);
   border-radius: 50%;
   margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
   border: 4px solid white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .character-name {

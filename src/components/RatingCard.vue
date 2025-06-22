@@ -7,6 +7,7 @@
     <div class="card-content">
       <div class="left-section">
         <CharacterInfo 
+          :id="character.id"
           :name="character.name"
           :nicknames="character.nicknames"
           :school="character.school" 
@@ -40,7 +41,7 @@
           <div class="rating-row"><strong>活動高難：</strong> <StarRating :rating="character.ratings.eventChallenge" /></div>
         </RatingSection>
 
-        <RatingSection :title="`技能簡述 (角評 ${character.ratingVersion})`">
+        <RatingSection :title="`技能簡述`">
           <p style="margin-top: 10px;">
             <span class="highlight">EX技能：</span>Cost使1名我方振動屬攻增加92.7%(32秒專二38秒)若目標有額外費用
           </p>
