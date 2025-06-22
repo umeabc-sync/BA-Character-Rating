@@ -112,7 +112,7 @@ const overallGrade = computed(() => {
 }
 
 .card-header {
-  background: linear-gradient(45deg, #4a90e2, #357abd);
+  background: linear-gradient(45deg, #87CEEB, #6495ED);
   color: white;
   padding: 15px;
   text-align: center;

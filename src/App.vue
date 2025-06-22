@@ -16,7 +16,7 @@ import RatingCard from './components/RatingCard.vue';
 
 body {
   font-family: 'Microsoft YaHei', Arial, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #E0FFFF 0%, #ADD8E6 100%);
   min-height: 100vh;
   padding: 10px;
 }

@@ -47,7 +47,7 @@ const getAvatarUrl = (id) => {
 .character-avatar {
   width: 120px;
   height: 120px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #ADD8E6, #87CEEB);
   border-radius: 50%;
   margin: 0 auto 15px;
   border: 4px solid white;
