@@ -7,6 +7,24 @@
       </div>
       <div class="modal-body">
         <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
+        
+        <div class="filter-controls">
+          <div class="filter-group">
+            <span class="filter-label">攻擊屬性:</span>
+            <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
+            <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type }">
+              {{ type }}
+            </button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">學　　園:</span>
+            <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
+            <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school }">
+              {{ school }}
+            </button>
+          </div>
+        </div>
+
         <div class="character-grid">
           <div 
             v-for="char in filteredCharacters" 
@@ -39,16 +57,44 @@ const props = defineProps({
 const emit = defineEmits(['select', 'close']);
 
 const searchTerm = ref('');
+const selectedAttackType = ref(null);
+const selectedSchool = ref(null);
+
+const attackTypes = computed(() => {
+  return [...new Set(props.characters.map(c => c.attackType))].sort();
+});
+
+const schools = computed(() => {
+  return [...new Set(props.characters.map(c => c.school))].sort();
+});
+
+const selectFilter = (filterType, value) => {
+  if (filterType === 'attackType') {
+    selectedAttackType.value = value;
+  } else if (filterType === 'school') {
+    selectedSchool.value = value;
+  }
+};
 
 const filteredCharacters = computed(() => {
-  if (!searchTerm.value) {
-    return props.characters;
+  let characters = props.characters;
+
+  if (selectedAttackType.value) {
+    characters = characters.filter(char => char.attackType === selectedAttackType.value);
   }
-  const lowerCaseSearch = searchTerm.value.toLowerCase();
-  return props.characters.filter(char => 
-    char.name.toLowerCase().includes(lowerCaseSearch) ||
-    (char.nicknames && char.nicknames.some(nick => nick.toLowerCase().includes(lowerCaseSearch)))
-  );
+
+  if (selectedSchool.value) {
+    characters = characters.filter(char => char.school === selectedSchool.value);
+  }
+
+  if (searchTerm.value) {
+    const lowerCaseSearch = searchTerm.value.toLowerCase();
+    characters = characters.filter(char => 
+      char.name.toLowerCase().includes(lowerCaseSearch) ||
+      (char.nicknames && char.nicknames.some(nick => nick.toLowerCase().includes(lowerCaseSearch)))
+    );
+  }
+  return characters;
 });
 
 const getAvatarUrl = (id) => {
@@ -131,13 +177,60 @@ const selectCharacter = (id) => {
   padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-bottom: 20px;
   font-size: 1rem;
 }
 .dark-mode .search-input {
   background-color: #1f3048;
   border-color: #2a4a6e;
   color: #e0e6ed;
+}
+
+.filter-controls {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.dark-mode .filter-controls {
+  border-bottom-color: #2a4a6e;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-label {
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dark-mode .filter-label {
+  color: #c0c8d0;
+}
+
+.filter-group button {
+  padding: 5px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.dark-mode .filter-group button { background-color: #1f3048; border-color: #2a4a6e; color: #e0e6ed; }
+.filter-group button:hover { background-color: #e9ecef; border-color: #6495ed; }
+.dark-mode .filter-group button:hover { background-color: #2a4a6e; border-color: #00aeef; }
+.filter-group button.active { background-color: #6495ed; color: white; border-color: #6495ed; font-weight: bold; }
+.dark-mode .filter-group button.active { background-color: #00aeef; border-color: #00aeef;
 }
 
 .character-grid {
@@ -171,4 +264,3 @@ const selectCharacter = (id) => {
 
 .no-results { text-align: center; padding: 20px; color: #7f8c8d; }
 </style>
-
