@@ -1,0 +1,35 @@
+{
+  "name": "橘 光",
+  "nicknames": ["光"],
+  "school": "高地人",
+  "attackType": "振動屬",
+  "defenseType": "輕裝甲",
+  "weapon": "HG手槍",
+  "position": "前排(輔助坦)",
+  "uniqueWeaponRecommended": "看情況開",
+  "acquisitionMethod": "限定池",
+  "skillMainOparts": "",
+  "skillSubOparts": "",
+  "l2dUnlock": 6,
+  "city": "D",
+  "outdoor": "B",
+  "indoor": "S",
+  "equipments": [
+    "Gloves",
+    "Hairpin",
+    "Amulet"
+  ],
+  "uniqueWeaponStar2": "增益持續增加",
+  "uniqueWeaponStar3": ["indoor", "SS"],
+  "ratingVersion": "7.0",
+  "ratings": {
+    "newbie": null,
+    "totalAssault": [4, 0, 0],
+    "pvp": null,
+    "grandAssault": [5, 0, 1],
+    "limitBreakAssault": [5, 0, 1],
+    "jointFiringDrill": [4, 0, 0],
+    "eventChallenge": [5, 0, 0],
+    "overall": 81
+  }
+}
