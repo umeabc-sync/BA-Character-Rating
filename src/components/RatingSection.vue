@@ -27,7 +27,7 @@ defineProps({
 }
 
 .dark-mode .rating-section {
-  background: #2f3c4c;
+  background: #1f3048;
 }
 
 .rating-title {
@@ -57,7 +57,7 @@ defineProps({
 }
 
 .dark-mode .rating-title::before {
-  background-color: #add8e6;
+  background-color: #00aeef;
 }
 
 .rating-details {

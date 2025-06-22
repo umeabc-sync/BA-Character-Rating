@@ -26,11 +26,11 @@
       </div>
     </div>
 
-    <div class="eval-item orange">
+    <div class="eval-item peach">
       <div class="eval-header">專武2</div>
       <div class="eval-value">{{ characterData.uniqueWeaponStar2 }}</div>
     </div>
-    <div class="eval-item orange">
+    <div class="eval-item peach">
       <div class="eval-header">專武3</div>
       <div class="eval-value" v-if="Array.isArray(characterData.uniqueWeaponStar3)">
         {{ terrainMap[characterData.uniqueWeaponStar3[0]] || characterData.uniqueWeaponStar3[0] }} → 
@@ -126,13 +126,12 @@ const getOpartImageUrl = (name) => {
   font-weight: bold;
   background: rgba(255, 255, 255, 0.7);
   border-top: 4px solid; /* Change the color of the top border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark Mode Overrides for EvaluationGrid */
 .dark-mode .eval-item {
-  background: rgba(45, 58, 75, 0.7);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: #1f3048;
   color: #e0e6ed;
 }
 
@@ -169,14 +168,14 @@ const getOpartImageUrl = (name) => {
   vertical-align: middle;
 }
 
-.yellow { border-color: #f1c40f; }
-.green { border-color: #27ae60; }
-.blue { border-color: #3498db; }
+.yellow { border-color: #ffd166; }
+.green { border-color: #06d6a0; }
+.blue { border-color: #118ab2; }
 .gray { border-color: #95a5a6; }
 .purple { border-color: #8e44ad; }
-.orange { border-color: #e67e22; }
-.pink { border-color: #ff7591; }
-.darkgray { border-color: #2c3e50; }
+.peach { border-color: #ef476f; }
+.pink { border-color: #ff89a1; }
+.darkgray { border-color: #6e7d8d; }
 
 @media (max-width: 768px) {
   .evaluation-grid {

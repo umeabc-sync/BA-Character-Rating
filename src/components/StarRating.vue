@@ -31,7 +31,7 @@ defineProps({
 .star { margin: 0 1px; }
 .black-star { color: #2c3e50; }
 .dark-mode .black-star {
-  color: #a4adb6;
+  color: #b0c4de; /* LightSteelBlue, for better contrast */
 }
 
 .blue-star { color: #3498db; }

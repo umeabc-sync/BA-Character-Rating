@@ -50,7 +50,8 @@ const getAvatarUrl = (id) => {
   background: linear-gradient(45deg, #add8e6, #87ceeb);
   border-radius: 50%;
   margin: 0 auto 15px;
-  border: 4px solid white;
+  border: 4px solid;
+  border-color: #6495ed;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
 }
@@ -75,16 +76,18 @@ const getAvatarUrl = (id) => {
 }
 
 .school-badge {
-  background: #34495e;
+  background: linear-gradient(45deg, #4a6a8a, #34495e);
   color: white;
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
   display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .dark-mode .character-avatar {
-  border-color: #3a4b60;
+  border-color: #4a90e2;
+  box-shadow: 0 0 15px rgba(0, 174, 239, 0.5), 0 4px 15px rgba(0,0,0,0.2); /* Halo Glow */
 }
 
 .dark-mode .character-name {

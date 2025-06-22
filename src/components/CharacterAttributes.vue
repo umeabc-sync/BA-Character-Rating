@@ -95,20 +95,20 @@ defineProps({
 
 /* Dark Mode Overrides for CharacterAttributes */
 .dark-mode .attribute-value {
-  background: #3A4B60;
-  border-color: #4A5C70;
-  color: #E0E6ED;
+  background: #1a2b40;
+  border-color: #2a4a6e;
+  color: #e0e6ed;
 }
 .dark-mode .attribute-label {
   /* Adjust label colors for better harmony in dark mode */
 }
-.dark-mode .red { background: #D9667E; }
-.dark-mode .green { background: #4281CF; }
-.dark-mode .blue { background: #5A85D6; }
+.dark-mode .red { background: linear-gradient(45deg, #ff5c8a, #ff8c9d); }
+.dark-mode .green { background: linear-gradient(45deg, #00c8b3, #00e0c8); }
+.dark-mode .blue { background: linear-gradient(45deg, #2a7fff, #00aeef); }
 
-.red { background: #ff7591; }
-.green { background: #4a90e2; }
-.blue { background: #6495ED; }
+.red { background: linear-gradient(45deg, #ff8a9f, #ff7591); }
+.green { background: linear-gradient(45deg, #50e3c2, #06d6a0); }
+.blue { background: linear-gradient(45deg, #87ceeb, #6495ed); }
 
 @media (max-width: 480px) {
   .attribute-row {
@@ -126,7 +126,7 @@ defineProps({
   }
   .dark-mode .attribute-label,
   .dark-mode .attribute-value {
-    border-left-color: #4a5c70; /* Dark mode border */
+    border-left-color: #2a4a6e;
   }
 }
 </style>

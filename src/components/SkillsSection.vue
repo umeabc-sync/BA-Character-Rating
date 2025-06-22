@@ -42,7 +42,7 @@ defineProps({
 
 /* Dark Mode Overrides for SkillsSection */
 .dark-mode .skill-recommendation {
-  background: #2f3c4c;
+  background: #1f3048; /* Match RatingSection */
 }
 
 .dark-mode .skill-order {
@@ -54,18 +54,6 @@ defineProps({
   font-size: 0.9rem;
   line-height: 1.8;
   color: #2c3e50;
-}
-
-.highlight {
-  background: #fff3cd;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-.dark-mode .highlight {
-  background: rgba(90, 128, 176, 0.4);
-  color: #add8e6;
 }
 
 /* For consistency, reuse the RatingSection style */
@@ -96,7 +84,7 @@ defineProps({
 }
 
 .dark-mode .rating-title::before {
-  background-color: #add8e6;
+  background-color: #00aeef;
 }
 
 .rating-details {
