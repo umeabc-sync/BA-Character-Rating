@@ -40,8 +40,8 @@
 <script setup>
 import { defineProps } from 'vue';
 import { useI18n } from '../composables/useI18n.js';
-import attackIcon from '../assets/icon/Type_Attack_s.png';
-import defenseIcon from '../assets/icon/Type_Defense_s.png';
+import attackIcon from '../assets/icon/Type_Attack_s.webp';
+import defenseIcon from '../assets/icon/Type_Defense_s.webp';
 
 const { t } = useI18n();
 

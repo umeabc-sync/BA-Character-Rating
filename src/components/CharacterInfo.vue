@@ -42,12 +42,12 @@ defineProps({
 defineEmits(['avatar-click']);
 
 const getAvatarUrl = (id) => {
-  return new URL(`../assets/avatar/${id}.png`, import.meta.url).href;
+  return new URL(`../assets/avatar/${id}.webp`, import.meta.url).href;
 };
 
 const getSchoolIconUrl = (school) => {
   if (!school) return '';
-  return new URL(`../assets/icon/school/${school}.png`, import.meta.url).href;
+  return new URL(`../assets/icon/school/${school}.webp`, import.meta.url).href;
 };
 </script>
 

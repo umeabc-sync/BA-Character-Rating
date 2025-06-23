@@ -100,7 +100,7 @@ const filteredCharacters = computed(() => {
 });
 
 const getAvatarUrl = (id) => {
-  return new URL(`../assets/avatar/${id}.png`, import.meta.url).href;
+  return new URL(`../assets/avatar/${id}.webp`, import.meta.url).href;
 };
 
 const selectCharacter = (id) => {

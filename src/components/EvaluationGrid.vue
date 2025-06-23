@@ -95,7 +95,7 @@ const adaptRankMap = {
 const getAdaptImageUrl = (rank) => {
   const rankNumber = adaptRankMap[rank];
   if (rankNumber !== undefined) {
-    return new URL(`../assets/adaptresult/Adaptresult${rankNumber}.png`, import.meta.url).href;
+    return new URL(`../assets/adaptresult/Adaptresult${rankNumber}.webp`, import.meta.url).href;
   }
   return ''; // Return empty string or a placeholder if rank is not found
 };
