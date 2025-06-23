@@ -4,7 +4,7 @@
       <div class="attribute-label green">攻擊屬性</div>
       <div class="attribute-value">
         <div class="type-icon-wrapper" :class="`type-bg-${attackType.toLowerCase()}`">
-          <img :src="attackIcon" alt="Attack Icon" class="type-icon">
+          <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon">
         </div>
         <span>{{ t(`attackType.${attackType}`) }}</span>
       </div>
@@ -13,7 +13,7 @@
       <div class="attribute-label green">裝甲屬性</div>
       <div class="attribute-value">
         <div class="type-icon-wrapper" :class="`type-bg-${defenseType.toLowerCase()}`">
-          <img :src="defenseIcon" alt="Defense Icon" class="type-icon">
+          <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon">
         </div>
         <span>{{ t(`defenseType.${defenseType}`) }}</span>
       </div>
@@ -38,10 +38,8 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
-import { useI18n } from '../composables/useI18n.js';
-import attackIcon from '../assets/icon/Type_Attack_s.webp';
-import defenseIcon from '../assets/icon/Type_Defense_s.webp';
+import { useI18n } from '@/composables/useI18n.js';
+import { getAssetsFile } from '@/utils/getAssetsFile';
 
 const { t } = useI18n();
 

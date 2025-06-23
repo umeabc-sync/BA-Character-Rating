@@ -69,6 +69,8 @@
 
 <script setup>
 import { getAssetsFile } from '@/utils/getAssetsFile';
+import { getAdaptImageUrl } from '@/utils/getAdaptImageUrl';
+import { getEquipmentImageUrl } from '@/utils/getEquipmentImageUrl';
 
 const props = defineProps({
   characterData: {
@@ -81,27 +83,6 @@ const terrainMap = {
   'indoor': '室內',
   'outdoor': '野外',
   'city': '市街'
-};
-
-const adaptRankMap = {
-  'SS': 5,
-  'S': 4,
-  'A': 3,
-  'B': 2,
-  'C': 1,
-  'D': 0
-};
-
-const getAdaptImageUrl = (rank) => {
-  const rankNumber = adaptRankMap[rank];
-  if (rankNumber !== undefined) {
-    return getAssetsFile(`adaptresult/Adaptresult${rankNumber}.png`);
-  }
-  return ''; // Return empty string or a placeholder if rank is not found
-};
-
-const getEquipmentImageUrl = (name) => {
-  return getAssetsFile(`equiment/${name}.webp`);
 };
 
 const getOpartImageUrl = (name) => {

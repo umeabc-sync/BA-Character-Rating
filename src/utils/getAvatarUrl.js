@@ -1,5 +1,6 @@
 import { getAssetsFile } from "./getAssetsFile";
 
 export function getAvatarUrl(id) {
-  return getAssetsFile(`avatar/${id}.png`);
+  if (!id) return '';
+  return getAssetsFile(`avatar/${id}.webp`);
 }
