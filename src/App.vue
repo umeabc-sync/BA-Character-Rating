@@ -25,6 +25,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { fetchData } from '@/utils/fetchData';
+import { getAssetsFile } from '@/utils/getAssetsFile';
+import { loadFontCSS } from '@/utils/loadFontCSS'
 import RatingCard from '@/components/RatingCard.vue';
 import CharacterSelector from '@/components/CharacterSelector.vue';
 
@@ -59,6 +61,18 @@ onMounted(async () => {
   } catch (error) {
     console.error('載入數據失敗:', error);
     alert('載入數據失敗:', error);
+  }
+
+  try {
+    const fonts = [
+      'fonts/NEXONFootballGothic/result.css',
+    ]
+
+    await Promise.all(
+      fonts.map(path => loadFontCSS(getAssetsFile(path)))
+    )
+  } catch (err) {
+    console.error('字體載入失敗:', err)
   }
 });
 </script>
