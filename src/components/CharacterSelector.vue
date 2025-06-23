@@ -8,13 +8,16 @@
             <button class="close-button" @click="closeModal">&times;</button>
           </div>
           <div class="modal-body">
-            <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
+            <div class="search-and-reset">
+              <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
+              <button @click="resetFilters" class="reset-button">重設篩選</button>
+            </div>
             
             <div class="filter-controls">
               <div class="filter-group">
                 <span class="filter-label">攻擊屬性:</span>
-                <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
-                <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type, 'has-icon': true }">
+                <button @click="selectFilter('attackType', null)" :class="{ active: selectedAttackType.length === 0 }">全部</button>
+                <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType.includes(type), 'has-icon': true }">
                   <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
                     <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon">
                   </div>
@@ -23,8 +26,8 @@
               </div>
               <div class="filter-group">
                 <span class="filter-label">裝甲屬性:</span>
-                <button @click="selectFilter('defenseType', null)" :class="{ active: !selectedDefenseType }">全部</button>
-                <button v-for="type in defenseTypes" :key="type" @click="selectFilter('defenseType', type)" :class="{ active: selectedDefenseType === type, 'has-icon': true }">
+                <button @click="selectFilter('defenseType', null)" :class="{ active: selectedDefenseType.length === 0 }">全部</button>
+                <button v-for="type in defenseTypes" :key="type" @click="selectFilter('defenseType', type)" :class="{ active: selectedDefenseType.includes(type), 'has-icon': true }">
                   <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
                     <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon">
                   </div>
@@ -33,31 +36,28 @@
               </div>
               <div class="filter-group">
                 <span class="filter-label">學　　園:</span>
-                <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
-                <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school, 'has-icon': true }">
+                <button @click="selectFilter('school', null)" :class="{ active: selectedSchool.length === 0 }">全部</button>
+                <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool.includes(school), 'has-icon': true }">
                   <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
                   <span>{{ t(`schoolAbbr.${school}`) }}</span>
                 </button>
               </div>
               <div class="filter-group">
                 <span class="filter-label">使用武器:</span>
-                <button @click="selectFilter('weapon', null)" :class="{ active: !selectedWeapon }">全部</button>
-                <button v-for="type in weaponTypes" :key="type" @click="selectFilter('weapon', type)" :class="{ active: selectedWeapon === type }">
+                <button @click="selectFilter('weapon', null)" :class="{ active: selectedWeapon.length === 0 }">全部</button>
+                <button v-for="type in weaponTypes" :key="type" @click="selectFilter('weapon', type)" :class="{ active: selectedWeapon.includes(type) }">
                   <span class="nexon-font">{{ type }}</span>
                 </button>
               </div>
               <div class="filter-group">
                 <span class="filter-label">角色定位:</span>
-                <button @click="selectFilter('position', null)" :class="{ active: !selectedPosition }">全部</button>
-                <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition === type.value }">
+                <button @click="selectFilter('position', null)" :class="{ active: selectedPosition.length === 0 }">全部</button>
+                <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition.includes(type.value) }">
                   <span class="nexon-font">
                     <span v-if="type.value === 0" style="color: #cc1a25;">STRIKER</span>
                     <span v-else-if="type.value === 1" style="color: #006bff;">SPECIAL</span>
                   </span>
                 </button>
-              </div>
-              <div class="filter-group">
-                <button @click="resetFilters" class="reset-button">重設全部篩選</button>
               </div>
             </div>
 
@@ -101,11 +101,11 @@ const props = defineProps({
 const emit = defineEmits(['select', 'close']);
 
 const searchTerm = ref('');
-const selectedAttackType = ref(null);
-const selectedDefenseType = ref(null);
-const selectedSchool = ref(null);
-const selectedWeapon = ref(null);
-const selectedPosition = ref(null);
+const selectedAttackType = ref([]);
+const selectedDefenseType = ref([]);
+const selectedSchool = ref([]);
+const selectedWeapon = ref([]);
+const selectedPosition = ref([]);
 
 const attackTypes = computed(() => {
   return [...new Set(props.characters.map(c => c.attackType))].sort();
@@ -129,11 +129,11 @@ const positionTypes = [
 ];
 
 const resetFilters = () => {
-  selectedAttackType.value = null;
-  selectedDefenseType.value = null;
-  selectedSchool.value = null;
-  selectedWeapon.value = null;
-  selectedPosition.value = null;
+  selectedAttackType.value = [];
+  selectedDefenseType.value = [];
+  selectedSchool.value = [];
+  selectedWeapon.value = [];
+  selectedPosition.value = [];
   searchTerm.value = '';
 };
 
@@ -142,16 +142,28 @@ const closeModal = () => {
 };
 
 const selectFilter = (filterType, value) => {
-  if (filterType === 'attackType') {
-    selectedAttackType.value = value;
-  } else if (filterType === 'school') {
-    selectedSchool.value = value;
-  } else if (filterType === 'defenseType') {
-    selectedDefenseType.value = value;
-  } else if (filterType === 'weapon') {
-    selectedWeapon.value = value;
-  } else if (filterType === 'position') {
-    selectedPosition.value = value;
+  let targetRef;
+  switch (filterType) {
+    case 'attackType':  targetRef = selectedAttackType; break;
+    case 'defenseType': targetRef = selectedDefenseType; break;
+    case 'school':      targetRef = selectedSchool; break;
+    case 'weapon':      targetRef = selectedWeapon; break;
+    case 'position':    targetRef = selectedPosition; break;
+    default: return;
+  }
+
+  if (value === null) {
+    // "All" button clicked, clear the array
+    targetRef.value = [];
+  } else {
+    const index = targetRef.value.indexOf(value);
+    if (index > -1) {
+      // Item is already selected, remove it
+      targetRef.value.splice(index, 1);
+    } else {
+      // Item is not selected, add it
+      targetRef.value.push(value);
+    }
   }
 };
 
@@ -162,24 +174,24 @@ const selectCharacter = (id) => {
 const filteredCharacters = computed(() => {
   let characters = props.characters;
 
-  if (selectedAttackType.value) {
-    characters = characters.filter(char => char.attackType === selectedAttackType.value);
+  if (selectedAttackType.value.length > 0) {
+    characters = characters.filter(char => selectedAttackType.value.includes(char.attackType));
   }
 
-  if (selectedDefenseType.value) {
-    characters = characters.filter(char => char.defenseType === selectedDefenseType.value);
+  if (selectedDefenseType.value.length > 0) {
+    characters = characters.filter(char => selectedDefenseType.value.includes(char.defenseType));
   }
 
-  if (selectedSchool.value) {
-    characters = characters.filter(char => char.school === selectedSchool.value);
+  if (selectedSchool.value.length > 0) {
+    characters = characters.filter(char => selectedSchool.value.includes(char.school));
   }
 
-  if (selectedWeapon.value) {
-    characters = characters.filter(char => char.weapon === selectedWeapon.value);
+  if (selectedWeapon.value.length > 0) {
+    characters = characters.filter(char => selectedWeapon.value.includes(char.weapon));
   }
 
-  if (selectedPosition.value !== null) {
-    characters = characters.filter(char => char.position[0] === selectedPosition.value);
+  if (selectedPosition.value.length > 0) {
+    characters = characters.filter(char => selectedPosition.value.includes(char.position[0]));
   }
 
   if (searchTerm.value) {
@@ -271,12 +283,23 @@ const filteredCharacters = computed(() => {
   overflow-y: auto;
 }
 
+.search-and-reset {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
 .search-input {
-  width: 100%;
+  flex-grow: 1; /* Take up available space */
   padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+}
+
+.search-input {
+  width: 100%;
 }
 .dark-mode .search-input {
   background-color: #1f3048;
@@ -312,6 +335,16 @@ const filteredCharacters = computed(() => {
 }
 
 .reset-button {
+  /* Inherit some styles from filter buttons for consistency */
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  
+  /* Specific reset button colors */
   background-color: #e74c3c !important;
   color: white !important;
 }
@@ -365,6 +398,11 @@ const filteredCharacters = computed(() => {
   object-fit: contain;
 }
 
+/* Apply filter when dark-mode is NOT active on body */
+body:not(.dark-mode) .school-icon {
+  filter: invert(1);
+}
+
 .type-bg-explosive, .type-bg-light {
   background: #a70c19;
 }
@@ -381,6 +419,7 @@ const filteredCharacters = computed(() => {
 .nexon-font {
   font-family: 'NEXON Football Gothic', sans-serif;
   font-style: italic;
+  font-weight: 300;
   margin-right: 4px;
 }
 
