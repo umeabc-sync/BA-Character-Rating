@@ -62,40 +62,12 @@
         <EvaluationGrid :character-data="character" />
         
         <RatingSection title="星級評價">
-          <div class="rating-row">
-            <strong>新手期：</strong>
-            <StarRating :rating="character.ratings.newbie" />
-            <InfoTooltip v-if="character.ratingsSummary.newbie" :text="character.ratingsSummary.newbie"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>總力戰：</strong>
-            <StarRating :rating="character.ratings.totalAssault" />
-            <InfoTooltip v-if="character.ratingsSummary.totalAssault" :text="character.ratingsSummary.totalAssault"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>戰術對抗戰：</strong>
-            <StarRating :rating="character.ratings.pvp" />
-            <InfoTooltip v-if="character.ratingsSummary.pvp" :text="character.ratingsSummary.pvp"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>大決戰：</strong>
-            <StarRating :rating="character.ratings.grandAssault" />
-            <InfoTooltip v-if="character.ratingsSummary.grandAssault" :text="character.ratingsSummary.grandAssault"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>制約解除作戰：</strong>
-            <StarRating :rating="character.ratings.limitBreakAssault" />
-            <InfoTooltip v-if="character.ratingsSummary.limitBreakAssault" :text="character.ratingsSummary.limitBreakAssault"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>演習考試：</strong>
-            <StarRating :rating="character.ratings.jointFiringDrill" />
-            <InfoTooltip v-if="character.ratingsSummary.jointFiringDrill" :text="character.ratingsSummary.jointFiringDrill"><InfoIcon /></InfoTooltip>
-          </div>
-          <div class="rating-row">
-            <strong>活動高難：</strong>
-            <StarRating :rating="character.ratings.eventChallenge" />
-            <InfoTooltip v-if="character.ratingsSummary.eventChallenge" :text="character.ratingsSummary.eventChallenge"><InfoIcon /></InfoTooltip>
+          <div v-for="category in ratingCategories" :key="category.key" class="rating-row">
+            <strong>{{ category.label }}</strong>
+            <StarRating :rating="character.ratings[category.key]" />
+            <InfoTooltip v-if="character.ratingsSummary[category.key]" :text="character.ratingsSummary[category.key]">
+              <InfoIcon />
+            </InfoTooltip>
           </div>
         </RatingSection>
 
@@ -152,6 +124,16 @@ const props = defineProps({
   isDarkMode: { type: Boolean, default: false }
 });
 defineEmits(['open-selector', 'toggle-dark-mode']);
+
+const ratingCategories = [
+  { key: 'newbie', label: '新手期：' },
+  { key: 'totalAssault', label: '總力戰：' },
+  { key: 'pvp', label: '戰術對抗戰：' },
+  { key: 'grandAssault', label: '大決戰：' },
+  { key: 'limitBreakAssault', label: '制約解除作戰：' },
+  { key: 'jointFiringDrill', label: '演習考試：' },
+  { key: 'eventChallenge', label: '活動高難：' }
+];
 
 const overallGrade = computed(() => {
   const score = props.character.ratings.overall;
