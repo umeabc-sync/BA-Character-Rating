@@ -1,47 +1,51 @@
 <template>
-  <div class="modal-overlay" @click.self="$emit('close')">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>選擇角色</h3>
-        <button class="close-button" @click="$emit('close')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
-        
-        <div class="filter-controls">
-          <div class="filter-group">
-            <span class="filter-label">攻擊屬性:</span>
-            <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
-            <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type }">
-              {{ t(`attackType.${type}`) }}
-            </button>
+  <teleport to="body">
+    <transition name="modal-fade">
+      <div v-if="isVisible" class="modal-overlay" @click.self="$emit('close')">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>選擇角色</h3>
+            <button class="close-button" @click="$emit('close')">&times;</button>
           </div>
-          <div class="filter-group">
-            <span class="filter-label">學　　園:</span>
-            <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
-            <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school }">
-              {{ t(`schoolAbbr.${school}`) }}
-            </button>
-          </div>
-        </div>
+          <div class="modal-body">
+            <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
+            
+            <div class="filter-controls">
+              <div class="filter-group">
+                <span class="filter-label">攻擊屬性:</span>
+                <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
+                <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type }">
+                  {{ t(`attackType.${type}`) }}
+                </button>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">學　　園:</span>
+                <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
+                <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school }">
+                  {{ t(`schoolAbbr.${school}`) }}
+                </button>
+              </div>
+            </div>
 
-        <div class="character-grid">
-          <div 
-            v-for="char in filteredCharacters" 
-            :key="char.id" 
-            class="character-item"
-            @click="selectCharacter(char.id)"
-          >
-            <img :src="getAvatarUrl(char.id)" :alt="char.name" class="item-avatar">
-            <span class="item-name">{{ char.name }}</span>
-          </div>
-          <div v-if="filteredCharacters.length === 0" class="no-results">
-            找不到符合條件的角色
+            <div class="character-grid">
+              <div 
+                v-for="char in filteredCharacters" 
+                :key="char.id" 
+                class="character-item"
+                @click="selectCharacter(char.id)"
+              >
+                <img :src="getAvatarUrl(char.id)" :alt="char.name" class="item-avatar">
+                <span class="item-name">{{ char.name }}</span>
+              </div>
+              <div v-if="filteredCharacters.length === 0" class="no-results">
+                找不到符合條件的角色
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </transition>
+  </teleport>
 </template>
 
 <script setup>
@@ -54,7 +58,8 @@ const props = defineProps({
   characters: {
     type: Array,
     required: true
-  }
+  },
+  isVisible: { type: Boolean, default: false }
 });
 
 const emit = defineEmits(['select', 'close']);
@@ -130,6 +135,18 @@ const selectCharacter = (id) => {
   flex-direction: column;
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
   border: 1px solid #dee2e6;
+  animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .dark-mode .modal-content {
@@ -262,4 +279,12 @@ const selectCharacter = (id) => {
 .item-name { font-weight: bold; font-size: 0.9rem; }
 
 .no-results { text-align: center; padding: 20px; color: #7f8c8d; }
+
+/* Transition */
+.modal-fade-enter-active, .modal-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.modal-fade-enter-from, .modal-fade-leave-to {
+  opacity: 0;
+}
 </style>

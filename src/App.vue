@@ -9,8 +9,8 @@
         @toggle-dark-mode="toggleDarkMode"
       />
       <CharacterSelector 
-        v-if="isSelectorVisible" 
-        :characters="allCharacters" 
+        :is-visible="isSelectorVisible"
+        :characters="allCharacters"
         @select="handleCharacterSelect" 
         @close="isSelectorVisible = false" 
       />
