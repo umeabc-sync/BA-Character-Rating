@@ -1,11 +1,11 @@
 <template>
   <teleport to="body">
     <transition name="modal-fade">
-      <div v-if="isVisible" class="modal-overlay" @click.self="$emit('close')">
+      <div v-if="isVisible" class="modal-overlay" @click.self="closeModal">
         <div class="modal-content">
           <div class="modal-header">
             <h3>選擇角色</h3>
-            <button class="close-button" @click="$emit('close')">&times;</button>
+            <button class="close-button" @click="closeModal">&times;</button>
           </div>
           <div class="modal-body">
             <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
@@ -14,16 +14,50 @@
               <div class="filter-group">
                 <span class="filter-label">攻擊屬性:</span>
                 <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
-                <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type }">
-                  {{ t(`attackType.${type}`) }}
+                <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type, 'has-icon': true }">
+                  <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
+                    <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon">
+                  </div>
+                  <span>{{ t(`attackType.${type}`) }}</span>
+                </button>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">裝甲屬性:</span>
+                <button @click="selectFilter('defenseType', null)" :class="{ active: !selectedDefenseType }">全部</button>
+                <button v-for="type in defenseTypes" :key="type" @click="selectFilter('defenseType', type)" :class="{ active: selectedDefenseType === type, 'has-icon': true }">
+                  <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
+                    <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon">
+                  </div>
+                  <span>{{ t(`defenseType.${type}`) }}</span>
                 </button>
               </div>
               <div class="filter-group">
                 <span class="filter-label">學　　園:</span>
                 <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
-                <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school }">
-                  {{ t(`schoolAbbr.${school}`) }}
+                <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school, 'has-icon': true }">
+                  <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
+                  <span>{{ t(`schoolAbbr.${school}`) }}</span>
                 </button>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">使用武器:</span>
+                <button @click="selectFilter('weapon', null)" :class="{ active: !selectedWeapon }">全部</button>
+                <button v-for="type in weaponTypes" :key="type" @click="selectFilter('weapon', type)" :class="{ active: selectedWeapon === type }">
+                  <span class="nexon-font">{{ type }}</span>
+                </button>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">角色定位:</span>
+                <button @click="selectFilter('position', null)" :class="{ active: !selectedPosition }">全部</button>
+                <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition === type.value }">
+                  <span class="nexon-font">
+                    <span v-if="type.value === 0" style="color: #cc1a25;">STRIKER</span>
+                    <span v-else-if="type.value === 1" style="color: #006bff;">SPECIAL</span>
+                  </span>
+                </button>
+              </div>
+              <div class="filter-group">
+                <button @click="resetFilters" class="reset-button">重設全部篩選</button>
               </div>
             </div>
 
@@ -51,7 +85,9 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from '../composables/useI18n';
+import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getAvatarUrl } from '@/utils/getAvatarUrl';
+import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';
 
 const { t } = useI18n();
 const props = defineProps({
@@ -66,22 +102,61 @@ const emit = defineEmits(['select', 'close']);
 
 const searchTerm = ref('');
 const selectedAttackType = ref(null);
+const selectedDefenseType = ref(null);
 const selectedSchool = ref(null);
+const selectedWeapon = ref(null);
+const selectedPosition = ref(null);
 
 const attackTypes = computed(() => {
   return [...new Set(props.characters.map(c => c.attackType))].sort();
+});
+
+const defenseTypes = computed(() => {
+  return [...new Set(props.characters.map(c => c.defenseType))].sort();
 });
 
 const schools = computed(() => {
   return [...new Set(props.characters.map(c => c.school))].sort();
 });
 
+const weaponTypes = computed(() => {
+  return [...new Set(props.characters.map(c => c.weapon))].sort();
+});
+
+const positionTypes = [
+  { value: 0, label: 'STRIKER' },
+  { value: 1, label: 'SPECIAL' }
+];
+
+const resetFilters = () => {
+  selectedAttackType.value = null;
+  selectedDefenseType.value = null;
+  selectedSchool.value = null;
+  selectedWeapon.value = null;
+  selectedPosition.value = null;
+  searchTerm.value = '';
+};
+
+const closeModal = () => {
+  emit('close');
+};
+
 const selectFilter = (filterType, value) => {
   if (filterType === 'attackType') {
     selectedAttackType.value = value;
   } else if (filterType === 'school') {
     selectedSchool.value = value;
+  } else if (filterType === 'defenseType') {
+    selectedDefenseType.value = value;
+  } else if (filterType === 'weapon') {
+    selectedWeapon.value = value;
+  } else if (filterType === 'position') {
+    selectedPosition.value = value;
   }
+};
+
+const selectCharacter = (id) => {
+  emit('select', id);
 };
 
 const filteredCharacters = computed(() => {
@@ -91,8 +166,20 @@ const filteredCharacters = computed(() => {
     characters = characters.filter(char => char.attackType === selectedAttackType.value);
   }
 
+  if (selectedDefenseType.value) {
+    characters = characters.filter(char => char.defenseType === selectedDefenseType.value);
+  }
+
   if (selectedSchool.value) {
     characters = characters.filter(char => char.school === selectedSchool.value);
+  }
+
+  if (selectedWeapon.value) {
+    characters = characters.filter(char => char.weapon === selectedWeapon.value);
+  }
+
+  if (selectedPosition.value !== null) {
+    characters = characters.filter(char => char.position[0] === selectedPosition.value);
   }
 
   if (searchTerm.value) {
@@ -104,10 +191,6 @@ const filteredCharacters = computed(() => {
   }
   return characters;
 });
-
-const selectCharacter = (id) => {
-  emit('select', id);
-};
 </script>
 
 <style scoped>
@@ -134,7 +217,7 @@ const selectCharacter = (id) => {
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   animation: slide-down 0.3s ease-out;
 }
 
@@ -228,6 +311,11 @@ const selectCharacter = (id) => {
   white-space: nowrap;
 }
 
+.reset-button {
+  background-color: #e74c3c !important;
+  color: white !important;
+}
+
 .dark-mode .filter-label {
   color: #c0c8d0;
 }
@@ -241,12 +329,59 @@ const selectCharacter = (id) => {
   transition: all 0.2s ease;
   font-size: 0.85rem;
 }
+.filter-group button.has-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px 5px 8px;
+}
 
 .dark-mode .filter-group button { background-color: #1f3048; border-color: #2a4a6e; color: #e0e6ed; }
 .filter-group button:hover { background-color: #e9ecef; border-color: #6495ed; }
 .dark-mode .filter-group button:hover { background-color: #2a4a6e; border-color: #00aeef; }
 .filter-group button.active { background-color: #6495ed; color: white; border-color: #6495ed; font-weight: bold; }
 .dark-mode .filter-group button.active { background-color: #00aeef; border-color: #00aeef;
+}
+
+.type-icon-wrapper {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.type-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.school-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.type-bg-explosive, .type-bg-light {
+  background: #a70c19;
+}
+.type-bg-piercing, .type-bg-heavy {
+  background: #b26d1f;
+}
+.type-bg-mystic, .type-bg-special {
+  background: #216f9c;
+}
+.type-bg-sonic, .type-bg-elastic {
+  background: #9431a5;
+}
+
+.nexon-font {
+  font-family: 'NEXON Football Gothic', sans-serif;
+  font-style: italic;
+  margin-right: 4px;
 }
 
 .character-grid {
