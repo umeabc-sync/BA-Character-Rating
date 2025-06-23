@@ -107,21 +107,15 @@ const selectedSchool = ref([]);
 const selectedWeapon = ref([]);
 const selectedPosition = ref([]);
 
-const attackTypes = computed(() => {
-  return [...new Set(props.characters.map(c => c.attackType))].sort();
-});
+const getUniqueSortedValues = (key) => {
+  if (!props.characters) return [];
+  return [...new Set(props.characters.map(c => c[key]))].sort();
+};
 
-const defenseTypes = computed(() => {
-  return [...new Set(props.characters.map(c => c.defenseType))].sort();
-});
-
-const schools = computed(() => {
-  return [...new Set(props.characters.map(c => c.school))].sort();
-});
-
-const weaponTypes = computed(() => {
-  return [...new Set(props.characters.map(c => c.weapon))].sort();
-});
+const attackTypes = computed(() => getUniqueSortedValues('attackType'));
+const defenseTypes = computed(() => getUniqueSortedValues('defenseType'));
+const schools = computed(() => getUniqueSortedValues('school'));
+const weaponTypes = computed(() => getUniqueSortedValues('weapon'));
 
 const positionTypes = [
   { value: 0, label: 'STRIKER' },
