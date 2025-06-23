@@ -1,7 +1,8 @@
 [
   {
     "id": 154,
-    "name": "秋泉 紅葉",
+    "fullname": "秋泉 紅葉",
+    "name": "紅葉",
     "nicknames": ["紅葉"],
     "school": "RedWinter",
     "attackType": "Sonic",
@@ -60,7 +61,8 @@
   },
   {
   "id": 211,
-  "name": "小塗 真紀（露營）",
+  "fullname": "小塗 真紀（露營）",
+  "name": "真紀（露營）",
   "nicknames": ["露營真紀", "兄弟"],
   "school": "Millennium",
   "attackType": "Explosive",
@@ -113,7 +115,8 @@
   },
   {
   "id": 215,
-  "name": "野正 麗",
+  "fullname": "野正 麗",
+  "name": "麗",
   "nicknames": ["棒球妹"],
   "school": "Millennium",
   "attackType": "Sonic",
@@ -166,7 +169,8 @@
   },
   {
   "id": 218,
-  "name": "橘 光",
+  "fullname": "橘 光",
+  "name": "光",
   "nicknames": ["光"],
   "school": "Highlander",
   "attackType": "Sonic",
@@ -219,7 +223,8 @@
   },
   {
     "id": 219,
-    "name": "橘 望",
+    "fullname": "橘 望",
+    "name": "望",
     "nicknames": ["望"],
     "school": "Highlander",
     "attackType": "Sonic",

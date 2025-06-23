@@ -24,7 +24,7 @@
       <div class="left-section">
         <CharacterInfo 
           :id="character.id"
-          :name="character.name"
+          :name="character.fullname"
           :nicknames="character.nicknames"
           :school="character.school" 
           @avatar-click="$emit('open-selector')"
