@@ -1,30 +1,37 @@
 <template>
   <div :class="{ 'dark-mode': isDarkMode }">
-    <RatingCard 
-      v-if="currentCharacter"
-      :character="currentCharacter" 
-      @open-selector="isSelectorVisible = true" 
-      :is-dark-mode="isDarkMode"
-      @toggle-dark-mode="toggleDarkMode"
-    />
-    <CharacterSelector 
-      v-if="isSelectorVisible" 
-      :characters="allCharacters" 
-      @select="handleCharacterSelect" 
-      @close="isSelectorVisible = false" 
-    />
+    <div v-if="allCharacters.length > 0">
+      <RatingCard 
+        v-if="currentCharacter"
+        :character="currentCharacter" 
+        @open-selector="isSelectorVisible = true" 
+        :is-dark-mode="isDarkMode"
+        @toggle-dark-mode="toggleDarkMode"
+      />
+      <CharacterSelector 
+        v-if="isSelectorVisible" 
+        :characters="allCharacters" 
+        @select="handleCharacterSelect" 
+        @close="isSelectorVisible = false" 
+      />
+    </div>
+    <div v-else>
+      <!-- TODO: 添加loading動畫 -->
+      <p>正在載入角色數據...</p>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import RatingCard from './components/RatingCard.vue';
-import CharacterSelector from './components/CharacterSelector.vue';
-import characterData from './data/zh-tw.json';
+import { fetchData } from '@/utils/fetchData';
+import RatingCard from '@/components/RatingCard.vue';
+import CharacterSelector from '@/components/CharacterSelector.vue';
 
 const isDarkMode = ref(false);
-const allCharacters = ref(characterData);
-const currentCharacter = ref(allCharacters.value.length > 0 ? allCharacters.value[0] : null);
+const language = ref('zh-tw');
+const allCharacters = ref([]); 
+const currentCharacter = ref(null);
 const isSelectorVisible = ref(false);
 
 const toggleDarkMode = () => {
@@ -39,6 +46,21 @@ const handleCharacterSelect = (characterId) => {
   }
   isSelectorVisible.value = false;
 };
+
+onMounted(async () => {
+  try {
+    const data = await fetchData(language.value);
+    allCharacters.value = data;
+    
+    if (allCharacters.value.length > 0) {
+      currentCharacter.value = allCharacters.value[0];
+    }
+    console.log('數據已載入並設定完成。');
+  } catch (error) {
+    console.error('載入數據失敗:', error);
+    alert('載入數據失敗:', error);
+  }
+});
 </script>
 
 <style>

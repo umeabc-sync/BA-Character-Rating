@@ -15,8 +15,9 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
 import { useI18n } from '../composables/useI18n.js';
+import { getAvatarUrl } from '@/utils/getAvatarUrl';
+import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';
 
 const { t } = useI18n();
 
@@ -40,15 +41,6 @@ defineProps({
 });
 
 defineEmits(['avatar-click']);
-
-const getAvatarUrl = (id) => {
-  return new URL(`../assets/avatar/${id}.webp`, import.meta.url).href;
-};
-
-const getSchoolIconUrl = (school) => {
-  if (!school) return '';
-  return new URL(`../assets/icon/school/${school}.webp`, import.meta.url).href;
-};
 </script>
 
 <style scoped>

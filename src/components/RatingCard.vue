@@ -105,7 +105,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps, defineEmits } from 'vue';
+import { computed } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';

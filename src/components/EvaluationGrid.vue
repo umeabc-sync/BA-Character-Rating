@@ -68,7 +68,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { getAssetsFile } from '@/utils/getAssetsFile';
 
 const props = defineProps({
   characterData: {
@@ -95,20 +95,19 @@ const adaptRankMap = {
 const getAdaptImageUrl = (rank) => {
   const rankNumber = adaptRankMap[rank];
   if (rankNumber !== undefined) {
-    return new URL(`../assets/adaptresult/Adaptresult${rankNumber}.webp`, import.meta.url).href;
+    return getAssetsFile(`adaptresult/Adaptresult${rankNumber}.png`);
   }
   return ''; // Return empty string or a placeholder if rank is not found
 };
 
 const getEquipmentImageUrl = (name) => {
-  return new URL(`../assets/equiment/${name}.webp`, import.meta.url).href;
+  return getAssetsFile(`equiment/${name}.webp`);
 };
 
 const getOpartImageUrl = (name) => {
   if (!name) return '';
-  return new URL(`../assets/opart/${name}.webp`, import.meta.url).href;
+  return getAssetsFile(`opart/${name}.webp`);
 };
-
 </script>
 
 <style scoped>

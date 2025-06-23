@@ -45,8 +45,9 @@
 </template>
 
 <script setup>
-import { ref, computed, defineProps, defineEmits } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from '../composables/useI18n';
+import { getAvatarUrl } from '@/utils/getAvatarUrl';
 
 const { t } = useI18n();
 const props = defineProps({
@@ -98,10 +99,6 @@ const filteredCharacters = computed(() => {
   }
   return characters;
 });
-
-const getAvatarUrl = (id) => {
-  return new URL(`../assets/avatar/${id}.webp`, import.meta.url).href;
-};
 
 const selectCharacter = (id) => {
   emit('select', id);
