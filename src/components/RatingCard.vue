@@ -31,7 +31,14 @@
         />
 
         <div class="overall-rating-section">
-          <div class="overall-score">{{ character.ratings.overall }}</div>
+          <div class="overall-score">
+            <span 
+              class="ani-num" 
+              :style="`--num: ${character.ratings.overall};`"
+              :class="{'is-animating': triggerAnimation}"
+              :key="character.id"
+            ></span>
+          </div>
           <div class="overall-grade">{{ overallGrade }}</div>
         </div>
 
@@ -117,7 +124,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, watch, ref, nextTick } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
@@ -150,9 +157,31 @@ const overallGrade = computed(() => {
 
 const isFavoriteItemVisible = ref(false);
 
+// Add a responsive variable to control the animation trigger
+const triggerAnimation = ref(true);
+
+// Monitor changes in overall rating and trigger animation
+watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
+  if (typeof newVal === 'number' && newVal !== oldVal) {
+    triggerAnimation.value = false;
+    await nextTick();
+    triggerAnimation.value = true;
+  }
+}, { immediate: true }); 
 </script>
 
 <style scoped>
+@property --seed {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes seed {
+  from { --seed: 0; }
+  to { --seed: 100; }
+}
+
 .character-card {
   max-width: 1200px;
   margin: 0 auto;
@@ -228,6 +257,12 @@ const isFavoriteItemVisible = ref(false);
   font-size: 3rem;
   font-weight: bold;
   color: #e74c3c;
+}
+
+.ani-num::before {
+  counter-reset: num calc(var(--seed) * var(--num) / 100);
+  content: counter(num);
+  animation: seed .5s ease-out forwards;
 }
 
 .overall-grade {
