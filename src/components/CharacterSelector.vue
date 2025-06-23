@@ -165,37 +165,31 @@ const selectCharacter = (id) => {
   emit('select', id);
 };
 
+const filterConfigs = [
+  { selected: selectedAttackType, key: 'attackType' },
+  { selected: selectedDefenseType, key: 'defenseType' },
+  { selected: selectedSchool, key: 'school' },
+  { selected: selectedWeapon, key: 'weapon' },
+  { selected: selectedPosition, key: 'position', getValue: (char) => char.position[0] }
+];
+
 const filteredCharacters = computed(() => {
-  let characters = props.characters;
+  const lowerCaseSearch = searchTerm.value.toLowerCase();
 
-  if (selectedAttackType.value.length > 0) {
-    characters = characters.filter(char => selectedAttackType.value.includes(char.attackType));
-  }
+  return props.characters.filter(char => {
+    const dropdownsMatch = filterConfigs.every(config => {
+      const { selected, key, getValue } = config;
+      if (selected.value.length === 0) return true;
+      const charValue = getValue ? getValue(char) : char[key];
+      return selected.value.includes(charValue);
+    });
 
-  if (selectedDefenseType.value.length > 0) {
-    characters = characters.filter(char => selectedDefenseType.value.includes(char.defenseType));
-  }
-
-  if (selectedSchool.value.length > 0) {
-    characters = characters.filter(char => selectedSchool.value.includes(char.school));
-  }
-
-  if (selectedWeapon.value.length > 0) {
-    characters = characters.filter(char => selectedWeapon.value.includes(char.weapon));
-  }
-
-  if (selectedPosition.value.length > 0) {
-    characters = characters.filter(char => selectedPosition.value.includes(char.position[0]));
-  }
-
-  if (searchTerm.value) {
-    const lowerCaseSearch = searchTerm.value.toLowerCase();
-    characters = characters.filter(char => 
+    const searchMatch = !searchTerm.value ||
       char.name.toLowerCase().includes(lowerCaseSearch) ||
-      (char.nicknames && char.nicknames.some(nick => nick.toLowerCase().includes(lowerCaseSearch)))
-    );
-  }
-  return characters;
+      (char.nicknames && char.nicknames.some(nick => nick.toLowerCase().includes(lowerCaseSearch)));
+
+    return dropdownsMatch && searchMatch;
+  });
 });
 </script>
 
