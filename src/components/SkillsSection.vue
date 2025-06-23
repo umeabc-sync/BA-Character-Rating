@@ -16,12 +16,19 @@
     
     <div class="recommendation-card">
       <div class="rating-title">技能推薦順序</div>
-      <div class="skill-order" v-html="skillOrder"></div>
+      <div class="skill-order-container">
+        <template v-for="(skill, index) in skillOrder" :key="skill">
+          <SkillTag :skill="skill" />
+          <span v-if="index < skillOrder.length - 1" class="separator-arrow">›</span>
+        </template>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import SkillTag from './SkillTag.vue';
+
 defineProps({
   overallRecommendation: {
     type: String,
@@ -32,8 +39,8 @@ defineProps({
     required: true
   },
   skillOrder: {
-    type: String,
-    required: true // 這個 prop 將包含 HTML，所以需要使用 v-html
+    type: Array,
+    required: true
   }
 });
 </script>
@@ -63,11 +70,18 @@ defineProps({
   color: #c0c8d0;
 }
 
+.skill-order-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
 
-.skill-order {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: #2c3e50;
+.separator-arrow {
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .recommendation-details {
@@ -115,5 +129,9 @@ defineProps({
 
 .dark-mode .separator {
   background-color: #2a4a6e;
+}
+
+.dark-mode .separator-arrow {
+  color: #5a6e8a;
 }
 </style>
