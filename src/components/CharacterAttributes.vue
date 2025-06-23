@@ -149,7 +149,7 @@ defineProps({
 .nexon-font {
   font-family: 'NEXON Football Gothic', sans-serif;
   font-style: italic;
-  font-weight: bold; 
+  font-weight: 300;
   font-size: 1rem;
   top: 2px;
   position: relative;
