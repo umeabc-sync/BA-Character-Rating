@@ -106,12 +106,23 @@
             <p><span class="highlight">SS技能</span>{{ character.skillsSummary.ss }}</p>
           </div>
         </RatingSection>
-        
-        <SkillsSection 
-          :overall-recommendation="character.overallRecommendation"
-          :unique-weapon-recommended-summary="character.uniqueWeaponRecommendedSummary"
-          :skill-order="character.skillOrder"
-        />
+
+        <RatingSection title="專武推薦度">
+          <p>{{ character.uniqueWeaponRecommendedSummary }}</p>
+        </RatingSection>
+
+        <RatingSection title="綜合泛用推薦">
+          <p>{{ character.overallRecommendation }}</p>
+        </RatingSection>
+
+        <RatingSection title="技能推薦順序">
+          <div class="skill-order-container">
+            <template v-for="(skill, index) in character.skillOrder" :key="skill">
+              <SkillTag :skill="skill" />
+              <span v-if="index < character.skillOrder.length - 1" class="separator-arrow">›</span>
+            </template>
+          </div>
+        </RatingSection>
       </div>
     </div>
   </div>
@@ -129,7 +140,7 @@ import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
 import RatingSection from './RatingSection.vue';
-import SkillsSection from './SkillsSection.vue';
+import SkillTag from './SkillTag.vue';
 import StarRating from './StarRating.vue';
 import InfoTooltip from './InfoTooltip.vue';
 import InfoIcon from './InfoIcon.vue';
@@ -288,6 +299,24 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
 
 .skills-summary p:last-child {
   margin-bottom: 0;
+}
+
+.skill-order-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.separator-arrow {
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.dark-mode .separator-arrow {
+  color: #5a6e8a;
 }
 
 /* Dark Mode Overrides for RatingCard */
