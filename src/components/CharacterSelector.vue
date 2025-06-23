@@ -13,7 +13,7 @@
             <span class="filter-label">攻擊屬性:</span>
             <button @click="selectFilter('attackType', null)" :class="{ active: !selectedAttackType }">全部</button>
             <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType === type }">
-              {{ type }}
+              {{ t(`attackType.${type}`) }}
             </button>
           </div>
           <div class="filter-group">
@@ -46,7 +46,9 @@
 
 <script setup>
 import { ref, computed, defineProps, defineEmits } from 'vue';
+import { useI18n } from '../composables/useI18n';
 
+const { t } = useI18n();
 const props = defineProps({
   characters: {
     type: Array,

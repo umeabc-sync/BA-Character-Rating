@@ -1,0 +1,14 @@
+{
+  "attackType": {
+    "Explosive": "爆發",
+    "Piercing": "貫通",
+    "Mystic": "神秘",
+    "Sonic": "震動"
+  },
+  "defenseType": {
+    "Light": "輕型護甲",
+    "Heavy": "重型裝甲",
+    "Special": "特殊裝甲",
+    "Elastic": "彈性裝甲"
+  }
+}

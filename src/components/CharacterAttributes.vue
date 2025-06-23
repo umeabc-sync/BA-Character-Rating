@@ -2,11 +2,21 @@
   <div class="attributes">
     <div class="attribute-row">
       <div class="attribute-label green">攻擊屬性</div>
-      <div class="attribute-value">{{ attackType }}</div>
+      <div class="attribute-value">
+        <div class="type-icon-wrapper" :style="{ backgroundColor: typeInfo[attackType]?.color }">
+          <img :src="attackIcon" alt="Attack Icon" class="type-icon">
+        </div>
+        <span>{{ t(`attackType.${attackType}`) }}</span>
+      </div>
     </div>
     <div class="attribute-row">
       <div class="attribute-label green">裝甲屬性</div>
-      <div class="attribute-value">{{ defenseType }}</div>
+      <div class="attribute-value">
+        <div class="type-icon-wrapper" :style="{ backgroundColor: typeInfo[defenseType]?.color }">
+          <img :src="defenseIcon" alt="Defense Icon" class="type-icon">
+        </div>
+        <span>{{ t(`defenseType.${defenseType}`) }}</span>
+      </div>
     </div>
     <div class="attribute-row">
       <div class="attribute-label green">使用武器</div>
@@ -29,6 +39,11 @@
 
 <script setup>
 import { defineProps } from 'vue';
+import { useI18n } from '../composables/useI18n.js';
+import attackIcon from '../assets/icon/Type_Attack_s.png';
+import defenseIcon from '../assets/icon/Type_Defense_s.png';
+
+const { t } = useI18n();
 
 defineProps({
   attackType: {
@@ -56,6 +71,18 @@ defineProps({
     required: true
   }
 });
+
+const typeInfo = {
+  Explosive: { color: '#a70c19' },
+  Piercing: { color: '#b26d1f' },
+  Mystic: { color: '#216f9c' },
+  Sonic: { color: '#9431a5' },
+  Light: { color: '#a70c19' },
+  Heavy: { color: '#b26d1f' },
+  Special: { color: '#216f9c' },
+  Elastic: { color: '#9431a5' }
+};
+
 </script>
 
 <style scoped>
@@ -91,8 +118,24 @@ defineProps({
   border-left: none;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
+.type-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.type-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
 /* Dark Mode Overrides for CharacterAttributes */
 .dark-mode .attribute-value {
   background: #1a2b40;
