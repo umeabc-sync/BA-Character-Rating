@@ -20,7 +20,7 @@
             <span class="filter-label">學　　園:</span>
             <button @click="selectFilter('school', null)" :class="{ active: !selectedSchool }">全部</button>
             <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool === school }">
-              {{ school }}
+              {{ t(`schoolAbbr.${school}`) }}
             </button>
           </div>
         </div>

@@ -7,12 +7,18 @@
     <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">
       {{ nicknames.join(', ') }}
     </div>
-    <div class="school-badge">{{ school }}</div>
+    <div class="school-badge">
+      <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
+      <span>{{ t(`school.${school}`) }}</span>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { defineProps, defineEmits } from 'vue';
+import { useI18n } from '../composables/useI18n.js';
+
+const { t } = useI18n();
 
 defineProps({
   id: {
@@ -37,6 +43,11 @@ defineEmits(['avatar-click']);
 
 const getAvatarUrl = (id) => {
   return new URL(`../assets/avatar/${id}.png`, import.meta.url).href;
+};
+
+const getSchoolIconUrl = (school) => {
+  if (!school) return '';
+  return new URL(`../assets/icon/school/${school}.png`, import.meta.url).href;
 };
 </script>
 
@@ -90,8 +101,16 @@ const getAvatarUrl = (id) => {
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.school-icon {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
 }
 
 .dark-mode .character-avatar {
