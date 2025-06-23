@@ -68,7 +68,7 @@
 </template>
 
 <script setup>
-import { getAssetsFile } from '@/utils/getAssetsFile';
+import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { getAdaptImageUrl } from '@/utils/getAdaptImageUrl';
 import { getEquipmentImageUrl } from '@/utils/getEquipmentImageUrl';
 
@@ -83,11 +83,6 @@ const terrainMap = {
   'indoor': '室內',
   'outdoor': '野外',
   'city': '市街'
-};
-
-const getOpartImageUrl = (name) => {
-  if (!name) return '';
-  return getAssetsFile(`opart/${name}.webp`);
 };
 </script>
 

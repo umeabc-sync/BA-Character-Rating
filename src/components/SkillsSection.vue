@@ -1,16 +1,16 @@
 <template>
   <div class="skills-section">
     <div class="recommendation-card">
-      <div class="rating-title">綜合泛用推薦</div>
+      <div class="rating-title">專武推薦度</div>
       <div class="recommendation-details">
-        {{ overallRecommendation }}
+        {{ uniqueWeaponRecommendedSummary }}
       </div>
 
       <div class="separator"></div>
 
-      <div class="rating-title">專武推薦度說明</div>
+      <div class="rating-title">綜合泛用推薦</div>
       <div class="recommendation-details">
-        {{ uniqueWeaponRecommendedSummary }}
+        {{ overallRecommendation }}
       </div>
     </div>
     

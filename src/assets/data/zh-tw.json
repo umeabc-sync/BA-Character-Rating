@@ -1,5 +1,64 @@
 [
   {
+    "id": 154,
+    "name": "秋泉 紅葉",
+    "nicknames": ["紅葉"],
+    "school": "RedWinter",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "RL火箭發射器",
+    "position": "前排(AOE輸出)",
+    "uniqueWeaponRecommended": "培養專一起",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "nimrud",
+    "skillSubOparts": "voynich",
+    "l2dUnlock": 5,
+    "city": "A",
+    "outdoor": "A",
+    "indoor": "D",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "爆擊率增加",
+    "uniqueWeaponStar3": ["indoor", "B"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [3, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 44
+    },
+    "skillsSummary": {
+      "ex": "4C造成356%圓形傷害",
+      "ns": "30秒22.5%加攻（20秒）",
+      "ss": "戰鬥開始時加攻17.8%且普攻時AOE半徑增加1.5倍。愛用品應對高爆抗敵人，猜測應對新BOSS"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰格裏多刀可選",
+      "pvp": "850攻距拉人、高攻範圍輸出秒特甲",
+      "grandAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰格裏多刀可選",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "振動環境可選",
+      "eventChallenge": "看環境要求、缺人可選"
+    },
+    "uniqueWeaponRecommendedSummary": "暴擊率提升有限，輸出最少5星起（卡池高星）",
+    "overallRecommendation": "久違的2星學生和RL火箭發射器，滿練全遊戲最高面板 | LU貓鬼多刀可選輸出，低星好培養",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "技一Lv7", "EX5", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
+    "favoriteItem": {
+      "name": "限定復刻版作品集",
+      "recommendedLevel": [3, 0, 0],
+      "materials": ["3", "nimrud"],
+      "effects": ["暴擊250", "攻擊力增加22.5%提升至24.6%，新增暴擊值提升24.6%"]
+    }
+  },
+  {
   "id": 218,
   "name": "橘 光",
   "nicknames": ["光"],

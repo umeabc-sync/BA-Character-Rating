@@ -43,8 +43,14 @@
           :unique-weapon-recommended="character.uniqueWeaponRecommended" 
           :acquisition-method="character.acquisitionMethod" 
         />
+
+        <FavoriteItemSection 
+          v-if="character.favoriteItem" 
+          :character="character" 
+          @open-modal="isFavoriteItemVisible = true" 
+        />
       </div>
-      
+
       <div class="right-section">
         <EvaluationGrid :character-data="character" />
         
@@ -102,10 +108,16 @@
       </div>
     </div>
   </div>
+  <FavoriteItemModal 
+    v-if="character.favoriteItem"
+    :character="character"
+    :is-visible="isFavoriteItemVisible"
+    @close="isFavoriteItemVisible = false"
+  />
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
@@ -114,6 +126,8 @@ import SkillsSection from './SkillsSection.vue';
 import StarRating from './StarRating.vue';
 import InfoTooltip from './InfoTooltip.vue';
 import InfoIcon from './InfoIcon.vue';
+import FavoriteItemSection from './FavoriteItemSection.vue';
+import FavoriteItemModal from './FavoriteItemModal.vue';
 
 const props = defineProps({
   character: { type: Object, required: true },
@@ -133,6 +147,9 @@ const overallGrade = computed(() => {
   if (score >= 20) return "F";
   return "N/A";
 });
+
+const isFavoriteItemVisible = ref(false);
+
 </script>
 
 <style scoped>
@@ -143,6 +160,7 @@ const overallGrade = computed(() => {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   overflow: hidden;
+  position: relative;
 }
 
 .card-header {
@@ -156,6 +174,7 @@ const overallGrade = computed(() => {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 .card-content {
@@ -163,6 +182,7 @@ const overallGrade = computed(() => {
   grid-template-columns: 1fr 2fr;
   gap: 0;
 }
+
 
 .theme-toggle-btn {
   position: absolute;
@@ -188,6 +208,7 @@ const overallGrade = computed(() => {
   background: rgba(248, 249, 250, 0.7);
   padding: 20px;
   border-right: 3px solid #dee2e6;
+  position: relative;
 }
 
 .right-section {
