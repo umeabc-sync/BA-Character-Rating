@@ -345,10 +345,29 @@ const filteredCharacters = computed(() => {
   white-space: nowrap;
   
   /* Specific reset button colors */
-  background-color: #e74c3c !important;
-  color: white !important;
+  background: linear-gradient(45deg, #ff6b6b, #e74c3c); /* Lighter red to current red */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transform: translateY(0); /* Initial state for transform */
 }
 
+.reset-button:hover {
+  background: linear-gradient(45deg, #ff4d4d, #d63031); /* Slightly darker/more vibrant on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.reset-button:active {
+  background: linear-gradient(45deg, #d63031, #c02a2a); /* Even darker on click */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Smaller shadow to simulate press */
+  transform: translateY(0); /* Press down effect */
+}
+
+/* Dark mode adjustments for the reset button */
+.dark-mode .reset-button {
+  background: linear-gradient(45deg, #e74c3c, #c0392b); /* Darker red gradient for dark mode */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
 .dark-mode .filter-label {
   color: #c0c8d0;
 }
@@ -359,7 +378,7 @@ const filteredCharacters = computed(() => {
   border-radius: 15px;
   background-color: #fff;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   font-size: 0.85rem;
 }
 .filter-group button.has-icon {
@@ -367,6 +386,14 @@ const filteredCharacters = computed(() => {
   align-items: center;
   gap: 6px;
   padding: 5px 12px 5px 8px;
+}
+.dark-mode .reset-button:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226); /* Even darker on hover in dark mode */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dark-mode .reset-button:active {
+  background: linear-gradient(45deg, #a93226, #922b20);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .filter-group button { background-color: #1f3048; border-color: #2a4a6e; color: #e0e6ed; }
