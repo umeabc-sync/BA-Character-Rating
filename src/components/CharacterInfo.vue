@@ -5,7 +5,7 @@
     </div>
     <div class="character-name">{{ name }}</div>
     <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">
-      {{ nicknames.join(', ') }}
+      {{ nicknames.join('、') }}
     </div>
     <div class="school-badge">
       <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
