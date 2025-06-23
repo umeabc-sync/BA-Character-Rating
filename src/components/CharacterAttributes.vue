@@ -3,7 +3,7 @@
     <div class="attribute-row">
       <div class="attribute-label green">攻擊屬性</div>
       <div class="attribute-value">
-        <div class="type-icon-wrapper" :style="{ backgroundColor: typeInfo[attackType]?.color }">
+        <div class="type-icon-wrapper" :class="`type-bg-${attackType.toLowerCase()}`">
           <img :src="attackIcon" alt="Attack Icon" class="type-icon">
         </div>
         <span>{{ t(`attackType.${attackType}`) }}</span>
@@ -12,7 +12,7 @@
     <div class="attribute-row">
       <div class="attribute-label green">裝甲屬性</div>
       <div class="attribute-value">
-        <div class="type-icon-wrapper" :style="{ backgroundColor: typeInfo[defenseType]?.color }">
+        <div class="type-icon-wrapper" :class="`type-bg-${defenseType.toLowerCase()}`">
           <img :src="defenseIcon" alt="Defense Icon" class="type-icon">
         </div>
         <span>{{ t(`defenseType.${defenseType}`) }}</span>
@@ -72,17 +72,6 @@ defineProps({
   }
 });
 
-const typeInfo = {
-  Explosive: { color: '#a70c19' },
-  Piercing: { color: '#b26d1f' },
-  Mystic: { color: '#216f9c' },
-  Sonic: { color: '#9431a5' },
-  Light: { color: '#a70c19' },
-  Heavy: { color: '#b26d1f' },
-  Special: { color: '#216f9c' },
-  Elastic: { color: '#9431a5' }
-};
-
 </script>
 
 <style scoped>
@@ -136,6 +125,20 @@ const typeInfo = {
   height: 14px;
   object-fit: contain;
 }
+
+.type-bg-explosive, .type-bg-light {
+  background: #a70c19;
+}
+.type-bg-piercing, .type-bg-heavy {
+  background: #b26d1f;
+}
+.type-bg-mystic, .type-bg-special {
+  background: #216f9c;
+}
+.type-bg-sonic, .type-bg-elastic {
+  background: #9431a5;
+}
+
 /* Dark Mode Overrides for CharacterAttributes */
 .dark-mode .attribute-value {
   background: #1a2b40;
