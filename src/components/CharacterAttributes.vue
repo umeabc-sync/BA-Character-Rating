@@ -20,11 +20,20 @@
     </div>
     <div class="attribute-row">
       <div class="attribute-label green">使用武器</div>
-      <div class="attribute-value">{{ weapon }}</div>
+      <div class="attribute-value">
+        <span class="nexon-font">{{ weapon }}</span>
+        <span>{{ t(`weapon.${weapon}`) }}</span>
+      </div>
     </div>
     <div class="attribute-row">
       <div class="attribute-label green">角色定位</div>
-      <div class="attribute-value">{{ position }}</div>
+      <div class="attribute-value">
+        <span class="nexon-font">
+          <span v-if="position[0] === 0" style="color: #cc1a25;">STRIKER</span>
+          <span v-else-if="position[0] === 1" style="color: #006bff;">SPECIAL</span>
+        </span>
+        <span>{{ position[1] }}</span>
+      </div>
     </div>
     <div class="attribute-row">
       <div class="attribute-label blue">專武推薦度</div>
@@ -135,6 +144,15 @@ defineProps({
 }
 .type-bg-sonic, .type-bg-elastic {
   background: #9431a5;
+}
+
+.nexon-font {
+  font-family: 'NEXON Football Gothic', sans-serif;
+  font-style: italic;
+  font-weight: bold; 
+  font-size: 1rem;
+  top: 2px;
+  position: relative;
 }
 
 /* Dark Mode Overrides for CharacterAttributes */
