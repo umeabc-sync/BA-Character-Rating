@@ -1,0 +1,278 @@
+[
+  {
+    "id": 154,
+    "fullname": "秋泉 红叶",
+    "name": "红叶",
+    "nicknames": ["红叶"],
+    "school": "RedWinter",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "RL",
+    "position": [0, "AOE输出"],
+    "uniqueWeaponRecommended": "培养专一起",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "nimrud",
+    "skillSubOparts": "voynich",
+    "l2dUnlock": 5,
+    "city": "A",
+    "outdoor": "A",
+    "indoor": "D",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "暴击率增加",
+    "uniqueWeaponStar3": ["indoor", "B"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [3, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 44
+    },
+    "skillsSummary": {
+      "ex": "4C造成356%圆形伤害",
+      "ns": "30秒22.5%加攻（20秒）",
+      "ss": "战斗开始时加攻17.8%且普攻时AOE半径增加1.5倍。爱用品应对高爆抗敌人，猜测应对新BOSS"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU猫鬼多刀输出，鸡斯拉&大决战格里多刀可选",
+      "pvp": "850攻距拉人、高攻范围输出秒特甲",
+      "grandAssault": "LU猫鬼多刀输出，鸡斯拉&大决战格里多刀可选",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "振动环境可选",
+      "eventChallenge": "看环境要求、缺人可选"
+    },
+    "uniqueWeaponRecommendedSummary": "暴击率提升有限，输出最少5星起（卡池高星）",
+    "overallRecommendation": "久违的2星学生和RL火箭发射器，满练全游戏最高面板 | LU猫鬼多刀可选输出，低星好培养",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "技一Lv7", "EX5", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
+    "favoriteItem": {
+      "name": "限定复刻版作品集",
+      "recommendedLevel": [3, 0, 0],
+      "materials": ["3", "nimrud"],
+      "effects": ["暴击250", "攻击力增加22.5%提升至24.6%，新增暴击值提升24.6%"]
+    }
+  },
+  {
+    "id": 211,
+    "fullname": "小涂 真纪（露营）",
+    "name": "真纪（露营）",
+    "nicknames": ["露营真纪", "兄弟"],
+    "school": "Millennium",
+    "attackType": "Explosive",
+    "defenseType": "Light",
+    "weapon": "MG",
+    "position": [1, "输出"],
+    "uniqueWeaponRecommended": "看情况/专一",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "atlantismedal",
+    "skillSubOparts": "rohonc",
+    "l2dUnlock": 5,
+    "city": "D",
+    "outdoor": "S",
+    "indoor": "B",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "攻击力增加",
+    "uniqueWeaponStar3": ["outdoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [1, 0, 0],
+      "totalAssault": [4, 0, 0],
+      "pvp": [1, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 43
+    },
+    "skillsSummary": {
+      "ex": "4Cost对一名敌方造成攻击力1642%的伤害（该伤害无视护盾）",
+      "ns": "每45秒赋予自身爆发属攻53.2%（25秒）",
+      "ss": "我方爆伤增加17.3%"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "盖布拉LU难及以下可选冰柱对策",
+      "pvp": "暂时无组合搭配",
+      "grandAssault": "轻甲BOSS多刀可选",
+      "limitBreakAssault": "缺人或机制使用",
+      "jointFiringDrill": "射击演习选用",
+      "eventChallenge": "应对护盾机制时选用"
+    },
+    "uniqueWeaponRecommendedSummary": "三星即可打TM盖布拉，LU难需要专一起",
+    "overallRecommendation": "盖布拉冰柱对策，备战盖布拉考虑培养",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+  },
+  {
+    "id": 215,
+    "fullname": "野正 丽",
+    "name": "丽",
+    "nicknames": ["棒球妹"],
+    "school": "Millennium",
+    "attackType": "Sonic",
+    "defenseType": "Light",
+    "weapon": "RL",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "看情况开",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "totempole",
+    "skillSubOparts": "rocket",
+    "l2dUnlock": 6,
+    "city": "B",
+    "outdoor": "D",
+    "indoor": "S",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "爆伤增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": [5, 0, 1],
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 56
+    },
+    "skillsSummary": {
+      "ex": "4Cost对圆形范围内敌方造成401%伤害",
+      "ns": "每击败四个敌人触发提高自身攻速57.3%（20秒）（冷却10秒）且获得一层「出局」（超额击杀仅算触发1次）",
+      "ss": "SS技获得三层出局时减少自身费用3点（满级），使用后清空出局层数"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "弹甲BOSS清杂/多刀可选",
+      "pvp": "850射程拉人、高攻范围输出秒特甲",
+      "grandAssault": "弹甲BOSS清杂/多刀可选",
+      "limitBreakAssault": "提法塔主对策范围输出之一",
+      "jointFiringDrill": "突破/防御/护卫演习可选",
+      "eventChallenge": "HIT机制选用"
+    },
+    "uniqueWeaponRecommendedSummary": "爬提法塔高培养，使用需开高专",
+    "overallRecommendation": "提法塔主对策范围输出，NS减费可以留出更多冗余，弹甲BOSS清杂/多刀可选",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+  },
+  {
+    "id": 218,
+    "fullname": "橘 光",
+    "name": "光",
+    "nicknames": ["光"],
+    "school": "Highlander",
+    "attackType": "Sonic",
+    "defenseType": "Light",
+    "weapon": "HG",
+    "position": [0, "辅助坦"],
+    "uniqueWeaponRecommended": "看情况开",
+    "acquisitionMethod": "限定池",
+    "skillMainOparts": "romandice",
+    "skillSubOparts": "winnistone",
+    "l2dUnlock": 6,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": [
+      "gloves",
+      "hairpin",
+      "amulet"
+    ],
+    "uniqueWeaponStar2": "增益持续增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [4, 0, 0],
+      "pvp": null,
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [5, 0, 1],
+      "jointFiringDrill": [4, 0, 0],
+      "eventChallenge": [5, 0, 0],
+      "overall": 81
+    },
+    "skillsSummary": {
+      "ex": "2Cost使1名我方振动属攻增加92.7%（32秒专二38秒）若目标有额外费用增伤机制可减少2C（升至EX5）额外费用,如果只能追加1费，则只减少1费",
+      "ns": "消耗三层「发车信号」使我方前排振动属攻增加29%（25秒专二29.7秒）（冷却20秒）",
+      "ss": "队友每使用2次EX自身获得「发车信号」并增加30.6%攻速"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "振动BOSS必备，提高振动角色输出上限，高难辅助人权",
+      "pvp": null,
+      "grandAssault": "振动BOSS必备，提高振动角色输出上限，高难辅助人权",
+      "limitBreakAssault": "提法瑞斯主对策振动属攻拐",
+      "jointFiringDrill": "振动通用辅助人权",
+      "eventChallenge": "振动通用辅助人权"
+    },
+    "uniqueWeaponRecommendedSummary": "增益时间增加，平民3星即可，凹分开专",
+    "overallRecommendation": "振动大决战必备人权，紫甲大决战较为频繁，未来可能有较高使用率。振动属攻建议拿下",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
+  },
+  {
+    "id": 219,
+    "fullname": "橘 望",
+    "name": "望",
+    "nicknames": ["望"],
+    "school": "Highlander",
+    "attackType": "Sonic",
+    "defenseType": "Light",
+    "weapon": "HG",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "看情况开",
+    "acquisitionMethod": "限定池",
+    "skillMainOparts": "quimbaya",
+    "skillSubOparts": "discocolgante",
+    "l2dUnlock": 2,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "爆伤增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [2, 0, 0],
+      "pvp": null,
+      "grandAssault": [4, 1, 0],
+      "limitBreakAssault": [5, 0, 1],
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [3, 0, 0],
+      "overall": 62
+    },
+    "skillsSummary": {
+      "ex": "4Cost对直线范围内指定目标造成1045%伤害，对指定外目标造成147%伤害每额外消耗1C则增加25%伤害，最多额外消耗2C",
+      "ns": "每攻击12次给予自身振动属攻53.9%（26秒）",
+      "ss": "所有攻击必定暴击且攻速和暴伤增加25.5%"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "暂无对策BOSS 未来可期",
+      "pvp": "暂时无搭配组合",
+      "grandAssault": "室内振动BOSS主对策输出之一",
+      "limitBreakAssault": "提法瑞斯主对策输出",
+      "jointFiringDrill": "室内振动可选输出",
+      "eventChallenge": "室内振动可选输出"
+    },
+    "uniqueWeaponRecommendedSummary": "攻击力增加，使用时建议专三提升面板",
+    "overallRecommendation": "多数时间绑定光一起走，大决战卷分可选，爬提法塔主要对策输出，本质是单体输出选手，与未花相比没有血量增伤",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技三LV7", "技二Lv7", "技一Lv10", "技三Lv10", "技二Lv10", "Max"]
+  }
+]
