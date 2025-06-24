@@ -467,7 +467,11 @@ body:not(.dark-mode) .school-icon {
 
 .item-name { font-weight: bold; font-size: 0.9rem; }
 
-.no-results { text-align: center; padding: 20px; color: #7f8c8d; }
+.no-results {
+  grid-column: 1 / -1; /* Span all columns */
+  text-align: center;
+  padding: 20px; color: #7f8c8d;
+}
 
 /* Transition */
 .modal-fade-enter-active, .modal-fade-leave-active {
