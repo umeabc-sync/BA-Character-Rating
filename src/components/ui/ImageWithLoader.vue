@@ -29,7 +29,7 @@ const onLoad = () => {
 };
 
 const onError = () => {
-  isLoading.value = false; // 停止顯示載入動畫，讓瀏覽器顯示預設的圖片錯誤圖示
+  isLoading.value = false; // Stop displaying the loading animation and let the browser display the default image error icon
 };
 
 // Watch for changes in the src prop and reset isLoading to true
@@ -43,10 +43,10 @@ watch(() => props.src, (newSrc, oldSrc) => {
 <style scoped>
 .image-loader-wrapper {
   position: relative;
-  overflow: hidden; /* 確保 placeholder 動畫不會超出邊界 (例如圓角) */
+  overflow: hidden; /* Make sure the placeholder animation does not extend beyond the borders (e.g. rounded corners) */
   display: inline-block;
   vertical-align: middle;
-  background-color: inherit; /* 繼承父層的背景色 */
+  background-color: inherit; /* Inherit the background color of the parent layer */
 }
 
 .image-loader-wrapper img {
@@ -61,7 +61,7 @@ watch(() => props.src, (newSrc, oldSrc) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e9ecef; /* 淺灰色底 */
+  background-color: #e9ecef;
   background: linear-gradient(
     100deg,
     rgba(255, 255, 255, 0) 40%,
@@ -73,18 +73,22 @@ watch(() => props.src, (newSrc, oldSrc) => {
   animation: 1.5s loading-skeleton ease-in-out infinite;
 }
 
+.dark-mode .placeholder {
+  background-color: #2a4a6e;
+  background: linear-gradient(
+    100deg,
+    rgba(74, 144, 226, 0) 40%,
+    rgba(74, 144, 226, 0.15) 50%,
+    rgba(74, 144, 226, 0) 60%
+  ) #2a4a6e;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.5s loading-skeleton ease-in-out infinite;
+}
+
 @keyframes loading-skeleton {
   to {
     background-position-x: -20%;
   }
-}
-
-/* 透過 :global 選擇器來應用 body 上的 .dark-mode */
-:global(body.dark-mode) .placeholder {
-  background-color: #2a4a6e;
-  background: linear-gradient(100deg, rgba(42, 74, 110, 0) 40%, rgba(42, 74, 110, .5) 50%, rgba(42, 74, 110, 0) 60%) #1f3048;
-  background-size: 200% 100%;
-  background-position-x: 180%;
-  animation: 1.5s loading-skeleton ease-in-out infinite;
 }
 </style>
