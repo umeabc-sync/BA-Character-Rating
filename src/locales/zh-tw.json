@@ -54,7 +54,8 @@
   },
   "common": {
     "all": "全部",
-    "notApplicable": "不適用"
+    "notApplicable": "不適用",
+    "settings": "設定"
   },
   "attributes": {
     "attackTypeLabel": "攻擊屬性",
@@ -129,5 +130,8 @@
     "materialsUsed": "素材使用",
     "t1Effect": "T1 效果",
     "t2Effect": "T2 效果"
+  },
+  "settingsModal": {
+    "language": "語言"
   }
 }

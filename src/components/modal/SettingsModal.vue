@@ -4,12 +4,12 @@
       <div v-if="isVisible" class="modal-overlay" @click.self="$emit('close')">
         <div class="modal-content">
           <div class="modal-header">
-            <h3>設定</h3>
+            <h3>{{ t('common.settings') }}</h3>
             <button @click="$emit('close')" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
             <div class="setting-group">
-              <h4 class="setting-group-title">語言</h4>
+              <h4 class="setting-group-title">{{ t('settingsModal.language') }}</h4>
               <div class="language-selector">
                 <button
                   v-for="lang in availableLanguages"
@@ -32,6 +32,9 @@
 <script setup>
 import { useSettingStore } from '@/store/setting';
 import { storeToRefs } from 'pinia';
+import { useI18n } from '@/composables/useI18n.js';
+
+const { t } = useI18n();
 
 defineProps({
   isVisible: { type: Boolean, default: false }
