@@ -6,7 +6,6 @@
         :alt="name"
         class="avatar-image"
       />
-      <img :src="getAvatarUrl(id)" :alt="name" class="avatar-image" />
     </div>
     <div class="character-name">{{ name }}</div>
     <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">

@@ -14,9 +14,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
-defineProps({
+const props = defineProps({
   src: { type: String, required: true },
   alt: { type: String, default: '' },
   objectFit: { type: String, default: 'cover' } // 'cover', 'contain', 'fill', etc.
@@ -31,6 +31,13 @@ const onLoad = () => {
 const onError = () => {
   isLoading.value = false; // 停止顯示載入動畫，讓瀏覽器顯示預設的圖片錯誤圖示
 };
+
+// Watch for changes in the src prop and reset isLoading to true
+watch(() => props.src, (newSrc, oldSrc) => {
+  if (newSrc !== oldSrc) {
+    isLoading.value = true; // Re-enable loading state
+  }
+});
 </script>
 
 <style scoped>
