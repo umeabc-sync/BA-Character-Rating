@@ -1,6 +1,6 @@
 <template>
   <div class="image-loader-wrapper">
-    <div v-if="isLoading" class="placeholder">
+    <div v-if="isLoading" class="placeholder" :class="{ 'dark': isDarkMode }">
     </div>
     <img
       v-show="!isLoading"
@@ -14,7 +14,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useSettingStore } from '@/store/setting';
 
 defineProps({
   src: { type: String, required: true },
@@ -22,6 +23,8 @@ defineProps({
   objectFit: { type: String, default: 'cover' } // 'cover', 'contain', 'fill', etc.
 });
 
+const settingStore = useSettingStore();
+const isDarkMode = computed(() => settingStore.isDarkMode);
 const isLoading = ref(true);
 
 const onLoad = () => {
@@ -66,18 +69,22 @@ const onError = () => {
   animation: 1.5s loading-skeleton ease-in-out infinite;
 }
 
+.placeholder.dark {
+  background-color: #2a4a6e;
+  background: linear-gradient(
+    100deg,
+    rgba(42, 74, 110, 0) 40%,
+    rgba(42, 74, 110, .5) 50%,
+    rgba(42, 74, 110, 0) 60%
+  ) #2a4a6e;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.5s loading-skeleton ease-in-out infinite;
+}
+
 @keyframes loading-skeleton {
   to {
     background-position-x: -20%;
   }
-}
-
-/* 透過 :global 選擇器來應用 body 上的 .dark-mode */
-:global(body.dark-mode) .placeholder {
-  background-color: #2a4a6e;
-  background: linear-gradient(100deg, rgba(42, 74, 110, 0) 40%, rgba(42, 74, 110, .5) 50%, rgba(42, 74, 110, 0) 60%) #1f3048;
-  background-size: 200% 100%;
-  background-position-x: 180%;
-  animation: 1.5s loading-skeleton ease-in-out infinite;
 }
 </style>
