@@ -54,8 +54,7 @@
                 <button @click="selectFilter('position', null)" :class="{ active: selectedPosition.length === 0 }">全部</button>
                 <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition.includes(type.value) }">
                   <span class="nexon-font">
-                    <span v-if="type.value === 0" style="color: #cc1a25;">STRIKER</span>
-                    <span v-else-if="type.value === 1" style="color: #006bff;">SPECIAL</span>
+                    <span :class="`position-type-${type.label.toLowerCase()}`">{{ type.label }}</span>
                   </span>
                 </button>
               </div>
@@ -107,6 +106,14 @@ const selectedSchool = ref([]);
 const selectedWeapon = ref([]);
 const selectedPosition = ref([]);
 
+const filterRefs = {
+  attackType: selectedAttackType,
+  defenseType: selectedDefenseType,
+  school: selectedSchool,
+  weapon: selectedWeapon,
+  position: selectedPosition
+};
+
 const getUniqueSortedValues = (key) => {
   if (!props.characters) return [];
   return [...new Set(props.characters.map(c => c[key]))].sort();
@@ -136,15 +143,8 @@ const closeModal = () => {
 };
 
 const selectFilter = (filterType, value) => {
-  let targetRef;
-  switch (filterType) {
-    case 'attackType':  targetRef = selectedAttackType; break;
-    case 'defenseType': targetRef = selectedDefenseType; break;
-    case 'school':      targetRef = selectedSchool; break;
-    case 'weapon':      targetRef = selectedWeapon; break;
-    case 'position':    targetRef = selectedPosition; break;
-    default: return;
-  }
+  const targetRef = filterRefs[filterType];
+  if (!targetRef) return;
 
   if (value === null) {
     // "All" button clicked, clear the array
@@ -436,6 +436,14 @@ body:not(.dark-mode) .school-icon {
   font-style: italic;
   font-weight: 300;
   margin-right: 4px;
+}
+
+.position-type-striker {
+  color: #cc1a25;
+}
+
+.position-type-special {
+  color: #006bff;
 }
 
 .character-grid {
