@@ -21,7 +21,6 @@ defineProps({
   background: #ecf0f1;
   padding: 15px;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .dark-mode .rating-section {

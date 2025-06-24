@@ -235,6 +235,9 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
 
 .right-section {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .overall-rating-section {
