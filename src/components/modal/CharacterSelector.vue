@@ -413,9 +413,19 @@ const filteredCharacters = computed(() => {
   object-fit: contain;
 }
 
-/* Apply filter when dark-mode is NOT active on body */
-body:not(.dark-mode) .school-icon {
+.filter-group button .school-icon {
+  /* Default in light mode (inactive button) */
   filter: invert(1);
+}
+
+.filter-group button.active .school-icon {
+  /* Light mode (active button) */
+  filter: none;
+}
+
+.dark-mode .filter-group button .school-icon {
+  /* Dark mode (both active and inactive buttons) */
+  filter: none;
 }
 
 .type-bg-explosive, .type-bg-light {
