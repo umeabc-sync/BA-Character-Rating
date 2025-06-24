@@ -1,6 +1,6 @@
 <template>
   <div class="image-loader-wrapper">
-    <div v-if="isLoading" class="placeholder" :class="{ 'dark': isDarkMode }">
+    <div v-if="isLoading" class="placeholder">
     </div>
     <img
       v-show="!isLoading"
@@ -14,8 +14,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { useSettingStore } from '@/store/setting';
+import { ref } from 'vue';
 
 defineProps({
   src: { type: String, required: true },
@@ -23,8 +22,6 @@ defineProps({
   objectFit: { type: String, default: 'cover' } // 'cover', 'contain', 'fill', etc.
 });
 
-const settingStore = useSettingStore();
-const isDarkMode = computed(() => settingStore.isDarkMode);
 const isLoading = ref(true);
 
 const onLoad = () => {
@@ -32,17 +29,17 @@ const onLoad = () => {
 };
 
 const onError = () => {
-  isLoading.value = false; // 停止顯示載入動畫，讓瀏覽器顯示預設的圖片錯誤圖示
+  isLoading.value = false; // Stop displaying the loading animation and let the browser display the default image error icon
 };
 </script>
 
 <style scoped>
 .image-loader-wrapper {
   position: relative;
-  overflow: hidden; /* 確保 placeholder 動畫不會超出邊界 (例如圓角) */
+  overflow: hidden; /* Make sure the placeholder animation does not extend beyond the borders (e.g. rounded corners) */
   display: inline-block;
   vertical-align: middle;
-  background-color: inherit; /* 繼承父層的背景色 */
+  background-color: inherit; /* Inherit the background color of the parent layer */
 }
 
 .image-loader-wrapper img {
@@ -57,7 +54,7 @@ const onError = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e9ecef; /* 淺灰色底 */
+  background-color: #e9ecef;
   background: linear-gradient(
     100deg,
     rgba(255, 255, 255, 0) 40%,
@@ -69,13 +66,13 @@ const onError = () => {
   animation: 1.5s loading-skeleton ease-in-out infinite;
 }
 
-.placeholder.dark {
+.dark-mode .placeholder {
   background-color: #2a4a6e;
   background: linear-gradient(
     100deg,
-    rgba(42, 74, 110, 0) 40%,
-    rgba(42, 74, 110, .5) 50%,
-    rgba(42, 74, 110, 0) 60%
+    rgba(74, 144, 226, 0) 40%,
+    rgba(74, 144, 226, 0.15) 50%,
+    rgba(74, 144, 226, 0) 60%
   ) #2a4a6e;
   background-size: 200% 100%;
   background-position-x: 180%;
