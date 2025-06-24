@@ -126,10 +126,10 @@
   },
   "favoriteItemModal": {
     "titleSuffix": "的愛用品",
-    "recommendedLevel": "推薦培養度",
-    "materialsUsed": "素材使用",
-    "t1Effect": "T1 效果",
-    "t2Effect": "T2 效果"
+    "recommendedLevel": "推薦培養度：",
+    "materialsUsed": "素材使用：",
+    "t1Effect": "T1 效果：",
+    "t2Effect": "T2 效果："
   },
   "settingsModal": {
     "language": "語言"

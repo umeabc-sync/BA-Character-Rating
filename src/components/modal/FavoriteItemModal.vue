@@ -4,7 +4,7 @@
       <div v-if="isVisible" class="favorite-item-modal-overlay" @click.self="$emit('close')">
         <div class="modal-content">
           <div class="modal-header">
-            <h3>{{ character.name }} {{ t('favoriteItemModal.titleSuffix') }}</h3>
+            <h3>{{ character.name }}{{ t('favoriteItemModal.titleSuffix') }}</h3>
             <button @click="$emit('close')" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
@@ -16,11 +16,11 @@
             />
             <p class="item-name"><strong>{{ character.favoriteItem.name }}</strong></p>
             <div class="info-row">
-              <strong>推薦培養度：</strong>
+              <strong>{{ t('favoriteItemModal.recommendedLevel') }}</strong>
               <StarRating :rating="character.favoriteItem.recommendedLevel" />
             </div>
             <div class="info-row materials">
-              <strong>素材使用：</strong>
+              <strong>{{ t('favoriteItemModal.materialsUsed') }}</strong>
               <ul>
                 <li>
                   <ImageWithLoader
@@ -41,8 +41,8 @@
               </ul>
             </div>
             <div class="effects">
-              <p><strong>T1 效果：</strong>{{ character.favoriteItem.effects[0] }}</p>
-              <p><strong>T2 效果：</strong>{{ character.favoriteItem.effects[1] }}</p>
+              <p><strong>{{ t('favoriteItemModal.t1Effect') }}</strong>{{ character.favoriteItem.effects[0] }}</p>
+              <p><strong>{{ t('favoriteItemModal.t2Effect') }}</strong>{{ character.favoriteItem.effects[1] }}</p>
             </div>
           </div>
         </div>

@@ -50,7 +50,7 @@
                 </button>
               </div>
               <div class="filter-group">
-                <span class="filter-label">角色定位:</span>
+                <span class="filter-label">{{ t('characterSelector.positionLabel') }}</span>
                 <button @click="selectFilter('position', null)" :class="{ active: selectedPosition.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition.includes(type.value) }">
                   <span class="nexon-font">
