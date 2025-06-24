@@ -1,6 +1,11 @@
 <template>
   <div class="character-info">
     <div class="character-avatar" @click="$emit('avatar-click')" title="點擊切換角色">
+      <ImageWithLoader
+        :src="getAvatarUrl(id)"
+        :alt="name"
+        class="avatar-image"
+      />
       <img :src="getAvatarUrl(id)" :alt="name" class="avatar-image" />
     </div>
     <div class="character-name">{{ name }}</div>
@@ -19,6 +24,7 @@ import { watch } from 'vue';
 import { useI18n } from '@/composables/useI18n.js';
 import { getAvatarUrl } from '@/utils/getAvatarUrl';
 import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';
+import ImageWithLoader from './ui/ImageWithLoader.vue';
 
 const { t } = useI18n();
 
