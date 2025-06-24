@@ -4,19 +4,19 @@
       <div v-if="isVisible" class="modal-overlay" @click.self="closeModal">
         <div class="modal-content">
           <div class="modal-header">
-            <h3>選擇角色</h3>
+            <h3>{{ t('characterSelector.title') }}</h3>
             <button class="close-button" @click="closeModal">&times;</button>
           </div>
           <div class="modal-body">
             <div class="search-and-reset">
-              <input type="text" v-model="searchTerm" placeholder="搜尋角色名稱或暱稱..." class="search-input">
-              <button @click="resetFilters" class="reset-button">重設篩選</button>
+              <input type="text" v-model="searchTerm" :placeholder="t('characterSelector.searchPlaceholder')" class="search-input">
+              <button @click="resetFilters" class="reset-button">{{ t('characterSelector.resetFilters') }}</button>
             </div>
             
             <div class="filter-controls">
               <div class="filter-group">
-                <span class="filter-label">攻擊屬性:</span>
-                <button @click="selectFilter('attackType', null)" :class="{ active: selectedAttackType.length === 0 }">全部</button>
+                <span class="filter-label">{{ t('characterSelector.attackTypeLabel') }}</span>
+                <button @click="selectFilter('attackType', null)" :class="{ active: selectedAttackType.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="type in attackTypes" :key="type" @click="selectFilter('attackType', type)" :class="{ active: selectedAttackType.includes(type), 'has-icon': true }">
                   <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
                     <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon">
@@ -25,8 +25,8 @@
                 </button>
               </div>
               <div class="filter-group">
-                <span class="filter-label">裝甲屬性:</span>
-                <button @click="selectFilter('defenseType', null)" :class="{ active: selectedDefenseType.length === 0 }">全部</button>
+                <span class="filter-label">{{ t('characterSelector.defenseTypeLabel') }}</span>
+                <button @click="selectFilter('defenseType', null)" :class="{ active: selectedDefenseType.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="type in defenseTypes" :key="type" @click="selectFilter('defenseType', type)" :class="{ active: selectedDefenseType.includes(type), 'has-icon': true }">
                   <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
                     <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon">
@@ -35,23 +35,23 @@
                 </button>
               </div>
               <div class="filter-group">
-                <span class="filter-label">學　　園:</span>
-                <button @click="selectFilter('school', null)" :class="{ active: selectedSchool.length === 0 }">全部</button>
+                <span class="filter-label">{{ t('characterSelector.schoolLabel') }}</span>
+                <button @click="selectFilter('school', null)" :class="{ active: selectedSchool.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="school in schools" :key="school" @click="selectFilter('school', school)" :class="{ active: selectedSchool.includes(school), 'has-icon': true }">
                   <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
                   <span>{{ t(`schoolAbbr.${school}`) }}</span>
                 </button>
               </div>
               <div class="filter-group">
-                <span class="filter-label">使用武器:</span>
-                <button @click="selectFilter('weapon', null)" :class="{ active: selectedWeapon.length === 0 }">全部</button>
+                <span class="filter-label">{{ t('characterSelector.weaponLabel') }}</span>
+                <button @click="selectFilter('weapon', null)" :class="{ active: selectedWeapon.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="type in weaponTypes" :key="type" @click="selectFilter('weapon', type)" :class="{ active: selectedWeapon.includes(type) }">
                   <span class="nexon-font">{{ type }}</span>
                 </button>
               </div>
               <div class="filter-group">
                 <span class="filter-label">角色定位:</span>
-                <button @click="selectFilter('position', null)" :class="{ active: selectedPosition.length === 0 }">全部</button>
+                <button @click="selectFilter('position', null)" :class="{ active: selectedPosition.length === 0 }">{{ t('common.all') }}</button>
                 <button v-for="type in positionTypes" :key="type.value" @click="selectFilter('position', type.value)" :class="{ active: selectedPosition.includes(type.value) }">
                   <span class="nexon-font">
                     <span :class="`position-type-${type.label.toLowerCase()}`">{{ type.label }}</span>
@@ -75,7 +75,7 @@
                 <span class="item-name">{{ char.name }}</span>
               </div>
               <div v-if="filteredCharacters.length === 0" class="no-results">
-                找不到符合條件的角色
+                {{ t('characterSelector.noResults') }}
               </div>
             </div>
           </div>

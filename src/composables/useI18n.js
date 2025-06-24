@@ -1,23 +1,42 @@
-import { ref } from 'vue';
-import zhTW from '../locales/zh-tw.json';
+import { ref, watch } from 'vue';
+import { useSettingStore } from '@/store/setting';
 
-// Currently we only have one language (zh-TW).
-// In the future this could be expanded to allow for dynamic language loading and switching.
-const translations = ref(zhTW);
+const loadedMessages = ref({});
+const currentLocale = ref('zh-tw'); // Default locale
 
-/**
-* A simple Composable for internationalization (i18n).
-*/
 export function useI18n() {
-  /**
-   * Translate the given key.
-   * @param {string} key - The key to translate, for example 'attackType.Explosive'.
-   * @returns {string} The translated string, or the original key if not found.
-   */
-  const t = (key) => {
-    if (!key) return '';
-    return key.split('.').reduce((o, i) => o?.[i], translations.value) || key;
+  const settingStore = useSettingStore();
+
+  const loadMessages = async (locale) => {
+    try {
+      const module = await import(`@/locales/${locale}.json`);
+      loadedMessages.value = module.default;
+      currentLocale.value = locale;
+    } catch (error) {
+      console.error(`Failed to load locale messages for ${locale}:`, error);
+      // Fallback to default if loading fails
+      const defaultModule = await import(`@/locales/zh-tw.json`);
+      loadedMessages.value = defaultModule.default;
+      currentLocale.value = 'zh-tw';
+    }
   };
 
-  return { t };
+  const t = (key) => {
+    const keys = key.split('.');
+    let value = loadedMessages.value;
+    for (const k of keys) {
+      if (value && typeof value === 'object' && Object.prototype.hasOwnProperty.call(value, k)) {
+        value = value[k];
+      } else {
+        return key; // Return the key if the translation is not found
+      }
+    }
+    return value;
+  };
+
+  // Watch for changes in the setting store's locale
+  watch(() => settingStore.locale, (newLocale) => loadMessages(newLocale), { immediate: true });
+
+  return { t, currentLocale: settingStore.locale }; // Expose settingStore.locale for reactivity
 }
+

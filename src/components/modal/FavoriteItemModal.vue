@@ -4,7 +4,7 @@
       <div v-if="isVisible" class="favorite-item-modal-overlay" @click.self="$emit('close')">
         <div class="modal-content">
           <div class="modal-header">
-            <h3>{{ character.name }} 的愛用品</h3>
+            <h3>{{ character.name }} {{ t('favoriteItemModal.titleSuffix') }}</h3>
             <button @click="$emit('close')" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
@@ -54,8 +54,11 @@
 <script setup>
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
+import { useI18n } from '@/composables/useI18n';
 import ImageWithLoader from '../ui/ImageWithLoader.vue';
 import StarRating from '../ui/StarRating.vue';
+
+const { t } = useI18n();
 
 defineProps({
   character: { type: Object, required: true },

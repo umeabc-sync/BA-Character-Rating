@@ -1,7 +1,12 @@
 <template>
   <div class="character-card">
     <div class="card-header">
-      蔚藍檔案 角色評分
+      <span>{{ t('ratingCard.title') }}</span>
+      <select :value="locale" @change="handleLocaleChange" class="locale-select" :title="t('ratingCard.selectLanguage')">
+        <option value="zh-tw">繁體中文</option>
+        <option value="zh-cn">简体中文</option>
+      </select>
+
       <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="themeToggleTitle">
         <Transition name="icon-fade-slide" mode="out-in">
           <!-- Light Mode Icon -->
@@ -70,7 +75,7 @@
       <div class="right-section">
         <EvaluationGrid :character-data="character" />
         
-        <RatingSection title="星級評價">
+        <RatingSection :title="t('ratingCard.starRating')">
           <div v-for="category in ratingCategories" :key="category.key" class="rating-row">
             <strong>{{ category.label }}</strong>
             <StarRating :rating="character.ratings[category.key]" />
@@ -80,23 +85,23 @@
           </div>
         </RatingSection>
 
-        <RatingSection title="技能簡述">
+        <RatingSection :title="t('ratingCard.skillSummary')">
           <div v-if="character.skillsSummary" class="skills-summary">
-            <p><span class="highlight">EX技能</span>{{ character.skillsSummary.ex }}</p>
-            <p><span class="highlight">NS技能</span>{{ character.skillsSummary.ns }}</p>
-            <p><span class="highlight">SS技能</span>{{ character.skillsSummary.ss }}</p>
+            <p><span class="highlight">{{ t("skillType.ex") }}</span>{{ character.skillsSummary.ex }}</p>
+            <p><span class="highlight">{{ t("skillType.ns") }}</span>{{ character.skillsSummary.ns }}</p>
+            <p><span class="highlight">{{ t("skillType.ss") }}</span>{{ character.skillsSummary.ss }}</p>
           </div>
         </RatingSection>
 
-        <RatingSection title="專武推薦度">
+        <RatingSection :title="t('ratingCard.uniqueWeaponRecommendation')">
           <p>{{ character.uniqueWeaponRecommendedSummary }}</p>
         </RatingSection>
 
-        <RatingSection title="綜合泛用推薦">
+        <RatingSection :title="t('ratingCard.overallRecommendation')">
           <p>{{ character.overallRecommendation }}</p>
         </RatingSection>
 
-        <RatingSection title="技能推薦順序">
+        <RatingSection :title="t('ratingCard.skillOrder')">
           <div class="skill-order-container">
             <template v-for="(skill, index) in character.skillOrder" :key="skill">
               <SkillTag :skill="skill" />
@@ -117,6 +122,7 @@
 
 <script setup>
 import { computed, watch, ref, nextTick } from 'vue';
+import { useI18n } from '@/composables/useI18n.js';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
@@ -130,9 +136,18 @@ import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 
 const props = defineProps({
   character: { type: Object, required: true }, 
-  theme: { type: String, default: 'system' }
+  theme: { type: String, default: 'system' },
+  locale: { type: String, default: 'zh-tw' }
 });
-defineEmits(['open-selector', 'toggle-dark-mode']);
+defineEmits(['open-selector', 'toggle-dark-mode', 'update-locale']);
+
+const { t } = useI18n();
+import { useSettingStore } from '@/store/setting';
+const settingStore = useSettingStore();
+
+const handleLocaleChange = (event) => {
+  settingStore.setLocale(event.target.value);
+};
 
 const themeToggleTitle = computed(() => {
   switch (props.theme) {
@@ -144,13 +159,13 @@ const themeToggleTitle = computed(() => {
 });
 
 const ratingCategories = [
-  { key: 'newbie', label: '新手期：' },
-  { key: 'totalAssault', label: '總力戰：' },
-  { key: 'pvp', label: '戰術對抗戰：' },
-  { key: 'grandAssault', label: '大決戰：' },
-  { key: 'limitBreakAssault', label: '制約解除作戰：' },
-  { key: 'jointFiringDrill', label: '演習考試：' },
-  { key: 'eventChallenge', label: '活動高難：' }
+  { key: 'newbie', label: computed(() => t('ratingCategory.newbie')) },
+  { key: 'totalAssault', label: computed(() => t('ratingCategory.totalAssault')) },
+  { key: 'pvp', label: computed(() => t('ratingCategory.pvp')) },
+  { key: 'grandAssault', label: computed(() => t('ratingCategory.grandAssault')) },
+  { key: 'limitBreakAssault', label: computed(() => t('ratingCategory.limitBreakAssault')) },
+  { key: 'jointFiringDrill', label: computed(() => t('ratingCategory.jointFiringDrill')) },
+  { key: 'eventChallenge', label: computed(() => t('ratingCategory.eventChallenge')) }
 ];
 
 const overallGrade = computed(() => {
@@ -215,12 +230,41 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   align-items: center;
   position: relative;
   z-index: 1;
+  /* 需要再調整 */
+  gap: 10px; /* Space between title and buttons */
+  /* ///////// */
 }
 
 .card-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0;
+}
+
+.locale-select {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none; /* Remove default select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C114.1L159.1%2C7.1c-3.7-3.7-9.6-3.7-13.3%2C0L5.1%2C114.1c-3.7%2C3.7-3.7%2C9.6%2C0%2C13.3l13.3%2C13.3c3.7%2C3.7%2C9.6%2C3.7%2C13.3%2C0L145%2C63.7c3.7-3.7%2C9.6-3.7%2C13.3%2C0l113.3%2C113.3c3.7%2C3.7%2C9.6%2C3.7%2C13.3%2C0l13.3-13.3C290.7%2C123.7%2C290.7%2C117.8%2C287%2C114.1z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px;
+  padding-right: 25px; /* Make space for the custom arrow */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.locale-select:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.locale-select option {
+  color: #333; /* Dark text for options in light mode */
+  background-color: #fff;
 }
 
 .theme-toggle-btn {
@@ -368,6 +412,15 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
 .dark-mode .character-nicknames,
 .dark-mode .overall-score {
   color: #e0e6ed;
+}
+
+.dark-mode .locale-select {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 174, 239, 0.3);
+}
+.dark-mode .locale-select option {
+  color: #e0e6ed; /* Light text for options in dark mode */
+  background-color: #1a2b40;
 }
 
 .dark-mode .school-badge {

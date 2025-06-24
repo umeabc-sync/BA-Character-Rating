@@ -1,7 +1,7 @@
 <template>
   <div class="attributes">
     <div class="attribute-row">
-      <div class="attribute-label green">攻擊屬性</div>
+      <div class="attribute-label green">{{ t('attributes.attackTypeLabel') }}</div>
       <div class="attribute-value">
         <div class="type-icon-wrapper" :class="`type-bg-${attackType.toLowerCase()}`">
           <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="attribute-row">
-      <div class="attribute-label green">裝甲屬性</div>
+      <div class="attribute-label green">{{ t('attributes.defenseTypeLabel') }}</div>
       <div class="attribute-value">
         <div class="type-icon-wrapper" :class="`type-bg-${defenseType.toLowerCase()}`">
           <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon">
@@ -19,14 +19,14 @@
       </div>
     </div>
     <div class="attribute-row">
-      <div class="attribute-label green">使用武器</div>
+      <div class="attribute-label green">{{ t('attributes.weaponLabel') }}</div>
       <div class="attribute-value">
         <span class="nexon-font">{{ weapon }}</span>
         <span>{{ t(`weapon.${weapon}`) }}</span>
       </div>
     </div>
     <div class="attribute-row">
-      <div class="attribute-label green">角色定位</div>
+      <div class="attribute-label green">{{ t('attributes.positionLabel') }}</div>
       <div class="attribute-value">
         <span class="nexon-font">
           <span v-if="position[0] === 0" style="color: #cc1a25;">STRIKER</span>
@@ -36,11 +36,11 @@
       </div>
     </div>
     <div class="attribute-row">
-      <div class="attribute-label blue">專武推薦度</div>
+      <div class="attribute-label blue">{{ t('attributes.uniqueWeaponRecommendedLabel') }}</div>
       <div class="attribute-value">{{ uniqueWeaponRecommended }}</div>
     </div>
     <div class="attribute-row">
-      <div class="attribute-label red">入手方式</div>
+      <div class="attribute-label red">{{ t('attributes.acquisitionMethodLabel') }}</div>
       <div class="attribute-value">{{ acquisitionMethod }}</div>
     </div>
   </div>

@@ -1,0 +1,133 @@
+{
+  "attackType": {
+    "Explosive": "爆发",
+    "Piercing": "贯穿",
+    "Mystic": "神秘",
+    "Sonic": "震动"
+  },
+  "defenseType": {
+    "Light": "轻装甲",
+    "Heavy": "重装甲",
+    "Special": "特殊装甲",
+    "Elastic": "弹力装甲"
+  },
+  "school": {
+    "Abydos": "阿拜多斯高中",
+    "Arius": "阿里乌斯分校",
+    "Gehenna": "歌赫娜学园",
+    "Hyakkiyako": "百鬼夜行联合学园",
+    "Millennium": "千禧年科学学园",
+    "RedWinter": "红冬联邦学园",
+    "Shanhaijing": "山海经高级中学",
+    "Trinity": "崔尼蒂综合学园",
+    "Valkyrie": "瓦尔基丽警察学园",
+    "SRT": "SRT特殊学园",
+    "Highlander": "高原众铁道学园",
+    "ETC": "其他学园"
+  },
+  "schoolAbbr": {
+    "Abydos": "阿拜多斯",
+    "Arius": "阿里乌斯",
+    "Gehenna": "歌赫娜",
+    "Hyakkiyako": "百鬼夜行",
+    "Millennium": "千禧年",
+    "RedWinter": "红冬",
+    "Shanhaijing": "山海经",
+    "Trinity": "崔尼蒂",
+    "Valkyrie": "瓦尔基丽",
+    "SRT": "SRT",
+    "Highlander": "高原众",
+    "ETC": "其他"
+  },
+  "weapon": {
+    "SG": "",
+    "SMG": "",
+    "AR": "",
+    "GL": "",
+    "HG": "手枪",
+    "SR": "",
+    "RG": "",
+    "MG": "机枪",
+    "RL": "火箭发射器",
+    "MT": "",
+    "FT": ""
+  },
+  "common": {
+    "all": "全部",
+    "notApplicable": "不适用"
+  },
+  "attributes": {
+    "attackTypeLabel": "攻击属性",
+    "defenseTypeLabel": "装甲属性",
+    "weaponLabel": "使用武器",
+    "positionLabel": "角色定位",
+    "uniqueWeaponRecommendedLabel": "专武推荐度",
+    "acquisitionMethodLabel": "入手方式"
+  },
+  "characterInfo": {
+    "clickToSwitch": "点击切换角色"
+  },
+  "terrain": {
+    "city": "市街",
+    "outdoor": "野外",
+    "indoor": "室内"
+  },
+  "evaluation": {
+    "equipment": "装备",
+    "uniqueWeapon2": "专武2",
+    "uniqueWeapon3": "专武3",
+    "mainMaterial": "主素材",
+    "subMaterial": "副素材",
+    "l2dBond": "L2D羁绊",
+    "ratingVersion": "角评版本"
+  },
+  "favoriteItem": {
+    "viewInfo": "查看爱用品信息"
+  },
+  "ratingCard": {
+    "title": "蔚蓝档案 角色评分",
+    "selectLanguage": "选择语言",
+    "toggleTheme": {
+      "light": "切换至暗黑模式",
+      "dark": "切换至跟随系统",
+      "system": "切换至明亮模式"
+    },
+    "starRating": "星级评价",
+    "skillSummary": "技能简述",
+    "uniqueWeaponRecommendation": "专武推荐度",
+    "overallRecommendation": "综合泛用推荐",
+    "skillOrder": "技能推荐顺序"
+  },
+  "ratingCategory": {
+    "newbie": "新手期：",
+    "totalAssault": "总力战：",
+    "pvp": "战术对战：",
+    "grandAssault": "大决战：",
+    "limitBreakAssault": "制约解除作战：",
+    "jointFiringDrill": "演习考试：",
+    "eventChallenge": "活动高难："
+  },
+  "skillType": {
+    "ex": "EX技能",
+    "ns": "NS技能",
+    "ss": "SS技能"
+  },
+  "characterSelector": {
+    "title": "选择角色",
+    "searchPlaceholder": "搜索角色名称或昵称...",
+    "resetFilters": "重设筛选",
+    "attackTypeLabel": "攻击属性:",
+    "defenseTypeLabel": "装甲属性:",
+    "schoolLabel": "学　　园:",
+    "weaponLabel": "使用武器:",
+    "positionLabel": "角色定位:",
+    "noResults": "找不到符合条件的角色"
+  },
+  "favoriteItemModal": {
+    "titleSuffix": "的爱用品",
+    "recommendedLevel": "推荐培养度",
+    "materialsUsed": "素材使用",
+    "t1Effect": "T1 效果",
+    "t2Effect": "T2 效果"
+  }
+}

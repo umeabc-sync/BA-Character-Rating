@@ -1,6 +1,6 @@
 <template>
   <div class="character-info">
-    <div class="character-avatar" @click="$emit('avatar-click')" title="點擊切換角色">
+    <div class="character-avatar" @click="$emit('avatar-click')" :title="t('characterInfo.clickToSwitch')">
       <ImageWithLoader
         :src="getAvatarUrl(id)"
         :alt="name"

@@ -6,6 +6,7 @@
         :character="currentCharacter" 
         @open-selector="isSelectorVisible = true"
         :theme="settingStore.theme" 
+        :locale="settingStore.locale"
         @toggle-dark-mode="settingStore.toggleTheme"
       />
       <CharacterSelector 
@@ -37,7 +38,6 @@ import '@/style/nprogress/nprogress.css'
 const settingStore = useSettingStore();
 const { isDarkMode } = storeToRefs(settingStore); // Maintaining responsiveness with storeToRefs
 
-const language = ref('zh-tw');
 const allCharacters = ref([]); 
 const currentCharacter = ref(null);
 const isSelectorVisible = ref(false);
@@ -65,8 +65,8 @@ onMounted(async () => {
   NProgress.start();
 
   try {
-    // 載入角色數據
-    const data = await fetchData(language.value);
+    // 載入角色數據，使用 Pinia store 中的 locale
+    const data = await fetchData(settingStore.locale);
     allCharacters.value = data;
 
     // 從 URL 讀取 id 並設置角色
@@ -94,6 +94,13 @@ onMounted(async () => {
   } finally {
     NProgress.done();
   }
+});
+
+// Watch for locale changes in Pinia store and re-fetch data
+watch(() => settingStore.locale, async (newLocale) => {
+  // Re-fetch data when locale changes
+  const data = await fetchData(newLocale);
+  allCharacters.value = data;
 });
 
 watch(isDarkMode, (newValue) => {

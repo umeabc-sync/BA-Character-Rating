@@ -51,5 +51,83 @@
     "RL": "火箭發射器",
     "MT": "",
     "FT": ""
+  },
+  "common": {
+    "all": "全部",
+    "notApplicable": "不適用"
+  },
+  "attributes": {
+    "attackTypeLabel": "攻擊屬性",
+    "defenseTypeLabel": "裝甲屬性",
+    "weaponLabel": "使用武器",
+    "positionLabel": "角色定位",
+    "uniqueWeaponRecommendedLabel": "專武推薦度",
+    "acquisitionMethodLabel": "入手方式"
+  },
+  "characterInfo": {
+    "clickToSwitch": "點擊切換角色"
+  },
+  "terrain": {
+    "city": "市街",
+    "outdoor": "野外",
+    "indoor": "室內"
+  },
+  "evaluation": {
+    "equipment": "裝備",
+    "uniqueWeapon2": "專武2",
+    "uniqueWeapon3": "專武3",
+    "mainMaterial": "主素材",
+    "subMaterial": "副素材",
+    "l2dBond": "L2D羈絆",
+    "ratingVersion": "角評版本"
+  },
+  "favoriteItem": {
+    "viewInfo": "查看愛用品資訊"
+  },
+  "ratingCard": {
+    "title": "蔚藍檔案 角色評分",
+    "selectLanguage": "選擇語言",
+    "toggleTheme": {
+      "light": "切換至暗黑模式",
+      "dark": "切換至跟隨系統",
+      "system": "切換至明亮模式"
+    },
+    "starRating": "星級評價",
+    "skillSummary": "技能簡述",
+    "uniqueWeaponRecommendation": "專武推薦度",
+    "overallRecommendation": "綜合泛用推薦",
+    "skillOrder": "技能推薦順序"
+  },
+  "ratingCategory": {
+    "newbie": "新手期：",
+    "totalAssault": "總力戰：",
+    "pvp": "戰術對抗戰：",
+    "grandAssault": "大決戰：",
+    "limitBreakAssault": "制約解除作戰：",
+    "jointFiringDrill": "演習考試：",
+    "eventChallenge": "活動高難："
+  },
+  "skillType": {
+    "ex": "EX技能",
+    "ns": "NS技能",
+    "ss": "SS技能"
+  },
+  "characterSelector": {
+    "title": "選擇角色",
+    "searchPlaceholder": "搜尋角色名稱或暱稱...",
+    "resetFilters": "重設篩選",
+    "attackTypeLabel": "攻擊屬性:",
+    "defenseTypeLabel": "裝甲屬性:",
+    "schoolLabel": "學　　園:",
+    "weaponLabel": "使用武器:",
+    "positionLabel": "角色定位:",
+    "noResults": "找不到符合條件的角色"
+  },
+  "favoriteItemModal": {
+    "titleSuffix": "的愛用品",
+    "recommendedLevel": "推薦培養度",
+    "materialsUsed": "素材使用",
+    "t1Effect": "T1 效果",
+    "t2Effect": "T2 效果"
   }
 }

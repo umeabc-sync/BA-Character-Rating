@@ -2,13 +2,16 @@
   <div class="favorite-item-section">
     <button @click="$emit('open-modal')" class="favorite-item-button">
       <img :src="getFavoriteItemImageUrl(character.id)" alt="Favorite Item" class="favorite-item-icon" />
-      <span>查看愛用品資訊</span>
+      <span>{{ t('favoriteItem.viewInfo') }}</span>
     </button>
   </div>
 </template>
 
 <script setup>
 import { getAssetsFile } from '@/utils/getAssetsFile';
+import { useI18n } from '@/composables/useI18n';
+
+const { t } = useI18n();
 
 defineProps({
   character: { type: Object, required: true }
