@@ -1,38 +1,37 @@
 <template>
   <div class="character-card">
     <div class="card-header">
-      <span>{{ t('ratingCard.title') }}</span>
-      <div class="header-actions">
-        <button @click="handleSettingsClick" class="settings-btn" :title="t('common.settings')">
-          <img :src="gearIconUrl" alt="Settings Icon" :class="{ 'is-rotating': isSettingsIconRotating }" @animationend="isSettingsIconRotating = false" />
-        </button>
+      <button @click="handleSettingsClick" class="settings-btn" :title="t('common.settings')">
+        <img :src="gearIconUrl" alt="Settings Icon" :class="{ 'is-rotating': isSettingsIconRotating }" @animationend="isSettingsIconRotating = false" />
+      </button>
 
-        <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="themeToggleTitle">
-          <Transition name="icon-fade-slide" mode="out-in">
-            <!-- Light Mode Icon -->
-            <svg v-if="theme === 'light'" key="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <!-- Dark Mode Icon -->
-            <svg v-else-if="theme === 'dark'" key="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-            <!-- System Mode Icon -->
-            <svg v-else key="system-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 7 A5 5 0 0 0 12 17 Z" fill="currentColor" stroke="none"></path>
-            </svg>
-          </Transition>
-        </button>
-      </div>
+      <span class="header-title">{{ t('ratingCard.title') }}</span>
+
+      <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="themeToggleTitle">
+        <Transition name="icon-fade-slide" mode="out-in">
+          <!-- Light Mode Icon -->
+          <svg v-if="theme === 'light'" key="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Dark Mode Icon -->
+          <svg v-else-if="theme === 'dark'" key="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- System Mode Icon -->
+          <svg v-else key="system-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 7 A5 5 0 0 0 12 17 Z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </Transition>
+      </button>
     </div>
     
     <div class="card-content">
@@ -237,7 +236,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   background: linear-gradient(45deg, #87CEEB, #6495ED);
   color: white;
   padding: 15px;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -247,20 +245,14 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   z-index: 1;
 }
 
+.header-title {
+  text-align: center;
+}
+
 .card-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0;
-}
-
-.header-actions {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .settings-btn {
@@ -274,13 +266,24 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease;
-  transition: rotate 0.5s ease-in-out;
+}
+
+.settings-btn,
+.theme-toggle-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .settings-btn img {
   width: 24px;
   height: 24px;
   filter: brightness(0) invert(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.theme-toggle-btn {
+  right: 30px;
 }
 
 .settings-btn img.is-rotating {
@@ -298,6 +301,10 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease;
+}
+
+.settings-btn {
+  right: 72px; /* 30px from edge + 34px theme button + 8px gap */
 }
 
 .icon-fade-slide-enter-active,
@@ -325,8 +332,8 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   transform: rotateY(0deg);
 }
 
-.settings-btn:hover {
-  rotate: 90deg;
+.settings-btn:hover img {
+  transform: rotate(90deg);
 }
 
 .settings-btn:hover,
@@ -477,6 +484,18 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
 @media (max-width: 768px) {
   .card-content {
     grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    justify-content: space-between;
+  }
+
+  .settings-btn,
+  .theme-toggle-btn {
+    position: static;
+    transform: none;
   }
   
   .left-section {
