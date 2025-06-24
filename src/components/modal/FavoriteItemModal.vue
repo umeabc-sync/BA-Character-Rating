@@ -8,7 +8,12 @@
             <button @click="$emit('close')" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
-            <img :src="getFavoriteItemImageUrl(character.id)" alt="Favorite Item" class="modal-item-icon" />
+            <ImageWithLoader
+              :src="getFavoriteItemImageUrl(character.id)"
+              alt="Favorite Item"
+              class="modal-item-icon"
+              object-fit="contain"
+            />
             <p class="item-name"><strong>{{ character.favoriteItem.name }}</strong></p>
             <div class="info-row">
               <strong>推薦培養度：</strong>
@@ -18,10 +23,20 @@
               <strong>素材使用：</strong>
               <ul>
                 <li>
-                  <img :src="getGiftImageUrl(character.favoriteItem.materials[0])" :alt="character.favoriteItem.materials[0]" class="material-icon" />
+                  <ImageWithLoader
+                    :src="getGiftImageUrl(character.favoriteItem.materials[0])"
+                    :alt="character.favoriteItem.materials[0]"
+                    class="material-icon"
+                    object-fit="contain"
+                  />
                 </li>
                 <li>
-                  <img :src="getOpartImageUrl(character.favoriteItem.materials[1])" :alt="character.favoriteItem.materials[1]" class="material-icon" />
+                  <ImageWithLoader
+                    :src="getOpartImageUrl(character.favoriteItem.materials[1])"
+                    :alt="character.favoriteItem.materials[1]"
+                    class="material-icon"
+                    object-fit="contain"
+                  />
                 </li>
               </ul>
             </div>
@@ -39,6 +54,7 @@
 <script setup>
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
+import ImageWithLoader from '../ui/ImageWithLoader.vue';
 import StarRating from '../ui/StarRating.vue';
 
 defineProps({
@@ -129,7 +145,6 @@ const getFavoriteItemImageUrl = (id) => {
 .modal-item-icon {
   width: 100px;
   height: 100px;
-  object-fit: contain;
   margin-bottom: 10px;
   background-color: #f0f0f0;
   border-radius: 50%;
@@ -164,7 +179,6 @@ const getFavoriteItemImageUrl = (id) => {
 .material-icon {
   width: 40px;
   height: 40px;
-  object-fit: contain;
   background-color: #e9ecef;
   border-radius: 8px;
   padding: 4px;

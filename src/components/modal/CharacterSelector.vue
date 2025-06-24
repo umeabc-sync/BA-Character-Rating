@@ -67,7 +67,11 @@
                 class="character-item"
                 @click="selectCharacter(char.id)"
               >
-                <img :src="getAvatarUrl(char.id)" :alt="char.name" class="item-avatar">
+                <ImageWithLoader
+                  :src="getAvatarUrl(char.id)"
+                  :alt="char.name"
+                  class="item-avatar"
+                />
                 <span class="item-name">{{ char.name }}</span>
               </div>
               <div v-if="filteredCharacters.length === 0" class="no-results">
@@ -87,6 +91,7 @@ import { useI18n } from '@/composables/useI18n';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getAvatarUrl } from '@/utils/getAvatarUrl';
 import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';
+import ImageWithLoader from '../ui/ImageWithLoader.vue';
 
 const { t } = useI18n();
 const props = defineProps({
