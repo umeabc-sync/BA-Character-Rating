@@ -2,36 +2,37 @@
   <div class="character-card">
     <div class="card-header">
       <span>{{ t('ratingCard.title') }}</span>
-      <select :value="locale" @change="handleLocaleChange" class="locale-select" :title="t('ratingCard.selectLanguage')">
-        <option value="zh-tw">繁體中文</option>
-        <option value="zh-cn">简体中文</option>
-      </select>
+      <div class="header-actions">
+        <button @click="handleSettingsClick" class="settings-btn" :title="t('common.settings')">
+          <img :src="gearIconUrl" alt="Settings Icon" :class="{ 'is-rotating': isSettingsIconRotating }" @animationend="isSettingsIconRotating = false" />
+        </button>
 
-      <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="themeToggleTitle">
-        <Transition name="icon-fade-slide" mode="out-in">
-          <!-- Light Mode Icon -->
-          <svg v-if="theme === 'light'" key="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <!-- Dark Mode Icon -->
-          <svg v-else-if="theme === 'dark'" key="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <!-- System Mode Icon -->
-          <svg v-else key="system-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 7 A5 5 0 0 0 12 17 Z" fill="currentColor" stroke="none"></path>
-          </svg>
-        </Transition>
-      </button>
+        <button @click="$emit('toggle-dark-mode')" class="theme-toggle-btn" :title="themeToggleTitle">
+          <Transition name="icon-fade-slide" mode="out-in">
+            <!-- Light Mode Icon -->
+            <svg v-if="theme === 'light'" key="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Dark Mode Icon -->
+            <svg v-else-if="theme === 'dark'" key="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- System Mode Icon -->
+            <svg v-else key="system-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 7 A5 5 0 0 0 12 17 Z" fill="currentColor" stroke="none"></path>
+            </svg>
+          </Transition>
+        </button>
+      </div>
     </div>
     
     <div class="card-content">
@@ -118,11 +119,16 @@
     :is-visible="isFavoriteItemVisible"
     @close="isFavoriteItemVisible = false"
   />
+  <SettingsModal
+    :is-visible="isSettingsModalVisible"
+    @close="isSettingsModalVisible = false"
+  />
 </template>
 
 <script setup>
 import { computed, watch, ref, nextTick } from 'vue';
 import { useI18n } from '@/composables/useI18n.js';
+import { getAssetsFile } from '@/utils/getAssetsFile';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
@@ -133,6 +139,7 @@ import InfoTooltip from './ui/InfoTooltip.vue';
 import InfoIcon from './ui/InfoIcon.vue';
 import FavoriteItemSection from './FavoriteItemSection.vue';
 import FavoriteItemModal from './modal/FavoriteItemModal.vue';
+import SettingsModal from './modal/SettingsModal.vue';
 
 const props = defineProps({
   character: { type: Object, required: true }, 
@@ -142,12 +149,8 @@ const props = defineProps({
 defineEmits(['open-selector', 'toggle-dark-mode', 'update-locale']);
 
 const { t } = useI18n();
-import { useSettingStore } from '@/store/setting';
-const settingStore = useSettingStore();
 
-const handleLocaleChange = (event) => {
-  settingStore.setLocale(event.target.value);
-};
+const gearIconUrl = computed(() => getAssetsFile('icon/gear.svg'));
 
 const themeToggleTitle = computed(() => {
   switch (props.theme) {
@@ -181,7 +184,14 @@ const overallGrade = computed(() => {
   return "N/A";
 });
 
+const isSettingsIconRotating = ref(false);
+const isSettingsModalVisible = ref(false);
 const isFavoriteItemVisible = ref(false);
+
+const handleSettingsClick = () => {
+  isSettingsIconRotating.value = true;
+  isSettingsModalVisible.value = true;
+};
 
 // Add a responsive variable to control the animation trigger
 const triggerAnimation = ref(true);
@@ -201,6 +211,11 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   syntax: "<integer>";
   inherits: true;
   initial-value: 0;
+}
+
+@keyframes rotate-gear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes seed {
@@ -230,9 +245,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   align-items: center;
   position: relative;
   z-index: 1;
-  /* 需要再調整 */
-  gap: 10px; /* Space between title and buttons */
-  /* ///////// */
 }
 
 .card-content {
@@ -241,37 +253,41 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   gap: 0;
 }
 
-.locale-select {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.header-actions {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-btn {
+  background: none;
+  border: none;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
   cursor: pointer;
-  appearance: none; /* Remove default select arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C114.1L159.1%2C7.1c-3.7-3.7-9.6-3.7-13.3%2C0L5.1%2C114.1c-3.7%2C3.7-3.7%2C9.6%2C0%2C13.3l13.3%2C13.3c3.7%2C3.7%2C9.6%2C3.7%2C13.3%2C0L145%2C63.7c3.7-3.7%2C9.6-3.7%2C13.3%2C0l113.3%2C113.3c3.7%2C3.7%2C9.6%2C3.7%2C13.3%2C0l13.3-13.3C290.7%2C123.7%2C290.7%2C117.8%2C287%2C114.1z%22%2F%3E%3C%2Fsvg%3E');
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 10px;
-  padding-right: 25px; /* Make space for the custom arrow */
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  transition: rotate 0.5s ease-in-out;
 }
-.locale-select:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+
+.settings-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
-.locale-select option {
-  color: #333; /* Dark text for options in light mode */
-  background-color: #fff;
+
+.settings-btn img.is-rotating {
+  animation: rotate-gear 0.5s ease-in-out;
 }
 
 .theme-toggle-btn {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
   background: none;
   border: none;
   color: white;
@@ -309,6 +325,11 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   transform: rotateY(0deg);
 }
 
+.settings-btn:hover {
+  rotate: 90deg;
+}
+
+.settings-btn:hover,
 .theme-toggle-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -412,15 +433,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
 .dark-mode .character-nicknames,
 .dark-mode .overall-score {
   color: #e0e6ed;
-}
-
-.dark-mode .locale-select {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 174, 239, 0.3);
-}
-.dark-mode .locale-select option {
-  color: #e0e6ed; /* Light text for options in dark mode */
-  background-color: #1a2b40;
 }
 
 .dark-mode .school-badge {
