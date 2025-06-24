@@ -46,8 +46,15 @@ const availableLanguages = [
   { code: 'zh-cn', name: '简体中文' },
 ];
 
+// 暫時性設定
 const handleLocaleChange = (newLocale) => {
+  // 如果選擇的語言與當前語言相同，則不執行任何操作
+  if (currentLocale.value === newLocale) {
+    return;
+  }
   settingStore.setLocale(newLocale);
+  // 强制重新整理頁面以應用所有語言變更
+  window.location.reload();
 };
 </script>
 
@@ -151,4 +158,3 @@ const handleLocaleChange = (newLocale) => {
 .modal-fade-enter-active, .modal-fade-leave-active { transition: opacity 0.3s ease; }
 .modal-fade-enter-from, .modal-fade-leave-to { opacity: 0; }
 </style>
-
