@@ -84,7 +84,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { useI18n } from '../composables/useI18n';
+import { useI18n } from '@/composables/useI18n';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getAvatarUrl } from '@/utils/getAvatarUrl';
 import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';

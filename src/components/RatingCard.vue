@@ -111,13 +111,13 @@ import { computed, watch, ref, nextTick } from 'vue';
 import CharacterInfo from './CharacterInfo.vue';
 import CharacterAttributes from './CharacterAttributes.vue';
 import EvaluationGrid from './EvaluationGrid.vue';
-import RatingSection from './RatingSection.vue';
-import SkillTag from './SkillTag.vue';
-import StarRating from './StarRating.vue';
-import InfoTooltip from './InfoTooltip.vue';
-import InfoIcon from './InfoIcon.vue';
+import RatingSection from './ui/RatingSection.vue';
+import SkillTag from './ui/SkillTag.vue';
+import StarRating from './ui/StarRating.vue';
+import InfoTooltip from './ui/InfoTooltip.vue';
+import InfoIcon from './ui/InfoIcon.vue';
 import FavoriteItemSection from './FavoriteItemSection.vue';
-import FavoriteItemModal from './FavoriteItemModal.vue';
+import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 
 const props = defineProps({
   character: { type: Object, required: true },

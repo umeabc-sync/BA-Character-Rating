@@ -28,7 +28,7 @@ import { fetchData } from '@/utils/fetchData';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { loadFontCSS } from '@/utils/loadFontCSS'
 import RatingCard from '@/components/RatingCard.vue';
-import CharacterSelector from '@/components/CharacterSelector.vue';
+import CharacterSelector from '@/components/modal/CharacterSelector.vue';
 
 const isDarkMode = ref(false);
 const language = ref('zh-tw');

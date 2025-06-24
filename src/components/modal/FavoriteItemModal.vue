@@ -39,7 +39,7 @@
 <script setup>
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
-import StarRating from './StarRating.vue';
+import StarRating from '../ui/StarRating.vue';
 
 defineProps({
   character: { type: Object, required: true },
