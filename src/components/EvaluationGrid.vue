@@ -63,8 +63,8 @@
 
 <script setup>
 import { ref } from 'vue';
-import EvaluationItem from './EvaluationItem.vue';
-import DetailModal from './DetailModal.vue';
+import EvaluationItem from './ui/EvaluationItem.vue';
+import DetailModal from './modal/DetailModal.vue';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { getAdaptImageUrl } from '@/utils/getAdaptImageUrl';
 import { getEquipmentImageUrl } from '@/utils/getEquipmentImageUrl';
