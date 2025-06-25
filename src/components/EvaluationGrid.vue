@@ -1,36 +1,36 @@
 <template>
   <div class="evaluation-grid">
-    <div class="eval-item green">
+    <div class="eval-item green" data-item="city">
       <div class="eval-header">{{ t('terrain.city') }}</div>
       <div class="eval-value">
         <img :src="getAdaptImageUrl(characterData.city)" :alt="characterData.city" class="eval-image">
       </div>
     </div>
-    <div class="eval-item green">
+    <div class="eval-item green" data-item="outdoor">
       <div class="eval-header">{{ t('terrain.outdoor') }}</div>
       <div class="eval-value">
         <img :src="getAdaptImageUrl(characterData.outdoor)" :alt="characterData.outdoor" class="eval-image">
       </div>
     </div>
-    <div class="eval-item green">
+    <div class="eval-item green" data-item="indoor">
       <div class="eval-header">{{ t('terrain.indoor') }}</div>
       <div class="eval-value">
         <img :src="getAdaptImageUrl(characterData.indoor)" :alt="characterData.indoor" class="eval-image">
       </div>
     </div>
 
-    <div v-for="(equip, index) in characterData.equipments" :key="equip" class="eval-item blue">
+    <div v-for="(equip, index) in characterData.equipments" :key="equip" class="eval-item blue" :data-item="`equip-${index + 1}`">
       <div class="eval-header">{{ t('evaluation.equipment') }}{{ index + 1 }}</div>
       <div class="eval-value">
         <img :src="getEquipmentImageUrl(equip)" :alt="equip" class="eval-image">
       </div>
     </div>
 
-    <div class="eval-item peach">
+    <div class="eval-item peach" data-item="uw2">
       <div class="eval-header">{{ t('evaluation.uniqueWeapon2') }}</div>
       <div class="eval-value">{{ characterData.uniqueWeaponStar2 }}</div>
     </div>
-    <div class="eval-item peach">
+    <div class="eval-item peach" data-item="uw3">
       <div class="eval-header">{{ t('evaluation.uniqueWeapon3') }}</div>
       <div class="eval-value" v-if="Array.isArray(characterData.uniqueWeaponStar3) && characterData.uniqueWeaponStar3.length === 2">
         {{ t(`terrain.${characterData.uniqueWeaponStar3[0]}`) }} → 
@@ -41,26 +41,26 @@
       </div>
     </div>
 
-    <div class="eval-item yellow">
+    <div class="eval-item yellow" data-item="main-material">
       <div class="eval-header">{{ t('evaluation.mainMaterial') }}</div>
       <div class="eval-value">
         <img v-if="characterData.skillMainOparts" :src="getOpartImageUrl(characterData.skillMainOparts)" :alt="characterData.skillMainOparts" class="eval-image">
         <span v-else>N/A</span>
       </div>
     </div>
-    <div class="eval-item yellow">
+    <div class="eval-item yellow" data-item="sub-material">
       <div class="eval-header">{{ t('evaluation.subMaterial') }}</div>
       <div class="eval-value">
         <img v-if="characterData.skillSubOparts" :src="getOpartImageUrl(characterData.skillSubOparts)" :alt="characterData.skillSubOparts" class="eval-image">
         <span v-else>N/A</span>
       </div>
     </div>
-    <div class="eval-item pink">
+    <div class="eval-item pink" data-item="l2d">
       <div class="eval-header">{{ t('evaluation.l2dBond') }}</div>
       <div class="eval-value">{{ characterData.l2dUnlock }}</div>
     </div>
 
-    <div class="eval-item darkgray">
+    <div class="eval-item darkgray" data-item="version">
       <div class="eval-header">{{ t('evaluation.ratingVersion') }}</div>
       <div class="eval-value">{{ characterData.ratingVersion }}</div>
     </div>
@@ -86,7 +86,7 @@ const props = defineProps({
 <style scoped>
 .evaluation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
@@ -148,21 +148,54 @@ const props = defineProps({
 .pink { border-color: #ff89a1; }
 .darkgray { border-color: #6e7d8d; }
 
+/* Default order for 4 columns (desktop) */
+.eval-item[data-item="city"] { order: 1; }
+.eval-item[data-item="outdoor"] { order: 2; }
+.eval-item[data-item="indoor"] { order: 3; }
+.eval-item[data-item="version"] { order: 4; }
+.eval-item[data-item="equip-1"] { order: 5; }
+.eval-item[data-item="equip-2"] { order: 6; }
+.eval-item[data-item="equip-3"] { order: 7; }
+.eval-item[data-item="l2d"] { order: 8; }
+.eval-item[data-item="uw2"] { order: 9; }
+.eval-item[data-item="uw3"] { order: 10; }
+.eval-item[data-item="main-material"] { order: 11; }
+.eval-item[data-item="sub-material"] { order: 12; }
+
 @media (max-width: 768px) {
   .evaluation-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
-  
+
   .eval-item {
     padding: 8px 4px;
     font-size: 0.8rem;
   }
+
+  /* Order for 3 columns (tablet) */
+  .eval-item[data-item="city"] { order: 1; }
+  .eval-item[data-item="outdoor"] { order: 2; }
+  .eval-item[data-item="indoor"] { order: 3; }
+  .eval-item[data-item="equip-1"] { order: 4; }
+  .eval-item[data-item="equip-2"] { order: 5; }
+  .eval-item[data-item="equip-3"] { order: 6; }
+  .eval-item[data-item="uw2"] { order: 7; }
+  .eval-item[data-item="uw3"] { order: 8; }
+  .eval-item[data-item="l2d"] { order: 9; }
+  .eval-item[data-item="main-material"] { order: 10; }
+  .eval-item[data-item="sub-material"] { order: 11; }
+  .eval-item[data-item="version"] { order: 12; }
 }
 
 @media (max-width: 480px) {
   .evaluation-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Order for 2 columns (mobile) */
+  .eval-item[data-item] {
+    order: initial;
   }
 }
 </style>
