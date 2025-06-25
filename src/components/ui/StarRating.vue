@@ -11,11 +11,15 @@
     </template>
   </div>
   <div v-else>
-    不適用
+    {{ t('common.notApplicable')  }}
   </div>
 </template>
 
 <script setup>
+import { useI18n } from '@/composables/useI18n.js';
+
+const { t } = useI18n();
+
 defineProps({
   rating: {
     type: [Array, null],
