@@ -49,11 +49,21 @@
     <EvaluationItem :header="t('evaluation.ratingVersion')" color="darkgray" data-item="version" @item-click="handleItemClick">
       {{ characterData.ratingVersion }}
     </EvaluationItem>
+
+    <DetailModal
+      v-model="isModalVisible"
+      :title="modalTitle"
+      :image-url="modalImageUrl"
+      :text="modalText"
+      :position="modalPosition"
+    />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import EvaluationItem from './EvaluationItem.vue';
+import DetailModal from './DetailModal.vue';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { getAdaptImageUrl } from '@/utils/getAdaptImageUrl';
 import { getEquipmentImageUrl } from '@/utils/getEquipmentImageUrl';
@@ -68,9 +78,65 @@ const props = defineProps({
   }
 });
 
-function handleItemClick(dataItem) {
-  console.log(`Evaluation item clicked: ${dataItem}`);
-  // 您可以在這裡添加更多邏輯，例如：打開一個詳細資訊的彈出視窗、導航到新頁面等。
+const isModalVisible = ref(false);
+const modalTitle = ref('');
+const modalImageUrl = ref('');
+const modalText = ref('');
+const modalPosition = ref({ top: 0, left: 0 });
+
+function handleItemClick(dataItem, event) {
+  // Reset modal content before each click
+  modalImageUrl.value = '';
+  modalText.value = '';
+
+  // Set modal position based on the clicked item
+  if (event && event.currentTarget) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    // Position the modal below the clicked item, centered horizontally
+    modalPosition.value = { top: rect.bottom + window.scrollY, left: rect.left + rect.width / 2 + window.scrollX };
+  }
+
+  switch (true) {
+    case dataItem === 'city' || dataItem === 'outdoor' || dataItem === 'indoor':
+      modalTitle.value = t(`terrain.${dataItem}`);
+      modalImageUrl.value = getAdaptImageUrl(props.characterData[dataItem]);
+      modalText.value = props.characterData[dataItem];
+      isModalVisible.value = true;
+      break;
+
+    case dataItem.startsWith('equip-'): {
+      const index = parseInt(dataItem.split('-')[1], 10) - 1;
+      const equipName = props.characterData.equipments[index];
+      modalTitle.value = `${t('evaluation.equipment')}${index + 1}`;
+      modalImageUrl.value = getEquipmentImageUrl(equipName);
+      // Use the original name as a fallback if translation is not found
+      modalText.value = t(`equipmentNames.${equipName}`, equipName);
+      isModalVisible.value = true;
+      break;
+    }
+
+    case dataItem === 'main-material' || dataItem === 'sub-material': {
+      const opartKey = dataItem === 'main-material' ? 'skillMainOparts' : 'skillSubOparts';
+      const opartName = props.characterData[opartKey];
+      if (opartName) {
+        modalTitle.value = t(`evaluation.${dataItem === 'main-material' ? 'mainMaterial' : 'subMaterial'}`);
+        modalImageUrl.value = getOpartImageUrl(opartName);
+        modalText.value = t(`opartNames.${opartName}`, opartName);
+        isModalVisible.value = true;
+      }
+      break;
+    }
+
+    case dataItem === 'version':
+      modalTitle.value = t('evaluation.ratingVersion');
+      modalText.value = t('evaluation.ratingVersionDetail');
+      isModalVisible.value = true;
+      break;
+
+    // For uw2, uw3, l2d, do nothing as requested
+    default:
+      break;
+  }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="eval-item" :class="color" :data-item="dataItem" @click="handleClick">
+  <div class="eval-item" :class="color" :data-item="dataItem" @click="handleClick($event)">
     <div class="eval-header">{{ header }}</div>
     <div class="eval-value">
       <slot></slot>
@@ -25,8 +25,8 @@ const props = defineProps({
 
 const emit = defineEmits(['item-click']);
 
-function handleClick() {
-  emit('item-click', props.dataItem);
+function handleClick(event) {
+  emit('item-click', props.dataItem, event);
 }
 </script>
 
