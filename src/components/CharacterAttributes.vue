@@ -82,9 +82,6 @@ defineProps({
 </script>
 
 <style scoped>
-.attributes {
-  margin-top: 20px;
-}
 
 .attribute-row {
   display: flex;

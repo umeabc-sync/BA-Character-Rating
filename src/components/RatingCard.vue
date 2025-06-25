@@ -70,6 +70,18 @@
           :character="character" 
           @open-modal="isFavoriteItemVisible = true" 
         />
+
+        <div>
+          <a href="https://github.com/Yuuzi261/BA-Character-Rating" target="_blank" class="github-link">
+            <img :src="githubIconUrl" alt="Github Icon" />
+          </a>
+          <div class="developer-credits">
+            Developed by
+            <a href="https://github.com/Yuuzi261" target="_blank" rel="noopener noreferrer">Yuuzi</a>
+            &
+            <a href="https://github.com/FuseFairy" target="_blank" rel="noopener noreferrer">Zhuang</a>
+          </div>
+        </div>
       </div>
 
       <div class="right-section">
@@ -149,6 +161,7 @@ defineEmits(['open-selector', 'toggle-dark-mode', 'update-locale']);
 
 const { t } = useI18n();
 
+const githubIconUrl = computed(() => getAssetsFile('icon/github.svg'));
 const gearIconUrl = computed(() => getAssetsFile('icon/gear.svg'));
 
 const themeToggleTitle = computed(() => {
@@ -346,6 +359,9 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   padding: 20px;
   border-right: 3px solid #dee2e6;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between items */
 }
 
 .right-section {
@@ -415,6 +431,44 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   line-height: 1;
 }
 
+.left-section > div:last-child { /* Target the last div in left-section (our new footer) */
+  margin-top: auto; /* Pushes this element to the bottom */
+  display: flex; /* Make it a flex container for icon and text */
+  align-items: center; /* Vertically align items */
+  gap: 8px; /* Space between icon and text */
+  color: #6c757d; /* Default text color for the footer section */
+}
+
+.left-section > div:last-child .github-link img {
+  width: 20px;
+  height: 20px;
+  /* The original black SVG is made to look grey by reducing opacity on a light background. */
+  filter: opacity(0.6);
+  transition: filter 0.3s ease;
+  vertical-align: middle; /* Ensure icon aligns well with text baseline */
+}
+
+.left-section > div:last-child .github-link:hover img {
+  /* Icon becomes darker (solid black) on hover */
+  filter: opacity(1);
+}
+
+.left-section > div:last-child .developer-credits {
+  font-size: 0.85rem; /* Adjust text size */
+  line-height: 1.2; /* Ensure text aligns well */
+}
+
+.left-section > div:last-child .developer-credits a {
+  color: inherit; /* Inherit grey from parent */
+  text-decoration: none; /* No underline by default */
+  transition: color 0.3s ease;
+}
+
+.left-section > div:last-child .developer-credits a:hover {
+  color: #343a40; /* Darker on hover */
+  text-decoration: underline;
+}
+
 .dark-mode .separator-arrow {
   color: #5a6e8a;
 }
@@ -464,6 +518,24 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   color: #c0c8d0;
 }
 
+.dark-mode .left-section > div:last-child {
+  color: #98a6b3;
+}
+
+.dark-mode .left-section > div:last-child .github-link img {
+  /* Invert the black SVG to white and set opacity */
+  filter: invert(1) opacity(0.6);
+}
+
+.dark-mode .left-section > div:last-child .github-link:hover img {
+  /* Icon becomes brighter (solid white) on hover */
+  filter: invert(1) opacity(1);
+}
+
+.dark-mode .left-section > div:last-child .developer-credits a:hover {
+  color: #e9ecef; /* Brighter on hover */
+  text-decoration: underline;
+}
 
 
 /* Style highlighting, because it is used in RatingSection and SkillsSection, so put it here */

@@ -26,7 +26,7 @@ const getFavoriteItemImageUrl = (id) => {
 
 <style scoped>
 .favorite-item-section {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .favorite-item-button {
