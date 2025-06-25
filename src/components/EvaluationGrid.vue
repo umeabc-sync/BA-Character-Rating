@@ -1,17 +1,18 @@
 <template>
   <div class="evaluation-grid">
-    <EvaluationItem :header="t('terrain.city')" color="green" data-item="city">
+    <EvaluationItem :header="t('terrain.city')" color="green" data-item="city" @item-click="handleItemClick">
       <img :src="getAdaptImageUrl(characterData.city)" :alt="characterData.city" class="eval-image">
     </EvaluationItem>
-    <EvaluationItem :header="t('terrain.outdoor')" color="green" data-item="outdoor">
+    <EvaluationItem :header="t('terrain.outdoor')" color="green" data-item="outdoor" @item-click="handleItemClick">
       <img :src="getAdaptImageUrl(characterData.outdoor)" :alt="characterData.outdoor" class="eval-image">
     </EvaluationItem>
-    <EvaluationItem :header="t('terrain.indoor')" color="green" data-item="indoor">
+    <EvaluationItem :header="t('terrain.indoor')" color="green" data-item="indoor" @item-click="handleItemClick">
       <img :src="getAdaptImageUrl(characterData.indoor)" :alt="characterData.indoor" class="eval-image">
     </EvaluationItem>
 
     <EvaluationItem
       v-for="(equip, index) in characterData.equipments"
+      @item-click="handleItemClick"
       :key="equip"
       :header="`${t('evaluation.equipment')}${index + 1}`"
       color="blue"
@@ -20,10 +21,10 @@
       <img :src="getEquipmentImageUrl(equip)" :alt="equip" class="eval-image">
     </EvaluationItem>
 
-    <EvaluationItem :header="t('evaluation.uniqueWeapon2')" color="peach" data-item="uw2">
+    <EvaluationItem :header="t('evaluation.uniqueWeapon2')" color="peach" data-item="uw2" @item-click="handleItemClick">
       {{ characterData.uniqueWeaponStar2 }}
     </EvaluationItem>
-    <EvaluationItem :header="t('evaluation.uniqueWeapon3')" color="peach" data-item="uw3">
+    <EvaluationItem :header="t('evaluation.uniqueWeapon3')" color="peach" data-item="uw3" @item-click="handleItemClick">
       <template v-if="Array.isArray(characterData.uniqueWeaponStar3) && characterData.uniqueWeaponStar3.length === 2">
         {{ t(`terrain.${characterData.uniqueWeaponStar3[0]}`) }} → 
         <img :src="getAdaptImageUrl(characterData.uniqueWeaponStar3[1])" :alt="characterData.uniqueWeaponStar3[1]" class="eval-image-inline" style="padding-left: 0.25em;">
@@ -33,19 +34,19 @@
       </template>
     </EvaluationItem>
 
-    <EvaluationItem :header="t('evaluation.mainMaterial')" color="yellow" data-item="main-material">
+    <EvaluationItem :header="t('evaluation.mainMaterial')" color="yellow" data-item="main-material" @item-click="handleItemClick">
       <img v-if="characterData.skillMainOparts" :src="getOpartImageUrl(characterData.skillMainOparts)" :alt="characterData.skillMainOparts" class="eval-image">
       <span v-else>N/A</span>
     </EvaluationItem>
-    <EvaluationItem :header="t('evaluation.subMaterial')" color="yellow" data-item="sub-material">
+    <EvaluationItem :header="t('evaluation.subMaterial')" color="yellow" data-item="sub-material" @item-click="handleItemClick">
       <img v-if="characterData.skillSubOparts" :src="getOpartImageUrl(characterData.skillSubOparts)" :alt="characterData.skillSubOparts" class="eval-image">
       <span v-else>N/A</span>
     </EvaluationItem>
-    <EvaluationItem :header="t('evaluation.l2dBond')" color="pink" data-item="l2d">
+    <EvaluationItem :header="t('evaluation.l2dBond')" color="pink" data-item="l2d" @item-click="handleItemClick">
       {{ characterData.l2dUnlock }}
     </EvaluationItem>
 
-    <EvaluationItem :header="t('evaluation.ratingVersion')" color="darkgray" data-item="version">
+    <EvaluationItem :header="t('evaluation.ratingVersion')" color="darkgray" data-item="version" @item-click="handleItemClick">
       {{ characterData.ratingVersion }}
     </EvaluationItem>
   </div>
@@ -66,6 +67,11 @@ const props = defineProps({
     required: true
   }
 });
+
+function handleItemClick(dataItem) {
+  console.log(`Evaluation item clicked: ${dataItem}`);
+  // 您可以在這裡添加更多邏輯，例如：打開一個詳細資訊的彈出視窗、導航到新頁面等。
+}
 </script>
 
 <style scoped>

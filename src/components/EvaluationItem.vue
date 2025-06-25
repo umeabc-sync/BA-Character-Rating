@@ -1,5 +1,5 @@
 <template>
-  <div class="eval-item" :class="color" :data-item="dataItem">
+  <div class="eval-item" :class="color" :data-item="dataItem" @click="handleClick">
     <div class="eval-header">{{ header }}</div>
     <div class="eval-value">
       <slot></slot>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   header: {
     type: String,
     required: true
@@ -22,6 +22,12 @@ defineProps({
     required: true
   }
 });
+
+const emit = defineEmits(['item-click']);
+
+function handleClick() {
+  emit('item-click', props.dataItem);
+}
 </script>
 
 <style scoped>
@@ -33,6 +39,13 @@ defineProps({
   background: rgba(255, 255, 255, 0.7);
   border-top: 4px solid; /* Change the color of the top border */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eval-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Dark Mode Overrides for EvaluationGrid */
