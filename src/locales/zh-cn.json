@@ -80,7 +80,41 @@
     "mainMaterial": "主素材",
     "subMaterial": "副素材",
     "l2dBond": "L2D羁绊",
-    "ratingVersion": "角评版本"
+    "ratingVersion": "角评版本",
+    "ratingVersionDetail": "当前最高版本：7.0"
+  },
+  "equipmentNames": {
+    "hat": "帽子",
+    "gloves": "手套",
+    "shoes": "鞋",
+    "bag": "背包",
+    "badge": "徽章",
+    "hairpin": "发夹",
+    "amulet": "护身符",
+    "necklace": "项链",
+    "watch": "手表"
+  },
+  "opartNames": {
+    "nebra": "内布拉星象盘碎片",
+    "phaistos": "费斯托斯圆盘碎片",
+    "wolfsegg": "沃尔夫塞格铁矿石",
+    "nimrud": "尼姆鲁德透镜碎片",
+    "mandragora": "曼德拉草种子",
+    "rohonc": "罗洪特写本书页",
+    "ether": "以太粉末",
+    "antikythera": "安提基瑟拉装置碎片",
+    "voynich": "伏尼契手稿书页",
+    "crystalhaniwa": "水晶埴轮碎片",
+    "totempole": "图腾柱碎片",
+    "baghdad": "巴格达电池碎片",
+    "goldenfleece": "黄金毛线",
+    "kikuko": "市松娃娃碎片",
+    "discocolgante": "圆盘吊坠碎片",
+    "atlantismedal": "亚特兰提斯徽章碎片",
+    "romandice": "罗马十二面体碎片",
+    "quimbaya": "金巴亚黄金飞机碎片",
+    "rocket": "伊斯坦布尔古代火箭碎片",
+    "winnistone": "温尼珀索基湖神秘石碎片"
   },
   "favoriteItem": {
     "viewInfo": "查看爱用品信息"
