@@ -71,7 +71,9 @@
           @open-modal="isFavoriteItemVisible = true" 
         />
 
-        <CardFooter v-if="!isMobileView" class="footer-desktop" />
+        <div class="footer-desktop">
+          <CardFooter />
+        </div>
       </div>
 
       <div class="right-section">
@@ -112,7 +114,9 @@
           </div>
         </RatingSection>
 
-        <CardFooter v-if="isMobileView" class="footer-mobile" />
+        <div class="footer-mobile">
+          <CardFooter />
+        </div>
       </div>
     </div>
   </div>
@@ -129,7 +133,7 @@
 </template>
 
 <script setup>
-import { computed, watch, ref, nextTick, onMounted, onUnmounted } from 'vue';
+import { computed, watch, ref, nextTick } from 'vue';
 import { useI18n } from '@/composables/useI18n.js';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import CharacterInfo from './CharacterInfo.vue';
@@ -208,25 +212,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
     triggerAnimation.value = true;
   }
 }, { immediate: true }); 
-
-const isMobileView = ref(false);
-let mediaQueryList;
-
-const checkScreenSize = () => {
-  if (mediaQueryList) {
-    isMobileView.value = mediaQueryList.matches;
-  }
-};
-
-onMounted(() => {
-  mediaQueryList = window.matchMedia('(max-width: 768px)');
-  checkScreenSize(); // Initial check
-  mediaQueryList.addEventListener('change', checkScreenSize);
-});
-
-onUnmounted(() => {
-  mediaQueryList?.removeEventListener('change', checkScreenSize);
-});
 </script>
 
 <style scoped>
@@ -496,11 +481,7 @@ onUnmounted(() => {
 }
 
 .footer-mobile {
-  display: flex;
-  justify-content: center; /* Center the content */
-  margin-top: 10px; /* Add some space from the content above */
-  padding-top: 10px; /* More space */
-  border-top: 1px solid #dee2e6;
+  display: none; /* Hidden on desktop */
 }
 
 .dark-mode .footer-mobile {
@@ -526,6 +507,18 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .card-content {
     grid-template-columns: 1fr;
+  }
+
+  .footer-desktop {
+    display: none; /* Hide desktop footer on mobile */
+  }
+
+  .footer-mobile {
+    display: flex; /* Show mobile footer */
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
   }
 
   .card-header {
