@@ -1,11 +1,11 @@
 <template>
   <teleport to="body">
     <transition name="modal-fade">
-      <div v-if="isVisible" class="modal-overlay" @click.self="closeModal">
+      <div v-if="isVisible" class="modal-overlay" @click.self="close">
         <div class="modal-content">
           <div class="modal-header">
             <h3>{{ t('characterSelector.title') }}</h3>
-            <button class="close-button" @click="closeModal">&times;</button>
+            <button class="close-button" @click="close">&times;</button>
           </div>
           <div class="modal-body">
             <div class="search-and-reset">
@@ -86,12 +86,13 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, toRefs } from 'vue';
 import { useI18n } from '@/composables/useI18n';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getAvatarUrl } from '@/utils/getAvatarUrl';
 import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl';
 import ImageWithLoader from '../ui/ImageWithLoader.vue';
+import { useEscapeKey } from '@/composables/useEscapeKey.js';
 
 const { t } = useI18n();
 const props = defineProps({
@@ -143,9 +144,12 @@ const resetFilters = () => {
   searchTerm.value = '';
 };
 
-const closeModal = () => {
+const close = () => {
   emit('close');
 };
+
+const { isVisible } = toRefs(props);
+useEscapeKey(isVisible, close);
 
 const selectFilter = (filterType, value) => {
   const targetRef = filterRefs[filterType];

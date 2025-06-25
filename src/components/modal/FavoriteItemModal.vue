@@ -1,11 +1,11 @@
 <template>
   <teleport to="body">
     <transition name="modal-fade">
-      <div v-if="isVisible" class="favorite-item-modal-overlay" @click.self="$emit('close')">
+      <div v-if="isVisible" class="favorite-item-modal-overlay" @click.self="close">
         <div class="modal-content">
           <div class="modal-header">
             <h3>{{ character.name }}{{ t('favoriteItemModal.titleSuffix') }}</h3>
-            <button @click="$emit('close')" class="close-button">&times;</button>
+            <button @click="close" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
             <ImageWithLoader
@@ -52,20 +52,29 @@
 </template>
 
 <script setup>
+import { toRefs } from 'vue';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { useI18n } from '@/composables/useI18n';
 import ImageWithLoader from '../ui/ImageWithLoader.vue';
 import StarRating from '../ui/StarRating.vue';
+import { useEscapeKey } from '@/composables/useEscapeKey.js';
 
 const { t } = useI18n();
 
-defineProps({
+const props = defineProps({
   character: { type: Object, required: true },
   isVisible: { type: Boolean, default: false }
 });
 
-defineEmits(['close']);
+const emit = defineEmits(['close']);
+
+const close = () => {
+  emit('close');
+};
+
+const { isVisible } = toRefs(props);
+useEscapeKey(isVisible, close);
 
 const getGiftImageUrl = (favor) => {
   return getAssetsFile(`gift/favor_${favor}.webp`);

@@ -1,11 +1,11 @@
 <template>
   <teleport to="body">
     <transition name="modal-fade">
-      <div v-if="isVisible" class="modal-overlay" @click.self="$emit('close')">
+      <div v-if="isVisible" class="modal-overlay" @click.self="close">
         <div class="modal-content">
           <div class="modal-header">
             <h3>{{ t('common.settings') }}</h3>
-            <button @click="$emit('close')" class="close-button">&times;</button>
+            <button @click="close" class="close-button">&times;</button>
           </div>
           <div class="modal-body">
             <div class="setting-group">
@@ -30,16 +30,24 @@
 </template>
 
 <script setup>
+import { toRefs } from 'vue';
 import { useSettingStore } from '@/store/setting';
 import { storeToRefs } from 'pinia';
 import { useI18n } from '@/composables/useI18n.js';
+import { useEscapeKey } from '@/composables/useEscapeKey.js';
 
 const { t } = useI18n();
 
-defineProps({
+const props = defineProps({
   isVisible: { type: Boolean, default: false }
 });
-defineEmits(['close']);
+const emit = defineEmits(['close']);
+
+const close = () => {
+  emit('close');
+};
+const { isVisible } = toRefs(props);
+useEscapeKey(isVisible, close);
 
 const settingStore = useSettingStore();
 const { locale: currentLocale } = storeToRefs(settingStore);
