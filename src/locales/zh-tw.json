@@ -133,5 +133,9 @@
   },
   "settingsModal": {
     "language": "語言"
+  },
+  "dataSource": {
+    "text": "資料來源：夜貓攻略組",
+    "title": "前往夜貓攻略組 Bilibili 頻道"
   }
 }

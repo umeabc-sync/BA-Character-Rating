@@ -71,7 +71,10 @@
           @open-modal="isFavoriteItemVisible = true" 
         />
 
-        <div class="footer-desktop">
+        <div class="data-source-wrapper">
+          <DataSource />
+        </div>
+        <div class="left-footer-wrapper">
           <CardFooter />
         </div>
       </div>
@@ -114,7 +117,8 @@
           </div>
         </RatingSection>
 
-        <div class="footer-mobile">
+        <div class="mobile-meta-section">
+          <DataSource />
           <CardFooter />
         </div>
       </div>
@@ -148,6 +152,7 @@ import FavoriteItemSection from './FavoriteItemSection.vue';
 import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 import SettingsModal from './modal/SettingsModal.vue';
 import CardFooter from './CardFooter.vue';
+import DataSource from './DataSource.vue';
 
 const props = defineProps({
   character: { type: Object, required: true }, 
@@ -357,7 +362,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space between items */
 }
 
 .right-section {
@@ -476,16 +480,17 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   color: #c0c8d0;
 }
 
-.footer-desktop {
-  margin-top: auto; /* Pushes this element to the bottom of the left column */
+.data-source-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0; /* Prevents flexbox overflow issues */
+  padding: 15px 0; /* Add some vertical padding */
 }
 
-.footer-mobile {
+.mobile-meta-section {
   display: none; /* Hidden on desktop */
-}
-
-.dark-mode .footer-mobile {
-  border-top-color: #2a4a6e;
 }
 
 
@@ -509,16 +514,22 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
     grid-template-columns: 1fr;
   }
 
-  .footer-desktop {
-    display: none; /* Hide desktop footer on mobile */
+  .data-source-wrapper,
+  .left-footer-wrapper {
+    display: none; /* Hide desktop meta sections on mobile */
   }
 
-  .footer-mobile {
+  .mobile-meta-section {
     display: flex; /* Show mobile footer */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #dee2e6;
+  }
+
+  .dark-mode .mobile-meta-section {
+    border-top-color: #2a4a6e;
   }
 
   .card-header {

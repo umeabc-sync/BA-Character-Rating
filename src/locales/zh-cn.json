@@ -133,5 +133,9 @@
   },
   "settingsModal": {
     "language": "语言"
+  },
+  "dataSource": {
+    "text": "资料来源：夜猫攻略组",
+    "title": "前往夜猫攻略组 Bilibili 频道"
   }
 }

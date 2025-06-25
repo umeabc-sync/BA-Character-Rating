@@ -23,6 +23,7 @@ const githubIconUrl = computed(() => getAssetsFile('icon/github.svg'));
 .card-footer-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: #6c757d;
 }
