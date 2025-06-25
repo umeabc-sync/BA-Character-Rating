@@ -26,7 +26,7 @@ const props = defineProps({
 const emit = defineEmits(['item-click']);
 
 function handleClick(event) {
-  emit('item-click', props.dataItem, event);
+  emit('item-click', props.dataItem, event, props.color);
 }
 </script>
 

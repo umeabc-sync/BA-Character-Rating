@@ -2,7 +2,7 @@
   <teleport to="body">
     <transition name="modal-fade">
       <div v-if="modelValue" class="modal-backdrop" @click.self="closeModal">
-        <div class="modal-content" :style="modalStyle">
+        <div class="modal-content" ref="modalContentRef" :class="color">
           <button class="close-button" @click="closeModal">&times;</button>
           <h3 class="modal-title">{{ title }}</h3>
           <div class="modal-body">
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { ref, watch, nextTick } from 'vue';
 
 const props = defineProps({
   modelValue: Boolean,
@@ -25,27 +25,72 @@ const props = defineProps({
   text: String,
   position: {
     type: Object,
-    default: () => ({ top: 0, left: 0 })
+    default: null
+  },
+  color: {
+    type: String,
+    default: 'blue'
   }
 });
 
 const emit = defineEmits(['update:modelValue']);
 
-const modalStyle = computed(() => {
-  // Default to center if no position is provided
-  if (!props.position || (props.position.top === 0 && props.position.left === 0)) {
-    return {
-      top: '50%',
-      left: '50%',
-      '--modal-transform': 'translate(-50%, -50%)'
-    };
+const modalContentRef = ref(null);
+
+watch(() => props.modelValue, async (show) => {
+  if (!show) return;
+
+  // Wait for the element to be rendered in the DOM
+  await nextTick();
+
+  const modalEl = modalContentRef.value;
+  if (!modalEl) return;
+
+  // Hide the modal to prevent any flicker while we calculate its position.
+  modalEl.style.visibility = 'hidden';
+
+  // Position the modal and set the CSS variable for the animation.
+  // Fallback to center if no position is provided.
+  if (!props.position) {
+    modalEl.style.top = '50%';
+    modalEl.style.left = '50%';
+    modalEl.style.setProperty('--modal-transform', 'translate(-50%, -50%)');
+  } else {
+    // --- Robust Positioning Logic ---
+    const triggerRect = props.position;
+    const modalRect = modalEl.getBoundingClientRect(); // Get REAL dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const margin = 10;
+
+    // Vertical position: Flip to top if not enough space below
+    let top = triggerRect.bottom + margin;
+    if (top + modalRect.height > viewportHeight - margin) {
+      top = triggerRect.top - modalRect.height - margin;
+    }
+    if (top < margin) {
+      top = margin;
+    }
+
+    // Horizontal position: Keep it inside the viewport
+    let left = triggerRect.left + triggerRect.width / 2;
+    const halfWidth = modalRect.width / 2;
+    if (left < halfWidth + margin) {
+      left = halfWidth + margin;
+    }
+    if (left + halfWidth > viewportWidth - margin) {
+      left = viewportWidth - halfWidth - margin;
+    }
+
+    modalEl.style.top = `${top}px`;
+    modalEl.style.left = `${left}px`;
+    modalEl.style.setProperty('--modal-transform', 'translateX(-50%)');
   }
-  // Position below the clicked item
-  return {
-    top: `${props.position.top + 10}px`, // Add 10px margin
-    left: `${props.position.left}px`,
-    '--modal-transform': 'translateX(-50%)'
-  };
+
+  // Reveal the element in the next frame, ensuring it appears at the correct final position.
+  requestAnimationFrame(() => {
+    modalEl.style.visibility = 'visible';
+  });
 });
 
 function closeModal() {
@@ -74,7 +119,7 @@ function closeModal() {
   position: absolute;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  border-top: 5px solid #118ab2; /* A default color matching the equipment items */
+  border-top: 5px solid;
   transform: var(--modal-transform);
   animation: slide-down 0.3s ease-out;
 }
@@ -94,6 +139,14 @@ function closeModal() {
   background: #2c3e50;
   color: #e0e6ed;
 }
+
+/* Dynamic border colors matching EvaluationItem */
+.modal-content.yellow { border-color: #ffd166; }
+.modal-content.green { border-color: #06d6a0; }
+.modal-content.blue { border-color: #118ab2; }
+.modal-content.peach { border-color: #ef476f; }
+.modal-content.pink { border-color: #ff89a1; }
+.modal-content.darkgray { border-color: #6e7d8d; }
 
 .close-button {
   position: absolute;

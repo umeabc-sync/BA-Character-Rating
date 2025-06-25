@@ -56,6 +56,7 @@
       :image-url="modalImageUrl"
       :text="modalText"
       :position="modalPosition"
+      :color="modalColor"
     />
   </div>
 </template>
@@ -83,17 +84,19 @@ const modalTitle = ref('');
 const modalImageUrl = ref('');
 const modalText = ref('');
 const modalPosition = ref({ top: 0, left: 0 });
+const modalColor = ref('blue');
 
-function handleItemClick(dataItem, event) {
+function handleItemClick(dataItem, event, color) {
   // Reset modal content before each click
   modalImageUrl.value = '';
   modalText.value = '';
+  modalColor.value = color;
 
   // Set modal position based on the clicked item
   if (event && event.currentTarget) {
     const rect = event.currentTarget.getBoundingClientRect();
-    // Position the modal below the clicked item, centered horizontally
-    modalPosition.value = { top: rect.bottom + window.scrollY, left: rect.left + rect.width / 2 + window.scrollX };
+    // Pass the viewport-relative rectangle of the trigger element
+    modalPosition.value = rect.toJSON();
   }
 
   switch (true) {
