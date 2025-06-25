@@ -71,17 +71,7 @@
           @open-modal="isFavoriteItemVisible = true" 
         />
 
-        <div>
-          <a href="https://github.com/Yuuzi261/BA-Character-Rating" target="_blank" class="github-link">
-            <img :src="githubIconUrl" alt="Github Icon" />
-          </a>
-          <div class="developer-credits">
-            Developed by
-            <a href="https://github.com/Yuuzi261" target="_blank" rel="noopener noreferrer">Yuuzi</a>
-            &
-            <a href="https://github.com/FuseFairy" target="_blank" rel="noopener noreferrer">Zhuang</a>
-          </div>
-        </div>
+        <CardFooter v-if="!isMobileView" class="footer-desktop" />
       </div>
 
       <div class="right-section">
@@ -121,6 +111,8 @@
             </template>
           </div>
         </RatingSection>
+
+        <CardFooter v-if="isMobileView" class="footer-mobile" />
       </div>
     </div>
   </div>
@@ -137,7 +129,7 @@
 </template>
 
 <script setup>
-import { computed, watch, ref, nextTick } from 'vue';
+import { computed, watch, ref, nextTick, onMounted, onUnmounted } from 'vue';
 import { useI18n } from '@/composables/useI18n.js';
 import { getAssetsFile } from '@/utils/getAssetsFile';
 import CharacterInfo from './CharacterInfo.vue';
@@ -151,6 +143,7 @@ import InfoIcon from './ui/InfoIcon.vue';
 import FavoriteItemSection from './FavoriteItemSection.vue';
 import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 import SettingsModal from './modal/SettingsModal.vue';
+import CardFooter from './CardFooter.vue';
 
 const props = defineProps({
   character: { type: Object, required: true }, 
@@ -161,7 +154,6 @@ defineEmits(['open-selector', 'toggle-dark-mode', 'update-locale']);
 
 const { t } = useI18n();
 
-const githubIconUrl = computed(() => getAssetsFile('icon/github.svg'));
 const gearIconUrl = computed(() => getAssetsFile('icon/gear.svg'));
 
 const themeToggleTitle = computed(() => {
@@ -216,6 +208,25 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
     triggerAnimation.value = true;
   }
 }, { immediate: true }); 
+
+const isMobileView = ref(false);
+let mediaQueryList;
+
+const checkScreenSize = () => {
+  if (mediaQueryList) {
+    isMobileView.value = mediaQueryList.matches;
+  }
+};
+
+onMounted(() => {
+  mediaQueryList = window.matchMedia('(max-width: 768px)');
+  checkScreenSize(); // Initial check
+  mediaQueryList.addEventListener('change', checkScreenSize);
+});
+
+onUnmounted(() => {
+  mediaQueryList?.removeEventListener('change', checkScreenSize);
+});
 </script>
 
 <style scoped>
@@ -431,44 +442,6 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   line-height: 1;
 }
 
-.left-section > div:last-child { /* Target the last div in left-section (our new footer) */
-  margin-top: auto; /* Pushes this element to the bottom */
-  display: flex; /* Make it a flex container for icon and text */
-  align-items: center; /* Vertically align items */
-  gap: 8px; /* Space between icon and text */
-  color: #6c757d; /* Default text color for the footer section */
-}
-
-.left-section > div:last-child .github-link img {
-  width: 20px;
-  height: 20px;
-  /* The original black SVG is made to look grey by reducing opacity on a light background. */
-  filter: opacity(0.6);
-  transition: filter 0.3s ease;
-  vertical-align: middle; /* Ensure icon aligns well with text baseline */
-}
-
-.left-section > div:last-child .github-link:hover img {
-  /* Icon becomes darker (solid black) on hover */
-  filter: opacity(1);
-}
-
-.left-section > div:last-child .developer-credits {
-  font-size: 0.85rem; /* Adjust text size */
-  line-height: 1.2; /* Ensure text aligns well */
-}
-
-.left-section > div:last-child .developer-credits a {
-  color: inherit; /* Inherit grey from parent */
-  text-decoration: none; /* No underline by default */
-  transition: color 0.3s ease;
-}
-
-.left-section > div:last-child .developer-credits a:hover {
-  color: #343a40; /* Darker on hover */
-  text-decoration: underline;
-}
-
 .dark-mode .separator-arrow {
   color: #5a6e8a;
 }
@@ -518,23 +491,20 @@ watch(() => props.character.ratings.overall, async (newVal, oldVal) => {
   color: #c0c8d0;
 }
 
-.dark-mode .left-section > div:last-child {
-  color: #98a6b3;
+.footer-desktop {
+  margin-top: auto; /* Pushes this element to the bottom of the left column */
 }
 
-.dark-mode .left-section > div:last-child .github-link img {
-  /* Invert the black SVG to white and set opacity */
-  filter: invert(1) opacity(0.6);
+.footer-mobile {
+  display: flex;
+  justify-content: center; /* Center the content */
+  margin-top: 10px; /* Add some space from the content above */
+  padding-top: 10px; /* More space */
+  border-top: 1px solid #dee2e6;
 }
 
-.dark-mode .left-section > div:last-child .github-link:hover img {
-  /* Icon becomes brighter (solid white) on hover */
-  filter: invert(1) opacity(1);
-}
-
-.dark-mode .left-section > div:last-child .developer-credits a:hover {
-  color: #e9ecef; /* Brighter on hover */
-  text-decoration: underline;
+.dark-mode .footer-mobile {
+  border-top-color: #2a4a6e;
 }
 
 
