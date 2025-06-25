@@ -61,4 +61,10 @@ const githubIconUrl = computed(() => getAssetsFile('icon/github.svg'));
 .dark-mode .github-link img { filter: invert(1) opacity(0.6); }
 .dark-mode .github-link:hover img { filter: invert(1) opacity(1); }
 .dark-mode .developer-credits a:hover { color: #e9ecef; text-decoration: underline; }
+
+@media (max-width: 768px) {
+	.card-footer-container {
+		padding-top: 0.75rem;
+	}
+}
 </style>
