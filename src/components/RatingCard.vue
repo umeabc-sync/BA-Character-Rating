@@ -94,18 +94,18 @@
 
         <RatingSection :title="t('ratingCard.skillSummary')">
           <div v-if="character.skillsSummary" class="skills-summary">
-            <p><span class="highlight">{{ t("skillType.ex") }}</span>{{ character.skillsSummary.ex }}</p>
-            <p><span class="highlight">{{ t("skillType.ns") }}</span>{{ character.skillsSummary.ns }}</p>
-            <p><span class="highlight">{{ t("skillType.ss") }}</span>{{ character.skillsSummary.ss }}</p>
+            <p><span class="highlight">{{ t("skillType.ex") }}</span><ColoredText :text="character.skillsSummary.ex" /></p>
+            <p><span class="highlight">{{ t("skillType.ns") }}</span><ColoredText :text="character.skillsSummary.ns" /></p>
+            <p><span class="highlight">{{ t("skillType.ss") }}</span><ColoredText :text="character.skillsSummary.ss" /></p>
           </div>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.uniqueWeaponRecommendation')">
-          <p>{{ character.uniqueWeaponRecommendedSummary }}</p>
+          <p><ColoredText :text="character.uniqueWeaponRecommendedSummary" /></p>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.overallRecommendation')">
-          <p>{{ character.overallRecommendation }}</p>
+          <p><ColoredText :text="character.overallRecommendation" /></p>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.skillOrder')">
@@ -152,6 +152,7 @@ import FavoriteItemSection from './FavoriteItemSection.vue';
 import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 import SettingsModal from './modal/SettingsModal.vue';
 import CardFooter from './CardFooter.vue';
+import ColoredText from './ui/ColoredText.vue';
 import DataSource from './DataSource.vue';
 
 const props = defineProps({

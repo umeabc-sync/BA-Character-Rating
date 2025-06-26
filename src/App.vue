@@ -107,6 +107,19 @@ watch(isDarkMode, (newValue) => {
 </script>
 
 <style>
+/* Define CSS Variables for colors */
+:root {
+  /* Light Mode Colors */
+  --color-blue: #4a90e2;
+  --color-green: #43a047;
+  --color-teal: #0097a7;
+  --color-red: #d32f2f;
+  --color-purple: #8e24aa;
+  /* Add other common colors here if needed */
+  --text-color-default: #2c3e50;
+  --background-color-default: linear-gradient(135deg, #e0ffff 0%, #add8e6 100%);
+}
+
 /* Global Style */
 * {
   margin: 0;
@@ -117,11 +130,22 @@ watch(isDarkMode, (newValue) => {
 
 body {
   font-family: 'Microsoft YaHei', Arial, sans-serif;
-  background: linear-gradient(135deg, #e0ffff 0%, #add8e6 100%);
-  color: #2c3e50; /* Light mode default text color */
+  background: var(--background-color-default);
+  color: var(--text-color-default);
   min-height: 100vh;
   padding: 10px;
   transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Dark Mode Overrides for CSS Variables */
+body.dark-mode {
+  --color-blue: #81d4fa;
+  --color-green: #81c784;
+  --color-teal: #4dd0e1;
+  --color-red: #ef5350;
+  --color-purple: #ce93d8;
+  --text-color-default: #e0e6ed;
+  --background-color-default: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
 }
 
 body.dark-mode {

@@ -41,8 +41,8 @@
               </ul>
             </div>
             <div class="effects">
-              <p><strong>{{ t('favoriteItemModal.t1Effect') }}</strong>{{ character.favoriteItem.effects[0] }}</p>
-              <p><strong>{{ t('favoriteItemModal.t2Effect') }}</strong>{{ character.favoriteItem.effects[1] }}</p>
+              <p><strong>{{ t('favoriteItemModal.t1Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[0]" /></p>
+              <p><strong>{{ t('favoriteItemModal.t2Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[1]" /></p>
             </div>
           </div>
         </div>
@@ -58,6 +58,7 @@ import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { useI18n } from '@/composables/useI18n';
 import ImageWithLoader from '../ui/ImageWithLoader.vue';
 import StarRating from '../ui/StarRating.vue';
+import ColoredText from '../ui/ColoredText.vue';
 import { useEscapeKey } from '@/composables/useEscapeKey.js';
 
 const { t } = useI18n();
