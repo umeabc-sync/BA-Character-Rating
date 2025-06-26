@@ -54,6 +54,186 @@
     "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技二Lv7", "技一Lv7", "EX5", "技三Lv10", "技二Lv10", "技一Lv10", "Max"]
   },
   {
+    "id": 18,
+    "fullname": "羽川 蓮實",
+    "name": "蓮實",
+    "nicknames": ["蓮實", "蓮見"],
+    "school": "Trinity",
+    "attackType": "Piercing",
+    "defenseType": "Heavy",
+    "weapon": "SR",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "可Hard高專",
+    "acquisitionMethod": "常駐/困難",
+    "skillMainOparts": "ether",
+    "skillSubOparts": "voynich",
+    "l2dUnlock": 8,
+    "city": "B",
+    "outdoor": "A",
+    "indoor": "B",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "暴擊傷害增加",
+    "uniqueWeaponStar3": ["city", "A"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [1, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 33
+    },
+    "skillsSummary": {
+      "ex": "5Cost對一名敵方造成1091%傷害",
+      "ns": "打倒敵方時立刻換彈並使暴擊傷害增加57%（13秒）",
+      "ss": "技換彈後暴擊值提升95%（攻擊一次後失效）。愛用品提升較小，變化不大"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "重甲多刀可選或修血條用",
+      "pvp": "暫時無可搭配組合",
+      "grandAssault": "重甲多刀可選或修血條用",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "射擊演習可選",
+      "eventChallenge": "低配缺人可選"
+    },
+    "uniqueWeaponRecommendedSummary": "需要用時一定要開，加強輸出能力",
+    "overallRecommendation": "老玩家根據環境需求培養、儲備角色",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技二Lv7", "技三LV7", "EX5", "技一Lv10", "技二Lv10", "技三Lv10", "Max"],
+    "favoriteItem": {
+      "name": "使い込まれた手帳（暫無譯名）",
+      "recommendedLevel": [2, 0, 0],
+      "materials": ["26", "ether"],
+      "effects": ["暴擊增加260", "暴傷增加57%提升至66.7%，持續時間從13秒提升至26秒"]
+    }
+  },
+  {
+    "id": 50,
+    "fullname": "才羽 綠",
+    "name": "綠",
+    "nicknames": ["小綠"],
+    "school": "Millennium",
+    "attackType": "Piercing",
+    "defenseType": "Light",
+    "weapon": "SR",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "有需要商店換",
+    "acquisitionMethod": "常駐/商店",
+    "skillMainOparts": "phaistos",
+    "skillSubOparts": "antikythera",
+    "l2dUnlock": 6,
+    "city": "B",
+    "outdoor": "S",
+    "indoor": "D",
+    "equipments": [
+      "gloves",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "暴擊值增加",
+    "uniqueWeaponStar3": ["outdoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [1, 1, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 38
+    },
+    "skillsSummary": {
+      "ex": "3Cost依序對最多5名敵人鎖定造成191%傷害（只有1名則鎖定5次），編隊內有小桃時則額外造成51.8%中毒（20秒）",
+      "ns": "每25秒對一名血量最低的我方回覆治愈力147%血量",
+      "ss": "攻速提升28.7%。編隊內有小桃時則提升至34.4%。愛用品加強掛件能力，其實是小桃的愛用品"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "野外重甲BOSS多刀可選",
+      "pvp": "S8針對重甲陣容",
+      "grandAssault": "野外重甲BOSS多刀可選",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "射擊/突破演習可選",
+      "eventChallenge": "持續傷害機制選用"
+    },
+    "uniqueWeaponRecommendedSummary": "暴擊值增加提升微小，可在商店兌換至高專",
+    "overallRecommendation": "重甲BOSS多刀選用。小桃掛件",
+    "skillOrder": ["技一.二.三Lv4", "EX3", "技三LV7", "技二Lv7", "技一Lv7", "EX5", "技三Lv10", "技二Lv10", "技一Lv10", "Max"],
+    "favoriteItem": {
+      "name": "携帯ゲーム機（暫無譯名）",
+      "recommendedLevel": [3, 0, 0],
+      "materials": ["24", "phaistos"],
+      "effects": ["攻擊力1000", "【新增】場上有小桃時（普通/女仆均可）額外對小桃進行治愈力165%的追加回覆，且小桃的攻擊力增加 41.7%（25秒）"]
+    }
+  },
+  {
+    "id": 101,
+    "fullname": "狐阪 若藻（泳裝）",
+    "name": "若藻（泳裝）",
+    "nicknames": ["水藻"],
+    "school": "Hyakkiyako",
+    "attackType": "Piercing",
+    "defenseType": "Heavy",
+    "weapon": "SR",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "看情況開",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "winnistone",
+    "skillSubOparts": "mandragora",
+    "l2dUnlock": 5,
+    "city": "S",
+    "outdoor": "D",
+    "indoor": "B",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [4, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 54
+    },
+    "skillsSummary": {
+      "ex": "5Cost造成1074%傷害且附帶9.6秒眩暈（5下），最後一下附帶擊退效果",
+      "ns": "每60秒提高自身受到的傷害（9.6%/19.2%/28.9%）同時提高攻擊力（31.5%/61.8%/99%）",
+      "ss": "對30%血量以下的敵方追加98.1%傷害，愛用品加強長軸輸出能力"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "霍德雙地形群控主對策兼輸出，氣墊船P1堆刀可選群控",
+      "pvp": "市街競技場可選輸出，重甲體質針對重特甲坦加推人",
+      "grandAssault": "霍德雙地形群控主對策兼輸出，氣墊船P1堆刀可選群控",
+      "limitBreakAssault": "暫無搭配",
+      "jointFiringDrill": "射擊/突破演習可選",
+      "eventChallenge": "應對群控機制可選"
+    },
+    "uniqueWeaponRecommendedSummary": "群控三星即可，主輸出建議開專，如對策霍德、氣墊船LU",
+    "overallRecommendation": "市街競技場可選，備戰對策HOD氣墊船高難LU/TM卷分",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "EX5", "技一Lv7", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
+    "favoriteItem": {
+      "name": "華やかな花柄の日傘（暫無譯名）",
+      "recommendedLevel": [5, 0, 0],
+      "materials": ["20", "winnistone"],
+      "effects": ["暴傷增加2000", "攻擊力增加31.5%/61.8%/99%提升至42.9%/84.3%/135%，承傷率增加9.6%/19.2%/28.9%降低至8.5%/17%/25.6%，新增3階段時所有攻擊必定暴擊，且CC強化力+93"]
+    }
+  },
+  {
     "id": 154,
     "fullname": "秋泉 紅葉",
     "name": "紅葉",
@@ -111,6 +291,66 @@
       "recommendedLevel": [3, 0, 0],
       "materials": ["3", "nimrud"],
       "effects": ["暴擊250", "攻擊力增加22.5%提升至24.6%，新增暴擊值提升24.6%"]
+    }
+  },
+  {
+    "id": 164,
+    "fullname": "不破 蓮華",
+    "name": "蓮華",
+    "nicknames": ["蓮華"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "SR",
+    "position": [0, "範圍輸出"],
+    "uniqueWeaponRecommended": "建議專二起",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "ether",
+    "skillSubOparts": "quimbaya",
+    "l2dUnlock": 6,
+    "city": "S",
+    "outdoor": "B",
+    "indoor": "D",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "暴擊傷害增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [2, 1, 0],
+      "pvp": [3, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 50
+    },
+    "skillsSummary": {
+      "ex": "3Cost對扇形範圍內敵方造成501.5%傷害和攻擊力27.6%的燒傷（20秒）",
+      "ns": "每30秒給與自身「熱情」並提高自身攻擊力37.6%（22秒）",
+      "ss": "自身有熱情攻擊時，會附加8.6%追加傷害。愛用品增加明顯，可當主輸出"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "貓鬼高難多刀可選副輸出，特/彈甲BOSS多刀清雜可選",
+      "pvp": "市街賽季可選長距離扇形輸出",
+      "grandAssault": "貓鬼高難多刀可選副輸出，特/彈甲BOSS多刀清雜可選",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "突破/防禦/護衛演習可選",
+      "eventChallenge": "AOE或HIT機制可選"
+    },
+    "uniqueWeaponRecommendedSummary": "副輸出使用卷分開，提高攻擊力可開",
+    "overallRecommendation": "低費振動範圍輸出，貓鬼多刀可選副C，競技場前排玩具",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技三LV7", "EX5", "技二Lv10", "技一Lv10", "技三Lv10", "Max"],
+    "favoriteItem": {
+      "name": "青春の白いリボン（暫無譯名）",
+      "recommendedLevel": [4, 0, 0],
+      "materials": ["3", "ether"],
+      "effects": ["攻擊力300", "攻擊力增加37.6%提升至41%，新增「熱情」狀態下EX技能無視敵方防禦力35%"]
     }
   },
   {
