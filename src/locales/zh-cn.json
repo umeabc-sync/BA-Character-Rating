@@ -55,7 +55,9 @@
   "common": {
     "all": "全部",
     "notApplicable": "不适用",
-    "settings": "设定"
+    "settings": "设定",
+    "enabled": "启用",
+    "disabled": "禁用"
   },
   "attributes": {
     "attackTypeLabel": "攻击属性",
@@ -167,7 +169,8 @@
     "t2Effect": "T2 效果："
   },
   "settingsModal": {
-    "language": "语言"
+    "language": "语言",
+    "enableColoredText": "关键文本高亮"
   },
   "dataSource": {
     "text": "资料来源：赛博夜猫攻略组",

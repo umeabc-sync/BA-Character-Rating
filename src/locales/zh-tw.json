@@ -55,7 +55,9 @@
   "common": {
     "all": "全部",
     "notApplicable": "不適用",
-    "settings": "設定"
+    "settings": "設定",
+    "enabled": "啟用",
+    "disabled": "禁用"
   },
   "attributes": {
     "attackTypeLabel": "攻擊屬性",
@@ -167,7 +169,8 @@
     "t2Effect": "T2 效果："
   },
   "settingsModal": {
-    "language": "語言"
+    "language": "語言",
+    "enableColoredText": "關鍵文本高亮"
   },
   "dataSource": {
     "text": "資料來源：賽博夜貓攻略組",
