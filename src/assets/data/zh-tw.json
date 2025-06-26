@@ -151,7 +151,7 @@
     },
     "skillsSummary": {
       "ex": "3Cost依序對最多5名敵人鎖定造成191%傷害（只有1名則鎖定5次），編隊內有小桃時則額外造成51.8%中毒（20秒）",
-      "ns": "每25秒對一名血量最低的我方回覆治愈力147%血量",
+      "ns": "每25秒對一名血量最低的我方回復治愈力147%血量",
       "ss": "攻速提升28.7%。編隊內有小桃時則提升至34.4%。愛用品加強掛件能力，其實是小桃的愛用品"
     },
     "ratingsSummary": {
@@ -170,7 +170,7 @@
       "name": "携帯ゲーム機（暫無譯名）",
       "recommendedLevel": [3, 0, 0],
       "materials": ["24", "phaistos"],
-      "effects": ["攻擊力1000", "【新增】場上有小桃時（普通/女仆均可）額外對小桃進行治愈力165%的追加回覆，且小桃的攻擊力增加 41.7%（25秒）"]
+      "effects": ["攻擊力1000", "【新增】場上有小桃時（普通/女僕均可）額外對小桃進行治愈力165%的追加回復，且小桃的攻擊力增加 41.7%（25秒）"]
     }
   },
   {
@@ -276,9 +276,9 @@
     },
     "ratingsSummary": {
       "newbie": null,
-      "totalAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰格里多刀可選",
+      "totalAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰葛利果多刀可選",
       "pvp": "850攻距拉人、高攻範圍輸出秒特甲",
-      "grandAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰格里多刀可選",
+      "grandAssault": "LU貓鬼多刀輸出，雞斯拉&大決戰葛利果多刀可選",
       "limitBreakAssault": null,
       "jointFiringDrill": "振動環境可選",
       "eventChallenge": "看環境要求、缺人可選"
@@ -567,6 +567,168 @@
     },
     "uniqueWeaponRecommendedSummary": "攻擊力增加，使用時建議專三提升面板",
     "overallRecommendation": "多數時間綁定光一起走，大決戰卷分可選，爬提法塔主要對策輸出，本質是單體輸出選手，與未花相比沒有血量增傷",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技三LV7", "技二Lv7", "技一Lv10", "技三Lv10", "技二Lv10", "Max"]
+  },
+  {
+    "id": 225,
+    "fullname": "勘解由小路 紫（泳裝）",
+    "name": "紫（泳裝）",
+    "nicknames": ["水紫", "水雷"],
+    "school": "Hyakkiyako",
+    "attackType": "Piercing",
+    "defenseType": "Light",
+    "weapon": "SR",
+    "position": [0, "範圍輸出"],
+    "uniqueWeaponRecommended": "培養專二起",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "atlantismedal",
+    "skillSubOparts": "baghdad",
+    "l2dUnlock": 5,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "貫通屬攻增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": [1, 1, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": [1, 0, 0],
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 37
+    },
+    "skillsSummary": {
+      "ex": "6Cost對圓形範圍內敵方造成1060%傷害",
+      "ns": "每35秒提高自身貫通屬攻55.5%（30秒）",
+      "ss": "提高自身攻擊力25.5%，每使用2次EX技，賦予自身COST回復力增加1259（10秒）（1.25c）"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "備戰LU球",
+      "pvp": "針對S9重甲多坦環境，等測試",
+      "grandAssault": "重甲BOSS清雜/對群可選（葛利果、雞斯拉貓鬼）",
+      "limitBreakAssault": "備戰重甲提法塔",
+      "jointFiringDrill": "突破/防禦/護衛演習可選",
+      "eventChallenge": "對群可選"
+    },
+    "uniqueWeaponRecommendedSummary": "貫通屬攻增加，使用基本專二起步、看個人情況培養",
+    "overallRecommendation": "未來可期，目前看備戰重甲提法塔、LU眼球",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技三LV7", "技一Lv7", "技二Lv7", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+  },
+  {
+    "id": 226,
+    "fullname": "不破 蓮華（泳裝）",
+    "name": "蓮華（泳裝）",
+    "nicknames": ["水蓮華"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Special",
+    "weapon": "SR",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "看情況開",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "romandice",
+    "skillSubOparts": "quimbaya",
+    "l2dUnlock": -1,
+    "city": "A",
+    "outdoor": "B",
+    "indoor": "C",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["city", "S"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [1, 0, 0],
+      "totalAssault": [1, 0, 0],
+      "pvp": null,
+      "grandAssault": [1, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [1, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 20
+    },
+    "skillsSummary": {
+      "ex": "3Cost對1名敵方造成540%傷害，消耗1層「水壓」可額外造成108%追加傷害",
+      "ns": "戰鬥開始以及每40秒賦予自身EX技傷害增加23.7%、暴傷增加 31.3%（33秒）並賦予自身2層水壓（最多3層）",
+      "ss": "使用EX技後，提高自身振動屬攻65%（16秒）"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "特甲BOSS多刀可選",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "特/彈甲BOSS多刀可選輸出",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "射擊/護衛演習可選",
+      "eventChallenge": "平民可選振動單體"
+    },
+    "uniqueWeaponRecommendedSummary": "攻擊力增加，備戰振動多刀考慮開專",
+    "overallRecommendation": "特/彈甲BOSS多刀可選輸出",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
+  },
+  {
+    "id": 227,
+    "fullname": "桐生 桔梗（泳裝）",
+    "name": "桔梗（泳裝）",
+    "nicknames": ["水桔梗", "海貓"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "SR",
+    "position": [1, "召喚輔助"],
+    "uniqueWeaponRecommended": "使用建議專一起",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "winnistone",
+    "skillSubOparts": "rocket",
+    "l2dUnlock": 6,
+    "city": "S",
+    "outdoor": "B",
+    "indoor": "D",
+    "equipments": [
+      "shoes",
+      "bag",
+      "amulet"
+    ],
+    "uniqueWeaponStar2": "生命值增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [3, 0, 0],
+      "pvp": null,
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": [4, 0, 0],
+      "jointFiringDrill": [1, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 48
+    },
+    "skillsSummary": {
+      "ex": "4Cost召喚自身至場上（30秒），吊床擁有桔梗45.1%生命值。以吊床為中心的圓形範圍內賦予友方暴擊值增加30.8%、暴傷增加45.1%（領域增益）",
+      "ns": "吊床在場上存在24秒後發動，賦予以吊床為中心的圓形範圍內友方暴傷增加15.1%（36秒）",
+      "ss": "17.3%爆傷光環"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "泛用後排雙暴輔助，根據打法搭配多C或按軸調整",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "泛用後排雙暴輔助，根據打法搭配多C或按軸調整",
+      "limitBreakAssault": "火龍塔、賽特塔百層可選群拐",
+      "jointFiringDrill": "護衛演習可選",
+      "eventChallenge": "不位移情況下考慮"
+    },
+    "uniqueWeaponRecommendedSummary": "血量可能不太夠，如果退場等於-4費，看情況考慮專一起",
+    "overallRecommendation": "首個領域版本的後排雙暴輔助，備戰高難度多隊可考慮",
     "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技三LV7", "技二Lv7", "技一Lv10", "技三Lv10", "技二Lv10", "Max"]
   }
 ]
