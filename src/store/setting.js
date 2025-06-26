@@ -6,6 +6,7 @@ export const useSettingStore = defineStore('setting', () => {
   const theme = ref('system') // 'light', 'dark', 'system'
   const osPrefersDark = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const locale = ref(null)
+  const enableColoredText = ref(true)
 
   // Getters (Computed)
   const isDarkMode = computed(() => {
@@ -22,6 +23,10 @@ export const useSettingStore = defineStore('setting', () => {
     theme.value = themes[nextIndex]
   }
 
+  function toggleColoredText() {
+    enableColoredText.value = !enableColoredText.value
+  }
+
   function setLocale(newLocale) {
     locale.value = newLocale
   }
@@ -32,5 +37,5 @@ export const useSettingStore = defineStore('setting', () => {
     })
   }
 
-  return { theme, locale, isDarkMode, toggleTheme, setLocale, initThemeListener }
+  return { theme, locale, isDarkMode, enableColoredText, toggleTheme, toggleColoredText, setLocale, initThemeListener }
 }, { persist: true })
