@@ -94,18 +94,18 @@
 
         <RatingSection :title="t('ratingCard.skillSummary')">
           <div v-if="character.skillsSummary" class="skills-summary">
-            <p><span class="highlight">{{ t("skillType.ex") }}</span><ColoredText :text="character.skillsSummary.ex" /></p>
-            <p><span class="highlight">{{ t("skillType.ns") }}</span><ColoredText :text="character.skillsSummary.ns" /></p>
-            <p><span class="highlight">{{ t("skillType.ss") }}</span><ColoredText :text="character.skillsSummary.ss" /></p>
+            <p><span class="highlight">{{ t("skillType.ex") }}</span><ColoredText :text="character.skillsSummary.ex" :enabled="enableColoredText" /></p>
+            <p><span class="highlight">{{ t("skillType.ns") }}</span><ColoredText :text="character.skillsSummary.ns" :enabled="enableColoredText" /></p>
+            <p><span class="highlight">{{ t("skillType.ss") }}</span><ColoredText :text="character.skillsSummary.ss" :enabled="enableColoredText" /></p>
           </div>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.uniqueWeaponRecommendation')">
-          <p><ColoredText :text="character.uniqueWeaponRecommendedSummary" /></p>
+          <p><ColoredText :text="character.uniqueWeaponRecommendedSummary" :enabled="enableColoredText" /></p>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.overallRecommendation')">
-          <p><ColoredText :text="character.overallRecommendation" /></p>
+          <p><ColoredText :text="character.overallRecommendation" :enabled="enableColoredText" /></p>
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.skillOrder')">
@@ -152,6 +152,8 @@ import FavoriteItemSection from './FavoriteItemSection.vue';
 import FavoriteItemModal from './modal/FavoriteItemModal.vue';
 import SettingsModal from './modal/SettingsModal.vue';
 import CardFooter from './CardFooter.vue';
+import { useSettingStore } from '@/store/setting';
+import { storeToRefs } from 'pinia';
 import ColoredText from './ui/ColoredText.vue';
 import DataSource from './DataSource.vue';
 
@@ -161,6 +163,9 @@ const props = defineProps({
   locale: { type: String, default: 'zh-tw' }
 });
 defineEmits(['open-selector', 'toggle-dark-mode', 'update-locale']);
+
+const settingStore = useSettingStore();
+const { enableColoredText } = storeToRefs(settingStore);
 
 const { t } = useI18n();
 

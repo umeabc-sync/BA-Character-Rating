@@ -41,8 +41,8 @@
               </ul>
             </div>
             <div class="effects">
-              <p><strong>{{ t('favoriteItemModal.t1Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[0]" /></p>
-              <p><strong>{{ t('favoriteItemModal.t2Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[1]" /></p>
+              <p><strong>{{ t('favoriteItemModal.t1Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[0]" :enabled="enableColoredText" /></p>
+              <p><strong>{{ t('favoriteItemModal.t2Effect') }}</strong><ColoredText :text="character.favoriteItem.effects[1]" :enabled="enableColoredText" /></p>
             </div>
           </div>
         </div>
@@ -58,6 +58,8 @@ import { getOpartImageUrl } from '@/utils/getOpartImageUrl';
 import { useI18n } from '@/composables/useI18n';
 import ImageWithLoader from '../ui/ImageWithLoader.vue';
 import StarRating from '../ui/StarRating.vue';
+import { useSettingStore } from '@/store/setting';
+import { storeToRefs } from 'pinia';
 import ColoredText from '../ui/ColoredText.vue';
 import { useEscapeKey } from '@/composables/useEscapeKey.js';
 
@@ -73,6 +75,9 @@ const emit = defineEmits(['close']);
 const close = () => {
   emit('close');
 };
+
+const settingStore = useSettingStore();
+const { enableColoredText } = storeToRefs(settingStore);
 
 const { isVisible } = toRefs(props);
 useEscapeKey(isVisible, close);

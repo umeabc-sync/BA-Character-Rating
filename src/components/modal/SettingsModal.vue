@@ -21,6 +21,16 @@
                 </button>
               </div>
             </div>
+
+            <div class="setting-group">
+              <h4 class="setting-group-title">{{ t('settingsModal.enableColoredText') }}</h4>
+              <div class="toggle-switch">
+                <input type="checkbox" id="coloredTextToggle" :checked="isColoredTextEnabled" @change="toggleColoredText" />
+                <label for="coloredTextToggle"></label>
+                <span class="toggle-label">{{ isColoredTextEnabled ? t('common.enabled') : t('common.disabled') }}</span>
+              </div>
+
+            </div>
             <!-- More settings added here -->
           </div>
         </div>
@@ -50,22 +60,25 @@ const { isVisible } = toRefs(props);
 useEscapeKey(isVisible, close);
 
 const settingStore = useSettingStore();
-const { locale: currentLocale } = storeToRefs(settingStore);
+const { locale: currentLocale, enableColoredText: isColoredTextEnabled } = storeToRefs(settingStore);
 
 const availableLanguages = [
   { code: 'zh-tw', name: '繁體中文' },
   { code: 'zh-cn', name: '简体中文' },
 ];
 
-// 暫時性設定
 const handleLocaleChange = (newLocale) => {
-  // 如果選擇的語言與當前語言相同，則不執行任何操作
+  // If the selected language is the same as the current language, no action is performed
   if (currentLocale.value === newLocale) {
     return;
   }
   settingStore.setLocale(newLocale);
-  // 强制重新整理頁面以應用所有語言變更
+  // Force refresh the page to apply all language changes
   window.location.reload();
+};
+
+const toggleColoredText = () => {
+  settingStore.toggleColoredText();
 };
 </script>
 
@@ -168,4 +181,58 @@ const handleLocaleChange = (newLocale) => {
 
 .modal-fade-enter-active, .modal-fade-leave-active { transition: opacity 0.3s ease; }
 .modal-fade-enter-from, .modal-fade-leave-to { opacity: 0; }
+
+/* Toggle Switch Styles */
+.toggle-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch label {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  background-color: #ccc;
+  border-radius: 28px; /* Half of height for pill shape */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch label:before {
+  content: '';
+  position: absolute;
+  width: 20px; /* Smaller circle */
+  height: 20px; /* Smaller circle */
+  border-radius: 50%;
+  background-color: white;
+  top: 4px; /* Center vertically */
+  left: 4px; /* Initial position */
+  transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #6495ed;
+}
+
+.dark-mode input[type="checkbox"]:checked + label {
+  background-color: #00aeef;
+}
+
+input[type="checkbox"]:checked + label:before {
+  transform: translateX(20px); /* Move to the right (width - circle_width - padding*2) */
+}
+
+.toggle-label {
+  font-weight: 500;
+  user-select: none;
+}
 </style>
