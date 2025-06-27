@@ -107,7 +107,7 @@
     "overallRecommendation": "老玩家根据环境需求培养、储备角色",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技二Lv7", "技三LV7", "EX5", "技一Lv10", "技二Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
-      "name": "使い込まれた手帳（暂无译名）",
+      "name": "用了很久的记事本",
       "recommendedLevel": [2, 0, 0],
       "materials": ["26", "ether"],
       "effects": ["暴击增加<red>260</red>", "暴伤增加<blue>57%</blue>提升至<blue>66.7%</blue>，持续时间从<blue>13秒</blue>提升至<blue>26秒</blue>"]
@@ -167,7 +167,7 @@
     "overallRecommendation": "重甲BOSS多刀选用。小桃挂件",
     "skillOrder": ["技一.二.三Lv4", "EX3", "技三LV7", "技二Lv7", "技一Lv7", "EX5", "技三Lv10", "技二Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
-      "name": "携帯ゲーム機（暂无译名）",
+      "name": "便携游戏机",
       "recommendedLevel": [3, 0, 0],
       "materials": ["24", "phaistos"],
       "effects": ["攻击力<red>1000</red>", "<red>【新增】</red><blue>场上有小桃时（普通/女仆均可）</blue>额外对小桃进行<red>治愈力165%</red>的追加回复，且小桃的攻击力<red>增加41.7%</red><teal>（25秒）</teal>"]
@@ -227,7 +227,7 @@
     "overallRecommendation": "市街竞技场可选，备战对策HOD气垫船高难LU/TM卷分",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "EX5", "技一Lv7", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
-      "name": "華やかな花柄の日傘（暂无译名）",
+      "name": "华丽花纹阳伞",
       "recommendedLevel": [5, 0, 0],
       "materials": ["20", "winnistone"],
       "effects": ["暴伤增加<red>2000</red>", "攻击力增加<blue>31.5%/61.8%/99%</blue>提升至<blue>42.9%/84.3%/135%</blue>，承伤率增加<blue>9.6%/19.2%/28.9%</blue>降低至<blue>8.5%/17%/25.6%</blue>，新增<red>3阶段时所有攻击必定暴击</red>，<blue>且CC强化力+93</blue>"]
@@ -347,7 +347,7 @@
     "overallRecommendation": "低费振动范围输出，猫鬼多刀可选副C，竞技场前排玩具",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技三LV7", "EX5", "技二Lv10", "技一Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
-      "name": "青春の白いリボン（暂无译名）",
+      "name": "青春白蝴蝶结",
       "recommendedLevel": [4, 0, 0],
       "materials": ["3", "ether"],
       "effects": ["攻击力<red>300</red>", "攻击力增加<blue>37.6%</blue>提升至<blue>41%</blue>，新增<purple>「热情」状态下</purple><red>EX技能无视敌方防御力35%</red>"]
@@ -637,7 +637,7 @@
     "acquisitionMethod": "常驻池",
     "skillMainOparts": "romandice",
     "skillSubOparts": "quimbaya",
-    "l2dUnlock": -1,
+    "l2dUnlock": 6,
     "city": "A",
     "outdoor": "B",
     "indoor": "C",
