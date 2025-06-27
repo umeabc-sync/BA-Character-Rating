@@ -1,57 +1,57 @@
 [
   {
-  "id": 0,
-  "fullname": "猫夜",
-  "name": "猫夜",
-  "nicknames": ["猫夜"],
-  "school": "Hyakkiyako",
-  "attackType": "Sonic",
-  "defenseType": "Heavy",
-  "weapon": "SR",
-  "position": [0, "辅助"],
-  "uniqueWeaponRecommended": "开！",
-  "acquisitionMethod": "愚人节限定池",
-  "skillMainOparts": "easter_egg_frenzy_max_umeboshi",
-  "skillSubOparts": "easter_egg_frenzy_max_umeboshi",
-  "l2dUnlock": 100,
-  "city": "S",
-  "outdoor": "S",
-  "indoor": "S",
-  "equipments": [
-    "badge",
-    "badge",
-    "badge"
-  ],
-  "uniqueWeaponStar2": "增益时间增加",
-  "uniqueWeaponStar3": ["outdoor", "SS"],
-  "ratingVersion": "4.1",
-  "ratings": {
-    "newbie": [5, 0, 0],
-    "totalAssault": [5, 0, 0],
-    "pvp": [5, 0, 0],
-    "grandAssault": [5, 0, 0],
-    "limitBreakAssault": [5, 0, 0],
-    "jointFiringDrill": [5, 0, 0],
-    "eventChallenge": [5, 0, 0],
-    "overall": 101
-  },
-  "skillsSummary": {
-    "ex": "2消耗增加一名队友振动属攻66.6%（持续40秒）并获得一枚「猫眼」",
-    "ns": "每20秒使圆形范围内的友军攻击力25%增加（持续30秒）",
-    "ss": "当队伍「猫眼」达到3枚时，消耗使全体Cost减少1和振动属攻40.8%增加"
-  },
-  "ratingsSummary": {
-    "newbie": null,
-    "totalAssault": "大决战新神已至",
-    "pvp": "吉祥物可爱就完事",
-    "grandAssault": "大决战新神已至",
-    "limitBreakAssault": null,
-    "jointFiringDrill": "水花带飞摆烂",
-    "eventChallenge": "水花带飞摆烂"
-  },
-  "uniqueWeaponRecommendedSummary": "开开开",
-  "overallRecommendation": "必备，必抽捏",
-  "skillOrder": ["EX3", "技能一.二.三Lv4", "技能三LV7", "技能二Lv7", "技能一Lv7", "EX5", "技能三Lv10", "技能二Lv10", "技能一Lv10", "Max"]
+    "id": 0,
+    "fullname": "猫夜",
+    "name": "猫夜",
+    "nicknames": ["猫夜"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "SR",
+    "position": [0, "辅助"],
+    "uniqueWeaponRecommended": "开！",
+    "acquisitionMethod": "愚人节限定池",
+    "skillMainOparts": "easter_egg_frenzy_max_umeboshi",
+    "skillSubOparts": "easter_egg_frenzy_max_umeboshi",
+    "l2dUnlock": 100,
+    "city": "S",
+    "outdoor": "S",
+    "indoor": "S",
+    "equipments": [
+      "badge",
+      "badge",
+      "badge"
+    ],
+    "uniqueWeaponStar2": "增益时间增加",
+    "uniqueWeaponStar3": ["outdoor", "SS"],
+    "ratingVersion": "4.1",
+    "ratings": {
+      "newbie": [5, 0, 0],
+      "totalAssault": [5, 0, 0],
+      "pvp": [5, 0, 0],
+      "grandAssault": [5, 0, 0],
+      "limitBreakAssault": [5, 0, 0],
+      "jointFiringDrill": [5, 0, 0],
+      "eventChallenge": [5, 0, 0],
+      "overall": 101
+    },
+    "skillsSummary": {
+      "ex": "2Cost增加一名队友振动属攻<blue>66.6%</blue><teal>（持续40秒）</teal>并获得一枚「猫眼」",
+      "ns": "每20秒使圆形范围内的友军攻击力<blue>25%</blue>增加<teal>（持续30秒）</teal>",
+      "ss": "当队伍「猫眼」达到3枚时，消耗使全体Cost减少1和振动属攻<blue>40.8%</blue>增加"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "大决战新神已至",
+      "pvp": "吉祥物可爱就完事",
+      "grandAssault": "大决战新神已至",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "水花带飞摆烂",
+      "eventChallenge": "水花带飞摆烂"
+    },
+    "uniqueWeaponRecommendedSummary": "开开开",
+    "overallRecommendation": "必备，必抽捏",
+    "skillOrder": ["EX3", "技能一.二.三Lv4", "技能三LV7", "技能二Lv7", "技能一Lv7", "EX5", "技能三Lv10", "技能二Lv10", "技能一Lv10", "Max"]
   },
   {
     "id": 18,
@@ -90,9 +90,9 @@
       "overall": 33
     },
     "skillsSummary": {
-      "ex": "5Cost对一名敌方造成1091%伤害",
-      "ns": "打倒敌方时立刻换弹并使暴击伤害增加57%（13秒）",
-      "ss": "技换弹后暴击值提升95%（攻击一次后失效）。爱用品提升较小，变化不大"
+      "ex": "5Cost对一名敌方造成<blue>1091%</blue>伤害",
+      "ns": "打倒敌方时立刻换弹并使暴击伤害增加<blue>57%</blue><teal>（13秒）</teal>",
+      "ss": "技换弹后暴击值提升<blue>95%</blue><red>（攻击一次后失效）</red> <green>爱用品提升较小，变化不大</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -103,14 +103,14 @@
       "jointFiringDrill": "射击演习可选",
       "eventChallenge": "低配缺人可选"
     },
-    "uniqueWeaponRecommendedSummary": "需要用时一定要开，加强输出能力",
+    "uniqueWeaponRecommendedSummary": "需要用时一定要开，<green>加强输出能力</green>",
     "overallRecommendation": "老玩家根据环境需求培养、储备角色",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技二Lv7", "技三LV7", "EX5", "技一Lv10", "技二Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
       "name": "使い込まれた手帳（暂无译名）",
       "recommendedLevel": [2, 0, 0],
       "materials": ["26", "ether"],
-      "effects": ["暴击增加260", "暴伤增加57%提升至66.7%，持续时间从13秒提升至26秒"]
+      "effects": ["暴击增加<red>260</red>", "暴伤增加<blue>57%</blue>提升至<blue>66.7%</blue>，持续时间从<blue>13秒</blue>提升至<blue>26秒</blue>"]
     }
   },
   {
@@ -150,9 +150,9 @@
       "overall": 38
     },
     "skillsSummary": {
-      "ex": "3Cost依序对最多5名敌人锁定造成191%伤害（只有1名则锁定5次），编队内有小桃时则额外造成51.8%中毒（20秒）",
-      "ns": "每25秒对一名血量最低的我方回复治愈力147%血量",
-      "ss": "攻速提升28.7%。编队内有小桃时则提升至34.4%。爱用品加强挂件能力，其实是小桃的爱用品"
+      "ex": "3Cost依序对最多5名敌人锁定造成<blue>191%</blue>伤害<red>（只有1名则锁定5次）</red>，<purple>编队内有小桃时</purple>则额外造成<blue>51.8%</blue>中毒<teal>（20秒）</teal>",
+      "ns": "每25秒对一名<red>血量最低</red>的我方回复治愈力<blue>147%</blue>血量",
+      "ss": "攻速提升<blue>28.7%</blue>。<purple>编队内有小桃时</purple>则提升至<blue>34.4%</blue>。<green>爱用品加强挂件能力，其实是小桃的爱用品</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -170,7 +170,7 @@
       "name": "携帯ゲーム機（暂无译名）",
       "recommendedLevel": [3, 0, 0],
       "materials": ["24", "phaistos"],
-      "effects": ["攻击力1000", "【新增】场上有小桃时（普通/女仆均可）额外对小桃进行治愈力165%的追加回复，且小桃的攻击力增加 41.7%（25秒）"]
+      "effects": ["攻击力<red>1000</red>", "<red>【新增】</red><blue>场上有小桃时（普通/女仆均可）</blue>额外对小桃进行<red>治愈力165%</red>的追加回复，且小桃的攻击力<red>增加41.7%</red><teal>（25秒）</teal>"]
     }
   },
   {
@@ -210,9 +210,9 @@
       "overall": 54
     },
     "skillsSummary": {
-      "ex": "5Cost造成1074%伤害且附带9.6秒眩晕（5下），最后一下附带击退效果",
-      "ns": "每60秒提高自身受到的伤害（9.6%/19.2%/28.9%）同时提高攻击力（31.5%/61.8%/99%）",
-      "ss": "对30%血量以下的敌方追加98.1%伤害，爱用品加强长轴输出能力"
+      "ex": "5Cost造成<blue>1074%</blue>伤害且附带9.6秒<purple>眩晕</purple>（5下），<red>最后一下附带击退效果</red>",
+      "ns": "每60秒提高自身受到的伤害（<blue>9.6%</blue>/<blue>19.2%</blue>/<blue>28.9%</blue>）同时提高攻击力（<blue>31.5%</blue>/<blue>61.8%</blue>/<blue>99%</blue>）",
+      "ss": "对<blue>30%</blue>血量以下的敌方追加<blue>98.1%</blue>伤害，<green>爱用品加强长轴输出能力</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -223,14 +223,14 @@
       "jointFiringDrill": "射击/突破演习可选",
       "eventChallenge": "应对群控机制可选"
     },
-    "uniqueWeaponRecommendedSummary": "群控三星即可，主输出建议开专，如对策霍德、气垫船LU",
+    "uniqueWeaponRecommendedSummary": "群控三星即可，主输出建议开专，<purple>如对策霍德、气垫船LU</purple>",
     "overallRecommendation": "市街竞技场可选，备战对策HOD气垫船高难LU/TM卷分",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "EX5", "技一Lv7", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
       "name": "華やかな花柄の日傘（暂无译名）",
       "recommendedLevel": [5, 0, 0],
       "materials": ["20", "winnistone"],
-      "effects": ["暴伤增加2000", "攻击力增加31.5%/61.8%/99%提升至42.9%/84.3%/135%，承伤率增加9.6%/19.2%/28.9%降低至8.5%/17%/25.6%，新增3阶段时所有攻击必定暴击，且CC强化力+93"]
+      "effects": ["暴伤增加<red>2000</red>", "攻击力增加<blue>31.5%/61.8%/99%</blue>提升至<blue>42.9%/84.3%/135%</blue>，承伤率增加<blue>9.6%/19.2%/28.9%</blue>降低至<blue>8.5%/17%/25.6%</blue>，新增<red>3阶段时所有攻击必定暴击</red>，<blue>且CC强化力+93</blue>"]
     }
   },
   {
@@ -270,9 +270,9 @@
       "overall": 44
     },
     "skillsSummary": {
-      "ex": "4C造成356%圆形伤害",
-      "ns": "30秒22.5%加攻（20秒）",
-      "ss": "战斗开始时加攻17.8%且普攻时AOE半径增加1.5倍。爱用品应对高爆抗敌人，猜测应对新BOSS"
+      "ex": "4C造成<blue>356%</blue>圆形伤害",
+      "ns": "30秒<blue>22.5%</blue>加攻<teal>（20秒）</teal>",
+      "ss": "战斗开始时加攻<blue>17.8%</blue>且<purple>普攻时AOE半径增加1.5倍。</purple><green>爱用品应对高爆抗敌人，猜测应对新BOSS</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -283,14 +283,14 @@
       "jointFiringDrill": "振动环境可选",
       "eventChallenge": "看环境要求、缺人可选"
     },
-    "uniqueWeaponRecommendedSummary": "暴击率提升有限，输出最少5星起（卡池高星）",
-    "overallRecommendation": "久违的2星学生和RL火箭发射器，满练全游戏最高面板 | LU猫鬼多刀可选输出，低星好培养",
+    "uniqueWeaponRecommendedSummary": "暴击率提升有限，<blue>输出最少5星起（卡池高星）</blue>",
+    "overallRecommendation": "久违的2星学生和RL火箭发射器，满练全游戏最高面板。LU猫鬼多刀可选输出，低星好培养",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "技一Lv7", "EX5", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
       "name": "限定复刻版作品集",
       "recommendedLevel": [3, 0, 0],
       "materials": ["3", "nimrud"],
-      "effects": ["暴击250", "攻击力增加22.5%提升至24.6%，新增暴击值提升24.6%"]
+      "effects": ["暴击<red>250</red>", "攻击力增加<blue>22.5%</blue>提升至<blue>24.6%</blue>，新增<red>暴击值</red>提升<red>24.6%</red>"]
     }
   },
   {
@@ -330,9 +330,9 @@
       "overall": 50
     },
     "skillsSummary": {
-      "ex": "3Cost对扇形范围内敌方造成501.5%伤害和攻击力27.6%的烧伤（20秒）",
-      "ns": "每30秒给与自身「热情」并提高自身攻击力37.6%（22秒）",
-      "ss": "自身有热情攻击时，会附加8.6%追加伤害。爱用品增加明显，可当主输出"
+      "ex": "3Cost对扇形范围内敌方造成<blue>501.5%</blue>伤害和攻击力<blue>27.6%</blue>的<purple>烧伤</purple><teal>（20秒）</teal>",
+      "ns": "每30秒给与自身<purple>「热情」</purple>并提高自身攻击力<blue>37.6%</blue><teal>（22秒）</teal>",
+      "ss": "自身有<purple>热情</purple>攻击时，会附加<blue>8.6%</blue>追加伤害。<green>爱用品增加明显，可当主输出</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -343,14 +343,14 @@
       "jointFiringDrill": "突破/防御/护卫演习可选",
       "eventChallenge": "AOE或HIT机制可选"
     },
-    "uniqueWeaponRecommendedSummary": "副输出使用卷分开，提高攻击力可开",
+    "uniqueWeaponRecommendedSummary": "副输出使用卷分开，<blue>提高攻击力可开</blue>",
     "overallRecommendation": "低费振动范围输出，猫鬼多刀可选副C，竞技场前排玩具",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技三LV7", "EX5", "技二Lv10", "技一Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
       "name": "青春の白いリボン（暂无译名）",
       "recommendedLevel": [4, 0, 0],
       "materials": ["3", "ether"],
-      "effects": ["攻击力300", "攻击力增加37.6%提升至41%，新增「热情」状态下EX技能无视敌方防御力35%"]
+      "effects": ["攻击力<red>300</red>", "攻击力增加<blue>37.6%</blue>提升至<blue>41%</blue>，新增<purple>「热情」状态下</purple><red>EX技能无视敌方防御力35%</red>"]
     }
   },
   {
@@ -390,9 +390,9 @@
       "overall": 43
     },
     "skillsSummary": {
-      "ex": "4Cost对一名敌方造成攻击力1642%的伤害（该伤害无视护盾）",
-      "ns": "每45秒赋予自身爆发属攻53.2%（25秒）",
-      "ss": "我方爆伤增加17.3%"
+      "ex": "4Cost对一名敌方造成攻击力<blue>1642%</blue>的伤害<purple>（该伤害无视护盾）</purple>",
+      "ns": "每45秒赋予自身爆发属攻<blue>53.2%</blue><teal>（25秒）</teal>",
+      "ss": "我方爆伤增加<blue>17.3%</blue>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -444,9 +444,9 @@
       "overall": 56
     },
     "skillsSummary": {
-      "ex": "4Cost对圆形范围内敌方造成401%伤害",
-      "ns": "每击败四个敌人触发提高自身攻速57.3%（20秒）（冷却10秒）且获得一层「出局」（超额击杀仅算触发1次）",
-      "ss": "SS技获得三层出局时减少自身费用3点（满级），使用后清空出局层数"
+      "ex": "4Cost对圆形范围内敌方造成<blue>401%</blue>伤害",
+      "ns": "<purple>每击败四个敌人触发</purple>提高自身攻速<blue>57.3%</blue><teal>（20秒）</teal><purple>（冷却10秒）</purple>且获得一层<purple>「出局」</purple><red>（超额击杀仅算触发1次）</red>",
+      "ss": "<purple>获得三层出局时</purple><red>减少自身费用3点（满级）</red>，使用后清空<purple>出局</purple>层数"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -498,9 +498,9 @@
       "overall": 81
     },
     "skillsSummary": {
-      "ex": "2Cost使1名我方振动属攻增加92.7%（32秒专二38秒）若目标有额外费用增伤机制可减少2C（升至EX5）额外费用,如果只能追加1费，则只减少1费",
-      "ns": "消耗三层「发车信号」使我方前排振动属攻增加29%（25秒专二29.7秒）（冷却20秒）",
-      "ss": "队友每使用2次EX自身获得「发车信号」并增加30.6%攻速"
+      "ex": "2Cost使1名我方振动属攻增加<blue>92.7%</blue>（<teal>32秒</teal><red>专二38秒</red>）<purple>若目标有额外费用增伤机制可减少2C</purple><red>（升至EX5）</red><purple>额外费用，</purple>如果只能追加1费，则只减少1费",
+      "ns": "消耗三层<purple>「发车信号」</purple>使我方前排振动属攻增加<blue>29%</blue>（<teal>25秒</teal><red>专二29.7秒</red>）<purple>（冷却20秒）</purple>",
+      "ss": "队友每使用2次EX<purple>自身获得「发车信号」</purple>并增加<blue>30.6%</blue>攻速"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -511,8 +511,8 @@
       "jointFiringDrill": "振动通用辅助人权",
       "eventChallenge": "振动通用辅助人权"
     },
-    "uniqueWeaponRecommendedSummary": "增益时间增加，平民3星即可，凹分开专",
-    "overallRecommendation": "振动大决战必备人权，紫甲大决战较为频繁，未来可能有较高使用率。振动属攻建议拿下",
+    "uniqueWeaponRecommendedSummary": "增益时间增加，<purple>平民3星即可，凹分开专</purple>",
+    "overallRecommendation": "<red>振动大决战必备人权</red>，紫甲大决战较为频繁，<red>未来可能</red>有较高使用率。振动属攻建议拿下",
     "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
   },
   {
@@ -552,9 +552,9 @@
       "overall": 62
     },
     "skillsSummary": {
-      "ex": "4Cost对直线范围内指定目标造成1045%伤害，对指定外目标造成147%伤害每额外消耗1C则增加25%伤害，最多额外消耗2C",
-      "ns": "每攻击12次给予自身振动属攻53.9%（26秒）",
-      "ss": "所有攻击必定暴击且攻速和暴伤增加25.5%"
+      "ex": "4Cost对直线范围内指定目标造成<blue>1045%</blue>伤害，对指定外目标造成<blue>147%</blue>伤害<purple>每额外消耗1C则增加25%伤害，最多额外消耗2C</purple>",
+      "ns": "<red>每攻击12次</red>给予自身振动属攻<blue>53.9%</blue><teal>（26秒）</teal>",
+      "ss": "所有攻击必定暴击且攻速和暴伤增加<blue>25.5%</blue>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -606,9 +606,9 @@
       "overall": 37
     },
     "skillsSummary": {
-      "ex": "6Cost对圆形范围内敌方造成1060%伤害",
-      "ns": "每35秒提高自身贯通属攻55.5%（30秒）",
-      "ss": "提高自身攻击力25.5%，每使用2次EX技，赋予自身COST回复力增加1259（10秒）（1.25c）"
+      "ex": "6Cost对圆形范围内敌方造成<blue>1060%</blue>伤害",
+      "ns": "每35秒提高自身贯通属攻<blue>55.5%</blue><teal>（30秒）</teal>",
+      "ss": "提高自身攻击力<blue>25.5%</blue>，每使用2次EX技，赋予自身COST回复力增加1259<teal>（10秒）</teal><red>（1.25c）</red>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -620,7 +620,7 @@
       "eventChallenge": "对群可选"
     },
     "uniqueWeaponRecommendedSummary": "贯通属攻增加，使用基本专二起步、看个人情况培养",
-    "overallRecommendation": "未来可期，目前看备战重甲提法塔、LU切塞德",
+    "overallRecommendation": "<red>未来可期，</red>目前看备战重甲提法塔、LU切塞德",
     "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技三LV7", "技一Lv7", "技二Lv7", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
   },
   {
@@ -660,9 +660,9 @@
       "overall": 20
     },
     "skillsSummary": {
-      "ex": "3Cost对1名敌方造成540%伤害，消耗1层「水压」可额外造成108%追加伤害",
-      "ns": "战斗开始以及每40秒赋予自身EX技伤害增加23.7%、暴伤增加 31.3%（33秒）并赋予自身2层水压（最多3层）",
-      "ss": "使用EX技后，提高自身振动属攻65%（16秒）"
+      "ex": "3Cost对1名敌方造成<blue>540%</blue>伤害，消耗1层<purple>「水压」</purple>可额外造成<blue>108%</blue>追加伤害",
+      "ns": "战斗开始以及每40秒赋予自身EX技伤害增加<blue>23.7%</blue>、暴伤增加 <blue>31.3%</blue><teal>（33秒）</teal>并赋予自身2层<purple>水压</purple><red>（最多3层）</red>",
+      "ss": "使用EX技后，提高自身振动属攻<blue>65%</blue><teal>（16秒）</teal>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -714,9 +714,9 @@
       "overall": 48
     },
     "skillsSummary": {
-      "ex": "4Cost召唤自身至场上（30秒），吊床拥有桔梗45.1%生命值。以吊床为中心的圆形范围内赋予友方暴击值增加30.8%、暴伤增加45.1%（领域增益）",
-      "ns": "吊床在场上存在24秒后发动，赋予以吊床为中心的圆形范围内友方暴伤增加15.1%（36秒）",
-      "ss": "17.3%爆伤光环"
+      "ex": "4Cost召唤自身至场上<teal>（30秒）</teal>，<purple>吊床</purple>拥有桔梗<blue>45.1%</blue>生命值。以<purple>吊床</purple>为中心的圆形范围内赋予友方暴击值增加<blue>30.8%</blue>、暴伤增加<blue>45.1%</blue><red>（领域增益）</red>",
+      "ns": "<purple>吊床</purple><red>在场上存在24秒后发动</red>，赋予以<purple>吊床</purple>为中心的圆形范围内友方暴伤增加<blue>15.1%</blue><teal>（36秒）</teal>",
+      "ss": "<blue>17.3%</blue>爆伤光环"
     },
     "ratingsSummary": {
       "newbie": null,

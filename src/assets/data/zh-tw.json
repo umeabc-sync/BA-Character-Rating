@@ -36,9 +36,9 @@
       "overall": 101
     },
     "skillsSummary": {
-      "ex": "2Cost增加一名隊友振動屬攻66.6%（持續40秒）並獲得一枚「猫眼」",
-      "ns": "每20秒使圓形範圍內的友軍攻撃力25%增加（持續30秒）",
-      "ss": "當隊伍「猫眼」達到3枚時，消耗使全體Cost減少1和振動屬攻40.8%增加"
+      "ex": "2Cost增加一名隊友振動屬攻<blue>66.6%</blue><teal>（持續40秒）</teal>並獲得一枚「猫眼」",
+      "ns": "每20秒使圓形範圍內的友軍攻擊力<blue>25%</blue>增加<teal>（持續30秒）</teal>",
+      "ss": "當隊伍「猫眼」達到3枚時，消耗使全體Cost減少1和振動屬攻<blue>40.8%</blue>增加"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -90,9 +90,9 @@
       "overall": 33
     },
     "skillsSummary": {
-      "ex": "5Cost對一名敵方造成1091%傷害",
-      "ns": "打倒敵方時立刻換彈並使暴擊傷害增加57%（13秒）",
-      "ss": "技換彈後暴擊值提升95%（攻擊一次後失效）。愛用品提升較小，變化不大"
+      "ex": "5Cost對一名敵方造成<blue>1091%</blue>傷害",
+      "ns": "打倒敵方時立刻換彈並使暴擊傷害增加<blue>57%</blue><teal>（13秒）</teal>",
+      "ss": "技換彈後暴擊值提升<blue>95%</blue><red>（攻擊一次後失效）</red> <green>愛用品提升較小，變化不大</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -103,14 +103,14 @@
       "jointFiringDrill": "射擊演習可選",
       "eventChallenge": "低配缺人可選"
     },
-    "uniqueWeaponRecommendedSummary": "需要用時一定要開，加強輸出能力",
+    "uniqueWeaponRecommendedSummary": "需要用時一定要開，<green>加強輸出能力</green>",
     "overallRecommendation": "老玩家根據環境需求培養、儲備角色",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技二Lv7", "技三LV7", "EX5", "技一Lv10", "技二Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
       "name": "使い込まれた手帳（暫無譯名）",
       "recommendedLevel": [2, 0, 0],
       "materials": ["26", "ether"],
-      "effects": ["暴擊增加260", "暴傷增加57%提升至66.7%，持續時間從13秒提升至26秒"]
+      "effects": ["暴擊增加<red>260</red>", "暴傷增加<blue>57%</blue>提升至<blue>66.7%</blue>，持續時間從<blue>13秒</blue>提升至<blue>26秒</blue>"]
     }
   },
   {
@@ -150,9 +150,9 @@
       "overall": 38
     },
     "skillsSummary": {
-      "ex": "3Cost依序對最多5名敵人鎖定造成191%傷害（只有1名則鎖定5次），編隊內有小桃時則額外造成51.8%中毒（20秒）",
-      "ns": "每25秒對一名血量最低的我方回復治愈力147%血量",
-      "ss": "攻速提升28.7%。編隊內有小桃時則提升至34.4%。愛用品加強掛件能力，其實是小桃的愛用品"
+      "ex": "3Cost依序對最多5名敵人鎖定造成<blue>191%</blue>傷害<red>（只有1名則鎖定5次）</red>，<purple>編隊內有小桃時</purple>則額外造成<blue>51.8%</blue>中毒<teal>（20秒）</teal>",
+      "ns": "每25秒對一名<red>血量最低</red>的我方回復治癒力<blue>147%</blue>血量",
+      "ss": "攻速提升<blue>28.7%</blue>。<purple>編隊內有小桃時</purple>則提升至<blue>34.4%</blue>。<green>愛用品加強掛件能力，其實是小桃的愛用品</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -170,7 +170,7 @@
       "name": "携帯ゲーム機（暫無譯名）",
       "recommendedLevel": [3, 0, 0],
       "materials": ["24", "phaistos"],
-      "effects": ["攻擊力1000", "【新增】場上有小桃時（普通/女僕均可）額外對小桃進行治愈力165%的追加回復，且小桃的攻擊力增加 41.7%（25秒）"]
+      "effects": ["攻擊力<red>1000</red>", "<red>【新增】</red><blue>場上有小桃時（普通/女僕均可）</blue>額外對小桃進行<red>治癒力165%</red>的追加回復，且小桃的攻擊力<red>增加41.7%</red><teal>（25秒）</teal>"]
     }
   },
   {
@@ -210,9 +210,9 @@
       "overall": 54
     },
     "skillsSummary": {
-      "ex": "5Cost造成1074%傷害且附帶9.6秒眩暈（5下），最後一下附帶擊退效果",
-      "ns": "每60秒提高自身受到的傷害（9.6%/19.2%/28.9%）同時提高攻擊力（31.5%/61.8%/99%）",
-      "ss": "對30%血量以下的敵方追加98.1%傷害，愛用品加強長軸輸出能力"
+      "ex": "5Cost造成<blue>1074%</blue>傷害且附帶9.6秒<purple>眩暈</purple>（5下），<red>最後一下附帶擊退效果</red>",
+      "ns": "每60秒提高自身受到的傷害（<blue>9.6%</blue>/<blue>19.2%</blue>/<blue>28.9%</blue>）同時提高攻擊力（<blue>31.5%</blue>/<blue>61.8%</blue>/<blue>99%</blue>）",
+      "ss": "對<blue>30%</blue>血量以下的敵方追加<blue>98.1%</blue>傷害，<green>愛用品加強長軸輸出能力</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -223,14 +223,14 @@
       "jointFiringDrill": "射擊/突破演習可選",
       "eventChallenge": "應對群控機制可選"
     },
-    "uniqueWeaponRecommendedSummary": "群控三星即可，主輸出建議開專，如對策霍德、氣墊船LU",
+    "uniqueWeaponRecommendedSummary": "群控三星即可，主輸出建議開專，<purple>如對策霍德、氣墊船LU</purple>",
     "overallRecommendation": "市街競技場可選，備戰對策HOD氣墊船高難LU/TM卷分",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "EX5", "技一Lv7", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
       "name": "華やかな花柄の日傘（暫無譯名）",
       "recommendedLevel": [5, 0, 0],
       "materials": ["20", "winnistone"],
-      "effects": ["暴傷增加2000", "攻擊力增加31.5%/61.8%/99%提升至42.9%/84.3%/135%，承傷率增加9.6%/19.2%/28.9%降低至8.5%/17%/25.6%，新增3階段時所有攻擊必定暴擊，且CC強化力+93"]
+      "effects": ["暴傷增加<red>2000</red>", "攻擊力增加<blue>31.5%/61.8%/99%</blue>提升至<blue>42.9%/84.3%/135%</blue>，承傷率增加<blue>9.6%/19.2%/28.9%</blue>降低至<blue>8.5%/17%/25.6%</blue>，新增<red>3階段時所有攻擊必定暴擊</red>，<blue>且CC強化力+93</blue>"]
     }
   },
   {
@@ -256,7 +256,7 @@
       "hairpin",
       "watch"
     ],
-    "uniqueWeaponStar2": "爆擊率增加",
+    "uniqueWeaponStar2": "暴擊率增加",
     "uniqueWeaponStar3": ["indoor", "B"],
     "ratingVersion": "7.0",
     "ratings": {
@@ -270,9 +270,9 @@
       "overall": 44
     },
     "skillsSummary": {
-      "ex": "4C造成356%圓形傷害",
-      "ns": "30秒22.5%加攻（20秒）",
-      "ss": "戰鬥開始時加攻17.8%且普攻時AOE半徑增加1.5倍。愛用品應對高爆抗敵人，猜測應對新BOSS"
+      "ex": "4C造成<blue>356%</blue>圓形傷害",
+      "ns": "30秒<blue>22.5%</blue>加攻<teal>（20秒）</teal>",
+      "ss": "戰鬥開始時加攻<blue>17.8%</blue>且<purple>普攻時AOE半徑增加1.5倍。</purple><green>愛用品應對高爆抗敵人，猜測應對新BOSS</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -283,14 +283,14 @@
       "jointFiringDrill": "振動環境可選",
       "eventChallenge": "看環境要求、缺人可選"
     },
-    "uniqueWeaponRecommendedSummary": "暴擊率提升有限，輸出最少5星起（卡池高星）",
-    "overallRecommendation": "久違的2星學生和RL火箭發射器，滿練全遊戲最高面板 | LU貓鬼多刀可選輸出，低星好培養",
+    "uniqueWeaponRecommendedSummary": "暴擊率提升有限，<blue>輸出最少5星起（卡池高星）</blue>",
+    "overallRecommendation": "久違的2星學生和RL火箭發射器，滿練全遊戲最高面板。LU貓鬼多刀可選輸出，低星好培養",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "技一Lv7", "EX5", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
     "favoriteItem": {
       "name": "限定復刻版作品集",
       "recommendedLevel": [3, 0, 0],
       "materials": ["3", "nimrud"],
-      "effects": ["暴擊250", "攻擊力增加22.5%提升至24.6%，新增暴擊值提升24.6%"]
+      "effects": ["暴擊<red>250</red>", "攻擊力增加<blue>22.5%</blue>提升至<blue>24.6%</blue>，新增<red>暴擊值</red>提升<red>24.6%</red>"]
     }
   },
   {
@@ -330,9 +330,9 @@
       "overall": 50
     },
     "skillsSummary": {
-      "ex": "3Cost對扇形範圍內敵方造成501.5%傷害和攻擊力27.6%的燒傷（20秒）",
-      "ns": "每30秒給與自身「熱情」並提高自身攻擊力37.6%（22秒）",
-      "ss": "自身有熱情攻擊時，會附加8.6%追加傷害。愛用品增加明顯，可當主輸出"
+      "ex": "3Cost對扇形範圍內敵方造成<blue>501.5%</blue>傷害和攻擊力<blue>27.6%</blue>的<purple>燒傷</purple><teal>（20秒）</teal>",
+      "ns": "每30秒給與自身<purple>「熱情」</purple>並提高自身攻擊力<blue>37.6%</blue><teal>（22秒）</teal>",
+      "ss": "自身有<purple>熱情</purple>攻擊時，會附加<blue>8.6%</blue>追加傷害。<green>愛用品增加明顯，可當主輸出</green>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -343,177 +343,177 @@
       "jointFiringDrill": "突破/防禦/護衛演習可選",
       "eventChallenge": "AOE或HIT機制可選"
     },
-    "uniqueWeaponRecommendedSummary": "副輸出使用卷分開，提高攻擊力可開",
+    "uniqueWeaponRecommendedSummary": "副輸出使用卷分開，<blue>提高攻擊力可開</blue>",
     "overallRecommendation": "低費振動範圍輸出，貓鬼多刀可選副C，競技場前排玩具",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技三LV7", "EX5", "技二Lv10", "技一Lv10", "技三Lv10", "Max"],
     "favoriteItem": {
       "name": "青春の白いリボン（暫無譯名）",
       "recommendedLevel": [4, 0, 0],
       "materials": ["3", "ether"],
-      "effects": ["攻擊力300", "攻擊力增加37.6%提升至41%，新增「熱情」狀態下EX技能無視敵方防禦力35%"]
+      "effects": ["攻擊力<red>300</red>", "攻擊力增加<blue>37.6%</blue>提升至<blue>41%</blue>，新增<purple>「熱情」狀態下</purple><red>EX技能無視敵方防禦力35%</red>"]
     }
   },
   {
-  "id": 211,
-  "fullname": "小塗 真紀（露營）",
-  "name": "真紀（露營）",
-  "nicknames": ["露營真紀", "兄弟"],
-  "school": "Millennium",
-  "attackType": "Explosive",
-  "defenseType": "Light",
-  "weapon": "MG",
-  "position": [1, "輸出"],
-  "uniqueWeaponRecommended": "看情況/專一",
-  "acquisitionMethod": "常駐池",
-  "skillMainOparts": "atlantismedal",
-  "skillSubOparts": "rohonc",
-  "l2dUnlock": 5,
-  "city": "D",
-  "outdoor": "S",
-  "indoor": "B",
-  "equipments": [
-    "hat",
-    "hairpin",
-    "watch"
-  ],
-  "uniqueWeaponStar2": "攻擊力增加",
-  "uniqueWeaponStar3": ["outdoor", "SS"],
-  "ratingVersion": "7.0",
-  "ratings": {
-    "newbie": [1, 0, 0],
-    "totalAssault": [4, 0, 0],
-    "pvp": [1, 0, 0],
-    "grandAssault": [2, 0, 0],
-    "limitBreakAssault": null,
-    "jointFiringDrill": [2, 0, 0],
-    "eventChallenge": [1, 0, 0],
-    "overall": 43
-  },
-  "skillsSummary": {
-    "ex": "4Cost對一名敵方造成攻擊力1642%的傷害（該傷害無視護盾）",
-    "ns": "每45秒賦予自身爆發屬攻53.2%（25秒）",
-    "ss": "我方爆傷增加17.3%"
-  },
-  "ratingsSummary": {
-    "newbie": null,
-    "totalAssault": "蓋布拉LU難及以下可選冰柱對策",
-    "pvp": "暫時無組合搭配",
-    "grandAssault": "輕甲BOSS多刀可選",
-    "limitBreakAssault": "缺人或機制使用",
-    "jointFiringDrill": "射擊演習選用",
-    "eventChallenge": "應對護盾機制時選用"
-  },
-  "uniqueWeaponRecommendedSummary": "三星即可打TM蓋布拉，LU難需要專一起",
-  "overallRecommendation": "蓋布拉冰柱對策，備戰蓋布拉考慮培養",
-  "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
-  },
-  {
-  "id": 215,
-  "fullname": "野正 麗",
-  "name": "麗",
-  "nicknames": ["棒球妹"],
-  "school": "Millennium",
-  "attackType": "Sonic",
-  "defenseType": "Light",
-  "weapon": "RL",
-  "position": [0, "輸出"],
-  "uniqueWeaponRecommended": "看情況開",
-  "acquisitionMethod": "常駐池",
-  "skillMainOparts": "totempole",
-  "skillSubOparts": "rocket",
-  "l2dUnlock": 6,
-  "city": "B",
-  "outdoor": "D",
-  "indoor": "S",
-  "equipments": [
-    "hat",
-    "hairpin",
-    "watch"
-  ],
-  "uniqueWeaponStar2": "爆傷增加",
-  "uniqueWeaponStar3": ["indoor", "SS"],
-  "ratingVersion": "7.0",
-  "ratings": {
-    "newbie": [3, 0, 0],
-    "totalAssault": [2, 0, 0],
-    "pvp": [2, 0, 0],
-    "grandAssault": [3, 0, 0],
-    "limitBreakAssault": [5, 0, 1],
-    "jointFiringDrill": [3, 0, 0],
-    "eventChallenge": [2, 0, 0],
-    "overall": 56
-  },
-  "skillsSummary": {
-    "ex": "4Cost對圓形範圍內敵方造成401%傷害",
-    "ns": "每擊敗四個敵人觸發提高自身攻速57.3%（20秒）（冷卻10秒）且獲得一層「出局」（超額擊殺僅算觸發1次）",
-    "ss": "SS技獲得三層出局時減少自身費用3點（滿級），使用後清空出局層數"
-  },
-  "ratingsSummary": {
-    "newbie": null,
-    "totalAssault": "彈甲BOSS清雜/多刀可選",
-    "pvp": "850射程拉人、高攻範圍輸出秒特甲",
-    "grandAssault": "彈甲BOSS清雜/多刀可選",
-    "limitBreakAssault": "提法塔主對策範圍輸出之一",
-    "jointFiringDrill": "突破/防禦/護衛演習可選",
-    "eventChallenge": "HIT機制選用"
-  },
-  "uniqueWeaponRecommendedSummary": "爬提法塔高培養，使用需開高專",
-  "overallRecommendation": "提法塔主對策範圍輸出，NS減費可以留出更多冗余，彈甲BOSS清雜/多刀可選",
-  "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+    "id": 211,
+    "fullname": "小塗 真紀（露營）",
+    "name": "真紀（露營）",
+    "nicknames": ["露營真紀", "兄弟"],
+    "school": "Millennium",
+    "attackType": "Explosive",
+    "defenseType": "Light",
+    "weapon": "MG",
+    "position": [1, "輸出"],
+    "uniqueWeaponRecommended": "看情況/專一",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "atlantismedal",
+    "skillSubOparts": "rohonc",
+    "l2dUnlock": 5,
+    "city": "D",
+    "outdoor": "S",
+    "indoor": "B",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["outdoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [1, 0, 0],
+      "totalAssault": [4, 0, 0],
+      "pvp": [1, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 43
+    },
+    "skillsSummary": {
+      "ex": "4Cost對一名敵方造成攻擊力<blue>1642%</blue>的傷害<purple>（該傷害無視護盾）</purple>",
+      "ns": "每45秒賦予自身爆發屬攻<blue>53.2%</blue><teal>（25秒）</teal>",
+      "ss": "我方爆傷增加<blue>17.3%</blue>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "蓋布拉LU難及以下可選冰柱對策",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "輕甲BOSS多刀可選",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "射擊演習選用",
+      "eventChallenge": "應對護盾機制時選用"
+    },
+    "uniqueWeaponRecommendedSummary": "三星即可打TM蓋布拉，LU難需要專一起",
+    "overallRecommendation": "蓋布拉冰柱對策，備戰蓋布拉考慮培養",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
   },
   {
-  "id": 218,
-  "fullname": "橘 光",
-  "name": "光",
-  "nicknames": ["光"],
-  "school": "Highlander",
-  "attackType": "Sonic",
-  "defenseType": "Light",
-  "weapon": "HG",
-  "position": [0, "輔助坦"],
-  "uniqueWeaponRecommended": "看情況開",
-  "acquisitionMethod": "限定池",
-  "skillMainOparts": "romandice",
-  "skillSubOparts": "winnistone",
-  "l2dUnlock": 6,
-  "city": "D",
-  "outdoor": "B",
-  "indoor": "S",
-  "equipments": [
-    "gloves",
-    "hairpin",
-    "amulet"
-  ],
-  "uniqueWeaponStar2": "增益持續增加",
-  "uniqueWeaponStar3": ["indoor", "SS"],
-  "ratingVersion": "7.0",
-  "ratings": {
-    "newbie": null,
-    "totalAssault": [4, 0, 0],
-    "pvp": null,
-    "grandAssault": [5, 0, 1],
-    "limitBreakAssault": [5, 0, 1],
-    "jointFiringDrill": [4, 0, 0],
-    "eventChallenge": [5, 0, 0],
-    "overall": 81
+    "id": 215,
+    "fullname": "野正 麗",
+    "name": "麗",
+    "nicknames": ["棒球妹"],
+    "school": "Millennium",
+    "attackType": "Sonic",
+    "defenseType": "Light",
+    "weapon": "RL",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "看情況開",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "totempole",
+    "skillSubOparts": "rocket",
+    "l2dUnlock": 6,
+    "city": "B",
+    "outdoor": "D",
+    "indoor": "S",
+    "equipments": [
+      "hat",
+      "hairpin",
+      "watch"
+    ],
+    "uniqueWeaponStar2": "爆傷增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": [5, 0, 1],
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 56
+    },
+    "skillsSummary": {
+      "ex": "4Cost對圓形範圍內敵方造成<blue>401%</blue>傷害",
+      "ns": "<purple>每擊敗四個敵人觸發</purple>提高自身攻速<blue>57.3%</blue><teal>（20秒）</teal><purple>（冷卻10秒）</purple>且獲得一層<purple>「出局」</purple><red>（超額擊殺僅算觸發1次）</red>",
+      "ss": "<purple>獲得三層出局時</purple><red>減少自身費用3點（滿級）</red>，使用後清空<purple>出局</purple>層數"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "彈甲BOSS清雜/多刀可選",
+      "pvp": "850射程拉人、高攻範圍輸出秒特甲",
+      "grandAssault": "彈甲BOSS清雜/多刀可選",
+      "limitBreakAssault": "提法塔主對策範圍輸出之一",
+      "jointFiringDrill": "突破/防禦/護衛演習可選",
+      "eventChallenge": "HIT機制選用"
+    },
+    "uniqueWeaponRecommendedSummary": "爬提法塔高培養，使用需開高專",
+    "overallRecommendation": "提法塔主對策範圍輸出，NS減費可以留出更多冗餘，彈甲BOSS清雜/多刀可選",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
   },
-  "skillsSummary": {
-    "ex": "2Cost使1名我方振動屬攻增加92.7%（32秒專二38秒）若目標有額外費用增傷機制可減少2C（升至EX5）額外費用,如果只能追加1費，則只減少1費",
-    "ns": "消耗三層「發車信號」使我方前排振動屬攻增加29%（25秒專二29.7秒）（冷卻20秒）",
-    "ss": "隊友每使用2次EX自身獲得「發車信號」並增加30.6%攻速"
-  },
-  "ratingsSummary": {
-    "newbie": null,
-    "totalAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
-    "pvp": null,
-    "grandAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
-    "limitBreakAssault": "提法瑞斯主對策振動屬攻拐",
-    "jointFiringDrill": "振動通用輔助人權",
-    "eventChallenge": "振動通用輔助人權"
-  },
-  "uniqueWeaponRecommendedSummary": "增益時間增加，平民3星即可，凹分開專",
-  "overallRecommendation": "振動大決戰必備人權，紫甲大決戰較為頻繁，未來可能有較高使用率。振動屬攻建議拿下",
-  "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
+  {
+    "id": 218,
+    "fullname": "橘 光",
+    "name": "光",
+    "nicknames": ["光"],
+    "school": "Highlander",
+    "attackType": "Sonic",
+    "defenseType": "Light",
+    "weapon": "HG",
+    "position": [0, "輔助坦"],
+    "uniqueWeaponRecommended": "看情況開",
+    "acquisitionMethod": "限定池",
+    "skillMainOparts": "romandice",
+    "skillSubOparts": "winnistone",
+    "l2dUnlock": 6,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": [
+      "gloves",
+      "hairpin",
+      "amulet"
+    ],
+    "uniqueWeaponStar2": "增益持續增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [4, 0, 0],
+      "pvp": null,
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [5, 0, 1],
+      "jointFiringDrill": [4, 0, 0],
+      "eventChallenge": [5, 0, 0],
+      "overall": 81
+    },
+    "skillsSummary": {
+      "ex": "2Cost使1名我方振動屬攻增加<blue>92.7%</blue>（<teal>32秒</teal><red>專二38秒</red>）<purple>若目標有額外費用增傷機制可減少2C</purple><red>（升至EX5）</red><purple>額外費用，</purple>如果只能追加1費，則只減少1費",
+      "ns": "消耗三層<purple>「發車信號」</purple>使我方前排振動屬攻增加<blue>29%</blue>（<teal>25秒</teal><red>專二29.7秒</red>）<purple>（冷卻20秒）</purple>",
+      "ss": "隊友每使用2次EX<purple>自身獲得「發車信號」</purple>並增加<blue>30.6%</blue>攻速"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
+      "pvp": null,
+      "grandAssault": "振動BOSS必備，提高振動角色輸出上限，高難輔助人權",
+      "limitBreakAssault": "提法瑞斯主對策振動屬攻拐",
+      "jointFiringDrill": "振動通用輔助人權",
+      "eventChallenge": "振動通用輔助人權"
+    },
+    "uniqueWeaponRecommendedSummary": "增益時間增加，<purple>平民3星即可，凹分開專</purple>",
+    "overallRecommendation": "<red>振動大決戰必備人權</red>，紫甲大決戰較為頻繁，<red>未來可能</red>有較高使用率。振動屬攻建議拿下",
+    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
   },
   {
     "id": 219,
@@ -552,9 +552,9 @@
       "overall": 62
     },
     "skillsSummary": {
-      "ex": "4Cost對直線範圍內指定目標造成1045%傷害，對指定外目標造成147%傷害每額外消耗1C則增加25%傷害，最多額外消耗2C",
-      "ns": "每攻擊12次給予自身振動屬攻53.9%（26秒）",
-      "ss": "所有攻擊必定暴擊且攻速和暴傷增加25.5%"
+      "ex": "4Cost對直線範圍內指定目標造成<blue>1045%</blue>傷害，對指定外目標造成<blue>147%</blue>傷害<purple>每額外消耗1C則增加25%傷害，最多額外消耗2C</purple>",
+      "ns": "<red>每攻擊12次</red>給予自身振動屬攻<blue>53.9%</blue><teal>（26秒）</teal>",
+      "ss": "所有攻擊必定暴擊且攻速和暴傷增加<blue>25.5%</blue>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -606,9 +606,9 @@
       "overall": 37
     },
     "skillsSummary": {
-      "ex": "6Cost對圓形範圍內敵方造成1060%傷害",
-      "ns": "每35秒提高自身貫通屬攻55.5%（30秒）",
-      "ss": "提高自身攻擊力25.5%，每使用2次EX技，賦予自身COST回復力增加1259（10秒）（1.25c）"
+      "ex": "6Cost對圓形範圍內敵方造成<blue>1060%</blue>傷害",
+      "ns": "每35秒提高自身貫通屬攻<blue>55.5%</blue><teal>（30秒）</teal>",
+      "ss": "提高自身攻擊力<blue>25.5%</blue>，每使用2次EX技，賦予自身COST回復力增加1259<teal>（10秒）</teal><red>（1.25c）</red>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -620,7 +620,7 @@
       "eventChallenge": "對群可選"
     },
     "uniqueWeaponRecommendedSummary": "貫通屬攻增加，使用基本專二起步、看個人情況培養",
-    "overallRecommendation": "未來可期，目前看備戰重甲提法塔、LU眼球",
+    "overallRecommendation": "<red>未來可期，</red>目前看備戰重甲提法塔、LU眼球",
     "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技三LV7", "技一Lv7", "技二Lv7", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
   },
   {
@@ -660,9 +660,9 @@
       "overall": 20
     },
     "skillsSummary": {
-      "ex": "3Cost對1名敵方造成540%傷害，消耗1層「水壓」可額外造成108%追加傷害",
-      "ns": "戰鬥開始以及每40秒賦予自身EX技傷害增加23.7%、暴傷增加 31.3%（33秒）並賦予自身2層水壓（最多3層）",
-      "ss": "使用EX技後，提高自身振動屬攻65%（16秒）"
+      "ex": "3Cost對1名敵方造成<blue>540%</blue>傷害，消耗1層<purple>「水壓」</purple>可額外造成<blue>108%</blue>追加傷害",
+      "ns": "戰鬥開始以及每40秒賦予自身EX技傷害增加<blue>23.7%</blue>、暴傷增加<blue>31.3%</blue><teal>（33秒）</teal>並賦予自身2層<purple>水壓</purple><red>（最多3層）</red>",
+      "ss": "使用EX技後，提高自身振動屬攻<blue>65%</blue><teal>（16秒）</teal>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -714,9 +714,9 @@
       "overall": 48
     },
     "skillsSummary": {
-      "ex": "4Cost召喚自身至場上（30秒），吊床擁有桔梗45.1%生命值。以吊床為中心的圓形範圍內賦予友方暴擊值增加30.8%、暴傷增加45.1%（領域增益）",
-      "ns": "吊床在場上存在24秒後發動，賦予以吊床為中心的圓形範圍內友方暴傷增加15.1%（36秒）",
-      "ss": "17.3%爆傷光環"
+      "ex": "4Cost召喚自身至場上<teal>（30秒）</teal>，<purple>吊床</purple>擁有桔梗<blue>45.1%</blue>生命值。以<purple>吊床</purple>為中心的圓形範圍內賦予友方暴擊值增加<blue>30.8%</blue>、暴傷增加<blue>45.1%</blue><red>（領域增益）</red>",
+      "ns": "<purple>吊床</purple><red>在場上存在24秒後發動</red>，賦予以<purple>吊床</purple>為中心的圓形範圍內友方暴傷增加<blue>15.1%</blue><teal>（36秒）</teal>",
+      "ss": "<blue>17.3%</blue>爆傷光環"
     },
     "ratingsSummary": {
       "newbie": null,
