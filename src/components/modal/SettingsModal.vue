@@ -11,11 +11,11 @@
             <div class="setting-group">
               <h4 class="setting-group-title">{{ t('settingsModal.language') }}</h4>
               <div class="language-selector">
-                <button @click="toggleMenu" class="dropdown-toggle">
+                <button @click="toggleMenu" class="dropdown-toggle" ref="dropdownToggleRef">
                   {{ currentLanguageName }} <span class="caret" :class="{ open: isOpen }"></span>
                 </button>
                 <transition name="dropdown">
-                  <ul v-if="isOpen" class="language-menu">
+                  <ul v-if="isOpen" class="language-menu" ref="languageMenuRef">
                     <li v-for="lang in availableLanguages" :key="lang.code" @click="() => { handleLocaleChange(lang.code); isOpen = false; }">
                       {{ lang.name }}
                     </li>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref, computed, toRefs } from 'vue';
+import { ref, computed, toRefs, watch } from 'vue';
 import { useSettingStore } from '@/store/setting';
 import { storeToRefs } from 'pinia';
 import { useI18n } from '@/composables/useI18n.js';
@@ -67,10 +67,35 @@ const availableLanguages = [
 ];
 
 const isOpen = ref(false);
+const dropdownToggleRef = ref(null);
+const languageMenuRef = ref(null);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
+
+const closeMenu = () => {
+  isOpen.value = false;
+};
+
+useEscapeKey(isOpen, closeMenu);
+
+const handleClickOutside = (event) => {
+  const isClickInsideButton = dropdownToggleRef.value && dropdownToggleRef.value.contains(event.target);
+  const isClickInsideMenu = languageMenuRef.value && languageMenuRef.value.contains(event.target);
+
+  if (!isClickInsideButton && !isClickInsideMenu) {
+    closeMenu();
+  }
+};
+
+watch(isOpen, (isMenuOpen) => {
+  if (isMenuOpen) {
+    document.addEventListener('click', handleClickOutside, true);
+  } else {
+    document.removeEventListener('click', handleClickOutside, true);
+  }
+});
 
 const currentLanguageName = computed(() => {
   return availableLanguages.find(lang => lang.code === currentLocale.value)?.name || '';
