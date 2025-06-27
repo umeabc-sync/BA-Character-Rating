@@ -5,23 +5,24 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3>{{ t('common.settings') }}</h3>
-            <button @click="close" class="close-button">&times;</button>
+            <button @click="close" class="close-button">×</button>
           </div>
           <div class="modal-body">
             <div class="setting-group">
               <h4 class="setting-group-title">{{ t('settingsModal.language') }}</h4>
               <div class="language-selector">
-                <button
-                  v-for="lang in availableLanguages"
-                  :key="lang.code"
-                  :class="{ active: currentLocale === lang.code }"
-                  @click="handleLocaleChange(lang.code)"
-                >
-                  {{ lang.name }}
+                <button @click="toggleMenu" class="dropdown-toggle">
+                  {{ currentLanguageName }} <span class="caret" :class="{ open: isOpen }"></span>
                 </button>
+                <transition name="dropdown">
+                  <ul v-if="isOpen" class="language-menu">
+                    <li v-for="lang in availableLanguages" :key="lang.code" @click="() => { handleLocaleChange(lang.code); isOpen = false; }">
+                      {{ lang.name }}
+                    </li>
+                  </ul>
+                </transition>
               </div>
             </div>
-
             <div class="setting-group">
               <h4 class="setting-group-title">{{ t('settingsModal.enableColoredText') }}</h4>
               <div class="toggle-switch">
@@ -29,9 +30,7 @@
                 <label for="coloredTextToggle"></label>
                 <span class="toggle-label">{{ isColoredTextEnabled ? t('common.enabled') : t('common.disabled') }}</span>
               </div>
-
             </div>
-            <!-- More settings added here -->
           </div>
         </div>
       </div>
@@ -40,7 +39,7 @@
 </template>
 
 <script setup>
-import { toRefs } from 'vue';
+import { ref, computed, toRefs } from 'vue';
 import { useSettingStore } from '@/store/setting';
 import { storeToRefs } from 'pinia';
 import { useI18n } from '@/composables/useI18n.js';
@@ -64,16 +63,24 @@ const { locale: currentLocale, enableColoredText: isColoredTextEnabled } = store
 
 const availableLanguages = [
   { code: 'zh-tw', name: '繁體中文' },
-  { code: 'zh-cn', name: '简体中文' },
+  { code: 'zh-cn', name: '简体中文' }
 ];
 
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const currentLanguageName = computed(() => {
+  return availableLanguages.find(lang => lang.code === currentLocale.value)?.name || '';
+});
+
 const handleLocaleChange = (newLocale) => {
-  // If the selected language is the same as the current language, no action is performed
   if (currentLocale.value === newLocale) {
     return;
   }
   settingStore.setLocale(newLocale);
-  // Force refresh the page to apply all language changes
   window.location.reload();
 };
 
@@ -147,37 +154,135 @@ const toggleColoredText = () => {
 }
 
 .setting-group {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.setting-group:last-child {
+  border-bottom: none;
 }
 
 .setting-group-title {
   font-size: 1.1rem;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e9ecef;
+  font-weight: 500;
+  margin: 0;
 }
 
-.dark-mode .setting-group-title {
-  border-bottom-color: #2a4a6e;
-}
+.dark-mode .setting-group { border-bottom-color: #2a4a6e; }
 
 .language-selector {
+  position: relative;
+  max-width: 200px;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-.language-selector button {
-  padding: 12px 20px; border: 1px solid #bdc3c7; border-radius: 8px;
-  background-color: #fff; cursor: pointer; transition: all 0.3s ease;
-  font-size: 1rem; text-align: left; font-weight: 500;
+.dark-mode .dropdown-toggle {
+  background-color: #1f3048;
+  border-color: #2a4a6e;
+  color: #e0e6ed;
 }
 
-.dark-mode .language-selector button { background-color: #1f3048; border-color: #2a4a6e; color: #e0e6ed; }
-.language-selector button:hover { border-color: #6495ed; background-color: #e9ecef; }
-.dark-mode .language-selector button:hover { border-color: #00aeef; background-color: #2a4a6e; }
-.language-selector button.active { background-color: #6495ed; color: white; border-color: #6495ed; font-weight: bold; box-shadow: 0 0 10px rgba(100, 149, 237, 0.5); }
-.dark-mode .language-selector button.active { background-color: #00aeef; border-color: #00aeef; box-shadow: 0 0 10px rgba(0, 174, 239, 0.5); }
+.dropdown-toggle:hover {
+  border-color: #6495ed;
+  background-color: #e9ecef;
+}
+
+.dark-mode .dropdown-toggle:hover {
+  border-color: #00aeef;
+  background-color: #2a4a6e;
+}
+
+.caret {
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .caret {
+  border-top-color: #e0e6ed;
+}
+
+.caret.open {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  z-index: 1000;
+  overflow: hidden; /* Ensure rounded corners clip child elements */
+}
+
+.dark-mode .language-menu {
+  background-color: #1f3048;
+  border-color: #2a4a6e;
+}
+
+.language-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.language-menu li:hover {
+  background-color: #e9ecef;
+}
+
+.dark-mode .language-menu li:hover {
+  background-color: #2a4a6e;
+}
+
+.language-menu li.active {
+  background-color: #6495ed;
+  color: white;
+  font-weight: bold;
+}
+
+.dark-mode .language-menu li.active {
+  background-color: #00aeef;
+  color: #e0e6ed;
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
 
 .modal-fade-enter-active, .modal-fade-leave-active { transition: opacity 0.3s ease; }
 .modal-fade-enter-from, .modal-fade-leave-to { opacity: 0; }
