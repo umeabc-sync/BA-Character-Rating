@@ -36,9 +36,9 @@
       "overall": 101
     },
     "skillsSummary": {
-      "ex": "2Cost增加一名队友振动属攻<blue>66.6%</blue><teal>（持续40秒）</teal>并获得一枚「猫眼」",
+      "ex": "2Cost增加一名队友振动属攻<blue>66.6%</blue><teal>（持续40秒）</teal>并获得一枚<purple>「猫眼」</purple>",
       "ns": "每20秒使圆形范围内的友军攻击力<blue>25%</blue>增加<teal>（持续30秒）</teal>",
-      "ss": "当队伍「猫眼」达到3枚时，消耗使全体Cost减少1和振动属攻<blue>40.8%</blue>增加"
+      "ss": "当队伍<purple>「猫眼」达到3枚时</purple>，消耗使全体Cost减少1和振动属攻<blue>40.8%</blue>增加"
     },
     "ratingsSummary": {
       "newbie": null,
