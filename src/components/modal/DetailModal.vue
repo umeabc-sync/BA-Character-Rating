@@ -174,6 +174,10 @@ watch(() => props.modelValue, async (show) => {
   color: #333;
 }
 
+.dark-mode .close-button:hover {
+  color: #fff;
+}
+
 .modal-title {
   margin-top: 0;
   margin-bottom: 15px;
