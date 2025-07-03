@@ -1,6 +1,6 @@
-import { getAssetsFile } from "./getAssetsFile";
+import { getAssetsFile } from './getAssetsFile'
 
 export function getOpartImageUrl(name) {
-  if (!name) return '';
-  return getAssetsFile(`opart/${name}.webp`);
+  if (!name) return ''
+  return getAssetsFile(`opart/${name}.webp`)
 }

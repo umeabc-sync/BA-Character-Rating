@@ -1,9 +1,9 @@
-import { getAssetsFile } from "./getAssetsFile";
+import { getAssetsFile } from './getAssetsFile'
 
 export async function fetchData(language = 'zh-tw') {
-  const response = await fetch(getAssetsFile(`data/${language}.json`));
+  const response = await fetch(getAssetsFile(`data/${language}.json`))
   if (!response.ok) {
-    throw new Error('Failed to fetch data');
+    throw new Error('Failed to fetch data')
   }
-  return response.json();
-};
+  return response.json()
+}

@@ -11,35 +11,46 @@
     </template>
   </div>
   <div v-else>
-    {{ t('common.notApplicable')  }}
+    {{ t('common.notApplicable') }}
   </div>
 </template>
 
 <script setup>
-import { useI18n } from '@/composables/useI18n.js';
+  import { useI18n } from '@/composables/useI18n.js'
 
-const { t } = useI18n();
+  const { t } = useI18n()
 
-defineProps({
-  rating: {
-    type: [Array, null],
-    required: true
-  },
-  star: {
-    type: Boolean,
-    default: true
-  }
-});
+  defineProps({
+    rating: {
+      type: [Array, null],
+      required: true,
+    },
+    star: {
+      type: Boolean,
+      default: true,
+    },
+  })
 </script>
 
 <style scoped>
-.star-rating { display: inline-block; font-size: 1.2rem; }
-.star { margin: 0 1px; }
-.black-star { color: #2c3e50; }
-.dark-mode .black-star {
-  color: #b0c4de; /* LightSteelBlue, for better contrast */
-}
+  .star-rating {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+  .star {
+    margin: 0 1px;
+  }
+  .black-star {
+    color: #2c3e50;
+  }
+  .dark-mode .black-star {
+    color: #b0c4de; /* LightSteelBlue, for better contrast */
+  }
 
-.blue-star { color: #3498db; }
-.red-star { color: #e74c3c; }
+  .blue-star {
+    color: #3498db;
+  }
+  .red-star {
+    color: #e74c3c;
+  }
 </style>

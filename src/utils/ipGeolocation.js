@@ -5,7 +5,7 @@ export async function runIPGeolocation() {
 
   if (settingStore.locale !== null) {
     console.log('skipping IP Geolocation API call.')
-    return Promise.resolve(); 
+    return Promise.resolve()
   }
 
   const countryLangMap = {
@@ -17,25 +17,25 @@ export async function runIPGeolocation() {
   const timeoutId = setTimeout(() => controller.abort(), 800)
 
   try {
-        const response = await fetch(`https://ipinfo.io/json?token=${import.meta.env.VITE_IPINFO_TOKEN}`, {
-            signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+    const response = await fetch(`https://ipinfo.io/json?token=${import.meta.env.VITE_IPINFO_TOKEN}`, {
+      signal: controller.signal,
+    })
+    clearTimeout(timeoutId)
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const countryCode = data.country;
-        settingStore.locale = countryLangMap[countryCode] || defaultCountryLang;
-    } catch (error) {
-        clearTimeout(timeoutId);
-
-        if (error.name === 'AbortError') {
-            console.error('IP Geolocation API request timeout.');
-        } else {
-            console.error('IP Geolocation API request error:', error.message);
-        }
-        settingStore.locale = defaultCountryLang;
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
     }
+    const data = await response.json()
+    const countryCode = data.country
+    settingStore.locale = countryLangMap[countryCode] || defaultCountryLang
+  } catch (error) {
+    clearTimeout(timeoutId)
+
+    if (error.name === 'AbortError') {
+      console.error('IP Geolocation API request timeout.')
+    } else {
+      console.error('IP Geolocation API request error:', error.message)
+    }
+    settingStore.locale = defaultCountryLang
+  }
 }

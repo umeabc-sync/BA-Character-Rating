@@ -17,11 +17,7 @@
     "city": "S",
     "outdoor": "S",
     "indoor": "S",
-    "equipments": [
-      "badge",
-      "badge",
-      "badge"
-    ],
+    "equipments": ["badge", "badge", "badge"],
     "uniqueWeaponStar2": "增益时间增加",
     "uniqueWeaponStar3": ["outdoor", "SS"],
     "ratingVersion": "4.1",
@@ -51,7 +47,18 @@
     },
     "uniqueWeaponRecommendedSummary": "开开开",
     "overallRecommendation": "必备，必抽捏",
-    "skillOrder": ["EX3", "技能一.二.三Lv4", "技能三LV7", "技能二Lv7", "技能一Lv7", "EX5", "技能三Lv10", "技能二Lv10", "技能一Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技能一.二.三Lv4",
+      "技能三LV7",
+      "技能二Lv7",
+      "技能一Lv7",
+      "EX5",
+      "技能三Lv10",
+      "技能二Lv10",
+      "技能一Lv10",
+      "Max"
+    ]
   },
   {
     "id": 18,
@@ -71,11 +78,7 @@
     "city": "B",
     "outdoor": "A",
     "indoor": "B",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "暴击伤害增加",
     "uniqueWeaponStar3": ["city", "A"],
     "ratingVersion": "7.0",
@@ -105,12 +108,26 @@
     },
     "uniqueWeaponRecommendedSummary": "需要用时一定要开，<green>加强输出能力</green>",
     "overallRecommendation": "老玩家根据环境需求培养、储备角色",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技二Lv7", "技三LV7", "EX5", "技一Lv10", "技二Lv10", "技三Lv10", "Max"],
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技一Lv7",
+      "技二Lv7",
+      "技三LV7",
+      "EX5",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ],
     "favoriteItem": {
       "name": "用了很久的记事本",
       "recommendedLevel": [2, 0, 0],
       "materials": ["26", "ether"],
-      "effects": ["暴击增加<red>260</red>", "暴伤增加<blue>57%</blue>提升至<blue>66.7%</blue>，持续时间从<blue>13秒</blue>提升至<blue>26秒</blue>"]
+      "effects": [
+        "暴击增加<red>260</red>",
+        "暴伤增加<blue>57%</blue>提升至<blue>66.7%</blue>，持续时间从<blue>13秒</blue>提升至<blue>26秒</blue>"
+      ]
     }
   },
   {
@@ -131,11 +148,7 @@
     "city": "B",
     "outdoor": "S",
     "indoor": "D",
-    "equipments": [
-      "gloves",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["gloves", "hairpin", "watch"],
     "uniqueWeaponStar2": "暴击值增加",
     "uniqueWeaponStar3": ["outdoor", "SS"],
     "ratingVersion": "7.0",
@@ -165,12 +178,26 @@
     },
     "uniqueWeaponRecommendedSummary": "暴击值增加提升微小，可在商店兑换至高专",
     "overallRecommendation": "重甲BOSS多刀选用。小桃挂件",
-    "skillOrder": ["技一.二.三Lv4", "EX3", "技三LV7", "技二Lv7", "技一Lv7", "EX5", "技三Lv10", "技二Lv10", "技一Lv10", "Max"],
+    "skillOrder": [
+      "技一.二.三Lv4",
+      "EX3",
+      "技三LV7",
+      "技二Lv7",
+      "技一Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv10",
+      "Max"
+    ],
     "favoriteItem": {
       "name": "便携游戏机",
       "recommendedLevel": [3, 0, 0],
       "materials": ["24", "phaistos"],
-      "effects": ["攻击力<red>1000</red>", "<red>【新增】</red><blue>场上有小桃时（普通/女仆均可）</blue>额外对小桃进行<red>治愈力165%</red>的追加回复，且小桃的攻击力<red>增加41.7%</red><teal>（25秒）</teal>"]
+      "effects": [
+        "攻击力<red>1000</red>",
+        "<red>【新增】</red><blue>场上有小桃时（普通/女仆均可）</blue>额外对小桃进行<red>治愈力165%</red>的追加回复，且小桃的攻击力<red>增加41.7%</red><teal>（25秒）</teal>"
+      ]
     }
   },
   {
@@ -191,11 +218,7 @@
     "city": "S",
     "outdoor": "D",
     "indoor": "B",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "攻击力增加",
     "uniqueWeaponStar3": ["city", "SS"],
     "ratingVersion": "7.0",
@@ -225,12 +248,26 @@
     },
     "uniqueWeaponRecommendedSummary": "群控三星即可，主输出建议开专，<purple>如对策霍德、气垫船LU</purple>",
     "overallRecommendation": "市街竞技场可选，备战对策HOD气垫船高难LU/TM卷分",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "EX5", "技一Lv7", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技三LV7",
+      "EX5",
+      "技一Lv7",
+      "技二Lv10",
+      "技三Lv10",
+      "技一Lv10",
+      "Max"
+    ],
     "favoriteItem": {
       "name": "华丽花纹阳伞",
       "recommendedLevel": [5, 0, 0],
       "materials": ["20", "winnistone"],
-      "effects": ["暴伤增加<red>2000</red>", "攻击力增加<blue>31.5%/61.8%/99%</blue>提升至<blue>42.9%/84.3%/135%</blue>，承伤率增加<blue>9.6%/19.2%/28.9%</blue>降低至<blue>8.5%/17%/25.6%</blue>，新增<red>3阶段时所有攻击必定暴击</red>，<blue>且CC强化力+93</blue>"]
+      "effects": [
+        "暴伤增加<red>2000</red>",
+        "攻击力增加<blue>31.5%/61.8%/99%</blue>提升至<blue>42.9%/84.3%/135%</blue>，承伤率增加<blue>9.6%/19.2%/28.9%</blue>降低至<blue>8.5%/17%/25.6%</blue>，新增<red>3阶段时所有攻击必定暴击</red>，<blue>且CC强化力+93</blue>"
+      ]
     }
   },
   {
@@ -251,11 +288,7 @@
     "city": "A",
     "outdoor": "A",
     "indoor": "D",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "暴击率增加",
     "uniqueWeaponStar3": ["indoor", "B"],
     "ratingVersion": "7.0",
@@ -285,12 +318,26 @@
     },
     "uniqueWeaponRecommendedSummary": "暴击率提升有限，<blue>输出最少5星起（卡池高星）</blue>",
     "overallRecommendation": "久违的2星学生和RL火箭发射器，满练全游戏最高面板。LU猫鬼多刀可选输出，低星好培养",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技三LV7", "技一Lv7", "EX5", "技二Lv10", "技三Lv10", "技一Lv10", "Max"],
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技三LV7",
+      "技一Lv7",
+      "EX5",
+      "技二Lv10",
+      "技三Lv10",
+      "技一Lv10",
+      "Max"
+    ],
     "favoriteItem": {
       "name": "限定复刻版作品集",
       "recommendedLevel": [3, 0, 0],
       "materials": ["3", "nimrud"],
-      "effects": ["暴击<red>250</red>", "攻击力增加<blue>22.5%</blue>提升至<blue>24.6%</blue>，新增<red>暴击值</red>提升<red>24.6%</red>"]
+      "effects": [
+        "暴击<red>250</red>",
+        "攻击力增加<blue>22.5%</blue>提升至<blue>24.6%</blue>，新增<red>暴击值</red>提升<red>24.6%</red>"
+      ]
     }
   },
   {
@@ -311,11 +358,7 @@
     "city": "S",
     "outdoor": "B",
     "indoor": "D",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "暴击伤害增加",
     "uniqueWeaponStar3": ["city", "SS"],
     "ratingVersion": "7.0",
@@ -345,12 +388,26 @@
     },
     "uniqueWeaponRecommendedSummary": "副输出使用卷分开，<blue>提高攻击力可开</blue>",
     "overallRecommendation": "低费振动范围输出，猫鬼多刀可选副C，竞技场前排玩具",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技三LV7", "EX5", "技二Lv10", "技一Lv10", "技三Lv10", "Max"],
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技一Lv7",
+      "技三LV7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ],
     "favoriteItem": {
       "name": "青春白蝴蝶结",
       "recommendedLevel": [4, 0, 0],
       "materials": ["3", "ether"],
-      "effects": ["攻击力<red>300</red>", "攻击力增加<blue>37.6%</blue>提升至<blue>41%</blue>，新增<purple>「热情」状态下</purple><red>EX技能无视敌方防御力35%</red>"]
+      "effects": [
+        "攻击力<red>300</red>",
+        "攻击力增加<blue>37.6%</blue>提升至<blue>41%</blue>，新增<purple>「热情」状态下</purple><red>EX技能无视敌方防御力35%</red>"
+      ]
     }
   },
   {
@@ -371,11 +428,7 @@
     "city": "D",
     "outdoor": "S",
     "indoor": "B",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "攻击力增加",
     "uniqueWeaponStar3": ["outdoor", "SS"],
     "ratingVersion": "7.0",
@@ -405,7 +458,18 @@
     },
     "uniqueWeaponRecommendedSummary": "三星即可打TM盖布拉，LU难需要专一起",
     "overallRecommendation": "盖布拉冰柱对策，备战盖布拉考虑培养",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三LV7",
+      "技一Lv7",
+      "技二Lv7",
+      "EX5",
+      "技三Lv10",
+      "技一Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   },
   {
     "id": 215,
@@ -425,11 +489,7 @@
     "city": "B",
     "outdoor": "D",
     "indoor": "S",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "爆伤增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
@@ -459,7 +519,18 @@
     },
     "uniqueWeaponRecommendedSummary": "爬提法塔高培养，使用需开高专",
     "overallRecommendation": "提法塔主对策范围输出，NS减费可以留出更多冗余，弹甲BOSS清杂/多刀可选",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技三LV7", "技一Lv7", "技二Lv7", "EX5", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三LV7",
+      "技一Lv7",
+      "技二Lv7",
+      "EX5",
+      "技三Lv10",
+      "技一Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   },
   {
     "id": 218,
@@ -479,11 +550,7 @@
     "city": "D",
     "outdoor": "B",
     "indoor": "S",
-    "equipments": [
-      "gloves",
-      "hairpin",
-      "amulet"
-    ],
+    "equipments": ["gloves", "hairpin", "amulet"],
     "uniqueWeaponStar2": "增益持续增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
@@ -513,7 +580,18 @@
     },
     "uniqueWeaponRecommendedSummary": "增益时间增加，<purple>平民3星即可，凹分开专</purple>",
     "overallRecommendation": "<red>振动大决战必备人权</red>，紫甲大决战较为频繁，<red>未来可能</red>有较高使用率。振动属攻建议拿下",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技二Lv7",
+      "技三LV7",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ]
   },
   {
     "id": 219,
@@ -533,11 +611,7 @@
     "city": "D",
     "outdoor": "B",
     "indoor": "S",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "爆伤增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
@@ -567,7 +641,18 @@
     },
     "uniqueWeaponRecommendedSummary": "攻击力增加，使用时建议专三提升面板",
     "overallRecommendation": "多数时间绑定光一起走，大决战卷分可选，爬提法塔主要对策输出，本质是单体输出选手，与未花相比没有血量增伤",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技三LV7", "技二Lv7", "技一Lv10", "技三Lv10", "技二Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技三LV7",
+      "技二Lv7",
+      "技一Lv10",
+      "技三Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   },
   {
     "id": 225,
@@ -587,11 +672,7 @@
     "city": "D",
     "outdoor": "B",
     "indoor": "S",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "贯通属攻增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
@@ -621,7 +702,18 @@
     },
     "uniqueWeaponRecommendedSummary": "贯通属攻增加，使用基本专二起步、看个人情况培养",
     "overallRecommendation": "<red>未来可期，</red>目前看备战重甲提法塔、LU切塞德",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技三LV7", "技一Lv7", "技二Lv7", "技三Lv10", "技一Lv10", "技二Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技三LV7",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv10",
+      "技一Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   },
   {
     "id": 226,
@@ -641,11 +733,7 @@
     "city": "A",
     "outdoor": "B",
     "indoor": "C",
-    "equipments": [
-      "hat",
-      "hairpin",
-      "watch"
-    ],
+    "equipments": ["hat", "hairpin", "watch"],
     "uniqueWeaponStar2": "攻击力增加",
     "uniqueWeaponStar3": ["city", "S"],
     "ratingVersion": "7.0",
@@ -675,7 +763,18 @@
     },
     "uniqueWeaponRecommendedSummary": "攻击力增加，备战振动多刀考虑开专",
     "overallRecommendation": "特/弹甲BOSS多刀可选输出",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技二Lv7", "技三LV7", "技一Lv10", "技二Lv10", "技三Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技二Lv7",
+      "技三LV7",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ]
   },
   {
     "id": 227,
@@ -695,11 +794,7 @@
     "city": "S",
     "outdoor": "B",
     "indoor": "D",
-    "equipments": [
-      "shoes",
-      "bag",
-      "amulet"
-    ],
+    "equipments": ["shoes", "bag", "amulet"],
     "uniqueWeaponStar2": "生命值增加",
     "uniqueWeaponStar3": ["city", "SS"],
     "ratingVersion": "7.0",
@@ -729,6 +824,17 @@
     },
     "uniqueWeaponRecommendedSummary": "血量可能不太够，如果退场等于-4费，看情况考虑专一起",
     "overallRecommendation": "首个领域版本的后排双暴辅助，备战高难度多队可考虑",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "EX5", "技一Lv7", "技三LV7", "技二Lv7", "技一Lv10", "技三Lv10", "技二Lv10", "Max"]
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技三LV7",
+      "技二Lv7",
+      "技一Lv10",
+      "技三Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   }
 ]

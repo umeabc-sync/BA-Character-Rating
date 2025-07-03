@@ -1,4 +1,4 @@
-import { watch, onUnmounted } from 'vue';
+import { watch, onUnmounted } from 'vue'
 
 /**
  * A Vue composable that executes a callback when the Escape key is pressed.
@@ -9,21 +9,20 @@ import { watch, onUnmounted } from 'vue';
 export function useEscapeKey(isVisibleRef, callback) {
   const handleKeyUp = (event) => {
     if (event.key === 'Escape') {
-      callback();
+      callback()
     }
-  };
+  }
 
   const stopWatching = watch(isVisibleRef, (isVisible) => {
     if (isVisible) {
-      window.addEventListener('keyup', handleKeyUp);
+      window.addEventListener('keyup', handleKeyUp)
     } else {
-      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener('keyup', handleKeyUp)
     }
-  });
+  })
 
   onUnmounted(() => {
-    window.removeEventListener('keyup', handleKeyUp);
-    stopWatching();
-  });
+    window.removeEventListener('keyup', handleKeyUp)
+    stopWatching()
+  })
 }
-
