@@ -188,6 +188,10 @@
     color: #333;
   }
 
+  .dark-mode .close-button:hover {
+    color: #e0e6ed;
+  }
+
   .modal-title {
     margin-top: 0;
     margin-bottom: 15px;

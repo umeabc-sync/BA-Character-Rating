@@ -100,7 +100,7 @@
   watch(
     isDarkMode,
     (newValue) => {
-      document.body.classList.toggle('dark-mode', newValue)
+      document.documentElement.classList.toggle('dark-mode', newValue)
     },
     { immediate: true }
   )
@@ -115,9 +115,25 @@
     --color-teal: #0097a7;
     --color-red: #d32f2f;
     --color-purple: #8e24aa;
-    /* Add other common colors here if needed */
     --text-color-default: #2c3e50;
-    --background-color-default: linear-gradient(135deg, #e0ffff 0%, #add8e6 100%);
+    --background-color-default: #e0ffff;
+    --background-default: linear-gradient(135deg, #e0ffff 0%, #add8e6 100%);
+  }
+
+  /* Dark Mode Overrides for CSS Variables */
+  html.dark-mode {
+    --color-blue: #81d4fa;
+    --color-green: #81c784;
+    --color-teal: #4dd0e1;
+    --color-red: #ef5350;
+    --color-purple: #ce93d8;
+    --text-color-default: #e0e6ed;
+    --background-color-default: #0f1928;
+    --background-default: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
+  }
+
+  html {
+    background-color: var(--background-color-default);
   }
 
   /* Global Style */
@@ -125,33 +141,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overscroll-behavior-y: none;
   }
 
   body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: var(--background-color-default);
+    background: var(--background-default);
     color: var(--text-color-default);
     min-height: 100vh;
     padding: 10px;
     transition:
       background 0.3s ease,
-      color 0.3s ease; /* Smooth transition */
-  }
-
-  /* Dark Mode Overrides for CSS Variables */
-  body.dark-mode {
-    --color-blue: #81d4fa;
-    --color-green: #81c784;
-    --color-teal: #4dd0e1;
-    --color-red: #ef5350;
-    --color-purple: #ce93d8;
-    --text-color-default: #e0e6ed;
-    --background-color-default: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
-  }
-
-  body.dark-mode {
-    background: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
-    color: #e0e6ed;
+      color 0.3s ease;
+    overflow: visible;
   }
 </style>
