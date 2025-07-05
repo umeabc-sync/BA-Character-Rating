@@ -14,6 +14,7 @@
       @select="handleCharacterSelect"
       @close="isSelectorVisible = false"
     />
+    <BackToTopButton />
   </div>
 </template>
 
@@ -27,6 +28,7 @@
   import { storeToRefs } from 'pinia'
   import RatingCard from '@/components/RatingCard.vue'
   import CharacterSelector from '@/components/modal/CharacterSelector.vue'
+  import BackToTopButton from '@/components/ui/BackToTopButton.vue'
   import NProgress from 'nprogress'
   import '@/style/nprogress/nprogress.css'
 
@@ -134,6 +136,7 @@
 
   html {
     background-color: var(--background-color-default);
+    overflow-x: hidden;
   }
 
   /* Global Style */
@@ -152,6 +155,6 @@
     transition:
       background 0.3s ease,
       color 0.3s ease;
-    overflow: visible;
+    overflow-x: hidden;
   }
 </style>
