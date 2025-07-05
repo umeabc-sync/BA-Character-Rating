@@ -1,8 +1,8 @@
 <template>
   <div class="hint-tooltip-wrapper">
-    <div class="tooltip-inner-content" ref="contentRef" @mouseenter="updateTooltipPosition">
+    <div ref="contentRef" class="tooltip-inner-content" @mouseenter="updateTooltipPosition">
       <slot></slot>
-      <div class="hint-tooltip-text" ref="tooltipRef" :style="tooltipStyle">
+      <div ref="tooltipRef" class="hint-tooltip-text" :style="tooltipStyle">
         {{ text }}
       </div>
     </div>
