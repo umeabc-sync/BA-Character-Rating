@@ -137,6 +137,7 @@
   html {
     background-color: var(--background-color-default);
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Global Style */
