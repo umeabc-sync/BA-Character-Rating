@@ -91,10 +91,12 @@
     flex: 0 0 110px;
     font-weight: bold;
     padding: 8px;
-    text-align: center;
     font-size: 0.9rem;
     border-radius: 5px 0 0 5px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .attribute-value {
