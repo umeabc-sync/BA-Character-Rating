@@ -451,17 +451,22 @@
   }
 
   .ani-num::before {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    font-family: 'NEXON Football Gothic', sans-serif;
     counter-reset: num calc(var(--seed) * var(--num) / 100);
     content: counter(num);
     animation: seed 0.5s ease-out forwards;
   }
 
   .overall-grade {
+    font-family: 'NEXON Football Gothic', sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
     background: linear-gradient(45deg, #87ceeb, #6495ed); /* BA Style Gradient */
-    padding: 5px 15px;
+    padding: 8px 18px 2px; /* Adjusted padding for vertical alignment */
     border-radius: 10px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
