@@ -3,7 +3,7 @@
     "Explosive": "爆發",
     "Piercing": "貫通",
     "Mystic": "神秘",
-    "Sonic": "震動"
+    "Sonic": "振動"
   },
   "defenseType": {
     "Light": "輕型護甲",
@@ -40,9 +40,9 @@
     "ETC": "其他"
   },
   "weapon": {
-    "SG": "",
-    "SMG": "",
-    "AR": "",
+    "SG": "霰彈槍",
+    "SMG": "衝鋒槍",
+    "AR": "突擊步槍",
     "GL": "",
     "HG": "手槍",
     "SR": "狙擊槍",

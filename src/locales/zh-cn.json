@@ -3,7 +3,7 @@
     "Explosive": "爆发",
     "Piercing": "贯穿",
     "Mystic": "神秘",
-    "Sonic": "震动"
+    "Sonic": "振动"
   },
   "defenseType": {
     "Light": "轻装甲",
@@ -40,9 +40,9 @@
     "ETC": "其他"
   },
   "weapon": {
-    "SG": "",
-    "SMG": "",
-    "AR": "",
+    "SG": "霰弹枪",
+    "SMG": "冲锋枪",
+    "AR": "突击步枪",
     "GL": "",
     "HG": "手枪",
     "SR": "狙擊槍",
@@ -139,7 +139,7 @@
   "ratingCategory": {
     "newbie": "新手期：",
     "totalAssault": "总力战：",
-    "pvp": "战术对战：",
+    "pvp": "战术对抗战：",
     "grandAssault": "大决战：",
     "limitBreakAssault": "制约解除作战：",
     "jointFiringDrill": "演习考试：",
