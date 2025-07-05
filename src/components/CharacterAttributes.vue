@@ -196,6 +196,7 @@
       border-radius: 5px; /* Restore rounded corners when stacking */
       border-left: 1px solid #e9ecef;
       text-align: center;
+      justify-content: center;
     }
     .dark-mode .attribute-label,
     .dark-mode .attribute-value {
