@@ -899,6 +899,67 @@
     ]
   },
   {
+    "id": 223,
+    "fullname": "天地 仁耶",
+    "name": "仁耶",
+    "nicknames": ["仁耶", "尼婭"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "HG",
+    "position": [1, "輸出輔"],
+    "uniqueWeaponRecommended": "看情況開",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "baghdad",
+    "skillSubOparts": "totempole",
+    "l2dUnlock": 5,
+    "city": "S",
+    "outdoor": "D",
+    "indoor": "B",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": null,
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 50
+    },
+    "skillsSummary": {
+      "ex": "4Cost<red>依據圓形範圍內敵方數量造成傷害</red>（3人以下：<blue>349%</blue>；4-6人：<blue>495%</blue>；7人以上：<blue>699%</blue>）且降防<blue>33.3%</blue><teal>（26秒）</teal>",
+      "ns": "每30秒對圓形範圍內敵方造成<blue>280%</blue>傷害且減少暴傷抗性<blue>22.5%</blue><teal>（25秒）</teal>",
+      "ss": "<blue>20.2%</blue>回費光環"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "高防彈甲BOSS可選輸出或輔助，如雞、貓鬼、葛利果",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "高防彈甲BOSS可選輸出或輔助，如雞、貓鬼、葛利果",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "護衛/防禦/突破/演習可選",
+      "eventChallenge": "群傷清雜或降防回費可選"
+    },
+    "uniqueWeaponRecommendedSummary": "輔助可不開，當做輸出來用至少五星專二起",
+    "overallRecommendation": "高防群怪可選降防輔助，貓鬼主對策輔助兼輸出",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv7",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ]
+  },
+  {
     "id": 224,
     "fullname": "柚鳥 夏 (樂團)",
     "name": "夏 (樂團)",

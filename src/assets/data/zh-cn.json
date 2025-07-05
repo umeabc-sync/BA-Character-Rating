@@ -899,6 +899,67 @@
     ]
   },
   {
+    "id": 223,
+    "fullname": "天地 尼娅",
+    "name": "尼娅",
+    "nicknames": ["尼娅"],
+    "school": "Hyakkiyako",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "HG",
+    "position": [1, "输出辅"],
+    "uniqueWeaponRecommended": "看情况开",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "baghdad",
+    "skillSubOparts": "totempole",
+    "l2dUnlock": 5,
+    "city": "S",
+    "outdoor": "D",
+    "indoor": "B",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻击力增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": null,
+      "grandAssault": [3, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 50
+    },
+    "skillsSummary": {
+      "ex": "4Cost<red>依据圆形范围内敌方数量造成伤害</red>（3人以下：<blue>349%</blue>；4-6人：<blue>495%</blue>；7人以上：<blue>699%</blue>）且降防<blue>33.3%</blue><teal>（26秒）</teal>",
+      "ns": "每30秒对圆形范围内敌方造成<blue>280%</blue>伤害且减少暴伤抗性<blue>22.5%</blue><teal>（25秒）</teal>",
+      "ss": "<blue>20.2%</blue>回费光环"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "高防弹甲BOSS可选输出或辅助，如鸡、猫鬼、格里高利",
+      "pvp": "暂时无组合搭配",
+      "grandAssault": "高防弹甲BOSS可选输出或辅助，如鸡、猫鬼、格里高利",
+      "limitBreakAssault": "缺人或机制使用",
+      "jointFiringDrill": "护卫/防御/突破/演习可选",
+      "eventChallenge": "群伤清杂或降防回费可选"
+    },
+    "uniqueWeaponRecommendedSummary": "辅助可不开，当做输出来用至少五星专二起",
+    "overallRecommendation": "高防群怪可选降防辅助，猫鬼主对策辅助兼输出",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv7",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ]
+  },
+  {
     "id": 224,
     "fullname": "柚鸟 夏 (乐队)",
     "name": "夏 (乐队)",
