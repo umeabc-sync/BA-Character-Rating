@@ -158,4 +158,9 @@
       color 0.3s ease;
     overflow-x: hidden;
   }
+
+  html.modal-open,
+  body.modal-open {
+    overflow-y: hidden;
+  }
 </style>

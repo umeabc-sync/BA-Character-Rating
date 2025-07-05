@@ -9,32 +9,36 @@ import { useEscapeKey } from '@/composables/useEscapeKey.js'
 export function useModal(isVisible, closeFn) {
   useEscapeKey(isVisible, closeFn)
 
-  // Lock or unlock background scrolling when Modal visibility changes
+  // Watch for changes in the modal's visibility to lock or unlock background scrolling.
   watch(isVisible, (newValue) => {
+    // Apply changes to both <html> and <body> for robust cross-browser compatibility.
+    const elements = [document.documentElement, document.body]
+
     if (newValue) {
-      // Before hiding the scrollbar, calculate its width
+      // --- Prevent content shift when scrollbar is hidden ---
+      // Calculate the scrollbar's width before hiding it.
       const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
 
-      // Check if scrollbar exists (width greater than 0)
+      // If a scrollbar exists, adjust the body's padding to compensate.
       if (scrollbarWidth > 0) {
-        // Get the currently calculated padding-right value of body
         const originalPaddingRight = window.getComputedStyle(document.body).paddingRight
-
-        // Set a new padding-right value of "original padding + scrollbar width"
-        // Using CSS's calc() function can handle unit issues elegantly
+        // Use calc() to elegantly handle different units (e.g., px, em).
         document.body.style.paddingRight = `calc(${originalPaddingRight} + ${scrollbarWidth}px)`
       }
 
-      // Hide scrollbars, lock scrolling
-      document.body.style.overflow = 'hidden'
+      // --- Lock scrolling ---
+      // Add a class to both <html> and <body> to disable scrolling.
+      // The actual CSS (`overflow-y: hidden`) is defined globally in App.vue.
+      elements.forEach((el) => el.classList.add('modal-open'))
     } else {
-      // When the Modal is closed, delay for a short time before resuming scrolling to ensure that the Modal closing animation is completed
+      // --- Restore scrolling ---
+      // Delay restoring scroll to ensure the modal's closing animation completes smoothly.
       setTimeout(() => {
-        // Remove inline styles and return the body style to the original state defined in the CSS file
-        document.body.style.overflow = ''
+        // Remove the class to re-enable scrolling.
+        elements.forEach((el) => el.classList.remove('modal-open'))
+        // Reset the padding adjustment.
         document.body.style.paddingRight = ''
-      }, 300) // The time set here should be consistent with the animation.
-      // Currently, all Modals have a fixed 0.3 second animation, so it is hard-coded for the time being.
+      }, 300) // This duration should match the modal's transition time.
     }
   })
 }
