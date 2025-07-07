@@ -7,7 +7,7 @@
           <h3 class="modal-title">{{ title }}</h3>
           <div class="modal-body">
             <img v-if="imageUrl" :src="imageUrl" alt="Detail Image" class="modal-image" />
-            <p v-if="text" class="modal-text">{{ text }}</p>
+            <div v-if="text" class="modal-text">{{ text }}</div>
           </div>
         </div>
       </div>
@@ -208,6 +208,8 @@
   .modal-text {
     font-size: 1.2rem;
     margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.5;
   }
 
   /* Transition for the backdrop */
