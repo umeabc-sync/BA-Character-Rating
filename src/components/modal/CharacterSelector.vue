@@ -673,6 +673,10 @@
   .item-name {
     font-weight: bold;
     font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Ensure it respects the parent's width */
   }
 
   .no-results {
