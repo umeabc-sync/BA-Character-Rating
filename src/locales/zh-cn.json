@@ -54,7 +54,7 @@
   },
   "common": {
     "all": "全部",
-    "notApplicable": "不适用",
+    "notApplicable": "不适合",
     "settings": "设定",
     "enabled": "启用",
     "disabled": "禁用"
