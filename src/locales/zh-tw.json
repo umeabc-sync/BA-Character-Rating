@@ -155,11 +155,11 @@
     "title": "選擇學生",
     "searchPlaceholder": "搜尋學生名稱或暱稱...",
     "resetFilters": "重設篩選",
-    "attackTypeLabel": "攻擊屬性:",
-    "defenseTypeLabel": "裝甲屬性:",
-    "schoolLabel": "學　　園:",
-    "weaponLabel": "使用武器:",
-    "positionLabel": "角色定位:",
+    "attackTypeLabel": "攻擊屬性",
+    "defenseTypeLabel": "裝甲屬性",
+    "schoolLabel": "學園",
+    "weaponLabel": "使用武器",
+    "positionLabel": "角色定位",
     "noResults": "找不到符合條件的學生"
   },
   "favoriteItemModal": {

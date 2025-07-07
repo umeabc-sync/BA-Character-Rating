@@ -155,11 +155,11 @@
     "title": "选择学生",
     "searchPlaceholder": "搜索学生名称或昵称...",
     "resetFilters": "重设筛选",
-    "attackTypeLabel": "攻击属性:",
-    "defenseTypeLabel": "装甲属性:",
-    "schoolLabel": "学　　园:",
-    "weaponLabel": "使用武器:",
-    "positionLabel": "角色定位:",
+    "attackTypeLabel": "攻击属性",
+    "defenseTypeLabel": "装甲属性",
+    "schoolLabel": "学园",
+    "weaponLabel": "使用武器",
+    "positionLabel": "角色定位",
     "noResults": "找不到符合条件的学生"
   },
   "favoriteItemModal": {

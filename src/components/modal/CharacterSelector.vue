@@ -35,88 +35,98 @@
                 <div class="filter-content-wrapper">
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.attackTypeLabel') }}</span>
-                    <button
-                      :class="{ active: selectedAttackType.length === 0 }"
-                      @click="selectFilter('attackType', null)"
-                    >
-                      {{ t('common.all') }}
-                    </button>
-                    <button
-                      v-for="type in attackTypes"
-                      :key="type"
-                      :class="{ active: selectedAttackType.includes(type), 'has-icon': true }"
-                      @click="selectFilter('attackType', type)"
-                    >
-                      <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
-                        <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon" />
-                      </div>
-                      <span>{{ t(`attackType.${type}`) }}</span>
-                    </button>
+                    <div class="filter-buttons">
+                      <button
+                        :class="{ active: selectedAttackType.length === 0 }"
+                        @click="selectFilter('attackType', null)"
+                      >
+                        {{ t('common.all') }}
+                      </button>
+                      <button
+                        v-for="type in attackTypes"
+                        :key="type"
+                        :class="{ active: selectedAttackType.includes(type), 'has-icon': true }"
+                        @click="selectFilter('attackType', type)"
+                      >
+                        <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
+                          <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon" />
+                        </div>
+                        <span>{{ t(`attackType.${type}`) }}</span>
+                      </button>
+                    </div>
                   </div>
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.defenseTypeLabel') }}</span>
-                    <button
-                      :class="{ active: selectedDefenseType.length === 0 }"
-                      @click="selectFilter('defenseType', null)"
-                    >
-                      {{ t('common.all') }}
-                    </button>
-                    <button
-                      v-for="type in defenseTypes"
-                      :key="type"
-                      :class="{ active: selectedDefenseType.includes(type), 'has-icon': true }"
-                      @click="selectFilter('defenseType', type)"
-                    >
-                      <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
-                        <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon" />
-                      </div>
-                      <span>{{ t(`defenseType.${type}`) }}</span>
-                    </button>
+                    <div class="filter-buttons">
+                      <button
+                        :class="{ active: selectedDefenseType.length === 0 }"
+                        @click="selectFilter('defenseType', null)"
+                      >
+                        {{ t('common.all') }}
+                      </button>
+                      <button
+                        v-for="type in defenseTypes"
+                        :key="type"
+                        :class="{ active: selectedDefenseType.includes(type), 'has-icon': true }"
+                        @click="selectFilter('defenseType', type)"
+                      >
+                        <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
+                          <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon" />
+                        </div>
+                        <span>{{ t(`defenseType.${type}`) }}</span>
+                      </button>
+                    </div>
                   </div>
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.schoolLabel') }}</span>
-                    <button :class="{ active: selectedSchool.length === 0 }" @click="selectFilter('school', null)">
-                      {{ t('common.all') }}
-                    </button>
-                    <button
-                      v-for="school in schools"
-                      :key="school"
-                      :class="{ active: selectedSchool.includes(school), 'has-icon': true }"
-                      @click="selectFilter('school', school)"
-                    >
-                      <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
-                      <span>{{ t(`schoolAbbr.${school}`) }}</span>
-                    </button>
+                    <div class="filter-buttons">
+                      <button :class="{ active: selectedSchool.length === 0 }" @click="selectFilter('school', null)">
+                        {{ t('common.all') }}
+                      </button>
+                      <button
+                        v-for="school in schools"
+                        :key="school"
+                        :class="{ active: selectedSchool.includes(school), 'has-icon': true }"
+                        @click="selectFilter('school', school)"
+                      >
+                        <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
+                        <span>{{ t(`schoolAbbr.${school}`) }}</span>
+                      </button>
+                    </div>
                   </div>
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.weaponLabel') }}</span>
-                    <button :class="{ active: selectedWeapon.length === 0 }" @click="selectFilter('weapon', null)">
-                      {{ t('common.all') }}
-                    </button>
-                    <button
-                      v-for="type in weaponTypes"
-                      :key="type"
-                      :class="{ active: selectedWeapon.includes(type) }"
-                      @click="selectFilter('weapon', type)"
-                    >
-                      <span class="nexon-font">{{ type }}</span>
-                    </button>
+                    <div class="filter-buttons">
+                      <button :class="{ active: selectedWeapon.length === 0 }" @click="selectFilter('weapon', null)">
+                        {{ t('common.all') }}
+                      </button>
+                      <button
+                        v-for="type in weaponTypes"
+                        :key="type"
+                        :class="{ active: selectedWeapon.includes(type) }"
+                        @click="selectFilter('weapon', type)"
+                      >
+                        <span class="nexon-font">{{ type }}</span>
+                      </button>
+                    </div>
                   </div>
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.positionLabel') }}</span>
-                    <button :class="{ active: selectedPosition.length === 0 }" @click="selectFilter('position', null)">
-                      {{ t('common.all') }}
-                    </button>
-                    <button
-                      v-for="type in positionTypes"
-                      :key="type.value"
-                      :class="{ active: selectedPosition.includes(type.value) }"
-                      @click="selectFilter('position', type.value)"
-                    >
-                      <span class="nexon-font">
-                        <span :class="`position-type-${type.label.toLowerCase()}`">{{ type.label }}</span>
-                      </span>
-                    </button>
+                    <div class="filter-buttons">
+                      <button :class="{ active: selectedPosition.length === 0 }" @click="selectFilter('position', null)">
+                        {{ t('common.all') }}
+                      </button>
+                      <button
+                        v-for="type in positionTypes"
+                        :key="type.value"
+                        :class="{ active: selectedPosition.includes(type.value) }"
+                        @click="selectFilter('position', type.value)"
+                      >
+                        <span class="nexon-font">
+                          <span :class="`position-type-${type.label.toLowerCase()}`">{{ type.label }}</span>
+                        </span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -433,7 +443,19 @@
 
   .filter-group {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-buttons {
+    display: flex;
     flex-wrap: wrap;
     gap: 8px;
   }
