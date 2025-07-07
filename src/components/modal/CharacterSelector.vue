@@ -490,12 +490,27 @@
 
   /* Wrapper for filter content to ensure proper collapse */
   .filter-content-wrapper {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 0 20px 15px;
+    padding: 0 20px;
     min-height: 0; /* Important for grid-template-rows: 0fr to work with flex children */
     overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #bdc3c7 #f8f9fa;
+  }
+
+  /* When the filter is in full version mode, there will be space below */
+  .filter-content-wrapper::after {
+    content: '';
+    display: block;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .dark-mode .filter-content-wrapper {
+    scrollbar-color: #7f8c8d #1a2b40;
   }
 
   .filter-controls.is-open:not(.is-animating) .filter-content-wrapper {
@@ -714,7 +729,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 15px;
-    padding: 0 20px 20px;
+    padding: 15px 20px 20px;
   }
 
   .character-item {
@@ -781,31 +796,37 @@
   }
 
   /* Custom Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
-  .scrollable-section::-webkit-scrollbar {
+  .scrollable-section::-webkit-scrollbar,
+  .filter-content-wrapper::-webkit-scrollbar {
     width: 12px;
   }
 
-  .scrollable-section::-webkit-scrollbar-track {
+  .scrollable-section::-webkit-scrollbar-track,
+  .filter-content-wrapper::-webkit-scrollbar-track {
     background: transparent; /* Track is invisible, blending with the modal body */
   }
 
-  .scrollable-section::-webkit-scrollbar-thumb {
+  .scrollable-section::-webkit-scrollbar-thumb,
+  .filter-content-wrapper::-webkit-scrollbar-thumb {
     background-color: #bdc3c7;
     border-radius: 10px;
     /* Create padding around thumb by using a border with the same color as the modal body */
     border: 3px solid #f8f9fa;
   }
 
-  .dark-mode .scrollable-section::-webkit-scrollbar-thumb {
+  .dark-mode .scrollable-section::-webkit-scrollbar-thumb,
+  .dark-mode .filter-content-wrapper::-webkit-scrollbar-thumb {
     background-color: #7f8c8d;
     border-color: #1a2b40;
   }
 
-  .scrollable-section::-webkit-scrollbar-thumb:hover {
+  .scrollable-section::-webkit-scrollbar-thumb:hover,
+  .filter-content-wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #a9a9a9;
   }
 
-  .dark-mode .scrollable-section::-webkit-scrollbar-thumb:hover {
+  .dark-mode .scrollable-section::-webkit-scrollbar-thumb:hover,
+  .dark-mode .filter-content-wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #95a5a6;
   }
 </style>
