@@ -9,7 +9,7 @@
           </div>
           <div class="modal-body">
             <div class="fixed-section">
-              <div class="search-and-reset">
+              <div class="search-and-reset modal-body-content-padding" ref="searchAndReset">
                 <input
                   v-model="searchTerm"
                   type="text"
@@ -31,8 +31,8 @@
                   </button>
                 </div>
               </div>
-              <div class="filter-controls" :class="{ 'is-open': isFilterPanelOpen }">
-                <div class="filter-content-wrapper">
+              <div class="filter-controls" :class="{ 'is-open': isFilterPanelOpen }" ref="filterControls">
+                <div class="filter-content-wrapper modal-body-content-padding">
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.attackTypeLabel') }}</span>
                     <div class="filter-buttons">
@@ -89,7 +89,12 @@
                         :class="{ active: selectedSchool.includes(school), 'has-icon': true }"
                         @click="selectFilter('school', school)"
                       >
-                        <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
+                        <img
+                          v-if="school !== 'ETC'"
+                          :src="getSchoolIconUrl(school)"
+                          :alt="school"
+                          class="school-icon"
+                        />
                         <span>{{ t(`schoolAbbr.${school}`) }}</span>
                       </button>
                     </div>
@@ -113,7 +118,10 @@
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.positionLabel') }}</span>
                     <div class="filter-buttons">
-                      <button :class="{ active: selectedPosition.length === 0 }" @click="selectFilter('position', null)">
+                      <button
+                        :class="{ active: selectedPosition.length === 0 }"
+                        @click="selectFilter('position', null)"
+                      >
                         {{ t('common.all') }}
                       </button>
                       <button
@@ -132,7 +140,7 @@
               </div>
             </div>
             <div class="scrollable-section">
-              <div class="character-grid">
+              <div class="character-grid modal-body-content-padding">
                 <div
                   v-for="char in filteredCharacters"
                   :key="char.id"
@@ -155,7 +163,8 @@
 </template>
 
 <script setup>
-  import { ref, computed, toRefs } from 'vue'
+  import { ref, computed, toRefs, onMounted, onBeforeUnmount } from 'vue'
+  import { nextTick } from 'vue'
   import { useI18n } from '@/composables/useI18n'
   import { getAssetsFile } from '@/utils/getAssetsFile'
   import { getAvatarUrl } from '@/utils/getAvatarUrl'
@@ -180,8 +189,11 @@
   const selectedSchool = ref([])
   const selectedWeapon = ref([])
   const selectedPosition = ref([])
-  // Default to open on desktop (>=769px), closed on smaller screens.
   const isFilterPanelOpen = ref(window.matchMedia('(min-width: 769px)').matches)
+
+  // 添加 ref 用於動態高度計算
+  const searchAndReset = ref(null)
+  const filterControls = ref(null)
 
   const filterRefs = {
     attackType: selectedAttackType,
@@ -222,8 +234,27 @@
   const { isVisible } = toRefs(props)
   useModal(isVisible, closeModal)
 
+  // 動態調整 filter-controls 高度的函數
+  const adjustFilterHeight = () => {
+    if (isFilterPanelOpen.value) {
+      nextTick(() => {
+        const modalBodyHeight = document.querySelector('.modal-body').offsetHeight
+        const searchAndResetHeight = searchAndReset.value.offsetHeight
+        const maxHeight = modalBodyHeight - searchAndResetHeight - 20 // 減去 padding 等間距
+        filterControls.value.style.maxHeight = `${maxHeight}px`
+        filterControls.value.style.overflowY = 'auto'
+      })
+    }
+  }
+
   const toggleFilterPanel = () => {
     isFilterPanelOpen.value = !isFilterPanelOpen.value
+    if (isFilterPanelOpen.value) {
+      adjustFilterHeight()
+    } else {
+      filterControls.value.style.maxHeight = ''
+      filterControls.value.style.overflowY = ''
+    }
   }
 
   const selectFilter = (filterType, value) => {
@@ -275,6 +306,15 @@
 
       return dropdownsMatch && searchMatch
     })
+  })
+
+  // 監聽窗口大小變化
+  onMounted(() => {
+    window.addEventListener('resize', adjustFilterHeight)
+  })
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('resize', adjustFilterHeight)
   })
 </script>
 
@@ -362,17 +402,19 @@
 
   .fixed-section {
     flex-shrink: 0;
-    padding: 0 20px;
   }
 
   .scrollable-section {
     flex-grow: 1;
     overflow-y: auto;
-    padding: 10px 0;
     /* Custom Scrollbar for Firefox */
     scrollbar-width: thin;
     scrollbar-color: #bdc3c7 #f8f9fa;
     mask-image: linear-gradient(to bottom, transparent, black 15px);
+  }
+
+  .modal-body-content-padding {
+    padding: 0 20px;
   }
 
   .dark-mode .scrollable-section {
@@ -418,7 +460,7 @@
     transition:
       grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
       opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      -setting-bottom-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-bottom-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
   }
 
@@ -437,20 +479,15 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 15px;
+    padding: 0 20px 15px;
     min-height: 0; /* Important for grid-template-rows: 0fr to work with flex children */
+    overflow-y: auto;
   }
 
   .filter-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-  }
-
-  .filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
     gap: 8px;
   }
 
