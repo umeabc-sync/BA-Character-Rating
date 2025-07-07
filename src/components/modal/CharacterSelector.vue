@@ -362,6 +362,7 @@
     /* Custom Scrollbar for Firefox */
     scrollbar-width: thin;
     scrollbar-color: #bdc3c7 #f8f9fa;
+    mask-image: linear-gradient(to bottom, transparent, black 15px);
   }
 
   .dark-mode .scrollable-section {
@@ -414,7 +415,6 @@
   .filter-controls.is-open {
     grid-template-rows: 1fr;
     opacity: 1;
-    margin-bottom: 15px;
     border-bottom-width: 1px;
   }
 
