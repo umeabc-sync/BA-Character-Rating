@@ -31,8 +31,12 @@
                   </button>
                 </div>
               </div>
-              <div class="filter-controls" :class="{ 'is-open': isFilterPanelOpen }" ref="filterControls">
-                <div class="filter-content-wrapper modal-body-content-padding">
+              <div
+                class="filter-controls"
+                :class="{ 'is-open': isFilterPanelOpen, 'is-animating': isAnimating }"
+                ref="filterControls"
+              >
+                <div class="filter-content-wrapper modal-body-content-padding" ref="filterContentWrapper">
                   <div class="filter-group">
                     <span class="filter-label">{{ t('characterSelector.attackTypeLabel') }}</span>
                     <div class="filter-buttons">
@@ -190,10 +194,12 @@
   const selectedWeapon = ref([])
   const selectedPosition = ref([])
   const isFilterPanelOpen = ref(window.matchMedia('(min-width: 769px)').matches)
+  const isAnimating = ref(false)
 
   // 添加 ref 用於動態高度計算
   const searchAndReset = ref(null)
   const filterControls = ref(null)
+  const filterContentWrapper = ref(null)
 
   const filterRefs = {
     attackType: selectedAttackType,
@@ -241,20 +247,28 @@
         const modalBodyHeight = document.querySelector('.modal-body').offsetHeight
         const searchAndResetHeight = searchAndReset.value.offsetHeight
         const maxHeight = modalBodyHeight - searchAndResetHeight - 20 // 減去 padding 等間距
-        filterControls.value.style.maxHeight = `${maxHeight}px`
-        filterControls.value.style.overflowY = 'auto'
+        if (filterContentWrapper.value) {
+          filterContentWrapper.value.style.maxHeight = `${maxHeight}px`
+        }
       })
     }
   }
 
   const toggleFilterPanel = () => {
     isFilterPanelOpen.value = !isFilterPanelOpen.value
+    isAnimating.value = true
+
     if (isFilterPanelOpen.value) {
       adjustFilterHeight()
     } else {
-      filterControls.value.style.maxHeight = ''
-      filterControls.value.style.overflowY = ''
+      if (filterContentWrapper.value) {
+        filterContentWrapper.value.style.maxHeight = ''
+      }
     }
+
+    setTimeout(() => {
+      isAnimating.value = false
+    }, 320) // Slightly longer than CSS animations to avoid artifacts
   }
 
   const selectFilter = (filterType, value) => {
@@ -481,6 +495,10 @@
     gap: 10px;
     padding: 0 20px 15px;
     min-height: 0; /* Important for grid-template-rows: 0fr to work with flex children */
+    overflow-y: hidden;
+  }
+
+  .filter-controls.is-open:not(.is-animating) .filter-content-wrapper {
     overflow-y: auto;
   }
 
