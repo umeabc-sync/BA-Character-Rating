@@ -162,7 +162,7 @@
 
       case dataItem === 'version':
         modalTitle.value = t('evaluation.ratingVersion')
-        modalText.value = `${t('evaluation.ratingVersionDetail')}\n${t('evaluation.ratingDate')}${props.characterData.ratingDate}`;
+        modalText.value = `${t('evaluation.ratingVersionDetail')}\n${t('evaluation.ratingDate')}${props.characterData.ratingDate}`
         isModalVisible.value = true
         break
 
