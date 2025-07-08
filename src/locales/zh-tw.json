@@ -171,7 +171,7 @@
   },
   "settingsModal": {
     "language": "語言",
-    "enableColoredText": "關鍵文本高亮"
+    "enableColoredText": "文本高亮"
   },
   "dataSource": {
     "text": "資料來源：賽博夜貓攻略組",

@@ -171,7 +171,7 @@
   },
   "settingsModal": {
     "language": "语言",
-    "enableColoredText": "关键文本高亮"
+    "enableColoredText": "文本高亮"
   },
   "dataSource": {
     "text": "资料来源：赛博夜猫攻略组",
