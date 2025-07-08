@@ -133,6 +133,77 @@
     }
   },
   {
+    "id": 40,
+    "fullname": "火宫 千夏",
+    "name": "千夏",
+    "nicknames": ["千夏"],
+    "school": "Gehenna",
+    "attackType": "Piercing",
+    "defenseType": "Light",
+    "weapon": "HG",
+    "position": [1, "奶妈"],
+    "uniqueWeaponRecommended": "凹分/机制用",
+    "acquisitionMethod": "常驻/商店",
+    "skillMainOparts": "rohonc",
+    "skillSubOparts": "nimrud",
+    "l2dUnlock": 6,
+    "city": "B",
+    "outdoor": "B",
+    "indoor": "B",
+    "equipments": ["shoes", "hairpin", "necklace"],
+    "uniqueWeaponStar2": "治愈力增加",
+    "uniqueWeaponStar3": ["indoor", "A"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [1, 0, 0],
+      "pvp": null,
+      "grandAssault": [1, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 23
+    },
+    "skillsSummary": {
+      "ex": "消耗4Cost使一名我方恢复治愈力<blue>342%</blue>的生命，<red>（升至EX3后追加效果）</red>并解除一个减益效果",
+      "ns": "每40秒使生命百分比最低的一名我方内避提升<blue>67%</blue><teal>（持续30秒）</teal>，<green>爱用品加强奶量</green>",
+      "ss": "我方防御力增加<blue>17.3%</blue>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "鸡斯拉可选解除减益奶妈、主教可选解灯",
+      "pvp": "暂无特别需要场合",
+      "grandAssault": "鸡斯拉可选解除减益奶妈、主教可选解灯",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "突破演习可采用",
+      "eventChallenge": "机制选用。如需净化及生存压力平民选"
+    },
+    "uniqueWeaponRecommendedSummary": "奶妈要求的治愈力、<purple>可商店兑换&抽升星至少专2</purple>",
+    "overallRecommendation": "功能性奶妈，萌新无奶可用考虑。需解减益效果兼生存可拉起来使用。鸡斯拉、主教候选对策奶",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技三Lv7",
+      "技一Lv7",
+      "技二Lv10",
+      "EX5",
+      "技三Lv7(10)",
+      "技一Lv7(10)",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "千夏的医疗包",
+      "recommendedLevel": [2, 0, 0],
+      "materials": ["9", "rohonc"],
+      "effects": [
+        "治愈力<blue>500</blue>",
+        "回避值增加<blue>67%</blue>提升至<blue>67.1%</blue>，新增<red>治愈力18.2%的缓回<teal>（持续30秒）</teal></red>"
+      ]
+    }
+  },
+  {
     "id": 50,
     "fullname": "才羽 绿",
     "name": "绿",
@@ -200,6 +271,76 @@
       "effects": [
         "攻击力<red>1000</red>",
         "<red>【新增】</red><blue>场上有小桃时（普通/女仆均可）</blue>额外对小桃进行<red>治愈力165%</red>的追加回复，且小桃的攻击力<red>增加41.7%</red><teal>（25秒）</teal>"
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "fullname": "空井 咲",
+    "name": "咲",
+    "nicknames": ["Saki", "咲"],
+    "school": "SRT",
+    "attackType": "Piercing",
+    "defenseType": "Special",
+    "weapon": "MG",
+    "position": [1, "控场AOE"],
+    "uniqueWeaponRecommended": "至少5星专1",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "wolfsegg",
+    "skillSubOparts": "baghdad",
+    "l2dUnlock": 5,
+    "city": "S",
+    "outdoor": "D",
+    "indoor": "B",
+    "equipments": ["hat", "bag", "necklace"],
+    "uniqueWeaponStar2": "攻击力增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [3, 0, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": null,
+      "overall": 38
+    },
+    "skillsSummary": {
+      "ex": "4C小范围<blue>666%</blue>圆形输出及施加5.1秒眩晕",
+      "ns": "每35秒对一名敌人造成<blue>343%</blue>伤害后施加每下<blue>56%</blue>烧伤<teal>（20秒）</teal>。<green>爱用品加强可能是备战LU霍德或是应对新BOSS机制</green>",
+      "ss": "我方攻擊力增加<blue>17.3%</blue>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU霍德多队对策，群控兼输出辅助后排",
+      "pvp": "暂无特别需要",
+      "grandAssault": "LU霍德多队对策，群控兼输出辅助后排",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "考试挂件，群控索敌机制可考虑功能选",
+      "eventChallenge": "群控机制可考虑功能选 "
+    },
+    "uniqueWeaponRecommendedSummary": "提供不少攻击力，<blue>输出挂件层面可考虑5星专1基本</blue>",
+    "overallRecommendation": "LU霍德多刀对策使用，有爱可以考虑培养",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三Lv7",
+      "技二Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv7(10)",
+      "Max（注意本校学校素材使用女武神警察学校）"
+    ],
+    "favoriteItem": {
+      "name": "SRT基础教范",
+      "recommendedLevel": [2, 0, 0],
+      "materials": ["7", "wolfsegg"],
+      "effects": [
+        "CC强化<red>35</red>",
+        "伤害<blue>343%</blue>提升至<blue>350%</blue>，火伤从<blue>56%</blue>提升至<blue>57.3%</blue>，<red>敌方1人加强为敌方3人，如目标不是BOSS则造成2.6秒眩晕</red>"
       ]
     }
   },
@@ -395,6 +536,77 @@
       "技一Lv10",
       "Max"
     ]
+  },
+  {
+    "id": 108,
+    "fullname": "锭前 纱织",
+    "name": "纱织",
+    "nicknames": ["纱织"],
+    "school": "Arius",
+    "attackType": "Explosive",
+    "defenseType": "Special",
+    "weapon": "AR",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "最少专1卷专3",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "baghdad",
+    "skillSubOparts": "wolfsegg",
+    "l2dUnlock": 5,
+    "city": "B",
+    "outdoor": "D",
+    "indoor": "S",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻击速度增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 49
+    },
+    "skillsSummary": {
+      "ex": "4Cost<blue>1275%</blue>必暴输出",
+      "ns": "每25秒一次<blue>334%</blue>必定暴击且提高自身暴伤<blue>24.8%</blue><teal>（16秒）</teal>",
+      "ss": "队伍中有阿里乌斯小队学生增加自身攻击（1人：<blue>36.7%</blue>，2人：<blue>55%</blue>，3人：<blue>73.4%</blue>）<red>（包含梓、水梓）</red>。<green>爱用品加强输出上限，目前看是备战LU主教多刀，尾刀或双核都很有用</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "主数LU难度多刀可选体系队",
+      "pvp": "单体必暴室内轻重甲杀手，爱用品有些许作用，但要等实测",
+      "grandAssault": "室内多环境爆发可选输出（球、鸡斯拉、霍德、黑白...等）",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "射击演习可选用",
+      "eventChallenge": "高暴抗机制可选副C"
+    },
+    "uniqueWeaponRecommendedSummary": "专1即可用，攻速需要再开、<blue>凹分及主C需要专3起</blue>",
+    "overallRecommendation": "爆发主C考虑培养、卷狗用，面向高暴抗场合稳定优势",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "纱织的面具",
+      "recommendedLevel": [4, 0, 0],
+      "materials": ["5", "baghdad"],
+      "effects": [
+        "暴击伤害<red>1000</red>",
+        "伤害<blue>334%</blue>提升至<blue>372%</blue>，增加暴伤<blue>24.8%</blue>提升至<blue>32.3%</blue>，<red>发动NS时使自己的EX费用降低2，使用EX后失效（每场战斗中限降费3次）</red>"
+      ]
+    }
   },
   {
     "id": 116,

@@ -133,6 +133,77 @@
     }
   },
   {
+    "id": 40,
+    "fullname": "火宮 千夏",
+    "name": "千夏",
+    "nicknames": ["千夏"],
+    "school": "Gehenna",
+    "attackType": "Piercing",
+    "defenseType": "Light",
+    "weapon": "HG",
+    "position": [1, "奶媽"],
+    "uniqueWeaponRecommended": "凹分/機制用",
+    "acquisitionMethod": "常駐/商店",
+    "skillMainOparts": "rohonc",
+    "skillSubOparts": "nimrud",
+    "l2dUnlock": 6,
+    "city": "B",
+    "outdoor": "B",
+    "indoor": "B",
+    "equipments": ["shoes", "hairpin", "necklace"],
+    "uniqueWeaponStar2": "治癒力增加",
+    "uniqueWeaponStar3": ["indoor", "A"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [1, 0, 0],
+      "pvp": null,
+      "grandAssault": [1, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 23
+    },
+    "skillsSummary": {
+      "ex": "消耗4Cost使一名我方回復治癒力<blue>342%</blue>的生命，<red>（升至EX3後追加效果）</red>並解除一個減益效果",
+      "ns": "每40秒使生命百分比最低的一名我方內避提升<blue>67%</blue><teal>（持續30秒）</teal>，<green>愛用品加強奶量</green>",
+      "ss": "我方防禦力增加<blue>17.3%</blue>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "雞斯拉可選解除減益奶媽、主教可選解燈",
+      "pvp": "暫無特別需要場合",
+      "grandAssault": "雞斯拉可選解除減益奶媽、主教可選解燈",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "突破演習可采用",
+      "eventChallenge": "機制選用。如需凈化及生存壓力平民選"
+    },
+    "uniqueWeaponRecommendedSummary": "奶媽要求的治癒力、<purple>可商店兌換&抽升星至少專2</purple>",
+    "overallRecommendation": "功能性奶媽，萌新無奶可用考慮。需解減益效果兼生存可拉起來使用。雞斯拉、主教候選對策奶",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技三Lv7",
+      "技一Lv7",
+      "技二Lv10",
+      "EX5",
+      "技三Lv7(10)",
+      "技一Lv7(10)",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "千夏的醫療包",
+      "recommendedLevel": [2, 0, 0],
+      "materials": ["9", "rohonc"],
+      "effects": [
+        "治癒力<blue>500</blue>",
+        "回避值增加<blue>67%</blue>提升至<blue>67.1%</blue>，新增<red>治癒力18.2%的緩回<teal>（持續30秒）</teal></red>"
+      ]
+    }
+  },
+  {
     "id": 50,
     "fullname": "才羽 綠",
     "name": "綠",
@@ -200,6 +271,76 @@
       "effects": [
         "攻擊力<red>1000</red>",
         "<red>【新增】</red><blue>場上有小桃時（普通/女僕均可）</blue>額外對小桃進行<red>治癒力165%</red>的追加回復，且小桃的攻擊力<red>增加41.7%</red><teal>（25秒）</teal>"
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "fullname": "空井 咲希",
+    "name": "咲希",
+    "nicknames": ["Saki", "咲"],
+    "school": "SRT",
+    "attackType": "Piercing",
+    "defenseType": "Special",
+    "weapon": "MG",
+    "position": [1, "控場AOE"],
+    "uniqueWeaponRecommended": "至少5星專1",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "wolfsegg",
+    "skillSubOparts": "baghdad",
+    "l2dUnlock": 5,
+    "city": "S",
+    "outdoor": "D",
+    "indoor": "B",
+    "equipments": ["hat", "bag", "necklace"],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [3, 0, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": null,
+      "overall": 38
+    },
+    "skillsSummary": {
+      "ex": "4C小範圍<blue>666%</blue>圓形輸出及施加5.1秒眩暈",
+      "ns": "每35秒對一名敵人造成<blue>343%</blue>傷害後施加每下<blue>56%</blue>燒傷<teal>（20秒）</teal>。<green>愛用品加強可能是備戰LU霍德或是應對新BOSS機制</green>",
+      "ss": "我方攻擊力增加<blue>17.3%</blue>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU霍德多隊對策，群控兼輸出輔助後排",
+      "pvp": "暫無特別需要",
+      "grandAssault": "LU霍德多隊對策，群控兼輸出輔助後排",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "考試掛件，群控索敵機制可考慮功能選",
+      "eventChallenge": "群控機制可考慮功能選 "
+    },
+    "uniqueWeaponRecommendedSummary": "提供不少攻擊力，<blue>輸出掛件層面可考慮5星專1基本</blue>",
+    "overallRecommendation": "LU霍德多刀對策使用，有愛可以考慮培養",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三Lv7",
+      "技二Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv7(10)",
+      "Max（注意本校學校素材使用女武神警察學校）"
+    ],
+    "favoriteItem": {
+      "name": "SRT基礎教範",
+      "recommendedLevel": [2, 0, 0],
+      "materials": ["7", "wolfsegg"],
+      "effects": [
+        "CC強化<red>35</red>",
+        "傷害<blue>343%</blue>提升至<blue>350%</blue>，火傷從<blue>56%</blue>提升至<blue>57.3%</blue>，<red>敵方1人加強為敵方3人，如目標不是BOSS則造成2.6秒眩暈</red>"
       ]
     }
   },
@@ -395,6 +536,77 @@
       "技一Lv10",
       "Max"
     ]
+  },
+  {
+    "id": 108,
+    "fullname": "錠前 紗織",
+    "name": "紗織",
+    "nicknames": ["紗織"],
+    "school": "Arius",
+    "attackType": "Explosive",
+    "defenseType": "Special",
+    "weapon": "AR",
+    "position": [0, "輸出"],
+    "uniqueWeaponRecommended": "最少專1卷專3",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "baghdad",
+    "skillSubOparts": "wolfsegg",
+    "l2dUnlock": 5,
+    "city": "B",
+    "outdoor": "D",
+    "indoor": "S",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻擊速度增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/03/29",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": [2, 0, 0],
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 49
+    },
+    "skillsSummary": {
+      "ex": "4Cost<blue>1275%</blue>必暴輸出",
+      "ns": "每25秒一次<blue>334%</blue>必定暴擊且提高自身暴傷<blue>24.8%</blue><teal>（16秒）</teal>",
+      "ss": "隊伍中有奧利斯小隊學生增加自身攻擊（1人：<blue>36.7%</blue>，2人：<blue>55%</blue>，3人：<blue>73.4%</blue>）<red>（包含梓、水梓）</red>。<green>愛用品加強輸出上限，目前看是備戰LU主教多刀，尾刀或雙核都很有用</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "主數LU難度多刀可選體系隊",
+      "pvp": "單體必暴室內輕重甲殺手，愛用品有些許作用，但要等實測",
+      "grandAssault": "室內多環境爆發可選輸出（球、雞斯拉、霍德、黑白...等）",
+      "limitBreakAssault": null,
+      "jointFiringDrill": "射擊演習可選用",
+      "eventChallenge": "高暴抗機制可選副C"
+    },
+    "uniqueWeaponRecommendedSummary": "專1即可用，攻速需要再開、<blue>凹分及主C需要專3起</blue>",
+    "overallRecommendation": "爆發主C考慮培養、卷狗用，面向高暴抗場合穩定優勢",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "紗織的面具",
+      "recommendedLevel": [4, 0, 0],
+      "materials": ["5", "baghdad"],
+      "effects": [
+        "暴擊傷害<red>1000</red>",
+        "傷害<blue>334%</blue>提升至<blue>372%</blue>，增加暴傷<blue>24.8%</blue>提升至<blue>32.3%</blue>，<red>發動NS時使自己的EX費用降低2，使用EX後失效（每場戰鬥中限降費3次）</red>"
+      ]
+    }
   },
   {
     "id": 116,
