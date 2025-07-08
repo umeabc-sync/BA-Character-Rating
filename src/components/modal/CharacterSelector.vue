@@ -137,7 +137,7 @@
   const emit = defineEmits(['select', 'close'])
 
   const searchTerm = ref('')
-  const isFilterPanelOpen = ref(window.matchMedia('(min-width: 769px)').matches)
+  const isFilterPanelOpen = ref(false)
   const isAnimating = ref(false)
 
   // Initialize selectedFilters reactively based on filterOptions
