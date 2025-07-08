@@ -28,7 +28,7 @@
       {{ nicknames.join('、') }}
     </div>
     <div class="school-badge">
-      <img v-if="school !== 'ETC'" :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
+      <img :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
       <span>{{ t(`school.${school}`) }}</span>
     </div>
   </div>
