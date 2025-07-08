@@ -3,22 +3,12 @@
     {
       "id": "attackType",
       "labelKey": "characterSelector.attackTypeLabel",
-      "options": [
-        { "value": "Explosive" },
-        { "value": "Piercing" },
-        { "value": "Mystic" },
-        { "value": "Sonic" }
-      ]
+      "options": [{ "value": "Explosive" }, { "value": "Piercing" }, { "value": "Mystic" }, { "value": "Sonic" }]
     },
     {
       "id": "defenseType",
       "labelKey": "characterSelector.defenseTypeLabel",
-      "options": [
-        { "value": "Light" },
-        { "value": "Heavy" },
-        { "value": "Special" },
-        { "value": "Elastic" }
-      ]
+      "options": [{ "value": "Light" }, { "value": "Heavy" }, { "value": "Special" }, { "value": "Elastic" }]
     },
     {
       "id": "school",

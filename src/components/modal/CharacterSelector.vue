@@ -58,11 +58,7 @@
                         <!-- Icon Slot -->
                         <template v-if="group.id === 'attackType'">
                           <div class="type-icon-wrapper" :class="`type-bg-${option.value.toLowerCase()}`">
-                            <img
-                              :src="getAssetsFile(`icon/Type_Attack_s.webp`)"
-                              alt="Attack Icon"
-                              class="type-icon"
-                            />
+                            <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon" />
                           </div>
                         </template>
                         <template v-else-if="group.id === 'defenseType'">
@@ -75,11 +71,7 @@
                           </div>
                         </template>
                         <template v-else-if="group.id === 'school'">
-                          <img
-                            :src="getSchoolIconUrl(option.value)"
-                            :alt="option.value"
-                            class="school-icon"
-                          />
+                          <img :src="getSchoolIconUrl(option.value)" :alt="option.value" class="school-icon" />
                         </template>
 
                         <!-- Label Slot -->
@@ -88,10 +80,7 @@
                             'nexon-font': ['weapon', 'position'].includes(group.id),
                           }"
                         >
-                          <span
-                            v-if="group.id === 'position'"
-                            :class="`position-type-${option.label.toLowerCase()}`"
-                          >
+                          <span v-if="group.id === 'position'" :class="`position-type-${option.label.toLowerCase()}`">
                             {{ option.label }}
                           </span>
                           <span v-else>{{ getOptionLabel(group, option) }}</span>
@@ -156,7 +145,7 @@
     filterOptions.filters.reduce((acc, filter) => {
       acc[filter.id] = []
       return acc
-    }, {}),
+    }, {})
   )
 
   // 添加 ref 用於動態高度計算
