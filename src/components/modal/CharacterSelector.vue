@@ -37,105 +37,64 @@
                 ref="filterControls"
               >
                 <div class="filter-content-wrapper modal-body-content-padding" ref="filterContentWrapper">
-                  <div class="filter-group">
-                    <span class="filter-label">{{ t('characterSelector.attackTypeLabel') }}</span>
+                  <div v-for="group in filterOptions.filters" :key="group.id" class="filter-group">
+                    <span class="filter-label">{{ t(group.labelKey) }}</span>
                     <div class="filter-buttons">
                       <button
-                        :class="{ active: selectedAttackType.length === 0 }"
-                        @click="selectFilter('attackType', null)"
+                        :class="{ active: selectedFilters[group.id].length === 0 }"
+                        @click="selectFilter(group.id, null)"
                       >
                         {{ t('common.all') }}
                       </button>
                       <button
-                        v-for="type in attackTypes"
-                        :key="type"
-                        :class="{ active: selectedAttackType.includes(type), 'has-icon': true }"
-                        @click="selectFilter('attackType', type)"
+                        v-for="option in group.options"
+                        :key="option.value"
+                        :class="{
+                          active: selectedFilters[group.id].includes(option.value),
+                          'has-icon': ['attackType', 'defenseType', 'school'].includes(group.id),
+                        }"
+                        @click="selectFilter(group.id, option.value)"
                       >
-                        <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
-                          <img :src="getAssetsFile(`icon/Type_Attack_s.webp`)" alt="Attack Icon" class="type-icon" />
-                        </div>
-                        <span>{{ t(`attackType.${type}`) }}</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-label">{{ t('characterSelector.defenseTypeLabel') }}</span>
-                    <div class="filter-buttons">
-                      <button
-                        :class="{ active: selectedDefenseType.length === 0 }"
-                        @click="selectFilter('defenseType', null)"
-                      >
-                        {{ t('common.all') }}
-                      </button>
-                      <button
-                        v-for="type in defenseTypes"
-                        :key="type"
-                        :class="{ active: selectedDefenseType.includes(type), 'has-icon': true }"
-                        @click="selectFilter('defenseType', type)"
-                      >
-                        <div class="type-icon-wrapper" :class="`type-bg-${type.toLowerCase()}`">
-                          <img :src="getAssetsFile(`icon/Type_Defense_s.webp`)" alt="Defense Icon" class="type-icon" />
-                        </div>
-                        <span>{{ t(`defenseType.${type}`) }}</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-label">{{ t('characterSelector.schoolLabel') }}</span>
-                    <div class="filter-buttons">
-                      <button :class="{ active: selectedSchool.length === 0 }" @click="selectFilter('school', null)">
-                        {{ t('common.all') }}
-                      </button>
-                      <button
-                        v-for="school in schools"
-                        :key="school"
-                        :class="{ active: selectedSchool.includes(school), 'has-icon': true }"
-                        @click="selectFilter('school', school)"
-                      >
-                        <img
-                          v-if="school !== 'ETC'"
-                          :src="getSchoolIconUrl(school)"
-                          :alt="school"
-                          class="school-icon"
-                        />
-                        <span>{{ t(`schoolAbbr.${school}`) }}</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-label">{{ t('characterSelector.weaponLabel') }}</span>
-                    <div class="filter-buttons">
-                      <button :class="{ active: selectedWeapon.length === 0 }" @click="selectFilter('weapon', null)">
-                        {{ t('common.all') }}
-                      </button>
-                      <button
-                        v-for="type in weaponTypes"
-                        :key="type"
-                        :class="{ active: selectedWeapon.includes(type) }"
-                        @click="selectFilter('weapon', type)"
-                      >
-                        <span class="nexon-font">{{ type }}</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-label">{{ t('characterSelector.positionLabel') }}</span>
-                    <div class="filter-buttons">
-                      <button
-                        :class="{ active: selectedPosition.length === 0 }"
-                        @click="selectFilter('position', null)"
-                      >
-                        {{ t('common.all') }}
-                      </button>
-                      <button
-                        v-for="type in positionTypes"
-                        :key="type.value"
-                        :class="{ active: selectedPosition.includes(type.value) }"
-                        @click="selectFilter('position', type.value)"
-                      >
-                        <span class="nexon-font">
-                          <span :class="`position-type-${type.label.toLowerCase()}`">{{ type.label }}</span>
+                        <!-- Icon Slot -->
+                        <template v-if="group.id === 'attackType'">
+                          <div class="type-icon-wrapper" :class="`type-bg-${option.value.toLowerCase()}`">
+                            <img
+                              :src="getAssetsFile(`icon/Type_Attack_s.webp`)"
+                              alt="Attack Icon"
+                              class="type-icon"
+                            />
+                          </div>
+                        </template>
+                        <template v-else-if="group.id === 'defenseType'">
+                          <div class="type-icon-wrapper" :class="`type-bg-${option.value.toLowerCase()}`">
+                            <img
+                              :src="getAssetsFile(`icon/Type_Defense_s.webp`)"
+                              alt="Defense Icon"
+                              class="type-icon"
+                            />
+                          </div>
+                        </template>
+                        <template v-else-if="group.id === 'school'">
+                          <img
+                            :src="getSchoolIconUrl(option.value)"
+                            :alt="option.value"
+                            class="school-icon"
+                          />
+                        </template>
+
+                        <!-- Label Slot -->
+                        <span
+                          :class="{
+                            'nexon-font': ['weapon', 'position'].includes(group.id),
+                          }"
+                        >
+                          <span
+                            v-if="group.id === 'position'"
+                            :class="`position-type-${option.label.toLowerCase()}`"
+                          >
+                            {{ option.label }}
+                          </span>
+                          <span v-else>{{ getOptionLabel(group, option) }}</span>
                         </span>
                       </button>
                     </div>
@@ -167,7 +126,7 @@
 </template>
 
 <script setup>
-  import { ref, computed, toRefs, onMounted, onBeforeUnmount } from 'vue'
+  import { ref, computed, toRefs, onMounted, onBeforeUnmount, reactive } from 'vue'
   import { nextTick } from 'vue'
   import { useI18n } from '@/composables/useI18n'
   import { getAssetsFile } from '@/utils/getAssetsFile'
@@ -175,6 +134,7 @@
   import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl'
   import ImageWithLoader from '../ui/ImageWithLoader.vue'
   import { useModal } from '@/composables/useModal.js'
+  import filterOptions from '@/data/filterOptions.json'
 
   const { t } = useI18n()
   const props = defineProps({
@@ -188,48 +148,37 @@
   const emit = defineEmits(['select', 'close'])
 
   const searchTerm = ref('')
-  const selectedAttackType = ref([])
-  const selectedDefenseType = ref([])
-  const selectedSchool = ref([])
-  const selectedWeapon = ref([])
-  const selectedPosition = ref([])
   const isFilterPanelOpen = ref(window.matchMedia('(min-width: 769px)').matches)
   const isAnimating = ref(false)
+
+  // Initialize selectedFilters reactively based on filterOptions
+  const selectedFilters = reactive(
+    filterOptions.filters.reduce((acc, filter) => {
+      acc[filter.id] = []
+      return acc
+    }, {}),
+  )
 
   // 添加 ref 用於動態高度計算
   const searchAndReset = ref(null)
   const filterControls = ref(null)
   const filterContentWrapper = ref(null)
 
-  const filterRefs = {
-    attackType: selectedAttackType,
-    defenseType: selectedDefenseType,
-    school: selectedSchool,
-    weapon: selectedWeapon,
-    position: selectedPosition,
+  const getOptionLabel = (group, option) => {
+    if (group.id === 'position') {
+      return option.label
+    }
+    if (group.id === 'weapon') {
+      return option.value
+    }
+    const prefix = group.labelKeyPrefix || group.id
+    return t(`${prefix}.${option.value}`)
   }
-
-  const getUniqueSortedValues = (key) => {
-    if (!props.characters) return []
-    return [...new Set(props.characters.map((c) => c[key]))].sort()
-  }
-
-  const attackTypes = computed(() => getUniqueSortedValues('attackType'))
-  const defenseTypes = computed(() => getUniqueSortedValues('defenseType'))
-  const schools = computed(() => getUniqueSortedValues('school'))
-  const weaponTypes = computed(() => getUniqueSortedValues('weapon'))
-
-  const positionTypes = [
-    { value: 0, label: 'STRIKER' },
-    { value: 1, label: 'SPECIAL' },
-  ]
 
   const resetFilters = () => {
-    selectedAttackType.value = []
-    selectedDefenseType.value = []
-    selectedSchool.value = []
-    selectedWeapon.value = []
-    selectedPosition.value = []
+    for (const key in selectedFilters) {
+      selectedFilters[key] = []
+    }
     searchTerm.value = ''
   }
 
@@ -272,20 +221,20 @@
   }
 
   const selectFilter = (filterType, value) => {
-    const targetRef = filterRefs[filterType]
-    if (!targetRef) return
+    const targetArray = selectedFilters[filterType]
+    if (!targetArray) return
 
     if (value === null) {
       // "All" button clicked, clear the array
-      targetRef.value = []
+      selectedFilters[filterType] = []
     } else {
-      const index = targetRef.value.indexOf(value)
+      const index = targetArray.indexOf(value)
       if (index > -1) {
         // Item is already selected, remove it
-        targetRef.value.splice(index, 1)
+        targetArray.splice(index, 1)
       } else {
         // Item is not selected, add it
-        targetRef.value.push(value)
+        targetArray.push(value)
       }
     }
   }
@@ -294,23 +243,20 @@
     emit('select', id)
   }
 
-  const filterConfigs = [
-    { selected: selectedAttackType, key: 'attackType' },
-    { selected: selectedDefenseType, key: 'defenseType' },
-    { selected: selectedSchool, key: 'school' },
-    { selected: selectedWeapon, key: 'weapon' },
-    { selected: selectedPosition, key: 'position', getValue: (char) => char.position[0] },
-  ]
-
   const filteredCharacters = computed(() => {
     const lowerCaseSearch = searchTerm.value.toLowerCase()
 
     return props.characters.filter((char) => {
-      const dropdownsMatch = filterConfigs.every((config) => {
-        const { selected, key, getValue } = config
-        if (selected.value.length === 0) return true
-        const charValue = getValue ? getValue(char) : char[key]
-        return selected.value.includes(charValue)
+      const dropdownsMatch = filterOptions.filters.every((filterGroup) => {
+        const selected = selectedFilters[filterGroup.id]
+        if (selected.length === 0) return true
+
+        // Special handling for position as it's an array in character data
+        if (filterGroup.id === 'position') {
+          return selected.includes(char.position[0])
+        }
+
+        return selected.includes(char[filterGroup.id])
       })
 
       const searchMatch =
