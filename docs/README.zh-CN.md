@@ -14,7 +14,7 @@
 
 这是一个为手游《蔚蓝档案》（Blue Archive）玩家设计的角色评分与信息查询整合网站。项目使用 Vue 3 和 Vite 构建，提供一个简洁、快速且响应式的界面，帮助玩家快速查阅角色数据、评分、装备与技能等信息。网站数据来源于赛博夜猫攻略组角评数据（已征得攻略组同意）。
 
-**[➡️ 点此进入网站](https://yuuzi.dev/BA-Character-Rating/)**
+**[➡️ 点此进入网站](https://ba-character-rating.pages.dev/)**
 
 ![项目预览图](https://raw.githubusercontent.com/Yuuzi261/BA-Character-Rating/refs/heads/main/public/og_image.webp)
 

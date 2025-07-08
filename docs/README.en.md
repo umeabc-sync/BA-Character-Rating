@@ -14,7 +14,7 @@
 
 This is an integrated website for character ratings and information inquiry designed for players of the mobile game "Blue Archive". The project is built with Vue 3 and Vite, providing a clean, fast, and responsive interface to help players quickly look up character data, ratings, equipment, skills, and other information. The website's data is sourced from the CyberNeko guide team's character evaluation data (with their permission).
 
-**[➡️ Click here to visit the website](https://yuuzi.dev/BA-Character-Rating/)**
+**[➡️ Click here to visit the website](https://ba-character-rating.pages.dev/)**
 
 ![Project Preview](https://raw.githubusercontent.com/Yuuzi261/BA-Character-Rating/refs/heads/main/public/og_image.webp)
 
