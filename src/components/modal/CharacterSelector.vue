@@ -9,7 +9,7 @@
           </div>
           <div class="modal-body">
             <div class="fixed-section">
-              <div class="search-and-reset modal-body-content-padding" ref="searchAndReset">
+              <div ref="searchAndReset" class="search-and-reset modal-body-content-padding">
                 <input
                   v-model="searchTerm"
                   type="text"
@@ -32,11 +32,11 @@
                 </div>
               </div>
               <div
+                ref="filterControls"
                 class="filter-controls"
                 :class="{ 'is-open': isFilterPanelOpen, 'is-animating': isAnimating }"
-                ref="filterControls"
               >
-                <div class="filter-content-wrapper modal-body-content-padding" ref="filterContentWrapper">
+                <div ref="filterContentWrapper" class="filter-content-wrapper modal-body-content-padding">
                   <div v-for="group in filterOptions.filters" :key="group.id" class="filter-group">
                     <span class="filter-label">{{ t(group.labelKey) }}</span>
                     <div class="filter-buttons">
