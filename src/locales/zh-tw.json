@@ -160,6 +160,7 @@
     "schoolLabel": "學園",
     "weaponLabel": "使用武器",
     "positionLabel": "角色定位",
+    "ratingLabel": "綜合評價",
     "noResults": "找不到符合條件的學生"
   },
   "favoriteItemModal": {

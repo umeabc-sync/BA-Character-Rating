@@ -77,7 +77,7 @@
                         <!-- Label Slot -->
                         <span
                           :class="{
-                            'nexon-font': ['weapon', 'position'].includes(group.id),
+                            'nexon-font': ['weapon', 'position', 'rating'].includes(group.id),
                           }"
                         >
                           <span v-if="group.id === 'position'" :class="`position-type-${option.label.toLowerCase()}`">
@@ -157,7 +157,7 @@
     if (group.id === 'position') {
       return option.label
     }
-    if (group.id === 'weapon') {
+    if (group.id === 'weapon' || group.id === 'rating') {
       return option.value
     }
     const prefix = group.labelKeyPrefix || group.id
@@ -232,6 +232,18 @@
     emit('select', id)
   }
 
+  const getOverallGrade = (score) => {
+    if (score > 100) return 'SS'
+    if (score >= 90) return 'S'
+    if (score >= 80) return 'A'
+    if (score >= 70) return 'B'
+    if (score >= 60) return 'C'
+    if (score >= 50) return 'D'
+    if (score >= 40) return 'E'
+    if (score >= 20) return 'F'
+    return 'N/A'
+  }
+
   const filteredCharacters = computed(() => {
     const lowerCaseSearch = searchTerm.value.toLowerCase()
 
@@ -243,6 +255,11 @@
         // Special handling for position as it's an array in character data
         if (filterGroup.id === 'position') {
           return selected.includes(char.position[0])
+        }
+
+        if (filterGroup.id === 'rating') {
+          const grade = getOverallGrade(char.ratings.overall)
+          return selected.includes(grade)
         }
 
         return selected.includes(char[filterGroup.id])
