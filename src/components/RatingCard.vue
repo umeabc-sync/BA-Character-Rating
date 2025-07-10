@@ -189,6 +189,7 @@
 
 <script setup>
   import { computed, watch, ref, nextTick } from 'vue'
+  import { getOverallGrade } from '@/utils/getOverallGrade.js'
   import { useI18n } from '@/composables/useI18n.js'
   import { getAssetsFile } from '@/utils/getAssetsFile'
   import CharacterInfo from './CharacterInfo.vue'
@@ -246,16 +247,7 @@
   ]
 
   const overallGrade = computed(() => {
-    const score = props.character.ratings.overall
-    if (score > 100) return 'SS'
-    if (score >= 90) return 'S'
-    if (score >= 80) return 'A'
-    if (score >= 70) return 'B'
-    if (score >= 60) return 'C'
-    if (score >= 50) return 'D'
-    if (score >= 40) return 'E'
-    if (score >= 20) return 'F'
-    return 'N/A'
+    return getOverallGrade(props.character.ratings.overall)
   })
 
   const isSettingsIconRotating = ref(false)
