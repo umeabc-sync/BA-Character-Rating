@@ -26,7 +26,7 @@ This is an integrated website for character ratings and information inquiry desi
 *   **Multi-language Support**: Built-in switching between Simplified Chinese (`zh-cn`) and Traditional Chinese (`zh-tw`).
 *   **Filtering and Sorting**: Allows filtering characters by various criteria such as school, attack type, and defense type.
 *   **Responsive Design**: Provides a good viewing experience on both desktop and mobile devices.
-*   **PWA Support**: Supports Progressive Web Apps, allowing the site to be "installed" on the desktop or home screen for offline access.
+*   **PWA Support**: Supports Progressive Web Apps, allowing the site to be "installed" on the desktop or home screen for more convenient access.
 
 ## 🛠️ Main Frameworks & Packages
 
