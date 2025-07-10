@@ -62,6 +62,77 @@
     ]
   },
   {
+    "id": 1,
+    "fullname": "陸八魔 亞瑠",
+    "name": "亞瑠",
+    "nicknames": ["阿露"],
+    "school": "Gehenna",
+    "attackType": "Explosive",
+    "defenseType": "Light",
+    "weapon": "SR",
+    "position": [0, "範圍輸出"],
+    "uniqueWeaponRecommended": "推薦刷Hard專三",
+    "acquisitionMethod": "常駐/困難",
+    "skillMainOparts": "rohonc",
+    "skillSubOparts": "rohonc",
+    "l2dUnlock": 6,
+    "city": "S",
+    "outdoor": "B",
+    "indoor": "D",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "暴擊傷害增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/09",
+    "ratings": {
+      "newbie": [4, 0, 0],
+      "totalAssault": [4, 0, 0],
+      "pvp": [3, 0, 0],
+      "grandAssault": [4, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [3, 0, 0],
+      "overall": 67
+    },
+    "skillsSummary": {
+      "ex": "4Cost對一名敵方造成<blue>521%</blue>傷害，隨後對該目標及圓形範圍造成<blue>554%</blue>傷害<red>（第二段無視掩體）</red>",
+      "ns": "毎25秒對一名敵方造成<blue>290%</blue>傷害，且<blue>50%</blue>機率對該目標及圓形範圍內敵方造成<blue>476%</blue>傷害",
+      "ss": "使用EX技時，提高自身暴擊值<blue>38.3%</blue>，<green>愛用品加強NS輸出質變層面</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "舊時代市街可選爆發大C，有出傷更快的優勢",
+      "pvp": "市街競技場可選輸出，只要暴擊三甲通吃",
+      "grandAssault": "舊時代市街可選爆發大C，有出傷更快的優勢",
+      "limitBreakAssault": "缺人可以頂替、機制使用",
+      "jointFiringDrill": "全演習均可選",
+      "eventChallenge": "平民可選爆發C"
+    },
+    "uniqueWeaponRecommendedSummary": "提供大量爆傷、攻擊力，<red>重點培養專2/專3起跳</red>",
+    "overallRecommendation": "市街可選爆發輸出，老玩家後期刷困難開高專",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技一Lv7",
+      "技三LV7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "亞瑠十分珍貴的錢包",
+      "recommendedLevel": [4, 0, 0],
+      "materials": ["17", "rohonc"],
+      "effects": [
+        "命中值<red>150</red>",
+        "<red>NS觸發率變為100%</red>，目標<blue>290%</blue>提升至<blue>296%</blue>，範圍傷害<blue>476%</blue>提升至<blue>487%</blue>"
+      ]
+    }
+  },
+  {
     "id": 18,
     "fullname": "羽川 蓮實",
     "name": "蓮實",

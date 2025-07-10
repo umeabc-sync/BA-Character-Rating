@@ -62,6 +62,77 @@
     ]
   },
   {
+    "id": 1,
+    "fullname": "陆八魔 爱露",
+    "name": "爱露",
+    "nicknames": ["阿露"],
+    "school": "Gehenna",
+    "attackType": "Explosive",
+    "defenseType": "Light",
+    "weapon": "SR",
+    "position": [0, "范围输出"],
+    "uniqueWeaponRecommended": "推荐刷Hard专三",
+    "acquisitionMethod": "常驻/困难",
+    "skillMainOparts": "rohonc",
+    "skillSubOparts": "rohonc",
+    "l2dUnlock": 6,
+    "city": "S",
+    "outdoor": "B",
+    "indoor": "D",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "暴击伤害增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/09",
+    "ratings": {
+      "newbie": [4, 0, 0],
+      "totalAssault": [4, 0, 0],
+      "pvp": [3, 0, 0],
+      "grandAssault": [4, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [3, 0, 0],
+      "overall": 67
+    },
+    "skillsSummary": {
+      "ex": "4Cost对一名敌方造成<blue>521%</blue>伤害，随后对该目标及圆形范围造成<blue>554%</blue>伤害<red>（第二段无视掩体）</red>",
+      "ns": "毎25秒对一名敌方造成<blue>290%</blue>伤害，且<blue>50%</blue>概率对该目标及圆形范围内敌方造成<blue>476%</blue>伤害",
+      "ss": "使用EX技时，提高自身暴击值<blue>38.3%</blue>，<green>爱用品加强NS输出质变层面</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "旧时代市街可选爆发大C，有出伤更快的优势",
+      "pvp": "市街竞技场可选输出，只要暴击三甲通吃",
+      "grandAssault": "旧时代市街可选爆发大C，有出伤更快的优势",
+      "limitBreakAssault": "缺人可以顶替、机制使用",
+      "jointFiringDrill": "全演习均可选",
+      "eventChallenge": "平民可选爆发C"
+    },
+    "uniqueWeaponRecommendedSummary": "提供大量爆伤、攻击力，<red>重点培养专2/专3起跳</red>",
+    "overallRecommendation": "市街可选爆发输出，老玩家后期刷困难开高专",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技一Lv7",
+      "技三LV7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "爱露十分珍贵的钱包",
+      "recommendedLevel": [4, 0, 0],
+      "materials": ["17", "rohonc"],
+      "effects": [
+        "命中值<red>150</red>",
+        "<red>NS触发率变为100%</red>，目标<blue>290%</blue>提升至<blue>296%</blue>，范围伤害<blue>476%</blue>提升至<blue>487%</blue>"
+      ]
+    }
+  },
+  {
     "id": 18,
     "fullname": "羽川 莲见",
     "name": "莲见",
