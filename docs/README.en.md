@@ -79,6 +79,7 @@ Please ensure you have [Node.js](https://nodejs.org/) (version 18.x or higher re
 | `npm run preview` | Previews the production build. |
 | `npm run format` | Formats all code using Prettier. |
 | `npm run lint` | Checks and fixes code style issues with ESLint. |
+| `npm run analyze` | Runs a bundle analysis and generates a `stats.html` report. |
 
 ## 📁 Project Structure
 
