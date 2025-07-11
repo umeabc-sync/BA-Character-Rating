@@ -1,0 +1,41 @@
+# /public/_headers
+
+# ----------------------------------------------------------------
+# Strategy 1: Cache static assets with hash values permanently
+# ----------------------------------------------------------------
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/workbox-*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# ----------------------------------------------------------------
+# Strategy 2: Ensure the Service Worker is updated immediately
+# ----------------------------------------------------------------
+/sw.js
+  Cache-Control: max-age=0, no-cache, must-revalidate
+/registerSW.js
+  Cache-Control: max-age=0, no-cache, must-revalidate
+
+# ----------------------------------------------------------------
+# Strategy 3: Set long-term cache for images and icons that do not change frequently
+# ----------------------------------------------------------------
+/img/*
+  Cache-Control: public, max-age=604800
+/og_image.webp
+  Cache-Control: public, max-age=604800
+/pyroxenes.webp
+  Cache-Control: public, max-age=604800
+/vite.svg
+  Cache-Control: public, max-age=604800
+
+# ----------------------------------------------------------------
+# Strategy 4: Ensure entry points and configuration files are always up-to-date
+# ----------------------------------------------------------------
+/index.html
+  Cache-Control: no-cache
+/manifest.json
+  Cache-control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+/robots.txt
+  Cache-Control: no-cache
