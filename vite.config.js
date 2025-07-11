@@ -8,7 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   server: {
     allowedHosts: true
   },
@@ -18,7 +18,7 @@ export default defineConfig({
     legacy({
       targets: ['defaults']
     }),
-    visualizer({
+    mode === 'analyze' && visualizer({
       emitFile: true,
       filename: "stats.html",
     }),
@@ -64,4 +64,4 @@ export default defineConfig({
       },
     }
   }
-})
+}))
