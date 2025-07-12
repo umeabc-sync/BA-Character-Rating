@@ -8,7 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   server: {
     allowedHosts: true
   },
@@ -18,13 +18,15 @@ export default defineConfig({
     legacy({
       targets: ['defaults']
     }),
-    visualizer({
+    mode === 'analyze' && visualizer({
       emitFile: true,
       filename: "stats.html",
     }),
     VitePWA({ 
       registerType: 'autoUpdate',
       workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
         navigateFallback: '/index.html',
         navigateFallbackAllowlist: [/.*/],
       },
@@ -64,4 +66,4 @@ export default defineConfig({
       },
     }
   }
-})
+}))
