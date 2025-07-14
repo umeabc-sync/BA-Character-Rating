@@ -174,6 +174,62 @@
     "language": "语言",
     "enableColoredText": "文本高亮"
   },
+  "ratingCriteriaModal": {
+    "title": "评分准则"
+  },
+  "starRatingSpecial": {
+    "title": "特殊星级",
+    "blueTitle": "蓝星评分",
+    "blueDesc": "对策分，可能因为场地、环境而导致变动",
+    "redTitle": "红星评分",
+    "redDesc": "某领域特别突出，在某领域中属人权卡，属于没有就打不了高难"
+  },
+  "starRatingBase": {
+    "title": "基本星级",
+    "5": "泛用强、整体偏强、游戏体验佳",
+    "4": "一定程度有过高光、泛用可选替补",
+    "3": "整体堪用、一般强度、可上可不上",
+    "2": "一般不太会使用、堆尸替补、仓管",
+    "1": "需后续拯救或创造环境、现有环境下完全用不上"
+  },
+  "ratingDimensions": {
+    "title": "评分种类",
+    "newbie": {
+      "title": "新手期",
+      "weight": "2.5%",
+      "desc": "以新手开荒到逐渐后期养成阶段(推图、日常本等)为基准"
+    },
+    "totalAssault": {
+      "title": "总力战",
+      "weight": "26.5%",
+      "desc": "以当前总力生态为主，覆盖INS~LU影响评价"
+    },
+    "grandAssault": {
+      "title": "大决战",
+      "weight": "26.5%",
+      "desc": "以当前大决战生态为主，覆盖INS~TM影响评价"
+    },
+    "pvp": {
+      "title": "战术对抗战",
+      "weight": "21%",
+      "desc": "针对主流(多场地环境)及最近有什么阵容、思路去评分"
+    },
+    "limitBreakAssault": {
+      "title": "制约作战",
+      "weight": "10.5%",
+      "desc": "以99+层生态为主，重点高星专用对策学生"
+    },
+    "jointFiringDrill": {
+      "title": "演习考试",
+      "weight": "10.5%",
+      "desc": "三场地主环境为主、根据上场率及对策率调整评分"
+    },
+    "eventChallenge": {
+      "title": "活动高难",
+      "weight": "2.5%",
+      "desc": "覆盖活动挑战、联合作战、占领战这种环境选、泛用性评分"
+    }
+  },
   "dataSource": {
     "text": "资料来源：赛博夜猫攻略组",
     "title": "前往赛博夜猫攻略组 Bilibili 频道"
