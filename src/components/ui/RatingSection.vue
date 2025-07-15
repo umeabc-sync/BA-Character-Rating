@@ -36,7 +36,6 @@
   .rating-title {
     font-weight: bold;
     font-size: 1.1rem;
-    margin-bottom: 10px;
     color: #2c3e50;
     position: relative;
     padding-left: 15px; /* Leave space for decorative moldings */
@@ -76,10 +75,11 @@
   .title-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin-bottom: 10px; /* Apply margin to the container */
   }
 
   .title-extra {
-    margin-bottom: 10px;
+    display: flex; /* Use flexbox to center the content (e.g., an icon) */
+    align-items: center;
   }
 </style>

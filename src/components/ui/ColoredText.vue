@@ -28,6 +28,7 @@
     teal: 'text-teal',
     red: 'text-red',
     purple: 'text-purple',
+    sth: 'skill-tag-highlight',
     bold: 'text-bold',
     italic: 'text-italic',
   }
@@ -46,7 +47,7 @@
 
     // Define the processing order to ensure that styles can be correctly superimposed
     // Usually, processing color first, then bold/italic, allows the internal tags to be styled correctly
-    const processingOrder = ['blue', 'green', 'teal', 'red', 'purple', 'bold', 'italic']
+    const processingOrder = ['blue', 'green', 'teal', 'red', 'purple', 'sth', 'bold', 'italic']
 
     for (const key of processingOrder) {
       const className = colorClassMap[key]
@@ -86,6 +87,10 @@
 
   :deep(.text-purple) {
     color: var(--color-purple);
+  }
+
+  :deep(.skill-tag-highlight) {
+    color: var(--color-skill-tag-highlight);
   }
 
   :deep(.text-bold) {

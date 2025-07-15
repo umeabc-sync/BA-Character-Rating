@@ -169,15 +169,9 @@
 
         <RatingSection :title="t('ratingCard.skillOrder')">
           <template #extra>
-            <ColoredText
-              v-if="character.skillExtraDesc"
-              :text="character.skillExtraDesc"
-              :custom-style="{
-                'font-size': '0.85em',
-                'margin-left': '8px',
-                'font-weight': 'bold',
-              }"
-            />
+            <InfoTooltip v-if="character.skillExtraDesc" :text="character.skillExtraDesc">
+              <InfoIcon />
+            </InfoTooltip>
           </template>
           <div class="skill-order-container">
             <template v-for="(skill, index) in character.skillOrder" :key="skill">
