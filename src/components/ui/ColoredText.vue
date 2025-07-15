@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-html="processedText"></span>
+  <span :style="customStyle" v-html="processedText"></span>
 </template>
 
 <script setup>
@@ -14,6 +14,10 @@
     enabled: {
       type: Boolean,
       default: true,
+    },
+    customStyle: {
+      type: Object,
+      default: () => ({}),
     },
   })
 

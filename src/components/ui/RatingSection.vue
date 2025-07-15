@@ -76,6 +76,7 @@
   .title-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
   }
 
   .title-extra {
