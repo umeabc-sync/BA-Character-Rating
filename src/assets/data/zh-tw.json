@@ -3802,17 +3802,7 @@
     },
     "uniqueWeaponRecommendedSummary": "破甲時間增加，<purple>可以考慮開，看軸情況</purple>",
     "overallRecommendation": "貓鬼降防主對策，振動輔助兼機制降費",
-    "skillOrder": [
-      "EX3",
-      "技一.二.三Lv4",
-      "技一Lv7",
-      "技三Lv7",
-      "EX5",
-      "技一Lv10",
-      "技三Lv10",
-      "技二Lv10",
-      "Max"
-    ],
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技三Lv7", "EX5", "技一Lv10", "技三Lv10", "技二Lv10", "Max"],
     "skillExtraDesc": "低配5M11即可"
   },
   {
