@@ -181,15 +181,8 @@
     },
     "uniqueWeaponRecommendedSummary": "增加自身續航和存活能力、<blue>平民備戰高難度推薦開</blue>",
     "overallRecommendation": "商店可兌換的平民輕甲坦，儲備角。備戰各種情況",
-    "skillOrder": [
-      "EX3",
-      "技一.二Lv4",
-      "技一.二Lv7",
-      "EX5",
-      "技一.二Lv10",
-      "技三Lv10（面對競技場群控角色選擇性升級）",
-      "Max"
-    ],
+    "skillOrder": ["EX3", "技一.二Lv4", "技一.二Lv7", "EX5", "技一.二Lv10", "<sth>技三Lv10</sth>", "Max"],
+    "skillExtraDesc": "面對競技場群控角色選擇性升級",
     "favoriteItem": {
       "name": "超冷卻電風扇",
       "recommendedLevel": [4, 0, 0],
@@ -309,17 +302,8 @@
     },
     "uniqueWeaponRecommendedSummary": "提高攻速增加技能組持續期間輸出能力、<red>商店可換至少專3</red>",
     "overallRecommendation": "默認必培養的平民貫通輸出、多模式泛用降防輔助",
-    "skillOrder": [
-      "技一Lv10（技一拉滿就能上場當破防掛件）",
-      "EX3",
-      "技二.三Lv4",
-      "技三Lv7",
-      "技二Lv7",
-      "EX5",
-      "技三Lv10",
-      "技二Lv10",
-      "Max"
-    ]
+    "skillOrder": ["技一Lv10", "EX3", "技二.三Lv4", "技三Lv7", "技二Lv7", "EX5", "技三Lv10", "技二Lv10", "Max"],
+    "skillExtraDesc": "技一拉滿就能上場當破防掛件"
   },
   {
     "id": 9,
@@ -585,12 +569,13 @@
       "EX5",
       "技二Lv7",
       "技二Lv10",
-      "技一Lv7（之後視素材量選擇性升級）",
-      "技三Lv7",
-      "技一Lv10",
-      "技三Lv10",
-      "Max"
-    ]
+      "<sth>技一Lv7</sth>",
+      "<sth>技三Lv7</sth>",
+      "<sth>技一Lv10</sth>",
+      "<sth>技三Lv10</sth>",
+      "<sth>Max</sth>"
+    ],
+    "skillExtraDesc": "視素材量選擇性升級"
   },
   {
     "id": 18,
@@ -1144,16 +1129,8 @@
     },
     "uniqueWeaponRecommendedSummary": "加成無用僅面板提升，廚力刷取",
     "overallRecommendation": "霍德多刀可選，其他模式應對群控機制時可選",
-    "skillOrder": [
-      "EX3（可不點高除EX外技能）",
-      "技一.三Lv4",
-      "技三Lv7",
-      "技一Lv7",
-      "EX5",
-      "技三Lv10",
-      "技一Lv10",
-      "Max"
-    ],
+    "skillOrder": ["EX3", "技一.三Lv4", "技三Lv7", "技一Lv7", "EX5", "技三Lv10", "技一Lv10", "Max"],
+    "skillExtraDesc": "可不點高除EX外技能",
     "favoriteItem": {
       "name": "雅典娜3號",
       "recommendedLevel": [1, 0, 0],
@@ -2067,10 +2044,11 @@
       "技一Lv10",
       "技二Lv10",
       "技三Lv10",
-      "EX3（EX不參與技能循環可不點、打TM船2星點滿技一二即可）",
-      "EX5",
+      "<sth>EX3</sth>",
+      "<sth>EX5</sth>",
       "Max"
-    ]
+    ],
+    "skillExtraDesc": "EX不參與技能循環可不點、打TM船2星點滿技一二即可"
   },
   {
     "id": 86,
@@ -2180,10 +2158,11 @@
       "EX5",
       "技三LV7",
       "技二Lv10",
-      "（愛用品後再考慮技一）技一Lv7",
-      "技一Lv10",
+      "<sth>技一Lv7</sth>",
+      "<sth>技一Lv10</sth>",
       "Max"
     ],
+    "skillExtraDesc": "愛用品後再考慮技一",
     "favoriteItem": {
       "name": "破舊的名牌",
       "recommendedLevel": [5, 0, 0],
@@ -2243,7 +2222,19 @@
     },
     "uniqueWeaponRecommendedSummary": "可考慮專一拉支援面板，<blue>競技場建議專二起</blue>",
     "overallRecommendation": "霍德多刀可選對策，S9對抗戰卷排位可選後排輸出",
-    "skillOrder": ["EX3", "技一.二.三Lv4", "技三Lv7", "技二Lv7", "EX5", "技三Lv10", "技二Lv10", "技一Lv7(10)", "Max"],
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三Lv7",
+      "技二Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "<sth>技一Lv7</sth>",
+      "<sth>技一Lv10</sth>",
+      "Max"
+    ],
+    "skillExtraDesc": "愛用品後再考慮技一",
     "favoriteItem": {
       "name": "SRT基礎教範",
       "recommendedLevel": [2, 0, 0],
@@ -3206,17 +3197,18 @@
     "uniqueWeaponRecommendedSummary": "掛件視軸情況開專，競技場建議專二起",
     "overallRecommendation": "室內賽季競技場可選後排對策，神秘總力可選掛件",
     "skillOrder": [
-      "EX3（只當掛件不點EX）",
+      "<sth>EX3</sth>",
       "技一.二.三Lv4",
       "技二Lv7",
       "技三Lv7",
       "技一Lv7",
-      "EX5",
+      "<sth>EX5</sth>",
       "技三Lv7",
       "技二Lv10",
       "技一Lv10",
       "Max"
-    ]
+    ],
+    "skillExtraDesc": "只當掛件不點EX"
   },
   {
     "id": 116,
@@ -3273,10 +3265,11 @@
       "技一Lv7",
       "EX5",
       "技一Lv10",
-      "技二Lv7",
-      "技二Lv10",
-      "Max（如果沒專二不點技二）"
-    ]
+      "<sth>技二Lv7</sth>",
+      "<sth>技二Lv10</sth>",
+      "Max"
+    ],
+    "skillExtraDesc": "如果沒專二不點技二"
   },
   {
     "id": 129,
@@ -3437,10 +3430,11 @@
       "EX5",
       "技一Lv7",
       "技一Lv10",
-      "技二Lv7",
-      "技二Lv10",
-      "Max（不開專二不需點技二）"
-    ]
+      "<sth>技二Lv7</sth>",
+      "<sth>技二Lv10</sth>",
+      "Max"
+    ],
+    "skillExtraDesc": "不開專二不需點技二"
   },
   {
     "id": 146,
@@ -3808,17 +3802,8 @@
     },
     "uniqueWeaponRecommendedSummary": "破甲時間增加，<purple>可以考慮開，看軸情況</purple>",
     "overallRecommendation": "貓鬼降防主對策，振動輔助兼機制降費",
-    "skillOrder": [
-      "EX3",
-      "技一.二.三Lv4",
-      "技一Lv7",
-      "技三Lv7",
-      "EX5",
-      "技一Lv10",
-      "技三Lv10",
-      "技二Lv10",
-      "Max（低配5M11即可）"
-    ]
+    "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技三Lv7", "EX5", "技一Lv10", "技三Lv10", "技二Lv10", "Max"],
+    "skillExtraDesc": "低配5M11即可"
   },
   {
     "id": 184,
@@ -3936,13 +3921,14 @@
       "技一.二.三Lv4",
       "技一Lv7",
       "技三Lv7",
-      "技二Lv7（不開專二視軸情況點技二）",
+      "<sth>技二Lv7</sth>",
       "EX5",
       "技一Lv10",
       "技三Lv10",
-      "技二Lv10",
+      "<sth>技二Lv10</sth>",
       "Max"
-    ]
+    ],
+    "skillExtraDesc": "不開專二視軸情況點技二"
   },
   {
     "id": 186,
@@ -3998,13 +3984,14 @@
       "技一.二.三Lv4",
       "技一Lv7",
       "技二Lv7",
-      "技三Lv7（當光環用優先技三）",
+      "<sth>技三Lv7</sth>",
       "EX5",
       "技一Lv10",
       "技二Lv10",
-      "技三Lv10",
+      "<sth>技三Lv10</sth>",
       "Max"
-    ]
+    ],
+    "skillExtraDesc": "當光環用優先技三"
   },
   {
     "id": 187,
@@ -4614,7 +4601,7 @@
     "uniqueWeaponRecommendedSummary": "視軸情況開專，<blue>提升支援面板或攻擊拐時間</blue>",
     "overallRecommendation": "推薦自備，默認必有功能人權",
     "skillOrder": [
-      "EX3（無專二優先技一再點技二）",
+      "EX3",
       "技一.二.三Lv4",
       "技三Lv7",
       "技二Lv7",
@@ -4624,7 +4611,8 @@
       "技二Lv10",
       "技一Lv10",
       "Max"
-    ]
+    ],
+    "skillExtraDesc": "無專二優先技一再點技二"
   },
   {
     "id": 210,

@@ -168,6 +168,11 @@
         </RatingSection>
 
         <RatingSection :title="t('ratingCard.skillOrder')">
+          <template #extra>
+            <InfoTooltip v-if="character.skillExtraDesc" :text="character.skillExtraDesc">
+              <InfoIcon />
+            </InfoTooltip>
+          </template>
           <div class="skill-order-container">
             <template v-for="(skill, index) in character.skillOrder" :key="skill">
               <SkillTag :skill="skill" />

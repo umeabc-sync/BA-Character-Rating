@@ -117,6 +117,7 @@
     --color-teal: #0097a7;
     --color-red: #d32f2f;
     --color-purple: #8e24aa;
+    --color-skill-tag-highlight: #ffe4b5;
     --text-color-default: #2c3e50;
     --background-color-default: #e0ffff;
     --background-default: linear-gradient(135deg, #e0ffff 0%, #add8e6 100%);
@@ -129,6 +130,7 @@
     --color-teal: #4dd0e1;
     --color-red: #ef5350;
     --color-purple: #ce93d8;
+    --color-skill-tag-highlight: #ffd54f;
     --text-color-default: #e0e6ed;
     --background-color-default: #0f1928;
     --background-default: linear-gradient(135deg, #0f1928 0%, #1a2b40 100%);
