@@ -31,7 +31,7 @@
 
   const notificationMessage = computed(() => {
     // Re-use existing i18n key for the "updating" message
-    return isError.value ? t('updateNotification.loadErrorMessage') : t('updateNotification.refreshingButton')
+    return isError.value ? t('updateNotification.loadErrorMessage') : t('updateNotification.refreshingMessage')
   })
 
   // Watch for update availability or fallback errors
