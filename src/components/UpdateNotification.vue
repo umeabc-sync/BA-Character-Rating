@@ -1,26 +1,13 @@
 <template>
   <Teleport to="body">
-    <div v-if="showNotification" class="update-notification" :class="{ 'error-mode': showFallbackError }">
+    <div v-if="isUpdating" class="update-notification" :class="{ 'error-mode': isError }">
       <div class="notification-content">
-        <div class="notification-main">
-          <div class="notification-icon">
-            {{ showFallbackError ? '⚠️' : '🔄' }}
-          </div>
-          <div class="notification-text">
-            <h3>{{ notificationTitle }}</h3>
-            <p>{{ notificationMessage }}</p>
-          </div>
+        <div class="notification-icon">
+          {{ isError ? '⚠️' : '🔄' }}
         </div>
-        <div class="notification-actions">
-          <button :disabled="isRefreshing" class="refresh-btn" @click="handleRefresh">
-            {{ refreshButtonText }}
-          </button>
-          <button v-if="!showFallbackError" class="later-btn" @click="handleLater">
-            {{ t('updateNotification.laterButton') }}
-          </button>
-          <button v-if="showFallbackError" class="force-btn" @click="handleForceRefresh">
-            {{ t('updateNotification.forceRefreshButton') }}
-          </button>
+        <div class="notification-text">
+          <h3>{{ notificationTitle }}</h3>
+          <p>{{ notificationMessage }}</p>
         </div>
       </div>
     </div>
@@ -33,56 +20,41 @@
   import { useI18n } from '@/composables/useI18n'
 
   const { t } = useI18n()
-  const { updateAvailable, isRefreshing, showFallbackError, refreshApp, forceRefresh } = usePWAUpdate()
-  const showNotification = ref(false)
-  const laterCount = ref(0)
+  const { updateAvailable, refreshApp, showFallbackError, forceRefresh } = usePWAUpdate()
 
-  // 計算通知內容
+  const isUpdating = ref(false)
+  const isError = ref(false)
+
   const notificationTitle = computed(() => {
-    return showFallbackError.value ? t('updateNotification.loadErrorTitle') : t('updateNotification.newVersionTitle')
+    return isError.value ? t('updateNotification.loadErrorTitle') : t('updateNotification.newVersionTitle')
   })
 
   const notificationMessage = computed(() => {
-    if (showFallbackError.value) {
-      return t('updateNotification.loadErrorMessage')
-    }
-    return t('updateNotification.newVersionMessage')
+    // Re-use existing i18n key for the "updating" message
+    return isError.value ? t('updateNotification.loadErrorMessage') : t('updateNotification.refreshingMessage')
   })
 
-  const refreshButtonText = computed(() => {
-    if (isRefreshing.value) return t('updateNotification.refreshingButton')
-    if (showFallbackError.value) return t('updateNotification.fixButton')
-    return t('updateNotification.updateButton')
-  })
+  // Watch for update availability or fallback errors
+  watch(
+    [updateAvailable, showFallbackError],
+    ([newUpdateAvailable, newFallbackError]) => {
+      if (newUpdateAvailable || newFallbackError) {
+        isUpdating.value = true
+        isError.value = newFallbackError
 
-  // 監聽更新狀態
-  watch([updateAvailable, showFallbackError], ([newUpdateAvailable, newFallbackError]) => {
-    if (newUpdateAvailable || newFallbackError) {
-      showNotification.value = true
-    }
-  })
-
-  const handleRefresh = () => {
-    refreshApp()
-  }
-
-  const handleForceRefresh = () => {
-    forceRefresh()
-  }
-
-  const handleLater = () => {
-    laterCount.value++
-    showNotification.value = false
-
-    // 每次點擊稍後，間隔時間逐漸增加
-    const delay = Math.min(laterCount.value * 5, 30) * 60 * 1000 // 5分鐘到30分鐘
-
-    setTimeout(() => {
-      if (updateAvailable.value && !showFallbackError.value) {
-        showNotification.value = true
+        // Automatically trigger the update process.
+        // A short delay allows the user to see the message before the page reloads.
+        setTimeout(() => {
+          if (newFallbackError) {
+            forceRefresh()
+          } else {
+            refreshApp()
+          }
+        }, 500) // 0.5 second delay
       }
-    }, delay)
-  }
+    },
+    { immediate: true }
+  )
 </script>
 
 <style scoped>
@@ -117,27 +89,31 @@
 
   .notification-content {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 16px;
-  }
-
-  .notification-main {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
   }
 
   .notification-icon {
     font-size: 24px;
     flex-shrink: 0;
+    animation: spin 1.5s linear infinite;
   }
 
-  .notification-text {
-    flex: 1;
+  .update-notification.error-mode .notification-icon {
+    animation: none;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .notification-text h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 4px 0;
     font-size: 16px;
     color: #2c3e50;
   }
@@ -146,60 +122,9 @@
     margin: 0;
     font-size: 14px;
     color: #7f8c8d;
-    line-height: 1.4;
   }
 
-  .notification-actions {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .refresh-btn,
-  .later-btn,
-  .force-btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.2s;
-  }
-
-  .refresh-btn {
-    background: #4a90e2;
-    color: white;
-  }
-
-  .refresh-btn:hover:not(:disabled) {
-    background: #357abd;
-  }
-
-  .refresh-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  .later-btn {
-    background: #ecf0f1;
-    color: #7f8c8d;
-  }
-
-  .later-btn:hover {
-    background: #d5dbdb;
-  }
-
-  .force-btn {
-    background: #d32f2f;
-    color: white;
-  }
-
-  .force-btn:hover {
-    background: #b71c1c;
-  }
-
-  /* 暗色模式 */
+  /* Dark Mode */
   .dark-mode .update-notification {
     background: #2c3e50;
     color: #e0e6ed;
@@ -209,12 +134,7 @@
     color: #e0e6ed;
   }
 
-  .dark-mode .later-btn {
-    background: #34495e;
+  .dark-mode .notification-text p {
     color: #bdc3c7;
-  }
-
-  .dark-mode .later-btn:hover {
-    background: #4a5f7a;
   }
 </style>
