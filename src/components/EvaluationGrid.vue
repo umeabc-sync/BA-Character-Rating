@@ -160,6 +160,12 @@
         break
       }
 
+      case dataItem === 'uw2' || dataItem === 'uw3':
+        modalTitle.value = t('evaluation.uniqueWeapon4')
+        modalText.value = `<span class='nexon-font' style='color: #cc1a25'>STRIKER</span> ${t('evaluation.uw4StrikerBonus')}\n<span class='nexon-font' style='color: #006bff'>SPECIAL</span> ${t('evaluation.uw4SpecialBonus')}`
+        isModalVisible.value = true
+        break
+
       case dataItem === 'version':
         modalTitle.value = t('evaluation.ratingVersion')
         modalText.value = `${t('evaluation.ratingVersionDetail')}\n${t('evaluation.ratingDate')}${props.characterData.ratingDate}`
