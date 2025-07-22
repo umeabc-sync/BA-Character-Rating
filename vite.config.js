@@ -13,7 +13,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 let appVersion;
 try {
   appVersion = execSync('git rev-parse --short HEAD').toString().trim();
-} catch (e) {
+} catch {
   console.warn('Could not get git hash, using timestamp as version.');
   appVersion = Date.now().toString();
 }
