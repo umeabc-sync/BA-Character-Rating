@@ -1988,6 +1988,77 @@
     "skillOrder": ["EX3", "技一.二.三Lv4", "技二Lv7", "技一Lv7", "技二Lv10", "EX5", "技一Lv10", "Max"]
   },
   {
+    "id": 83,
+    "fullname": "狐坂 若藻",
+    "name": "狐坂 若藻",
+    "nicknames": ["若藻"],
+    "school": "Hyakkiyako",
+    "attackType": "Mystic",
+    "defenseType": "Light",
+    "weapon": "SR",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "推荐专三",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "baghdad",
+    "skillSubOparts": "crystalhaniwa",
+    "l2dUnlock": 2,
+    "city": "A",
+    "outdoor": "D",
+    "indoor": "S",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻击力增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/23",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [5, 0, 1],
+      "pvp": null,
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [3, 0, 0],
+      "eventChallenge": [2, 0, 0],
+      "overall": 79
+    },
+    "skillsSummary": {
+      "ex": "4Cost造成<blue>325%</blue>伤害并施加<purple>积蓄</purple>（<teal>10秒</teal>，<red>需累计</red>）最大造成<blue>1322%</blue>的<red>真伤</red>",
+      "ns": "每25秒对一名敌方造成<blue>369%</blue>伤害",
+      "ss": "攻击BOSS级别的敌方时，造成<blue>29.7%</blue>追加伤害。<green>爱用品大幅度增强，破万面板及NS输出伤害，神秘真伤大C</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "室内神秘BOSS特化输出，特甲高防高减伤BOSS对策",
+      "pvp": "暂时无搭配组合",
+      "grandAssault": "室内神秘BOSS特化输出，特甲高防高减伤BOSS对策",
+      "limitBreakAssault": "缺人或机制使用",
+      "jointFiringDrill": "射击/护卫演习可选",
+      "eventChallenge": "高防高减伤对策输出"
+    },
+    "uniqueWeaponRecommendedSummary": "提高基础面板，<red>建议高专提升EX真伤积蓄值</red>",
+    "overallRecommendation": "对BOSS单体特化、高减伤BOSS环境采用",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv7",
+      "技一Lv10",
+      "技二Lv10",
+      "技三Lv10",
+      "Max"
+    ],
+    "favoriteItem": {
+      "name": "隐藏秘密的狐狸面具",
+      "recommendedLevel": [5, 0, 0],
+      "materials": ["20", "baghdad"],
+      "effects": [
+        "攻击力<red>2000</red>",
+        "NS伤害<blue>369%</blue>提升至<blue>645%</blue>，该技能从<red>1hit</red>提升至<red>3hit</red>"
+      ]
+    }
+  },
+  {
     "id": 84,
     "fullname": "合欢垣 吹雪",
     "name": "吹雪",
@@ -2788,7 +2859,7 @@
     "uniqueWeaponStar2": "攻防双增加",
     "uniqueWeaponStar3": ["city", "SS"],
     "ratingVersion": "7.0",
-    "ratingDate": "2025/04/27",
+    "ratingDate": "2025/07/23",
     "ratings": {
       "newbie": [4, 0, 0],
       "totalAssault": [5, 0, 1],
@@ -2806,15 +2877,15 @@
     },
     "ratingsSummary": {
       "newbie": null,
-      "totalAssault": "爆发多功能属攻拐，活跃各大环境人权学生。领域增益效果可跟多数加攻叠加、回费过牌其他环境皆有适配",
+      "totalAssault": "爆发队多功能属攻拐，回费兼加攻其他BOSS也有极高上场率",
       "pvp": "多坦跑速队可选450对位",
-      "grandAssault": "爆发多功能属攻拐，活跃各大环境人权学生。领域增益效果可跟多数加攻叠加、回费过牌其他环境皆有适配",
-      "limitBreakAssault": "爆发多功能属攻拐，活跃各大环境人权学生。领域增益效果可跟多数加攻叠加、回费过牌其他环境皆有适配",
-      "jointFiringDrill": "爆发多功能属攻拐，活跃各大环境人权学生。领域增益效果可跟多数加攻叠加、回费过牌其他环境皆有适配",
-      "eventChallenge": "爆发多功能属攻拐，活跃各大环境人权学生。领域增益效果可跟多数加攻叠加、回费过牌其他环境皆有适配"
+      "grandAssault": "爆发队多功能属攻拐，回费兼加攻其他BOSS也有极高上场率",
+      "limitBreakAssault": "赛特/提法塔选多功能辅助",
+      "jointFiringDrill": "几乎无脑选的多功能辅助坦，领域加攻兼回费承伤",
+      "eventChallenge": "几乎无脑选的多功能辅助坦，领域加攻兼回费承伤"
     },
     "uniqueWeaponRecommendedSummary": "攻防双提升，<purple>看轴生存压力再考虑专1至2</purple>",
-    "overallRecommendation": "多环境，多总力横跨泛用人权。<red>FES限定角色默认必有，本地文件</red>",
+    "overallRecommendation": "除竞技场外横跨全模式的泛用人权辅助坦，<red>默认必有</red>",
     "skillOrder": [
       "EX3",
       "技一.二.三Lv4",
@@ -3272,6 +3343,68 @@
     "skillExtraDesc": "如果没专二不点技二"
   },
   {
+    "id": 127,
+    "fullname": "圣园 未花",
+    "name": "未花",
+    "nicknames": ["未花"],
+    "school": "Trinity",
+    "attackType": "Piercing",
+    "defenseType": "Light",
+    "weapon": "SMG",
+    "position": [0, "输出坦"],
+    "uniqueWeaponRecommended": "推荐专三",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "ether",
+    "skillSubOparts": "nimrud",
+    "l2dUnlock": 5,
+    "city": "D",
+    "outdoor": "A",
+    "indoor": "S",
+    "equipments": ["hat", "badge", "watch"],
+    "uniqueWeaponStar2": "贯穿特攻增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/23",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [5, 0, 1],
+      "pvp": [3, 0, 0],
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [4, 0, 0],
+      "jointFiringDrill": [4, 0, 0],
+      "eventChallenge": [5, 0, 1],
+      "overall": 98
+    },
+    "skillsSummary": {
+      "ex": "6Cost对一名敌方造成<blue>1540%</blue>的伤害<red>（依目标当前血量提升1~2倍伤害，血量越高，伤害越高）</red>",
+      "ns": "每普攻5次造成1次<blue>169%</blue>伤害，<red>第3次触发NS</red>会额外造成1次<blue>339%</blue>的追伤",
+      "ss": "<red>所有攻击必定暴击</red>且拥有<blue>24.2%</blue>伤害提高<red>（独立乘区）</red>以及<blue>12.2%</blue>承伤减少"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "贯穿必备人权主C兼闪避输出坦非常泛用",
+      "pvp": "多坦队、萌新缺人可选",
+      "grandAssault": "贯穿必备人权主C兼闪避输出坦非常泛用",
+      "limitBreakAssault": "重甲火龙塔可选输出",
+      "jointFiringDrill": "射击/护卫演习选用",
+      "eventChallenge": "可无视属性输出"
+    },
+    "uniqueWeaponRecommendedSummary": "多泛用人权，拉面板血量和攻击，<red>属攻专武推荐专三</red>",
+    "overallRecommendation": "默认必有贯通人权、TM难度重甲BOSS按该角色设计",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技二Lv7",
+      "技一Lv7",
+      "技三Lv7",
+      "EX5",
+      "技二Lv10",
+      "技一Lv10",
+      "技三Lv10",
+      "Max"
+    ]
+  },
+  {
     "id": 129,
     "fullname": "尾刃 康娜",
     "name": "康娜",
@@ -3550,6 +3683,68 @@
     "skillOrder": ["EX3", "技一.二.三Lv4", "技三Lv7(10)", "技二Lv7", "技一Lv7", "EX5", "技二Lv10", "技一Lv10", "Max"]
   },
   {
+    "id": 151,
+    "fullname": "浦和 花子（泳装）",
+    "name": "花子（泳装）",
+    "nicknames": ["水花"],
+    "school": "Trinity",
+    "attackType": "Sonic",
+    "defenseType": "Heavy",
+    "weapon": "AR",
+    "position": [0, "AOE输出"],
+    "uniqueWeaponRecommended": "建议自备专三",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "wolfsegg",
+    "skillSubOparts": "antikythera",
+    "l2dUnlock": 3,
+    "city": "S",
+    "outdoor": "A",
+    "indoor": "D",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "攻&暴伤增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/23",
+    "ratings": {
+      "newbie": [5, 0, 1],
+      "totalAssault": [5, 0, 1],
+      "pvp": [5, 0, 1],
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [4, 0, 0],
+      "jointFiringDrill": [5, 0, 1],
+      "eventChallenge": [5, 0, 1],
+      "overall": 100
+    },
+    "skillsSummary": {
+      "ex": "2Cost对扇形范围内敌方造成<blue>642%</blue>伤害，<red>释放EX时拥有1层计数，则会重新抓取EX</red>",
+      "ns": "对圆形范围内敌方造成<blue>225%</blue>伤害并减少<blue>20.7%</blue>防御<teal>（20秒）</teal><red>（区域降防可和其他NS降防叠加）</red>",
+      "ss": "<red>友方使用EX技时</red><purple>会为水花的计数条增加40%</purple>，<red>累积至100%获得1层计数</red>并提高自身攻击力<blue>38.3%</blue><teal>（20秒）</teal><red>（最多2层）</red>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "猫鬼主对策，四甲球清杂对策，弹/特甲BOSS清杂/对群可选",
+      "pvp": "对牌序要求极低，速转EX队可以稳定先手，市街三甲通吃",
+      "grandAssault": "猫鬼主对策，四甲球清杂对策，弹/特甲BOSS清杂/对群可选",
+      "limitBreakAssault": "提法塔百层以下可选对群输出",
+      "jointFiringDrill": "突破/防御/护卫演习可选",
+      "eventChallenge": "多挑战泛用清杂可选"
+    },
+    "uniqueWeaponRecommendedSummary": "攻击暴伤提升对花子提升足，<red>建议环境自备专三</red>",
+    "overallRecommendation": "FES清杂/对群含金量极高，震动中最泛用多模式战神",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三Lv7",
+      "技二Lv7",
+      "技一Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv10",
+      "Max"
+    ]
+  },
+  {
     "id": 154,
     "fullname": "秋泉 红叶",
     "name": "红叶",
@@ -3804,6 +3999,69 @@
     "overallRecommendation": "猫鬼降防主对策，振动辅助兼机制降费",
     "skillOrder": ["EX3", "技一.二.三Lv4", "技一Lv7", "技三Lv7", "EX5", "技一Lv10", "技三Lv10", "技二Lv10", "Max"],
     "skillExtraDesc": "低配5M11即可"
+  },
+  {
+    "id": 172,
+    "fullname": "空崎 日奈（礼服）",
+    "name": "日奈（礼服）",
+    "nicknames": ["礼奈"],
+    "school": "Gehenna",
+    "attackType": "Explosive",
+    "defenseType": "Elastic",
+    "weapon": "MG",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "使用推荐专三",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "phaistos",
+    "skillSubOparts": "winnistone",
+    "l2dUnlock": 5,
+    "city": "D",
+    "outdoor": "A",
+    "indoor": "S",
+    "equipments": ["hat", "badge", "watch"],
+    "uniqueWeaponStar2": "攻&暴击增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "uniqueWeaponStar4": "爆发属性10%",
+    "ratingVersion": "7.0",
+    "ratingDate": "2025/07/23",
+    "ratings": {
+      "newbie": [3, 0, 0],
+      "totalAssault": [5, 0, 1],
+      "pvp": [3, 0, 0],
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [3, 0, 0],
+      "jointFiringDrill": [4, 0, 0],
+      "eventChallenge": [5, 0, 1],
+      "overall": 95
+    },
+    "skillsSummary": {
+      "ex": "6Cost切换<purple>「集中射击」</purple><teal>10秒</teal><red>（无法普攻和移动，中了群控则会解除）</red>，并<purple>刷新3张0Cost的武器牌至卡槽内</purple><red>（不会进入循环）</red>，可对直线范围内敌方造成<blue>618%</blue>/<blue>618%</blue>/<blue>1288%</blue>伤害且<red>不受安定影响</red>（<red>每次使用武器牌会重置</red><purple>集中射击</purple><teal>持续时间</teal>），<red>第三次使用则会解除</red>（该伤害每贯穿1名敌方会衰减<blue>45%</blue>伤害，最多衰减<blue>90%</blue>）",
+      "ns": "战斗开始时，提高自身爆发属性攻击<blue>64.91%</blue>和命中<blue>451</blue><red>（仅触发一次）</red>",
+      "ss": "处于<purple>集中射击</purple>时，提高自身爆发属性攻击<blue>63.51%</blue>且<red>无视嘲讽</red>。<green>面板自带无视防御</green>"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "新一代爆发人权数值怪，对单对群皆可，以至于LU难和新BOSS需要针对礼奈",
+      "pvp": "开局拉人、射程特殊，对策阵容选",
+      "grandAssault": "新一代爆发人权数值怪，对单对群皆可，以至于LU难和新BOSS需要针对礼奈",
+      "limitBreakAssault": "轻甲赛特普攻输出挂件，破红球可选",
+      "jointFiringDrill": "多演习可选择使用输出，注意EX衰减",
+      "eventChallenge": "专治各种轻甲血牛和各种繁琐机制"
+    },
+    "uniqueWeaponRecommendedSummary": "攻暴双数值增加，<red>FES限定使用推荐专二至专三自备</red>",
+    "overallRecommendation": "改变了整个总力/大决战爆发BOSS环境，默认为必有人权输出",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技一Lv7",
+      "技三Lv7",
+      "技二Lv7",
+      "EX5",
+      "技一Lv10",
+      "技三Lv10",
+      "技二Lv10",
+      "Max"
+    ]
   },
   {
     "id": 184,
