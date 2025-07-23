@@ -5838,7 +5838,7 @@
     "skillsSummary": {
       "ex": "对扇形范围内敌方造成<blue>866%</blue>伤害",
       "ns": "NS技每35秒提高自身暴伤<blue>24.4%</blue>，每有一层<purple>西瓜</purple>增加暴击率<blue>8.9%</blue><teal>（30秒）</teal>",
-      "ss": "<red>每攻击4次EX技命中的目标</red><purple><purple>获得一层西瓜</purple><teal>（43秒）</teal>，每有一层<purple>西瓜</purple>增加<blue>6.2%</blue>暴伤<red>（西瓜最多4层）</red>"
+      "ss": "使用EX技时，<red>每造成4次伤害</red><purple><purple>获得一层西瓜</purple><teal>（43秒）</teal>，每有一层<purple>西瓜</purple>使暴伤提高<blue>6.2%</blue><red>（西瓜最多4层）</red>"
     },
     "ratingsSummary": {
       "newbie": null,
