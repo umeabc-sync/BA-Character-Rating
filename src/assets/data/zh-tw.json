@@ -5741,6 +5741,68 @@
     ]
   },
   {
+    "id": 227,
+    "fullname": "仲正 一花（泳裝）",
+    "name": "一花（泳裝）",
+    "nicknames": ["水一花"],
+    "school": "Trinity",
+    "attackType": "Sonic",
+    "defenseType": "Special",
+    "weapon": "AR",
+    "position": [1, "輔助"],
+    "uniqueWeaponRecommended": "活動有愛刷取",
+    "acquisitionMethod": "活動獎勵",
+    "skillMainOparts": "kikuko",
+    "skillSubOparts": "totempole",
+    "l2dUnlock": "-1",
+    "city": "A",
+    "outdoor": "B",
+    "indoor": "C",
+    "equipments": ["gloves", "bag", "watch"],
+    "uniqueWeaponStar2": "攻擊力增加",
+    "uniqueWeaponStar3": ["indoor", "B"],
+    "ratingVersion": "7.1",
+    "ratingDate": "2025/07/23",
+    "ratings": {
+      "newbie": [1, 0, 0],
+      "totalAssault": [2, 0, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 33
+    },
+    "skillsSummary": {
+      "ex": "2Cost對一名敵方造成<blue>242%</blue>傷害，並降低暴傷抗性<blue>35.3%</blue>、施加<purple>集火</purple><teal>（30秒）</teal>",
+      "ns": "每35秒對一名敵方造成<blue>103%</blue>傷害，並降低暴傷抗性<blue>20.5%</blue>、暴擊抗性<blue>15.2%</blue><teal>（20秒）</teal>",
+      "ss": "<blue>17.3%</blue>攻速光環"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "葛利果減益、高茲集火、氣墊船攻速光環堆屍選用",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "葛利果減益、高茲集火、氣墊船攻速光環堆屍選用",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "高雙暴抗敵人可選",
+      "eventChallenge": "高雙暴抗敵人可選"
+    },
+    "uniqueWeaponRecommendedSummary": "攻擊力增加，有愛活動刷取高專",
+    "overallRecommendation": "備戰多刀的功能性輔助後排，她很可愛~有愛刷取",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技一Lv7",
+      "技三Lv7",
+      "技二Lv7",
+      "技一Lv10",
+      "技三Lv10",
+      "技二Lv10",
+      "Max"
+    ]
+  },
+  {
     "id": 228,
     "fullname": "羽川 蓮實（泳裝）",
     "name": "蓮實（泳裝）",
