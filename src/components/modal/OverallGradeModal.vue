@@ -12,15 +12,52 @@
 
           <div class="modal-body">
             <div class="modal-body-content">
-              <div class="criteria-section">
-                <p>{{ t('overallGradeModal.description') }}</p>
-                <ul>
-                  <li><strong>≥80 (SS~A):</strong> {{ t('overallGradeModal.ss_a') }}</li>
-                  <li><strong>70~79(B):</strong> {{ t('overallGradeModal.b') }}</li>
-                  <li><strong>60~69(C):</strong> {{ t('overallGradeModal.c') }}</li>
-                  <li><strong>40~59(D~E):</strong> {{ t('overallGradeModal.d_e') }}</li>
-                  <li><strong>20~39(F):</strong> {{ t('overallGradeModal.f') }}</li>
-                </ul>
+              <div class="criteria-section grade-section">
+                <div class="grade-description">
+                  <p>{{ t('overallGradeModal.description') }}</p>
+                </div>
+
+                <div class="grade-grid">
+                  <div class="grade-item grade-ss-a">
+                    <div class="grade-header">
+                      <div class="grade-letter">SS ~ A</div>
+                      <div class="grade-range">≥80</div>
+                    </div>
+                    <div class="grade-text">{{ t('overallGradeModal.ss_a') }}</div>
+                  </div>
+
+                  <div class="grade-item grade-b">
+                    <div class="grade-header">
+                      <div class="grade-letter">B</div>
+                      <div class="grade-range">70 ~ 79</div>
+                    </div>
+                    <div class="grade-text">{{ t('overallGradeModal.b') }}</div>
+                  </div>
+
+                  <div class="grade-item grade-c">
+                    <div class="grade-header">
+                      <div class="grade-letter">C</div>
+                      <div class="grade-range">60 ~ 69</div>
+                    </div>
+                    <div class="grade-text">{{ t('overallGradeModal.c') }}</div>
+                  </div>
+
+                  <div class="grade-item grade-d-e">
+                    <div class="grade-header">
+                      <div class="grade-letter">D ~ E</div>
+                      <div class="grade-range">40 ~ 59</div>
+                    </div>
+                    <div class="grade-text">{{ t('overallGradeModal.d_e') }}</div>
+                  </div>
+
+                  <div class="grade-item grade-f">
+                    <div class="grade-header">
+                      <div class="grade-letter">F</div>
+                      <div class="grade-range">20 ~ 39</div>
+                    </div>
+                    <div class="grade-text">{{ t('overallGradeModal.f') }}</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -74,7 +111,7 @@
     padding: 25px 0 0;
     border-radius: 10px;
     width: 90%;
-    max-width: 700px;
+    max-width: 705px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     max-height: 80vh;
     display: flex;
@@ -197,17 +234,157 @@
     margin-bottom: 25px;
   }
 
-  .criteria-section p {
-    margin-bottom: 1em;
+  .grade-description {
+    margin-bottom: 20px;
   }
 
-  .criteria-section ul {
-    list-style-type: none;
-    padding: 0;
+  .grade-description p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
   }
 
-  .criteria-section li {
-    margin-bottom: 0.5em;
+  .dark-mode .grade-description p {
+    color: #bdc3c7;
+  }
+
+  .grade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .grade-item {
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  /* 如果要有 hover 動畫那其他 Modal 的卡片也要跟上，為了統一性暫時註解 */
+  /* .grade-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  } */
+
+  .dark-mode .grade-item {
+    background: #2a3d54;
+    border-color: #4f6a8e;
+  }
+
+  /* .dark-mode .grade-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  } */
+
+  .grade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .grade-range {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  .grade-letter {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .dark-mode .grade-letter {
+    color: #e0e6ed;
+  }
+
+  .grade-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+  }
+
+  .dark-mode .grade-text {
+    color: #bdc3c7;
+  }
+
+  .grade-item {
+    --ss-a-color: #a87d51;
+    --b-color: #7a5bbe;
+    --c-color: #658dbf;
+    --d-e-color: #8c939e;
+    --f-color: #6c757d;
+  }
+
+  .grade-ss-a {
+    border-left: 4px solid var(--ss-a-color);
+  }
+
+  .grade-ss-a .grade-letter,
+  .dark-mode .grade-ss-a .grade-letter {
+    color: var(--ss-a-color);
+  }
+
+  .grade-ss-a .grade-range {
+    background-color: var(--ss-a-color);
+  }
+
+  .grade-b {
+    border-left: 4px solid var(--b-color);
+  }
+
+  .grade-b .grade-letter,
+  .dark-mode .grade-b .grade-letter {
+    color: var(--b-color);
+  }
+
+  .grade-b .grade-range {
+    background-color: var(--b-color);
+  }
+
+  .grade-c {
+    border-left: 4px solid var(--c-color);
+  }
+
+  .grade-c .grade-letter,
+  .dark-mode .grade-c .grade-letter {
+    color: var(--c-color);
+  }
+
+  .grade-c .grade-range {
+    background-color: var(--c-color);
+  }
+
+  .grade-d-e {
+    border-left: 4px solid var(--d-e-color);
+  }
+
+  .grade-d-e .grade-letter,
+  .dark-mode .grade-d-e .grade-letter {
+    color: var(--d-e-color);
+  }
+
+  .grade-d-e .grade-range {
+    background-color: var(--d-e-color);
+  }
+
+  .grade-f {
+    border-left: 4px solid var(--f-color);
+  }
+
+  .grade-f .grade-letter,
+  .dark-mode .grade-f .grade-letter {
+    color: var(--f-color);
+  }
+
+  .grade-f .grade-range {
+    background-color: var(--f-color);
   }
 
   .modal-fade-enter-active,
@@ -224,6 +401,10 @@
     .modal-content {
       width: 95%;
       max-height: 90vh;
+    }
+
+    .grade-grid {
+      grid-template-columns: 1fr;
     }
 
     .header-title h2 {
