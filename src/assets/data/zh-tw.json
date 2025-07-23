@@ -5754,7 +5754,7 @@
     "acquisitionMethod": "活動獎勵",
     "skillMainOparts": "kikuko",
     "skillSubOparts": "totempole",
-    "l2dUnlock": -1,
+    "l2dUnlock": 5,
     "city": "A",
     "outdoor": "B",
     "indoor": "C",
@@ -5816,7 +5816,7 @@
     "acquisitionMethod": "限定池",
     "skillMainOparts": "ether",
     "skillSubOparts": "goldenfleece",
-    "l2dUnlock": -1,
+    "l2dUnlock": 3,
     "city": "D",
     "outdoor": "S",
     "indoor": "B",
@@ -5878,7 +5878,7 @@
     "acquisitionMethod": "限定池",
     "skillMainOparts": "nebra",
     "skillSubOparts": "discocolgante",
-    "l2dUnlock": -1,
+    "l2dUnlock": 2,
     "city": "S",
     "outdoor": "B",
     "indoor": "D",
@@ -5892,10 +5892,10 @@
       "totalAssault": [5, 0, 1],
       "pvp": null,
       "grandAssault": [5, 0, 1],
-      "limitBreakAssault": null,
+      "limitBreakAssault": [3, 0, 0],
       "jointFiringDrill": [5, 0, 1],
       "eventChallenge": [5, 0, 1],
-      "overall": 86
+      "overall": 90
     },
     "skillsSummary": {
       "ex": "3Cost使一名友方EX技傷害提高<blue>74.1%</blue><teal>（25秒）</teal>",
@@ -5907,7 +5907,7 @@
       "totalAssault": "泛用人權EX技輔助、解放後排位置，靈活配隊",
       "pvp": "暫時無組合搭配",
       "grandAssault": "泛用人權EX技輔助、解放後排位置，靈活配隊",
-      "limitBreakAssault": "特甲上場困難，中低層可選",
+      "limitBreakAssault": "火龍塔搭配降攻可選輔助",
       "jointFiringDrill": "提高友方EX輸出能力，快速清屏",
       "eventChallenge": "提高友方EX輸出能力，快速清屏"
     },
