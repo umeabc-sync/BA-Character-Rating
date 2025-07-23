@@ -14,7 +14,7 @@
             <div class="modal-body-content">
               <div class="criteria-section grade-section">
                 <div class="grade-description">
-                  <p>{{ t('overallGradeModal.description') }}</p>
+                  <p v-html="t('overallGradeModal.description')"></p>
                 </div>
 
                 <div class="grade-grid">
