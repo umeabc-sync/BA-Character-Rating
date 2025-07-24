@@ -68,7 +68,7 @@
       <span v-else>N/A</span>
     </EvaluationItem>
     <EvaluationItem :header="t('evaluation.l2dBond')" color="pink" data-item="l2d" @item-click="handleItemClick">
-      {{ characterData.l2dUnlock }}
+      {{ characterData.l2dUnlock === -1 ? '--' : characterData.l2dUnlock }}
     </EvaluationItem>
 
     <EvaluationItem
