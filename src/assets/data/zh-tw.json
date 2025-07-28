@@ -6652,7 +6652,7 @@
       "limitBreakAssault": null,
       "jointFiringDrill": [1, 0, 0],
       "eventChallenge": [1, 0, 0],
-      "overall": 20
+      "overall": 28
     },
     "skillsSummary": {
       "ex": "3Cost對1名敵方造成<blue>540%</blue>傷害，消耗1層<purple>「水壓」</purple>可額外造成<blue>108%</blue>追加傷害",
