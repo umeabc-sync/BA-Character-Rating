@@ -108,7 +108,7 @@
       "jointFiringDrill": "全演习均可选",
       "eventChallenge": "平民可选爆发C"
     },
-    "uniqueWeaponRecommendedSummary": "提供大量爆伤、攻击力，<red>重点培养专2/专3起跳</red>",
+    "uniqueWeaponRecommendedSummary": "提供大量暴伤、攻击力，<red>重点培养专2/专3起跳</red>",
     "overallRecommendation": "市街可选爆发输出，老玩家后期刷困难开高专",
     "skillOrder": [
       "EX3",
@@ -423,7 +423,7 @@
       "jointFiringDrill": "有红甲/机制/过牌需要时可选",
       "eventChallenge": "有红甲/机制/过牌需要时可选"
     },
-    "uniqueWeaponRecommendedSummary": "爆伤提升，一般。<green>有爱刷Hard高专</green>",
+    "uniqueWeaponRecommendedSummary": "暴伤提升，一般。<green>有爱刷Hard高专</green>",
     "overallRecommendation": "可碎片合，2费平民回转用、寿司破盾过牌用",
     "skillOrder": [
       "EX3",
@@ -2215,7 +2215,7 @@
     "skillsSummary": {
       "ex": "3Cost对扇形范围敌人造成<blue>395%</blue>伤害，并且减少敌方暴伤<blue>27.7%</blue><teal>（30秒）</teal>。",
       "ns": "毎40秒提升圆形范围内我方角色攻击力<blue>16.4%</blue><teal>（30秒）</teal>",
-      "ss": "我方爆伤抵抗率增加<blue>17.3%</blue>"
+      "ss": "我方暴伤抵抗率增加<blue>17.3%</blue>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3054,7 +3054,7 @@
     "skillsSummary": {
       "ex": "4Cost召唤<purple>雨云号</purple>进入战场<teal>（30秒）</teal>，<purple>雨云号</purple>额外拥有绫音<blue>47.5%</blue>攻击力跟<blue>32.6%</blue>暴击值。<purple>雨云号</purple>毎12秒会对一名敌方单位造成<blue>401%</blue>伤害<red>且无视84%防御</red>",
       "ns": "毎30秒对一名敌人造成<blue>215%</blue>伤害<red>且无视84%防御</red>",
-      "ss": "<blue>17.3%</blue>爆伤光环"
+      "ss": "<blue>17.3%</blue>暴伤光环"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3249,7 +3249,7 @@
     "skillsSummary": {
       "ex": "4Cost对矩形范围内敌方造成<blue>489%</blue>伤害并造成<blue>66.2%</blue><purple>烧伤</purple><teal>（20秒）</teal>",
       "ns": "毎40秒对五名敌方造成<blue>160%</blue>伤害并<purple>眩晕</purple>1.6秒",
-      "ss": "<blue>17.3%</blue>爆伤光环"
+      "ss": "<blue>17.3%</blue>暴伤光环"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -4238,7 +4238,7 @@
     "skillsSummary": {
       "ex": "5Cost对矩形范围内敌方造成<blue>737%</blue><red>必定暴击</red>伤害",
       "ns": "每70秒对扇形范围内敌方造成<blue>702%</blue>伤害",
-      "ss": "<blue>17.3%</blue>爆伤光环"
+      "ss": "<blue>17.3%</blue>暴伤光环"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -4980,7 +4980,7 @@
     "skillsSummary": {
       "ex": "6Cost对圆形范围造成<blue>1210%伤害</blue>（半径300范围）",
       "ns": "毎35秒对圆形范围内敌方造成<blue>187%</blue>伤害",
-      "ss": "<blue>17.3%</blue>爆伤光环"
+      "ss": "<blue>17.3%</blue>暴伤光环"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -5913,7 +5913,7 @@
     "skillsSummary": {
       "ex": "4Cost对一名敌方造成攻击力<blue>1642%</blue>的伤害<purple>（该伤害无视护盾）</purple>",
       "ns": "每45秒赋予自身爆发属攻<blue>53.2%</blue><teal>（25秒）</teal>",
-      "ss": "我方爆伤增加<blue>17.3%</blue>"
+      "ss": "我方暴伤增加<blue>17.3%</blue>"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -5958,7 +5958,7 @@
     "outdoor": "D",
     "indoor": "S",
     "equipments": ["hat", "hairpin", "watch"],
-    "uniqueWeaponStar2": "爆伤增加",
+    "uniqueWeaponStar2": "暴伤增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
     "ratingDate": "2025/06/22",
@@ -6036,7 +6036,7 @@
     },
     "skillsSummary": {
       "ex": "3Cost对一名敌人造成<blue>402%</blue>伤害并且给予<purple>「弱点掌握」</purple><teal>（20秒）</teal>（我方攻击时根据hit都会附加堇<blue>13.2%</blue>攻击力额外伤害）",
-      "ns": "我方累计造成100次暴击，使我方四人爆伤提高<blue>15.1%</blue><teal>（21秒）</teal><purple>（冷却25秒）</purple>",
+      "ns": "我方累计造成100次暴击，使我方四人暴伤提高<blue>15.1%</blue><teal>（21秒）</teal><purple>（冷却25秒）</purple>",
       "ss": "我方贯通属攻单位暴击伤害增加<blue>24.2%</blue>"
     },
     "ratingsSummary": {
@@ -6206,7 +6206,7 @@
     "outdoor": "B",
     "indoor": "S",
     "equipments": ["hat", "hairpin", "watch"],
-    "uniqueWeaponStar2": "爆伤增加",
+    "uniqueWeaponStar2": "暴伤增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.0",
     "ratingDate": "2025/07/10",
@@ -6719,7 +6719,7 @@
     "skillsSummary": {
       "ex": "4Cost召唤自身至场上<teal>（30秒）</teal>，<purple>吊床</purple>拥有桔梗<blue>45.1%</blue>生命值。以<purple>吊床</purple>为中心的圆形范围内赋予友方暴击值增加<blue>30.8%</blue>、暴伤增加<blue>45.1%</blue><red>（领域增益）</red>",
       "ns": "<purple>吊床</purple><red>在场上存在24秒后发动</red>，赋予以<purple>吊床</purple>为中心的圆形范围内友方暴伤增加<blue>15.1%</blue><teal>（36秒）</teal>",
-      "ss": "<blue>17.3%</blue>爆伤光环"
+      "ss": "<blue>17.3%</blue>暴伤光环"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -6928,6 +6928,131 @@
       "技一Lv10",
       "技二Lv10",
       "技三Lv10",
+      "Max"
+    ]
+  },
+  {
+    "id": 230,
+    "fullname": "桐藤 渚（泳装）",
+    "name": "渚（泳装）",
+    "nicknames": ["水渚"],
+    "school": "Trinity",
+    "attackType": "Sonic",
+    "defenseType": "Elastic",
+    "weapon": "HG",
+    "position": [1, "辅助"],
+    "uniqueWeaponRecommended": "看情况开",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "wolfsegg",
+    "skillSubOparts": "rocket",
+    "l2dUnlock": -1,
+    "city": "S",
+    "outdoor": "A",
+    "indoor": "D",
+    "equipments": ["shoes", "bag", "watch"],
+    "uniqueWeaponStar2": "增益时间增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.1",
+    "ratingDate": "2025/07/30",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [5, 0, 1],
+      "pvp": null,
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [5, 0, 0],
+      "jointFiringDrill": [5, 0, 1],
+      "eventChallenge": [5, 0, 1],
+      "overall": 95
+    },
+    "skillsSummary": {
+      "ex": "3Cost赋予一名友方<purple>cost溢出</purple>并提高暴伤<blue>78.6%</blue>（<teal>26秒</teal>/<red>专二30.94秒</red>）",
+      "ns": "每35秒降低一名敌方暴伤抵抗<blue>38.2%</blue><teal>（27秒）</teal>并造成<blue>376%</blue>伤害",
+      "ss": "<blue>17.3%</blue>暴伤光环"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "泛用人权辅助。注意要求有较高的cost回复力才能贷款",
+      "pvp": "暂时无搭配组合",
+      "grandAssault": "泛用人权辅助。注意要求有较高的cost回复力才能贷款",
+      "limitBreakAssault": "后排单拐暴伤辅助，多保一爆破关卡",
+      "jointFiringDrill": "后排单拐暴伤辅助，多保一爆破关卡",
+      "eventChallenge": "后排单拐暴伤辅助，多保一爆破关卡"
+    },
+    "uniqueWeaponRecommendedSummary": "增益时间增加，看轴情况考虑专二或专四",
+    "overallRecommendation": "连发机制角色的专属辅助，沫花、水日和、水花等...",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技三Lv7",
+      "技一Lv7",
+      "技二Lv7",
+      "技三Lv10",
+      "技一Lv10",
+      "技二Lv10",
+      "Max"
+    ],
+    "skillExtraDesc": "无专二可不点技二"
+  },
+  {
+    "id": 231,
+    "fullname": "圣园 未花（泳装）",
+    "name": "未花（泳装）",
+    "nicknames": ["沫花"],
+    "school": "Trinity",
+    "attackType": "Sonic",
+    "defenseType": "Special",
+    "weapon": "SMG",
+    "position": [0, "输出"],
+    "uniqueWeaponRecommended": "建议自备专三",
+    "acquisitionMethod": "FES限定池",
+    "skillMainOparts": "nimrud",
+    "skillSubOparts": "winnistone",
+    "l2dUnlock": -1,
+    "city": "S",
+    "outdoor": "A",
+    "indoor": "D",
+    "equipments": ["hat", "hairpin", "watch"],
+    "uniqueWeaponStar2": "暴击伤害增加",
+    "uniqueWeaponStar3": ["city", "SS"],
+    "ratingVersion": "7.1",
+    "ratingDate": "2025/07/30",
+    "ratings": {
+      "newbie": null,
+      "totalAssault": [4, 1, 0],
+      "pvp": null,
+      "grandAssault": [5, 0, 1],
+      "limitBreakAssault": [3, 0, 0],
+      "jointFiringDrill": [4, 0, 0],
+      "eventChallenge": [5, 0, 1],
+      "overall": 81
+    },
+    "skillsSummary": {
+      "ex": "①<red>（对自己）</red>2Cost立即抽取EX技并进入<purple>连射状态</purple><teal>（30秒）</teal>，处于<purple>连射状态</purple>时，立即抽取EX技，<red>对敌方使用时</red>会根据使用次数改变EX技的基础消耗，<red>第1~2次：</red><blue>4cost</blue> / <red>第3~4次：</red><blue>6cost</blue> / <red>第5次及以后：</red><blue>10cost</blue>，<red>再次对自己使用</red><blue>（0cost）</blue>则提前解除<purple>连射状态</purple>，连射结束时将EX技移至牌组末并重置基础费用 ②<red>（对敌人）</red>4Cost对一名敌人造成<blue>1571%</blue>伤害",
+      "ns": "每40秒提高自身振动属攻<blue>59.8%</blue><teal>（33秒）</teal>",
+      "ss": "所有攻击<red>必定暴击</red>，追加<blue>49.25%</blue>振动属攻"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "未来可期，特甲BOSS多刀可选",
+      "pvp": "暂时无搭配组合",
+      "grandAssault": "市街/野外弹甲BOSS主对策输出",
+      "limitBreakAssault": "中低层弹甲提法塔可选输出",
+      "jointFiringDrill": "射击/护卫演习可选",
+      "eventChallenge": "特甲/弹甲对单可选输出"
+    },
+    "uniqueWeaponRecommendedSummary": "FES限定人权输出，拉面板血量和攻击，建议自备专三/专四",
+    "overallRecommendation": "<red>现阶段泛用性较弱，但环境会适应FES。</red>总力等新boss，大决战包揽市街/野外振动单体",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "技三Lv7",
+      "技二Lv7",
+      "技一Lv7",
+      "EX5",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv10",
       "Max"
     ]
   }
