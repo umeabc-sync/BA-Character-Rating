@@ -979,7 +979,7 @@
       "name": "风到来之音",
       "recommendedLevel": [2, 0, 0],
       "materials": ["23", "crystalhaniwa"],
-      "effects": ["攻击力<red>500</red>", "NS技伤害<blue>416%</blue>提升至<blue>567%</blue>"]
+      "effects": ["攻击力<red>500</red>", "伤害<blue>416%</blue>提升至<blue>567%</blue>"]
     }
   },
   {
@@ -1651,7 +1651,7 @@
       "materials": ["2", "wolfsegg"],
       "effects": [
         "攻击力<red>200</red>、命中值<red>400</red>",
-        "NS技伤害<blue>275%</blue>提升至<blue>300%</blue>，<red>变为5个圆形区域</red>，依目标当前血量提升1~2倍伤害，血量越低，伤害越高，<red>对相同目标造成伤害时，后续伤害衰减45%，最多衰减至10%</red>"
+        "伤害<blue>275%</blue>提升至<blue>300%</blue>，<red>变为5个圆形区域</red>，依目标当前血量提升1~2倍伤害，血量越低，伤害越高，<red>对相同目标造成伤害时，后续伤害衰减45%，最多衰减至10%</red>"
       ]
     }
   },
@@ -4973,7 +4973,7 @@
       "materials": ["1", "winnistone"],
       "effects": [
         "命中值<red>200</red>",
-        "NS技伤害<blue>778%</blue>提升至<blue>910%</blue><green>（<purple>「阿比舒形态」</purple>无视60%防御）</green>，<red>普通型态NS：</red>使用EX，使EX回到手牌1次；<red>阿比舒形态NS：</red>爆发属攻提高<blue>30.8%</blue><teal>（30秒）</teal>。<red>进入或解除机甲会立即使用1次NS</red>"
+        "伤害<blue>778%</blue>提升至<blue>910%</blue><green>（<purple>「阿比舒形态」</purple>无视60%防御）</green>，<red>普通型态NS：</red>使用EX，使EX回到手牌1次；<red>阿比舒形态NS：</red>爆发属攻提高<blue>30.8%</blue><teal>（30秒）</teal>。<red>进入或解除机甲会立即使用1次NS</red>"
       ]
     }
   },
