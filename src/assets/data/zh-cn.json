@@ -3454,9 +3454,9 @@
     "ratingDate": "2025/08/01",
     "ratings": {
       "newbie": [4, 0, 0],
-      "totalAssault": [3, 0, 0],
+      "totalAssault": [4, 0, 0],
       "pvp": [5, 0, 0],
-      "grandAssault": [3, 0, 0],
+      "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [1, 0, 0],
       "eventChallenge": [1, 0, 0],
@@ -3470,9 +3470,9 @@
     },
     "ratingsSummary": {
       "newbie": null,
-      "totalAssault": "霍德多刀可选群控对策辅助坦",
+      "totalAssault": "LU霍德多刀可选群控对策辅助坦",
       "pvp": "市街掩体赛季可选高生存坦，多赛季可选对位控制兼输出",
-      "grandAssault": "霍德多刀可选群控对策辅助坦",
+      "grandAssault": "LU霍德多刀可选群控对策辅助坦",
       "limitBreakAssault": "缺人或机制使用",
       "jointFiringDrill": "群控机制可选",
       "eventChallenge": "群控机制可选"
@@ -3532,7 +3532,7 @@
       "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [2, 0, 0],
-      "eventChallenge": null,
+      "eventChallenge": [1, 0, 0],
       "overall": 50
     },
     "skillsSummary": {
@@ -3567,7 +3567,7 @@
     "skillExtraDesc": "爱用品后再考虑技一",
     "favoriteItem": {
       "name": "SRT基础教范",
-      "recommendedLevel": [2, 0, 0],
+      "recommendedLevel": [5, 0, 0],
       "materials": ["7", "wolfsegg"],
       "effects": [
         "CC强化<red>35</red>",
@@ -5421,10 +5421,10 @@
     "uniqueWeaponStar2": "减益时间增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.1",
-    "ratingDate": "2025/08/01",
+    "ratingDate": "2025/08/06",
     "ratings": {
       "newbie": [2, 0, 0],
-      "totalAssault": [3, 1, 0],
+      "totalAssault": [4, 0, 0],
       "pvp": null,
       "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
@@ -6478,16 +6478,16 @@
     "uniqueWeaponStar2": "攻击力增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.1",
-    "ratingDate": "2025/08/01",
+    "ratingDate": "2025/08/06",
     "ratings": {
       "newbie": null,
       "totalAssault": [2, 0, 0],
       "pvp": null,
-      "grandAssault": [3, 0, 0],
+      "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [2, 0, 0],
       "eventChallenge": [1, 0, 0],
-      "overall": 38
+      "overall": 33
     },
     "skillsSummary": {
       "ex": "6Cost对一名敌方造成<blue>1892%</blue>伤害，随后对该目标及圆形范围内敌方造成<blue>392%</blue>伤害",

@@ -626,7 +626,7 @@
       "jointFiringDrill": "HIT機制可選",
       "eventChallenge": "HIT機制可選"
     },
-    "uniqueWeaponRecommendedSummary": "回復量增加，增強生存、<blue>使用至少5星專1拉麵板</blue>",
+    "uniqueWeaponRecommendedSummary": "回復量增加，增強生存、<blue>使用至少5星專1拉面板</blue>",
     "overallRecommendation": "玩具/攻速掛件替補。<purple>多數活動湊加成的角色</purple>",
     "skillOrder": [
       "EX3",
@@ -3454,9 +3454,9 @@
     "ratingDate": "2025/08/01",
     "ratings": {
       "newbie": [4, 0, 0],
-      "totalAssault": [3, 0, 0],
+      "totalAssault": [4, 0, 0],
       "pvp": [5, 0, 0],
-      "grandAssault": [3, 0, 0],
+      "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [1, 0, 0],
       "eventChallenge": [1, 0, 0],
@@ -3470,9 +3470,9 @@
     },
     "ratingsSummary": {
       "newbie": null,
-      "totalAssault": "霍德多刀可選群控對策輔助坦",
+      "totalAssault": "LU霍德多刀可選群控對策輔助坦",
       "pvp": "市街掩體賽季可選高生存坦，多賽季可選對位控制兼輸出",
-      "grandAssault": "霍德多刀可選群控對策輔助坦",
+      "grandAssault": "LU霍德多刀可選群控對策輔助坦",
       "limitBreakAssault": "缺人或機制使用",
       "jointFiringDrill": "群控機制可選",
       "eventChallenge": "群控機制可選"
@@ -3532,7 +3532,7 @@
       "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [2, 0, 0],
-      "eventChallenge": null,
+      "eventChallenge": [1, 0, 0],
       "overall": 50
     },
     "skillsSummary": {
@@ -3567,7 +3567,7 @@
     "skillExtraDesc": "愛用品後再考慮技一",
     "favoriteItem": {
       "name": "SRT基礎教範",
-      "recommendedLevel": [2, 0, 0],
+      "recommendedLevel": [5, 0, 0],
       "materials": ["7", "wolfsegg"],
       "effects": [
         "CC強化<red>35</red>",
@@ -3623,7 +3623,7 @@
       "jointFiringDrill": "射擊演習可選",
       "eventChallenge": "HIT機制可選"
     },
-    "uniqueWeaponRecommendedSummary": "提高NS觸發頻率。<blue>推薦專一拉麵板、卷分/高配專三</blue>",
+    "uniqueWeaponRecommendedSummary": "提高NS觸發頻率。<blue>推薦專一拉面板、卷分/高配專三</blue>",
     "overallRecommendation": "氣墊船P2可選HIT對策，其他重甲LU/TM多刀可選",
     "skillOrder": [
       "EX3",
@@ -5421,10 +5421,10 @@
     "uniqueWeaponStar2": "減益時間增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.1",
-    "ratingDate": "2025/08/01",
+    "ratingDate": "2025/08/06",
     "ratings": {
       "newbie": [2, 0, 0],
-      "totalAssault": [3, 1, 0],
+      "totalAssault": [4, 0, 0],
       "pvp": null,
       "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
@@ -6478,16 +6478,16 @@
     "uniqueWeaponStar2": "攻擊力增加",
     "uniqueWeaponStar3": ["indoor", "SS"],
     "ratingVersion": "7.1",
-    "ratingDate": "2025/08/01",
+    "ratingDate": "2025/08/06",
     "ratings": {
       "newbie": null,
       "totalAssault": [2, 0, 0],
       "pvp": null,
-      "grandAssault": [3, 0, 0],
+      "grandAssault": [2, 0, 0],
       "limitBreakAssault": null,
       "jointFiringDrill": [2, 0, 0],
       "eventChallenge": [1, 0, 0],
-      "overall": 38
+      "overall": 33
     },
     "skillsSummary": {
       "ex": "6Cost對一名敵方造成<blue>1892%</blue>傷害，隨後對該目標及圓形範圍內敵方造成<blue>392%</blue>傷害",
