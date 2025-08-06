@@ -97,7 +97,8 @@
     "skillsSummary": {
       "ex": "4Cost對一名敵方造成<blue>521%</blue>傷害，隨後對該目標及圓形範圍造成<blue>554%</blue>傷害<red>（第二段無視掩體）</red>",
       "ns": "毎25秒對一名敵方造成<blue>290%</blue>傷害，且<blue>50%</blue>機率對該目標及圓形範圍內敵方造成<blue>476%</blue>傷害",
-      "ss": "使用EX技時，提高自身暴擊值<blue>38.3%</blue>，<green>愛用品加強NS輸出質變層面</green>"
+      "ss": "使用EX技時，提高自身暴擊值<blue>38.3%</blue>",
+      "fi": "加強NS輸出質變層面"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -168,7 +169,8 @@
     "skillsSummary": {
       "ex": "4Cost賦予自身治癒力<blue>16.4%</blue>+<red>已損失生命3.4%</red>的持續恢復<teal>（20秒）</teal>",
       "ns": "毎15秒對扇形範圍內敵方造成<blue>564%</blue>傷害",
-      "ss": "血量低於50%時群控抵抗力提升<blue>38.3%</blue>。<green>愛用品提升自身續航和存活</green>"
+      "ss": "血量低於50%時群控抵抗力提升<blue>38.3%</blue>",
+      "fi": "提升自身續航和存活"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -291,8 +293,9 @@
     },
     "skillsSummary": {
       "ex": "7Cost對扇形範圍內敵方造成<blue>1208%</blue>傷害",
-      "ns": "<red>彈藥耗盡時觸發</red>提高自身攻擊力<blue>39.9%</blue><teal>（16秒）</teal><red>並完成換彈</red>。<green>愛用品小提輸出能力</green>",
-      "ss": "攻擊未處於掩體的敵方會額外造成<blue>5.2%</blue>追加傷害"
+      "ns": "<red>彈藥耗盡時觸發</red>提高自身攻擊力<blue>39.9%</blue><teal>（16秒）</teal><red>並完成換彈</red>",
+      "ss": "攻擊未處於掩體的敵方會額外造成<blue>5.2%</blue>追加傷害",
+      "fi": "小提輸出能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -363,7 +366,8 @@
     "skillsSummary": {
       "ex": "4Cost對扇形範圍內敵方造成<blue>697%</blue>傷害且每段攻擊<purple>（EX3）施加眩暈</purple><red>（EX5）1.4秒</red>",
       "ns": "<red>自身血量低於30%時</red>賦予治癒力<blue>191%</blue>回復<teal>（每場戰鬥限1次）</teal>",
-      "ss": "使用EX技時賦予自身治癒力<blue>205%</blue>的護盾。<green>愛用品降低暴斃機率，加強競技場殘局收尾能力</green>"
+      "ss": "使用EX技時賦予自身治癒力<blue>205%</blue>的護盾",
+      "fi": "降低暴斃機率，加強競技場殘局收尾能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -538,7 +542,8 @@
     "skillsSummary": {
       "ex": "2Cost對一名敵方造成<blue>762%</blue>傷害，擁有<purple>「憤怒」</purple>時為<red>1.7<red>倍傷害",
       "ns": "賦予<purple>「憤怒」</purple>狀態，並且提高自身閃避<blue>33.9%</blue><teal>（20秒）</teal>",
-      "ss": "擁有<purple>「憤怒」</purple>時提高自身攻擊力<blue>31.9%</blue><teal>（30秒）</teal>。<green>愛用品提升輸出</green>"
+      "ss": "擁有<purple>「憤怒」</purple>時提高自身攻擊力<blue>31.9%</blue><teal>（30秒）</teal>",
+      "fi": "提升輸出"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -609,7 +614,8 @@
     "skillsSummary": {
       "ex": "3Cost恢復自身治癒力<blue>254%</blue>的生命值，且攻速增加<blue>38.4%</blue><teal>（21秒）</teal>",
       "ns": "普攻時，有20%機率對一名敵方造成<blue>523%</blue>傷害<purple>（冷卻10秒）</purple>",
-      "ss": "攻擊時，根據生命值百分比額外造成<blue>0.7%</blue>至<blue>4.1%</blue>追傷。<green>愛用品攻速提高增加NS釋放概率穩定輸出</green>"
+      "ss": "攻擊時，根據生命值百分比額外造成<blue>0.7%</blue>至<blue>4.1%</blue>追傷",
+      "fi": "攻速提高增加NS釋放機率穩定輸出"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -677,7 +683,8 @@
     "skillsSummary": {
       "ex": "2Cost對一名敵方造成<blue>760%</blue>傷害<purple>（目標死亡後會找準最近目標）</purple>",
       "ns": "毎25秒對圓形範圍內敵方造成<blue>368%</blue>傷害",
-      "ss": "普攻時有20%機率提升自身攻速<blue>57.4%</blue><teal>（30秒）</teal>，<green>愛用品增強輸出</green>"
+      "ss": "普攻時有20%機率提升自身攻速<blue>57.4%</blue><teal>（30秒）</teal>",
+      "fi": "增強輸出"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -808,7 +815,8 @@
     "skillsSummary": {
       "ex": "3Cost對扇形範圍內敵方造成<blue>1410%</blue>傷害<purple>（會向前翻滾、較吃站位及角度）</purple>",
       "ns": "毎40秒提高自身攻擊力<blue>47.9%</blue><teal>（20秒）</teal>",
-      "ss": "自身未擁有群控效果時防禦力提升<blue>25.5%</blue>。<green>愛用品提升輸出跟生存</green>"
+      "ss": "自身未擁有群控效果時防禦力提升<blue>25.5%</blue>",
+      "fi": "提升輸出跟生存"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -941,7 +949,8 @@
     "skillsSummary": {
       "ex": "4Cost對圓形範圍內造成<blue>106%</blue>傷害（<teal>10秒</teal>，合計<blue>1166%</blue>）",
       "ns": "毎25秒對圓形範圍敵人造成<blue>416%</blue>傷害",
-      "ss": "普攻時有10%機率造成<blue>102%</blue>燒傷<teal>（20秒）</teal>。<green>愛用品小幅度提升傷害</green>"
+      "ss": "普攻時有10%機率造成<blue>102%</blue>燒傷<teal>（20秒）</teal>",
+      "fi": "小幅度提升傷害"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1060,7 +1069,8 @@
     "skillsSummary": {
       "ex": "5Cost對一名敵方造成<blue>1091%</blue>傷害",
       "ns": "打倒敵方時立刻換彈並使暴擊傷害增加<blue>57%</blue><teal>（13秒）</teal>",
-      "ss": "技換彈後暴擊值提升<blue>95%</blue><red>（攻擊一次後失效）</red> <green>愛用品提升較小，變化不大</green>"
+      "ss": "技換彈後暴擊值提升<blue>95%</blue><red>（攻擊一次後失效）</red>",
+      "fi": "提升較小，變化不大"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1131,7 +1141,8 @@
     "skillsSummary": {
       "ex": "5Cost對扇形範圍敵人造成<blue>821%</blue>傷害",
       "ns": "毎30秒提升自身<blue>41.4%</blue>攻擊力<teal>（20秒）</teal>",
-      "ss": "對<red>大體型目標</red>額外造成<blue>12.8%</blue>追傷。<green>愛用品增加命中，不用凹球道中小怪</green>"
+      "ss": "對<red>大體型目標</red>額外造成<blue>12.8%</blue>追傷",
+      "fi": "增加命中，不用凹球道中小怪"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1253,7 +1264,8 @@
     "skillsSummary": {
       "ex": "2Cost立即換彈且提升自身<blue>67.4%</blue>攻擊力<teal>（30秒）</teal>",
       "ns": "毎25秒對一名敵方造成<blue>425%</blue>傷害",
-      "ss": "使用EX技後攻速增加<blue>38.3%</blue><teal>（30秒）</teal>，<green>愛用品增強輸出能力</green>"
+      "ss": "使用EX技後攻速增加<blue>38.3%</blue><teal>（30秒）</teal>",
+      "fi": "增強輸出能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1372,7 +1384,8 @@
     "skillsSummary": {
       "ex": "3Cost賦予自身治癒力<blue>248%</blue>護盾<teal>（25秒）</teal>",
       "ns": "毎15秒對一名敵方造成<blue>573%</blue>傷害",
-      "ss": "進入掩體時回復治癒力<blue>142%</blue>血量<purple>（冷卻10秒）</purple>。<green>愛用品增強了防禦和閃避，生存能力提升顯著</green>"
+      "ss": "進入掩體時回復治癒力<blue>142%</blue>血量<purple>（冷卻10秒）</purple>",
+      "fi": "增強了防禦和閃避，生存能力提升顯著"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1494,7 +1507,8 @@
     "skillsSummary": {
       "ex": "4Cost使圓形範圍內友方4人位移到指定位置並賦予治癒力<blue>334%</blue>的護盾<green>（13秒）</green>",
       "ns": "毎35秒對扇形範圍內敵方造成<blue>511%</blue>傷害",
-      "ss": "擊敗敵方時增加自身暴傷<blue>38.3%</blue><teal>（13秒）</teal>，<green>愛用品提高護盾效果和輸出</green>"
+      "ss": "擊敗敵方時增加自身暴傷<blue>38.3%</blue><teal>（13秒）</teal>",
+      "fi": "提高護盾效果和輸出"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1605,7 +1619,8 @@
     "skillsSummary": {
       "ex": "4Cost對5個圓形範圍內敵方造成<blue>591%</blue>傷害<red>（可疊圈判定）</red>",
       "ns": "毎20秒以<red>血量最低的敵方為中心</red>對圓形範圍內造成<blue>275%</blue>傷害",
-      "ss": "<blue>17.3%</blue>暴傷光環。<green>愛用品加強命中期望，NS技能質變成小EX技</green>"
+      "ss": "<blue>17.3%</blue>暴傷光環",
+      "fi": "加強命中期望，NS技能質變成小EX技"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1850,7 +1865,8 @@
     "skillsSummary": {
       "ex": "4Cost召喚一座<purple>炮臺</purple>到指定位置輸出<teal>（30秒）</teal>，<purple>炮臺</purple>擁有詠葉<blue>154%</blue>攻擊力",
       "ns": "毎30秒會召喚1座<purple>小炮臺</purple>入場輸出，<purple>小炮臺</purple>擁有詠葉<blue>72.6%</blue>攻擊力",
-      "ss": "<blue>17.3%</blue>生命值光環。<green>愛用品NS質變成三座小炮臺</green>"
+      "ss": "<blue>17.3%</blue>生命值光環",
+      "fi": "NS質變成三座小炮臺"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -1968,8 +1984,9 @@
     },
     "skillsSummary": {
       "ex": "消耗4Cost使一名我方回復治癒力<blue>342%</blue>的生命，<red>（升至EX3後追加效果）</red>並解除一個減益效果",
-      "ns": "每40秒使生命百分比最低的一名我方內避提升<blue>67%</blue><teal>（持續30秒）</teal>，<green>愛用品加強奶量</green>",
-      "ss": "我方防禦力增加<blue>17.3%</blue>"
+      "ns": "每40秒使生命百分比最低的一名我方內避提升<blue>67%</blue><teal>（持續30秒）</teal>",
+      "ss": "我方防禦力增加<blue>17.3%</blue>",
+      "fi": "加強奶量"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -2204,7 +2221,8 @@
     "skillsSummary": {
       "ex": "3Cost依序對最多5名敵人鎖定造成<blue>191%</blue>傷害<red>（只有1名則鎖定5次）</red>，<purple>編隊內有小桃時</purple>則額外造成<blue>51.8%</blue>中毒<teal>（20秒）</teal>",
       "ns": "每25秒對一名<red>血量最低</red>的我方回復治癒力<blue>147%</blue>血量",
-      "ss": "攻速提升<blue>28.7%</blue>。<purple>編隊內有小桃時</purple>則提升至<blue>34.4%</blue>。<green>愛用品加強掛件能力，其實是小桃的愛用品</green>"
+      "ss": "攻速提升<blue>28.7%</blue>。<purple>編隊內有小桃時</purple>則提升至<blue>34.4%</blue>",
+      "fi": "加強掛件能力，其實是小桃的愛用品"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -2696,7 +2714,8 @@
     "skillsSummary": {
       "ex": "5Cost對矩形範圍內敵方造成<blue>75.9%</blue>持續傷害<teal>（20秒）</teal>",
       "ns": "毎30秒對圓形範圍內敵方造成<blue>389%</blue>傷害",
-      "ss": "<blue>17.3%</blue>暴傷光環。<green>愛用品提高輸出、且NS增加中毒效果</green>"
+      "ss": "<blue>17.3%</blue>暴傷光環",
+      "fi": "提高輸出、且NS增加中毒效果"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -2891,7 +2910,8 @@
     "skillsSummary": {
       "ex": "5Cost對圓形範圍內敵方造成<blue>438%</blue>傷害同時降防<blue>24.6%</blue><teal>（40秒）</teal>",
       "ns": "毎35秒提高自身攻擊力<blue>29.5%</blue><teal>（23秒）</teal>",
-      "ss": "使用EX技後提高自身攻速<blue>38.3%</blue><teal>（30秒）</teal>。<green>愛用品提高掛件輔助能力</green>"
+      "ss": "使用EX技後提高自身攻速<blue>38.3%</blue><teal>（30秒）</teal>",
+      "fi": "提高掛件輔助能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3197,7 +3217,8 @@
     "skillsSummary": {
       "ex": "4Cost造成<blue>325%</blue>傷害並施加<purple>積蓄</purple>（<teal>10秒</teal>，<red>需累計</red>）最大造成<blue>1322%</blue>的<red>真傷</red>",
       "ns": "每25秒對一名敵方造成<blue>369%</blue>傷害",
-      "ss": "攻擊BOSS級別的敵方時，造成<blue>29.7%</blue>追加傷害。<green>愛用品大幅度增強，破萬面板及NS輸出傷害，神秘真傷大C</green>"
+      "ss": "攻擊BOSS級別的敵方時，造成<blue>29.7%</blue>追加傷害",
+      "fi": "大幅度增強，破萬面板及NS輸出傷害，神秘真傷大C"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3444,7 +3465,8 @@
     "skillsSummary": {
       "ex": "3Cost對一名敵方造成<blue>545%</blue>傷害並<purple>眩暈</purple>5.5秒",
       "ns": "毎40秒對扇形範圍內<purple>飛射5枚破片</purple>，每枚碎片造成<blue>160%</blue>傷害",
-      "ss": "<red>使用EX技後</red>使自身承受的傷害降低<blue>36.1%</blue><teal>（16秒）</teal>，<green>愛用品減少敵方群控抵抗力，可減少群控計量表的時間需求</green>"
+      "ss": "<red>使用EX技後</red>使自身承受的傷害降低<blue>36.1%</blue><teal>（16秒）</teal>",
+      "fi": "減少敵方群控抵抗力，可減少群控計量表的時間需求"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3516,7 +3538,8 @@
     "skillsSummary": {
       "ex": "4Cost對圓形範圍內敵方造成<blue>666%</blue>傷害並<purple>眩暈5.1秒</purple>",
       "ns": "每35秒對<red>血量最低</red>的一名敵方造成<blue>343%</blue>傷害<blue>並造成<blue>56%</blue><purple>燒傷</purple><teal>（20秒）</teal>",
-      "ss": "我方攻擊力增加<blue>17.3%</blue>。<green>愛用品備戰LU難霍德，競技場穩定壓低黑子血量/收佐倉</green>"
+      "ss": "我方攻擊力增加<blue>17.3%</blue>",
+      "fi": "備戰LU難霍德，競技場穩定壓低黑子血量/收佐倉"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3588,7 +3611,8 @@
     "skillsSummary": {
       "ex": "3Cost對一名敵方賦予<purple>弱點掌握</purple><teal>（10秒）</teal>（友方攻擊時根據HIT數附加美遊<blue>30%</blue>攻擊力追加傷害）",
       "ns": "<red>毎普攻5次</red>對一名敵方造成<blue>283%</blue>傷害",
-      "ss": "換彈時提高自身暴傷<blue>36%</blue><teal>（13秒）</teal>，<green>愛用品提高輸出能力</green>"
+      "ss": "換彈時提高自身暴傷<blue>36%</blue><teal>（13秒）</teal>",
+      "fi": "提高輸出能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3659,7 +3683,8 @@
     "skillsSummary": {
       "ex": "4Cost使圓形範圍我方獲得治癒力<blue>275%</blue>護盾<teal>（16秒）</teal>",
       "ns": "每40秒一名<red>防禦最高</red>我方提升防禦力<blue>30%</blue><teal>（33秒）</teal>",
-      "ss": "<blue>17.3%</blue>生命光環。<green>愛用品增強主坦生存，降低高壓情況下我用壓力</green>"
+      "ss": "<blue>17.3%</blue>生命光環",
+      "fi": "增強主坦生存，降低高壓情況下費用壓力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3719,7 +3744,8 @@
     "skillsSummary": {
       "ex": "5Cost對7個小圓形範圍毎4秒造成攻擊力<blue>14.3%</blue>傷害<teal>（48秒打滿合計1201%傷害）</teal>",
       "ns": "毎50秒提升自身攻擊力<blue>37.1%</blue><teal>（40秒）</teal>",
-      "ss": "<red>攻擊時如對方有減益效果</red>，則會根據個數額外造成不同的追加傷害（<blue>2.1%</blue>/<blue>4.1%</blue>/<blue>6.2%</blue>/<blue>8.3%</blue>/<blue>10.3%</blue>，最多判定5次)。<green>愛用品加強輸出/防穿</green>"
+      "ss": "<red>攻擊時如對方有減益效果</red>，則會根據個數額外造成不同的追加傷害（<blue>2.1%</blue>/<blue>4.1%</blue>/<blue>6.2%</blue>/<blue>8.3%</blue>/<blue>10.3%</blue>，最多判定5次)",
+      "fi": "加強輸出/防穿"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -3914,7 +3940,8 @@
     "skillsSummary": {
       "ex": "5Cost造成<blue>1074%</blue>傷害且附帶9.6秒<purple>眩暈</purple>（5下），<red>最後一下附帶擊退效果</red>",
       "ns": "每60秒提高自身受到的傷害（<blue>9.6%</blue>/<blue>19.2%</blue>/<blue>28.9%</blue>）同時提高攻擊力（<blue>31.5%</blue>/<blue>61.8%</blue>/<blue>99%</blue>）",
-      "ss": "對<blue>30%</blue>血量以下的敵方追加<blue>98.1%</blue>傷害，<green>愛用品加強長軸輸出能力</green>"
+      "ss": "對<blue>30%</blue>血量以下的敵方追加<blue>98.1%</blue>傷害",
+      "fi": "加強長軸輸出能力"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -4171,7 +4198,8 @@
     "skillsSummary": {
       "ex": "4Cost<blue>1275%</blue>必暴輸出",
       "ns": "每25秒一次<blue>334%</blue>必定暴擊且提高自身暴傷<blue>24.8%</blue><teal>（16秒）</teal>",
-      "ss": "隊伍中有奧利斯小隊學生增加自身攻擊（1人：<blue>36.7%</blue>，2人：<blue>55%</blue>，3人：<blue>73.4%</blue>）<red>（包含梓、水梓）</red>。<green>愛用品加強輸出上限，目前看是備戰LU主教多刀，尾刀或雙核都很有用</green>"
+      "ss": "隊伍中有奧利斯小隊學生增加自身攻擊（1人：<blue>36.7%</blue>，2人：<blue>55%</blue>，3人：<blue>73.4%</blue>）<red>（包含梓、水梓）</red>",
+      "fi": "加強輸出上限，目前看是備戰LU主教多刀，尾刀或雙核都很有用"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -4913,7 +4941,8 @@
     "skillsSummary": {
       "ex": "2Cost轉換為<purple>「阿比舒形態」</purple>提高自身攻擊力<blue>41.8%</blue>、命中<blue>18.1%</blue>、閃避<blue>12.2%</blue>。<red>（機甲技無視60%防禦且使用三次後解除）</red>，處於<purple>「阿比舒形態」</purple>中改變EX技。<red>機甲EX技</red>5Cost第1、2次點射對直線範圍內敵方造成<blue>167%</blue>傷害，最後一次激光對直線範圍內<red>指定敵方</red>造成<blue>1153%</blue>的傷害，並對範圍內其他敵方造成<blue>230%</blue>的傷害",
       "ns": "毎35秒對一名敵方造成<blue>778%</blue>傷害，處於<purple>「阿比舒形態」</purple>下<red>無視60%防禦</red>",
-      "ss": "處於<purple>「阿比舒形態」</purple>時根據使用EX技次數造成追加傷害，第1次：<blue>25.6%</blue>；第2次：<blue>51.1%</blue>；第3次：<blue>76.7%</blue>，<red>此追傷無視60%防禦</red>。<green>愛用品加強了整體邏輯，不用再卡技能循環</green>"
+      "ss": "處於<purple>「阿比舒形態」</purple>時根據使用EX技次數造成追加傷害，第1次：<blue>25.6%</blue>；第2次：<blue>51.1%</blue>；第3次：<blue>76.7%</blue>，<red>此追傷無視60%防禦</red>",
+      "fi": "加強了整體邏輯，不用再卡技能循環"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -5046,7 +5075,8 @@
     "skillsSummary": {
       "ex": "4Cost對一名敵方造成<blue>1128%</blue>傷害",
       "ns": "每普攻15次提高自身神秘屬攻<blue>38.1%</blue>和攻擊力<blue>32%</blue><teal>（40秒）</teal>",
-      "ss": "普攻<red>不再能穿透敵人</red>，攻擊時造成<blue>30.1%</blue>追加傷害。<green>愛用品加強暴擊率，提升不大</green>"
+      "ss": "普攻<red>不再能穿透敵人</red>，攻擊時造成<blue>30.1%</blue>追加傷害",
+      "fi": "加強暴擊率，提升不大"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -5643,7 +5673,8 @@
     "skillsSummary": {
       "ex": "4C造成<blue>356%</blue>圓形傷害",
       "ns": "30秒<blue>22.5%</blue>加攻<teal>（20秒）</teal>",
-      "ss": "戰鬥開始時加攻<blue>17.8%</blue>且<purple>普攻時AOE半徑增加1.5倍。</purple><green>愛用品應對高爆抗敵人，猜測應對新BOSS</green>"
+      "ss": "戰鬥開始時加攻<blue>17.8%</blue>且<purple>普攻時AOE半徑增加1.5倍。</purple>",
+      "fi": "應對高爆抗敵人，猜測應對新BOSS"
     },
     "ratingsSummary": {
       "newbie": null,
@@ -5838,7 +5869,8 @@
     "skillsSummary": {
       "ex": "3Cost對扇形範圍內敵方造成<blue>501.5%</blue>傷害和攻擊力<blue>27.6%</blue>的<purple>燒傷</purple><teal>（20秒）</teal>",
       "ns": "每30秒給與自身<purple>「熱情」</purple>並提高自身攻擊力<blue>37.6%</blue><teal>（22秒）</teal>",
-      "ss": "自身有<purple>熱情</purple>攻擊時，會附加<blue>8.6%</blue>追加傷害。<green>愛用品增加明顯，可當主輸出</green>"
+      "ss": "自身有<purple>熱情</purple>攻擊時，會附加<blue>8.6%</blue>追加傷害",
+      "fi": "增加明顯，可當主輸出"
     },
     "ratingsSummary": {
       "newbie": null,

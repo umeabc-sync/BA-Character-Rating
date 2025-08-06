@@ -152,7 +152,8 @@
   "skillType": {
     "ex": "EX技能",
     "ns": "NS技能",
-    "ss": "SS技能"
+    "ss": "SS技能",
+    "fi": "愛用品"
   },
   "characterSelector": {
     "title": "選擇學生",
