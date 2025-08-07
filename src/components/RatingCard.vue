@@ -160,6 +160,10 @@
               <span class="highlight">{{ t('skillType.ss') }}</span
               ><ColoredText :text="character.skillsSummary.ss" :enabled="enableColoredText" />
             </p>
+            <p v-if="character.skillsSummary.fi">
+              <span class="highlight fi">{{ t('skillType.fi') }}</span
+              ><ColoredText :text="character.skillsSummary.fi" :enabled="enableColoredText" />
+            </p>
           </div>
         </RatingSection>
 
@@ -595,6 +599,16 @@
   .dark-mode .highlight {
     background: rgba(0, 174, 239, 0.2);
     color: #87ceeb;
+  }
+
+  .highlight.fi {
+    background: rgba(255, 183, 202, 0.4);
+    color: #d1456e;
+  }
+
+  .dark-mode .highlight.fi {
+    background: rgba(255, 92, 138, 0.3);
+    color: #ffb7ca;
   }
 
   .criteria-btn {
