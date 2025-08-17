@@ -180,7 +180,10 @@
     "language": "語言",
     "enableColoredText": "文本高亮",
     "characterSelectorLazyLoad": "圖片懶加載",
-    "lazyLoadTooltip": "懶加載角色選擇器的的圖片，只動態加載出現在螢幕上的圖片，對於第一次加載效率更高，但滾動時可能出現短暫加載畫面"
+    "lazyLoadTooltip": "懶加載角色選擇器的的圖片，只動態加載出現在螢幕上的圖片，對於第一次加載效率更高，但滾動時可能出現短暫加載畫面",
+    "nameSubFieldDisplay": "名稱副欄位顯示",
+    "jpname": "日文原名",
+    "nicknames": "暱稱"
   },
   "ratingCriteriaModal": {
     "title": "評分準則"
