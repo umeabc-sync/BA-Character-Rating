@@ -35,6 +35,9 @@
             <div class="setting-group">
               <h4 class="setting-group-title">{{ t('settingsModal.enableColoredText') }}</h4>
               <div class="toggle-switch">
+                <span class="toggle-label">{{
+                  isColoredTextEnabled ? t('common.enabled') : t('common.disabled')
+                }}</span>
                 <input
                   id="coloredTextToggle"
                   type="checkbox"
@@ -42,9 +45,6 @@
                   @change="toggleColoredText"
                 />
                 <label for="coloredTextToggle"></label>
-                <span class="toggle-label">{{
-                  isColoredTextEnabled ? t('common.enabled') : t('common.disabled')
-                }}</span>
               </div>
             </div>
             <div class="setting-group">
@@ -55,9 +55,17 @@
                 </InfoTooltip>
               </div>
               <div class="toggle-switch">
+                <span class="toggle-label">{{ isLazyLoadEnabled ? t('common.enabled') : t('common.disabled') }}</span>
                 <input id="lazyLoadToggle" type="checkbox" :checked="isLazyLoadEnabled" @change="toggleLazyLoad" />
                 <label for="lazyLoadToggle"></label>
-                <span class="toggle-label">{{ isLazyLoadEnabled ? t('common.enabled') : t('common.disabled') }}</span>
+              </div>
+            </div>
+            <div class="setting-group">
+              <h4 class="setting-group-title">{{ t('settingsModal.nameSubFieldDisplay') }}</h4>
+              <div class="toggle-switch">
+                <span class="toggle-label">{{ showJpname ? t('settingsModal.jpname') : t('settingsModal.nicknames') }}</span>
+                <input id="jpnameToggle" type="checkbox" :checked="showJpname" @change="toggleShowJpname" />
+                <label for="jpnameToggle"></label>
               </div>
             </div>
           </div>
@@ -94,7 +102,10 @@
     locale: currentLocale,
     enableColoredText: isColoredTextEnabled,
     enableCharacterSelectorLazyLoad: isLazyLoadEnabled,
+    showJpname,
   } = storeToRefs(settingStore)
+
+  const { toggleShowJpname } = settingStore
 
   const availableLanguages = [
     { code: 'zh-tw', name: '繁體中文' },

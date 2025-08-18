@@ -85,6 +85,7 @@
           :id="character.id"
           :name="character.fullname"
           :nicknames="character.nicknames"
+          :jpname="character.jpname"
           :school="character.school"
           @avatar-click="$emit('open-selector')"
         />

@@ -11,6 +11,7 @@ export const useSettingStore = defineStore(
     const enableColoredText = ref(true)
     const tutorialShown = ref(false)
     const enableCharacterSelectorLazyLoad = ref(true)
+    const showJpname = ref(false)
 
     // Getters (Computed)
     const isDarkMode = computed(() => {
@@ -35,6 +36,10 @@ export const useSettingStore = defineStore(
       enableCharacterSelectorLazyLoad.value = !enableCharacterSelectorLazyLoad.value
     }
 
+    function toggleShowJpname() {
+      showJpname.value = !showJpname.value
+    }
+
     function setLocale(newLocale) {
       locale.value = newLocale
     }
@@ -56,9 +61,11 @@ export const useSettingStore = defineStore(
       enableColoredText,
       tutorialShown,
       enableCharacterSelectorLazyLoad,
+      showJpname,
       toggleTheme,
       toggleColoredText,
       toggleCharacterSelectorLazyLoad,
+      toggleShowJpname,
       setLocale,
       markTutorialAsShown,
       initThemeListener,

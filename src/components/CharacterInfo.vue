@@ -24,8 +24,11 @@
       </div>
     </div>
     <div class="character-name">{{ name }}</div>
-    <div v-if="nicknames && nicknames.length > 0" class="character-nicknames">
+    <div v-if="!showJpname && nicknames && nicknames.length > 0" class="character-nicknames">
       {{ nicknames.join('、') }}
+    </div>
+    <div v-if="showJpname && jpname" class="character-nicknames">
+      {{ jpname }}
     </div>
     <div class="school-badge">
       <img :src="getSchoolIconUrl(school)" :alt="school" class="school-icon" />
@@ -40,8 +43,12 @@
   import { getAvatarUrl } from '@/utils/getAvatarUrl'
   import { getSchoolIconUrl } from '@/utils/getSchoolIconUrl'
   import ImageWithLoader from './ui/ImageWithLoader.vue'
+  import { useSettingStore } from '@/store/setting'
+  import { storeToRefs } from 'pinia'
 
   const { t } = useI18n()
+  const settingStore = useSettingStore()
+  const { showJpname } = storeToRefs(settingStore)
 
   const props = defineProps({
     id: {
@@ -55,6 +62,10 @@
     nicknames: {
       type: Array,
       default: () => [],
+    },
+    jpname: {
+      type: String,
+      default: '',
     },
     school: {
       type: String,

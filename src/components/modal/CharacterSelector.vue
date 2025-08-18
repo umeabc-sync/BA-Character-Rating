@@ -274,7 +274,9 @@
       const searchMatch =
         !searchTerm.value ||
         char.name.toLowerCase().includes(lowerCaseSearch) ||
-        (char.nicknames && char.nicknames.some((nick) => nick.toLowerCase().includes(lowerCaseSearch)))
+        (char.nicknames && char.nicknames.some((nick) => nick.toLowerCase().includes(lowerCaseSearch))) ||
+        (char.fullname && char.fullname.toLowerCase().includes(lowerCaseSearch)) ||
+        (char.jpname && char.jpname.toLowerCase().includes(lowerCaseSearch))
 
       return dropdownsMatch && searchMatch
     })
