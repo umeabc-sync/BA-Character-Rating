@@ -23,6 +23,7 @@
     "Valkyrie": "瓦尔基丽警察学园",
     "SRT": "SRT特殊学园",
     "Highlander": "高原众铁道学园",
+    "WildHunt": "狂猎艺术学园",
     "ETC": "其他学园"
   },
   "schoolAbbr": {
@@ -37,6 +38,7 @@
     "Valkyrie": "瓦尔基丽",
     "SRT": "SRT",
     "Highlander": "高原众",
+    "WildHunt": "狂猎",
     "ETC": "其他"
   },
   "weapon": {
