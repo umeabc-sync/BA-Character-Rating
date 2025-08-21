@@ -63,7 +63,9 @@
             <div class="setting-group">
               <h4 class="setting-group-title">{{ t('settingsModal.nameSubFieldDisplay') }}</h4>
               <div class="toggle-switch">
-                <span class="toggle-label">{{ showJpname ? t('settingsModal.jpname') : t('settingsModal.nicknames') }}</span>
+                <span class="toggle-label">{{
+                  showJpname ? t('settingsModal.jpname') : t('settingsModal.nicknames')
+                }}</span>
                 <input id="jpnameToggle" type="checkbox" :checked="showJpname" @change="toggleShowJpname" />
                 <label for="jpnameToggle"></label>
               </div>
