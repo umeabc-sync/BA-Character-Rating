@@ -5100,8 +5100,8 @@
   },
   {
     "id": 116,
-    "fullname": "早瀨 優香（運動服）",
-    "name": "優香（運動服）",
+    "fullname": "早瀨 優香（體育服）",
+    "name": "優香（體育服）",
     "nicknames": ["體香"],
     "jpname": "早瀬 ユウカ（体操服）",
     "school": "Millennium",
@@ -9000,9 +9000,9 @@
   },
   {
     "id": 227,
-    "fullname": "百合園 聖婭（泳裝）",
-    "name": "聖婭（泳裝）",
-    "nicknames": ["水聖婭"],
+    "fullname": "百合園 聖亞（泳裝）",
+    "name": "聖亞（泳裝）",
+    "nicknames": ["水聖亞"],
     "jpname": "百合園 セイア（水着）",
     "school": "Trinity",
     "attackType": "Piercing",
