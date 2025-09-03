@@ -9440,5 +9440,68 @@
       "技一Lv10",
       "Max"
     ]
+  },
+  {
+    "id": 234,
+    "fullname": "戒野 美咲（泳裝）",
+    "name": "美咲（泳裝）",
+    "nicknames": ["水美咲", "水円"],
+    "jpname": "戒野 ミサキ（水著）",
+    "school": "Arius",
+    "attackType": "Explosive",
+    "defenseType": "Special",
+    "weapon": "RL",
+    "position": [1, "範圍輸出"],
+    "uniqueWeaponRecommended": "使用至少高專",
+    "acquisitionMethod": "常駐池",
+    "skillMainOparts": "discocolgante",
+    "skillSubOparts": "ether",
+    "l2dUnlock": -1,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": ["hat", "bag", "watch"],
+    "uniqueWeaponStar2": "暴傷增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.1",
+    "ratingDate": "2025/09/04",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 44
+    },
+    "skillsSummary": {
+      "ex": "6Cost對圓形範圍內敵方<red>根據減益層數</red>造成傷害（1層及以下：<blue>553%</blue>；2~3層：<blue>1106%</blue>；4層及以上：<blue>1653%</blue>）",
+      "ns": "每35秒對圓形範圍內敵方造成<blue>174%</blue>傷害",
+      "ss": "<blue>30.2%</blue>爆發屬攻光環"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU難葛利果多隊對策輸出，葛夫拉堆屍可選，其他輕甲BOSS可選光環掛件",
+      "pvp": "暫時無組合搭配",
+      "grandAssault": "LU難葛利果多隊對策輸出，葛夫拉堆屍可選，其他輕甲BOSS可選光環掛件",
+      "limitBreakAssault": "缺人或機制使用",
+      "jointFiringDrill": "支援輸出機制/清雜可選",
+      "eventChallenge": "支援輸出機制/清雜可選"
+    },
+    "uniqueWeaponRecommendedSummary": "暴傷增加，當主輸出使用建議專三及以上",
+    "overallRecommendation": "LU難葛利果第二刀可選輸出，如果備戰考慮抽取",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技三Lv7",
+      "技二Lv7",
+      "技一Lv7",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv10",
+      "Max"
+    ]
   }
 ]
