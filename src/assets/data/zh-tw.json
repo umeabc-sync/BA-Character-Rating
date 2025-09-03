@@ -9456,7 +9456,7 @@
     "acquisitionMethod": "常駐池",
     "skillMainOparts": "discocolgante",
     "skillSubOparts": "ether",
-    "l2dUnlock": -1,
+    "l2dUnlock": 3,
     "city": "D",
     "outdoor": "B",
     "indoor": "S",
