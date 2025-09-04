@@ -9440,5 +9440,68 @@
       "技一Lv10",
       "Max"
     ]
+  },
+  {
+    "id": 234,
+    "fullname": "戒野 美咲（泳装）",
+    "name": "美咲（泳装）",
+    "nicknames": ["水美咲", "水円"],
+    "jpname": "戒野 ミサキ（水着）",
+    "school": "Arius",
+    "attackType": "Explosive",
+    "defenseType": "Special",
+    "weapon": "RL",
+    "position": [1, "范围输出"],
+    "uniqueWeaponRecommended": "使用至少高专",
+    "acquisitionMethod": "常驻池",
+    "skillMainOparts": "discocolgante",
+    "skillSubOparts": "ether",
+    "l2dUnlock": -1,
+    "city": "D",
+    "outdoor": "B",
+    "indoor": "S",
+    "equipments": ["hat", "bag", "watch"],
+    "uniqueWeaponStar2": "暴伤增加",
+    "uniqueWeaponStar3": ["indoor", "SS"],
+    "ratingVersion": "7.1",
+    "ratingDate": "2025/09/04",
+    "ratings": {
+      "newbie": [2, 0, 0],
+      "totalAssault": [3, 1, 0],
+      "pvp": null,
+      "grandAssault": [2, 0, 0],
+      "limitBreakAssault": null,
+      "jointFiringDrill": [2, 0, 0],
+      "eventChallenge": [1, 0, 0],
+      "overall": 44
+    },
+    "skillsSummary": {
+      "ex": "6Cost对圆形范围内敌方<red>根据减益层数</red>造成伤害（1层及以下：<blue>553%</blue>；2~3层：<blue>1106%</blue>；4层及以上：<blue>1653%</blue>）",
+      "ns": "每35秒对圆形范围内敌方造成<blue>174%</blue>伤害",
+      "ss": "<blue>30.2%</blue>爆发属攻光环"
+    },
+    "ratingsSummary": {
+      "newbie": null,
+      "totalAssault": "LU难格里高利多队对策输出，盖布拉堆尸可选，其他轻甲BOSS可选光环挂件",
+      "pvp": "暂时无组合搭配",
+      "grandAssault": "LU难格里高利多队对策输出，盖布拉堆尸可选，其他轻甲BOSS可选光环挂件",
+      "limitBreakAssault": "缺人或机制使用",
+      "jointFiringDrill": "支援输出机制/清杂可选",
+      "eventChallenge": "支援输出机制/清杂可选"
+    },
+    "uniqueWeaponRecommendedSummary": "暴伤增加，当主输出使用建议专三及以上",
+    "overallRecommendation": "LU难格里高利第二刀可选输出，如果备战考虑抽取",
+    "skillOrder": [
+      "EX3",
+      "技一.二.三Lv4",
+      "EX5",
+      "技三Lv7",
+      "技二Lv7",
+      "技一Lv7",
+      "技三Lv10",
+      "技二Lv10",
+      "技一Lv10",
+      "Max"
+    ]
   }
 ]
